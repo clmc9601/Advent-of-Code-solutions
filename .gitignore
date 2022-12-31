@@ -5,6 +5,7 @@ __pycache__/
 
 # Alteryx
 *.bak
+*.DS_Store
 
 # C extensions
 *.so
