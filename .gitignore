@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# Alteryx
+*.bak
+
 # C extensions
 *.so
 
