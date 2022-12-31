@@ -1,0 +1,2229 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2021.2">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
+        <Position x="162" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UseFileInput value="False" />
+          <Name>Input1</Name>
+          <Abbrev />
+          <ShowFieldMap value="True" />
+          <Optional value="False" />
+          <TextInput>
+            <Configuration>
+              <NumRows value="36" />
+              <Fields>
+                <Field name="ItemID" />
+                <Field name="MonkeyItemID" />
+                <Field name="Monkey" />
+                <Field name="Worry" />
+                <Field name="Worry Equation" />
+                <Field name="Expression" />
+                <Field name="MonkeyIfTrue" />
+                <Field name="MonkeyifFalse" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>1</c>
+                  <c>1</c>
+                  <c>4</c>
+                  <c>62</c>
+                  <c>[Worry] * 17</c>
+                  <c>19</c>
+                  <c>2</c>
+                  <c>6</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>2</c>
+                  <c>4</c>
+                  <c>67</c>
+                  <c>[Worry] * 17</c>
+                  <c>19</c>
+                  <c>2</c>
+                  <c>6</c>
+                </r>
+                <r>
+                  <c>3</c>
+                  <c>3</c>
+                  <c>4</c>
+                  <c>80</c>
+                  <c>[Worry] * 17</c>
+                  <c>19</c>
+                  <c>2</c>
+                  <c>6</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>1</c>
+                  <c>5</c>
+                  <c>91</c>
+                  <c>[Worry] + 7</c>
+                  <c>5</c>
+                  <c>1</c>
+                  <c>4</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>1</c>
+                  <c>2</c>
+                  <c>54</c>
+                  <c>[Worry] * [Worry]</c>
+                  <c>7</c>
+                  <c>0</c>
+                  <c>7</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>2</c>
+                  <c>2</c>
+                  <c>96</c>
+                  <c>[Worry] * [Worry]</c>
+                  <c>7</c>
+                  <c>0</c>
+                  <c>7</c>
+                </r>
+                <r>
+                  <c>7</c>
+                  <c>3</c>
+                  <c>2</c>
+                  <c>82</c>
+                  <c>[Worry] * [Worry]</c>
+                  <c>7</c>
+                  <c>0</c>
+                  <c>7</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>4</c>
+                  <c>2</c>
+                  <c>78</c>
+                  <c>[Worry] * [Worry]</c>
+                  <c>7</c>
+                  <c>0</c>
+                  <c>7</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>5</c>
+                  <c>2</c>
+                  <c>69</c>
+                  <c>[Worry] * [Worry]</c>
+                  <c>7</c>
+                  <c>0</c>
+                  <c>7</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>1</c>
+                  <c>6</c>
+                  <c>79</c>
+                  <c>[Worry] + 6</c>
+                  <c>17</c>
+                  <c>2</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>11</c>
+                  <c>2</c>
+                  <c>6</c>
+                  <c>83</c>
+                  <c>[Worry] + 6</c>
+                  <c>17</c>
+                  <c>2</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>12</c>
+                  <c>3</c>
+                  <c>6</c>
+                  <c>64</c>
+                  <c>[Worry] + 6</c>
+                  <c>17</c>
+                  <c>2</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>13</c>
+                  <c>4</c>
+                  <c>6</c>
+                  <c>52</c>
+                  <c>[Worry] + 6</c>
+                  <c>17</c>
+                  <c>2</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>14</c>
+                  <c>5</c>
+                  <c>6</c>
+                  <c>77</c>
+                  <c>[Worry] + 6</c>
+                  <c>17</c>
+                  <c>2</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>15</c>
+                  <c>6</c>
+                  <c>6</c>
+                  <c>56</c>
+                  <c>[Worry] + 6</c>
+                  <c>17</c>
+                  <c>2</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>16</c>
+                  <c>7</c>
+                  <c>6</c>
+                  <c>63</c>
+                  <c>[Worry] + 6</c>
+                  <c>17</c>
+                  <c>2</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>17</c>
+                  <c>8</c>
+                  <c>6</c>
+                  <c>92</c>
+                  <c>[Worry] + 6</c>
+                  <c>17</c>
+                  <c>2</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>18</c>
+                  <c>1</c>
+                  <c>0</c>
+                  <c>56</c>
+                  <c>[Worry] * 7</c>
+                  <c>3</c>
+                  <c>3</c>
+                  <c>7</c>
+                </r>
+                <r>
+                  <c>19</c>
+                  <c>2</c>
+                  <c>0</c>
+                  <c>56</c>
+                  <c>[Worry] * 7</c>
+                  <c>3</c>
+                  <c>3</c>
+                  <c>7</c>
+                </r>
+                <r>
+                  <c>20</c>
+                  <c>3</c>
+                  <c>0</c>
+                  <c>92</c>
+                  <c>[Worry] * 7</c>
+                  <c>3</c>
+                  <c>3</c>
+                  <c>7</c>
+                </r>
+                <r>
+                  <c>21</c>
+                  <c>4</c>
+                  <c>0</c>
+                  <c>65</c>
+                  <c>[Worry] * 7</c>
+                  <c>3</c>
+                  <c>3</c>
+                  <c>7</c>
+                </r>
+                <r>
+                  <c>22</c>
+                  <c>5</c>
+                  <c>0</c>
+                  <c>71</c>
+                  <c>[Worry] * 7</c>
+                  <c>3</c>
+                  <c>3</c>
+                  <c>7</c>
+                </r>
+                <r>
+                  <c>23</c>
+                  <c>6</c>
+                  <c>0</c>
+                  <c>61</c>
+                  <c>[Worry] * 7</c>
+                  <c>3</c>
+                  <c>3</c>
+                  <c>7</c>
+                </r>
+                <r>
+                  <c>24</c>
+                  <c>7</c>
+                  <c>0</c>
+                  <c>79</c>
+                  <c>[Worry] * 7</c>
+                  <c>3</c>
+                  <c>3</c>
+                  <c>7</c>
+                </r>
+                <r>
+                  <c>25</c>
+                  <c>1</c>
+                  <c>1</c>
+                  <c>61</c>
+                  <c>[Worry] + 5</c>
+                  <c>11</c>
+                  <c>6</c>
+                  <c>4</c>
+                </r>
+                <r>
+                  <c>26</c>
+                  <c>2</c>
+                  <c>1</c>
+                  <c>85</c>
+                  <c>[Worry] + 5</c>
+                  <c>11</c>
+                  <c>6</c>
+                  <c>4</c>
+                </r>
+                <r>
+                  <c>27</c>
+                  <c>1</c>
+                  <c>3</c>
+                  <c>57</c>
+                  <c>[Worry] + 4</c>
+                  <c>2</c>
+                  <c>5</c>
+                  <c>1</c>
+                </r>
+                <r>
+                  <c>28</c>
+                  <c>2</c>
+                  <c>3</c>
+                  <c>59</c>
+                  <c>[Worry] + 4</c>
+                  <c>2</c>
+                  <c>5</c>
+                  <c>1</c>
+                </r>
+                <r>
+                  <c>29</c>
+                  <c>3</c>
+                  <c>3</c>
+                  <c>65</c>
+                  <c>[Worry] + 4</c>
+                  <c>2</c>
+                  <c>5</c>
+                  <c>1</c>
+                </r>
+                <r>
+                  <c>30</c>
+                  <c>4</c>
+                  <c>3</c>
+                  <c>95</c>
+                  <c>[Worry] + 4</c>
+                  <c>2</c>
+                  <c>5</c>
+                  <c>1</c>
+                </r>
+                <r>
+                  <c>31</c>
+                  <c>1</c>
+                  <c>7</c>
+                  <c>50</c>
+                  <c>[Worry] + 3</c>
+                  <c>13</c>
+                  <c>3</c>
+                  <c>5</c>
+                </r>
+                <r>
+                  <c>32</c>
+                  <c>2</c>
+                  <c>7</c>
+                  <c>97</c>
+                  <c>[Worry] + 3</c>
+                  <c>13</c>
+                  <c>3</c>
+                  <c>5</c>
+                </r>
+                <r>
+                  <c>33</c>
+                  <c>3</c>
+                  <c>7</c>
+                  <c>76</c>
+                  <c>[Worry] + 3</c>
+                  <c>13</c>
+                  <c>3</c>
+                  <c>5</c>
+                </r>
+                <r>
+                  <c>34</c>
+                  <c>4</c>
+                  <c>7</c>
+                  <c>96</c>
+                  <c>[Worry] + 3</c>
+                  <c>13</c>
+                  <c>3</c>
+                  <c>5</c>
+                </r>
+                <r>
+                  <c>35</c>
+                  <c>5</c>
+                  <c>7</c>
+                  <c>80</c>
+                  <c>[Worry] + 3</c>
+                  <c>13</c>
+                  <c>3</c>
+                  <c>5</c>
+                </r>
+                <r>
+                  <c>36</c>
+                  <c>6</c>
+                  <c>7</c>
+                  <c>56</c>
+                  <c>[Worry] + 3</c>
+                  <c>13</c>
+                  <c>3</c>
+                  <c>5</c>
+                </r>
+              </Data>
+            </Configuration>
+          </TextInput>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Input</DefaultAnnotationText>
+          <Left value="True" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="ItemID" source="TextInput:" type="Byte" />
+            <Field name="MonkeyItemID" source="TextInput:" type="Byte" />
+            <Field name="Monkey" source="TextInput:" type="Byte" />
+            <Field name="Worry" source="TextInput:" type="Byte" />
+            <Field name="Worry Equation" size="17" source="TextInput:" type="V_String" />
+            <Field name="Expression" source="TextInput:" type="Byte" />
+            <Field name="MonkeyIfTrue" source="TextInput:" type="Byte" />
+            <Field name="MonkeyifFalse" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="594" y="366" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="//Floor(&#xA;Mod(&#xA;IF Contains([Worry Equation], '+') or Contains([Worry Equation], '+')&#xA;THEN [Worry] + ToNumber(GetWord([Worry Equation], 2))&#xA;ELSEIF Contains([Worry Equation], '[Worry] * [Worry]')&#xA;THEN [Worry] * [Worry]&#xA;ELSE [Worry] * ToNumber(GetWord([Worry Equation], 2))&#xA;ENDIF&#xA;,9699690)&#xA;///3) &#xA;&#xA;// for part1, include floor but not mod 9699690 which is the product of all the Expression divisors" field="NewWorry" size="8" type="Double" />
+            <FormulaField expression="Mod(&#xA;[NewWorry]&#xA;&#xA;, [Expression])=0&#xA;// add the pow for part 2" field="Evaluation" size="1" type="Bool" />
+            <FormulaField expression="IF [Evaluation]&#xA;THEN [MonkeyIfTrue]&#xA;ELSE [MonkeyifFalse]&#xA;ENDIF" field="NewMonkey" size="4" type="Int32" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>NewWorry = //Floor(
+Mod(
+IF Contains([Worry Equation], '+') or Contains([Worry E...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="ItemID" source="TextInput:" type="Byte" />
+            <Field name="MonkeyItemID" source="TextInput:" type="Byte" />
+            <Field name="Monkey" source="TextInput:" type="Byte" />
+            <Field name="Worry" source="TextInput:" type="Double" />
+            <Field name="Iteration" source="File: D:\Users\clmc9601\Documents\Alteryx\Advent-of-Code-solutions\2022 Alteryx\AoC Day 11 Part 2 Iterations.yxdb" type="Int32" />
+            <Field name="Worry Equation" size="17" source="TextInput:" type="String" />
+            <Field name="Expression" source="TextInput:" type="Byte" />
+            <Field name="MonkeyIfTrue" source="TextInput:" type="Byte" />
+            <Field name="MonkeyifFalse" source="TextInput:" type="Byte" />
+            <Field name="NewWorry" source="Formula: //Floor(&#xA;Mod(&#xA;IF Contains([Worry Equation], '+') or Contains([Worry Equation], '+')&#xA;THEN [Worry] + ToNumber(GetWord([Worry Equation], 2))&#xA;ELSEIF Contains([Worry Equation], '[Worry] * [Worry]')&#xA;THEN [Worry] * [Worry]&#xA;ELSE [Worry] * ToNumber(GetWord([Worry Equation], 2))&#xA;ENDIF&#xA;,9699690)&#xA;///3) &#xA;&#xA;// for part1, include floor but not mod 9699690 which is the product of all the Expression divisors" type="Double" />
+            <Field name="Evaluation" source="Formula: Mod(&#xA;[NewWorry]&#xA;&#xA;, [Expression])=0&#xA;// add the pow for part 2" type="Bool" />
+            <Field name="NewMonkey" source="Formula: IF [Evaluation]&#xA;THEN [MonkeyIfTrue]&#xA;ELSE [MonkeyifFalse]&#xA;ENDIF" type="Int32" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="Monkey" order="" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="318" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[Iteration] = [Engine.IterationNumber]+1</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Iteration] = [Engine.IterationNumber]+1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="Iteration" source="File: D:\Users\clmc9601\Documents\Alteryx\Advent-of-Code-solutions\2022 Alteryx\AoC Day 11 Part 2 Iterations.yxdb" type="Int32" />
+            <Field name="Monkey" source="Formula: [Tile_SequenceNum]-1" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="Iteration" source="File: D:\Users\clmc9601\Documents\Alteryx\Advent-of-Code-solutions\2022 Alteryx\AoC Day 11 Part 2 Iterations.yxdb" type="Int32" />
+            <Field name="Monkey" source="Formula: [Tile_SequenceNum]-1" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="510" y="318" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Monkey" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Monkey" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_Monkey" selected="False" rename="Right_Monkey" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="ItemID" source="TextInput:" type="Byte" />
+            <Field name="MonkeyItemID" source="TextInput:" type="Byte" />
+            <Field name="Monkey" source="TextInput:" type="Byte" />
+            <Field name="Worry" source="TextInput:" type="Double" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="Monkey" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field name="ItemID" source="TextInput:" type="Byte" />
+            <Field name="MonkeyItemID" source="TextInput:" type="Byte" />
+            <Field name="Monkey" source="TextInput:" type="Byte" />
+            <Field name="Worry" source="TextInput:" type="Double" />
+            <Field name="Iteration" source="File: D:\Users\clmc9601\Documents\Alteryx\Advent-of-Code-solutions\2022 Alteryx\AoC Day 11 Part 2 Iterations.yxdb" type="Int32" />
+            <Field name="Worry Equation" size="17" source="TextInput:" type="String" />
+            <Field name="Expression" source="TextInput:" type="Byte" />
+            <Field name="MonkeyIfTrue" source="TextInput:" type="Byte" />
+            <Field name="MonkeyifFalse" source="TextInput:" type="Byte" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="Monkey" order="" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="Iteration" source="File: D:\Users\clmc9601\Documents\Alteryx\Advent-of-Code-solutions\2022 Alteryx\AoC Day 11 Part 2 Iterations.yxdb" type="Int32" />
+            <Field name="Monkey" source="Formula: [Tile_SequenceNum]-1" type="Int32" />
+            <Field name="Worry Equation" size="17" source="TextInput:" type="String" />
+            <Field name="Expression" source="TextInput:" type="Byte" />
+            <Field name="MonkeyIfTrue" source="TextInput:" type="Byte" />
+            <Field name="MonkeyifFalse" source="TextInput:" type="Byte" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="Monkey" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="714" y="414" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="ItemID" selected="True" />
+            <SelectField field="MonkeyItemID" selected="True" />
+            <SelectField field="Monkey" selected="True" />
+            <SelectField field="Worry" selected="True" />
+            <SelectField field="Iteration" selected="True" />
+            <SelectField field="Worry Equation" selected="True" />
+            <SelectField field="Expression" selected="True" />
+            <SelectField field="MonkeyIfTrue" selected="True" />
+            <SelectField field="MonkeyifFalse" selected="True" />
+            <SelectField field="NewWorry" selected="True" />
+            <SelectField field="Evaluation" selected="True" />
+            <SelectField field="NewMonkey" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="ItemID" source="TextInput:" type="Byte" />
+            <Field name="MonkeyItemID" source="TextInput:" type="Byte" />
+            <Field name="Monkey" source="TextInput:" type="Byte" />
+            <Field name="Worry" source="TextInput:" type="Double" />
+            <Field name="Iteration" source="File: D:\Users\clmc9601\Documents\Alteryx\Advent-of-Code-solutions\2022 Alteryx\AoC Day 11 Part 2 Iterations.yxdb" type="Int32" />
+            <Field name="Worry Equation" size="17" source="TextInput:" type="String" />
+            <Field name="Expression" source="TextInput:" type="Byte" />
+            <Field name="MonkeyIfTrue" source="TextInput:" type="Byte" />
+            <Field name="MonkeyifFalse" source="TextInput:" type="Byte" />
+            <Field name="NewWorry" source="Formula: //Floor(&#xA;Mod(&#xA;IF Contains([Worry Equation], '+') or Contains([Worry Equation], '+')&#xA;THEN [Worry] + ToNumber(GetWord([Worry Equation], 2))&#xA;ELSEIF Contains([Worry Equation], '[Worry] * [Worry]')&#xA;THEN [Worry] * [Worry]&#xA;ELSE [Worry] * ToNumber(GetWord([Worry Equation], 2))&#xA;ENDIF&#xA;,9699690)&#xA;///3) &#xA;&#xA;// for part1, include floor but not mod 9699690 which is the product of all the Expression divisors" type="Double" />
+            <Field name="Evaluation" source="Formula: Mod(&#xA;[NewWorry]&#xA;&#xA;, [Expression])=0&#xA;// add the pow for part 2" type="Bool" />
+            <Field name="NewMonkey" source="Formula: IF [Evaluation]&#xA;THEN [MonkeyIfTrue]&#xA;ELSE [MonkeyifFalse]&#xA;ENDIF" type="Int32" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="Monkey" order="" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="906" y="414" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>ItemsInspected</Name>
+          <Abbrev />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Output</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="714" y="342" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Monkey" selected="False" rename="OldMonkey" />
+            <SelectField field="Worry" selected="False" rename="OldWorry" />
+            <SelectField field="NewWorry" selected="True" rename="Worry" />
+            <SelectField field="NewMonkey" selected="True" rename="Monkey" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="ItemID" source="TextInput:" type="Byte" />
+            <Field name="MonkeyItemID" source="TextInput:" type="Byte" />
+            <Field name="Iteration" source="File: D:\Users\clmc9601\Documents\Alteryx\Advent-of-Code-solutions\2022 Alteryx\AoC Day 11 Part 2 Iterations.yxdb" type="Int32" />
+            <Field name="Worry Equation" size="17" source="TextInput:" type="String" />
+            <Field name="Expression" source="TextInput:" type="Byte" />
+            <Field name="MonkeyIfTrue" source="TextInput:" type="Byte" />
+            <Field name="MonkeyifFalse" source="TextInput:" type="Byte" />
+            <Field name="Worry" source="Formula: //Floor(&#xA;Mod(&#xA;IF Contains([Worry Equation], '+') or Contains([Worry Equation], '+')&#xA;THEN [Worry] + ToNumber(GetWord([Worry Equation], 2))&#xA;ELSEIF Contains([Worry Equation], '[Worry] * [Worry]')&#xA;THEN [Worry] * [Worry]&#xA;ELSE [Worry] * ToNumber(GetWord([Worry Equation], 2))&#xA;ENDIF&#xA;,9699690)&#xA;///3) &#xA;&#xA;// for part1, include floor but not mod 9699690 which is the product of all the Expression divisors" type="Double" />
+            <Field name="Evaluation" source="Formula: Mod(&#xA;[NewWorry]&#xA;&#xA;, [Expression])=0&#xA;// add the pow for part 2" type="Bool" />
+            <Field name="Monkey" source="Formula: IF [Evaluation]&#xA;THEN [MonkeyIfTrue]&#xA;ELSE [MonkeyifFalse]&#xA;ENDIF" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="822" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Ignore</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="ItemID" source="TextInput:" type="Byte" />
+            <Field name="MonkeyItemID" source="TextInput:" type="Byte" />
+            <Field name="Monkey" source="(Multiple Sources)" type="Int32" />
+            <Field name="Worry" source="(Multiple Sources)" type="Double" />
+            <Field name="Iteration" source="File: D:\Users\clmc9601\Documents\Alteryx\Advent-of-Code-solutions\2022 Alteryx\AoC Day 11 Part 2 Iterations.yxdb" type="Int32" />
+            <Field name="Worry Equation" size="17" source="TextInput:" type="String" />
+            <Field name="Expression" source="TextInput:" type="Byte" />
+            <Field name="MonkeyIfTrue" source="TextInput:" type="Byte" />
+            <Field name="MonkeyifFalse" source="TextInput:" type="Byte" />
+            <Field name="Evaluation" source="Formula: Mod(&#xA;[NewWorry]&#xA;&#xA;, [Expression])=0&#xA;// add the pow for part 2" type="Bool" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="1110" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>Iteration</Name>
+          <Abbrev />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Output</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1014" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[Engine.IterationNumber]&lt;//160
+//1003
+80002</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Engine.IterationNumber]&lt;//160
+//1003
+80002</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="ItemID" source="TextInput:" type="Byte" />
+            <Field name="MonkeyItemID" source="TextInput:" type="Byte" />
+            <Field name="Monkey" source="(Multiple Sources)" type="Int32" />
+            <Field name="Worry" source="(Multiple Sources)" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="ItemID" source="TextInput:" type="Byte" />
+            <Field name="MonkeyItemID" source="TextInput:" type="Byte" />
+            <Field name="Monkey" source="(Multiple Sources)" type="Int32" />
+            <Field name="Worry" source="(Multiple Sources)" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="54" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="160" />
+          <Fields>
+            <Field name="Iteration" />
+            <Field name="Monkey" />
+          </Fields>
+          <Data>
+            <r>
+              <c>1</c>
+              <c>0</c>
+            </r>
+            <r>
+              <c>2</c>
+              <c>1</c>
+            </r>
+            <r>
+              <c>3</c>
+              <c>2</c>
+            </r>
+            <r>
+              <c>4</c>
+              <c>3</c>
+            </r>
+            <r>
+              <c>5</c>
+              <c>4</c>
+            </r>
+            <r>
+              <c>6</c>
+              <c>5</c>
+            </r>
+            <r>
+              <c>7</c>
+              <c>6</c>
+            </r>
+            <r>
+              <c>8</c>
+              <c>7</c>
+            </r>
+            <r>
+              <c>9</c>
+              <c>0</c>
+            </r>
+            <r>
+              <c>10</c>
+              <c>1</c>
+            </r>
+            <r>
+              <c>11</c>
+              <c>2</c>
+            </r>
+            <r>
+              <c>12</c>
+              <c>3</c>
+            </r>
+            <r>
+              <c>13</c>
+              <c>4</c>
+            </r>
+            <r>
+              <c>14</c>
+              <c>5</c>
+            </r>
+            <r>
+              <c>15</c>
+              <c>6</c>
+            </r>
+            <r>
+              <c>16</c>
+              <c>7</c>
+            </r>
+            <r>
+              <c>17</c>
+              <c>0</c>
+            </r>
+            <r>
+              <c>18</c>
+              <c>1</c>
+            </r>
+            <r>
+              <c>19</c>
+              <c>2</c>
+            </r>
+            <r>
+              <c>20</c>
+              <c>3</c>
+            </r>
+            <r>
+              <c>21</c>
+              <c>4</c>
+            </r>
+            <r>
+              <c>22</c>
+              <c>5</c>
+            </r>
+            <r>
+              <c>23</c>
+              <c>6</c>
+            </r>
+            <r>
+              <c>24</c>
+              <c>7</c>
+            </r>
+            <r>
+              <c>25</c>
+              <c>0</c>
+            </r>
+            <r>
+              <c>26</c>
+              <c>1</c>
+            </r>
+            <r>
+              <c>27</c>
+              <c>2</c>
+            </r>
+            <r>
+              <c>28</c>
+              <c>3</c>
+            </r>
+            <r>
+              <c>29</c>
+              <c>4</c>
+            </r>
+            <r>
+              <c>30</c>
+              <c>5</c>
+            </r>
+            <r>
+              <c>31</c>
+              <c>6</c>
+            </r>
+            <r>
+              <c>32</c>
+              <c>7</c>
+            </r>
+            <r>
+              <c>33</c>
+              <c>0</c>
+            </r>
+            <r>
+              <c>34</c>
+              <c>1</c>
+            </r>
+            <r>
+              <c>35</c>
+              <c>2</c>
+            </r>
+            <r>
+              <c>36</c>
+              <c>3</c>
+            </r>
+            <r>
+              <c>37</c>
+              <c>4</c>
+            </r>
+            <r>
+              <c>38</c>
+              <c>5</c>
+            </r>
+            <r>
+              <c>39</c>
+              <c>6</c>
+            </r>
+            <r>
+              <c>40</c>
+              <c>7</c>
+            </r>
+            <r>
+              <c>41</c>
+              <c>0</c>
+            </r>
+            <r>
+              <c>42</c>
+              <c>1</c>
+            </r>
+            <r>
+              <c>43</c>
+              <c>2</c>
+            </r>
+            <r>
+              <c>44</c>
+              <c>3</c>
+            </r>
+            <r>
+              <c>45</c>
+              <c>4</c>
+            </r>
+            <r>
+              <c>46</c>
+              <c>5</c>
+            </r>
+            <r>
+              <c>47</c>
+              <c>6</c>
+            </r>
+            <r>
+              <c>48</c>
+              <c>7</c>
+            </r>
+            <r>
+              <c>49</c>
+              <c>0</c>
+            </r>
+            <r>
+              <c>50</c>
+              <c>1</c>
+            </r>
+            <r>
+              <c>51</c>
+              <c>2</c>
+            </r>
+            <r>
+              <c>52</c>
+              <c>3</c>
+            </r>
+            <r>
+              <c>53</c>
+              <c>4</c>
+            </r>
+            <r>
+              <c>54</c>
+              <c>5</c>
+            </r>
+            <r>
+              <c>55</c>
+              <c>6</c>
+            </r>
+            <r>
+              <c>56</c>
+              <c>7</c>
+            </r>
+            <r>
+              <c>57</c>
+              <c>0</c>
+            </r>
+            <r>
+              <c>58</c>
+              <c>1</c>
+            </r>
+            <r>
+              <c>59</c>
+              <c>2</c>
+            </r>
+            <r>
+              <c>60</c>
+              <c>3</c>
+            </r>
+            <r>
+              <c>61</c>
+              <c>4</c>
+            </r>
+            <r>
+              <c>62</c>
+              <c>5</c>
+            </r>
+            <r>
+              <c>63</c>
+              <c>6</c>
+            </r>
+            <r>
+              <c>64</c>
+              <c>7</c>
+            </r>
+            <r>
+              <c>65</c>
+              <c>0</c>
+            </r>
+            <r>
+              <c>66</c>
+              <c>1</c>
+            </r>
+            <r>
+              <c>67</c>
+              <c>2</c>
+            </r>
+            <r>
+              <c>68</c>
+              <c>3</c>
+            </r>
+            <r>
+              <c>69</c>
+              <c>4</c>
+            </r>
+            <r>
+              <c>70</c>
+              <c>5</c>
+            </r>
+            <r>
+              <c>71</c>
+              <c>6</c>
+            </r>
+            <r>
+              <c>72</c>
+              <c>7</c>
+            </r>
+            <r>
+              <c>73</c>
+              <c>0</c>
+            </r>
+            <r>
+              <c>74</c>
+              <c>1</c>
+            </r>
+            <r>
+              <c>75</c>
+              <c>2</c>
+            </r>
+            <r>
+              <c>76</c>
+              <c>3</c>
+            </r>
+            <r>
+              <c>77</c>
+              <c>4</c>
+            </r>
+            <r>
+              <c>78</c>
+              <c>5</c>
+            </r>
+            <r>
+              <c>79</c>
+              <c>6</c>
+            </r>
+            <r>
+              <c>80</c>
+              <c>7</c>
+            </r>
+            <r>
+              <c>81</c>
+              <c>0</c>
+            </r>
+            <r>
+              <c>82</c>
+              <c>1</c>
+            </r>
+            <r>
+              <c>83</c>
+              <c>2</c>
+            </r>
+            <r>
+              <c>84</c>
+              <c>3</c>
+            </r>
+            <r>
+              <c>85</c>
+              <c>4</c>
+            </r>
+            <r>
+              <c>86</c>
+              <c>5</c>
+            </r>
+            <r>
+              <c>87</c>
+              <c>6</c>
+            </r>
+            <r>
+              <c>88</c>
+              <c>7</c>
+            </r>
+            <r>
+              <c>89</c>
+              <c>0</c>
+            </r>
+            <r>
+              <c>90</c>
+              <c>1</c>
+            </r>
+            <r>
+              <c>91</c>
+              <c>2</c>
+            </r>
+            <r>
+              <c>92</c>
+              <c>3</c>
+            </r>
+            <r>
+              <c>93</c>
+              <c>4</c>
+            </r>
+            <r>
+              <c>94</c>
+              <c>5</c>
+            </r>
+            <r>
+              <c>95</c>
+              <c>6</c>
+            </r>
+            <r>
+              <c>96</c>
+              <c>7</c>
+            </r>
+            <r>
+              <c>97</c>
+              <c>0</c>
+            </r>
+            <r>
+              <c>98</c>
+              <c>1</c>
+            </r>
+            <r>
+              <c>99</c>
+              <c>2</c>
+            </r>
+            <r>
+              <c>100</c>
+              <c>3</c>
+            </r>
+            <r>
+              <c>101</c>
+              <c>4</c>
+            </r>
+            <r>
+              <c>102</c>
+              <c>5</c>
+            </r>
+            <r>
+              <c>103</c>
+              <c>6</c>
+            </r>
+            <r>
+              <c>104</c>
+              <c>7</c>
+            </r>
+            <r>
+              <c>105</c>
+              <c>0</c>
+            </r>
+            <r>
+              <c>106</c>
+              <c>1</c>
+            </r>
+            <r>
+              <c>107</c>
+              <c>2</c>
+            </r>
+            <r>
+              <c>108</c>
+              <c>3</c>
+            </r>
+            <r>
+              <c>109</c>
+              <c>4</c>
+            </r>
+            <r>
+              <c>110</c>
+              <c>5</c>
+            </r>
+            <r>
+              <c>111</c>
+              <c>6</c>
+            </r>
+            <r>
+              <c>112</c>
+              <c>7</c>
+            </r>
+            <r>
+              <c>113</c>
+              <c>0</c>
+            </r>
+            <r>
+              <c>114</c>
+              <c>1</c>
+            </r>
+            <r>
+              <c>115</c>
+              <c>2</c>
+            </r>
+            <r>
+              <c>116</c>
+              <c>3</c>
+            </r>
+            <r>
+              <c>117</c>
+              <c>4</c>
+            </r>
+            <r>
+              <c>118</c>
+              <c>5</c>
+            </r>
+            <r>
+              <c>119</c>
+              <c>6</c>
+            </r>
+            <r>
+              <c>120</c>
+              <c>7</c>
+            </r>
+            <r>
+              <c>121</c>
+              <c>0</c>
+            </r>
+            <r>
+              <c>122</c>
+              <c>1</c>
+            </r>
+            <r>
+              <c>123</c>
+              <c>2</c>
+            </r>
+            <r>
+              <c>124</c>
+              <c>3</c>
+            </r>
+            <r>
+              <c>125</c>
+              <c>4</c>
+            </r>
+            <r>
+              <c>126</c>
+              <c>5</c>
+            </r>
+            <r>
+              <c>127</c>
+              <c>6</c>
+            </r>
+            <r>
+              <c>128</c>
+              <c>7</c>
+            </r>
+            <r>
+              <c>129</c>
+              <c>0</c>
+            </r>
+            <r>
+              <c>130</c>
+              <c>1</c>
+            </r>
+            <r>
+              <c>131</c>
+              <c>2</c>
+            </r>
+            <r>
+              <c>132</c>
+              <c>3</c>
+            </r>
+            <r>
+              <c>133</c>
+              <c>4</c>
+            </r>
+            <r>
+              <c>134</c>
+              <c>5</c>
+            </r>
+            <r>
+              <c>135</c>
+              <c>6</c>
+            </r>
+            <r>
+              <c>136</c>
+              <c>7</c>
+            </r>
+            <r>
+              <c>137</c>
+              <c>0</c>
+            </r>
+            <r>
+              <c>138</c>
+              <c>1</c>
+            </r>
+            <r>
+              <c>139</c>
+              <c>2</c>
+            </r>
+            <r>
+              <c>140</c>
+              <c>3</c>
+            </r>
+            <r>
+              <c>141</c>
+              <c>4</c>
+            </r>
+            <r>
+              <c>142</c>
+              <c>5</c>
+            </r>
+            <r>
+              <c>143</c>
+              <c>6</c>
+            </r>
+            <r>
+              <c>144</c>
+              <c>7</c>
+            </r>
+            <r>
+              <c>145</c>
+              <c>0</c>
+            </r>
+            <r>
+              <c>146</c>
+              <c>1</c>
+            </r>
+            <r>
+              <c>147</c>
+              <c>2</c>
+            </r>
+            <r>
+              <c>148</c>
+              <c>3</c>
+            </r>
+            <r>
+              <c>149</c>
+              <c>4</c>
+            </r>
+            <r>
+              <c>150</c>
+              <c>5</c>
+            </r>
+            <r>
+              <c>151</c>
+              <c>6</c>
+            </r>
+            <r>
+              <c>152</c>
+              <c>7</c>
+            </r>
+            <r>
+              <c>153</c>
+              <c>0</c>
+            </r>
+            <r>
+              <c>154</c>
+              <c>1</c>
+            </r>
+            <r>
+              <c>155</c>
+              <c>2</c>
+            </r>
+            <r>
+              <c>156</c>
+              <c>3</c>
+            </r>
+            <r>
+              <c>157</c>
+              <c>4</c>
+            </r>
+            <r>
+              <c>158</c>
+              <c>5</c>
+            </r>
+            <r>
+              <c>159</c>
+              <c>6</c>
+            </r>
+            <r>
+              <c>160</c>
+              <c>7</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Part 1</AnnotationText>
+          <DefaultAnnotationText>Part 1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Iteration" source="TextInput:" type="Byte" />
+            <Field name="Monkey" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="16">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="54" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="80" />
+          <Fields>
+            <Field name="Iteration" />
+            <Field name="Monkey" />
+          </Fields>
+          <Data>
+            <r>
+              <c>1</c>
+              <c>0</c>
+            </r>
+            <r>
+              <c>2</c>
+              <c>1</c>
+            </r>
+            <r>
+              <c>3</c>
+              <c>2</c>
+            </r>
+            <r>
+              <c>4</c>
+              <c>3</c>
+            </r>
+            <r>
+              <c>5</c>
+              <c>0</c>
+            </r>
+            <r>
+              <c>6</c>
+              <c>1</c>
+            </r>
+            <r>
+              <c>7</c>
+              <c>2</c>
+            </r>
+            <r>
+              <c>8</c>
+              <c>3</c>
+            </r>
+            <r>
+              <c>9</c>
+              <c>0</c>
+            </r>
+            <r>
+              <c>10</c>
+              <c>1</c>
+            </r>
+            <r>
+              <c>11</c>
+              <c>2</c>
+            </r>
+            <r>
+              <c>12</c>
+              <c>3</c>
+            </r>
+            <r>
+              <c>13</c>
+              <c>0</c>
+            </r>
+            <r>
+              <c>14</c>
+              <c>1</c>
+            </r>
+            <r>
+              <c>15</c>
+              <c>2</c>
+            </r>
+            <r>
+              <c>16</c>
+              <c>3</c>
+            </r>
+            <r>
+              <c>17</c>
+              <c>0</c>
+            </r>
+            <r>
+              <c>18</c>
+              <c>1</c>
+            </r>
+            <r>
+              <c>19</c>
+              <c>2</c>
+            </r>
+            <r>
+              <c>20</c>
+              <c>3</c>
+            </r>
+            <r>
+              <c>21</c>
+              <c>0</c>
+            </r>
+            <r>
+              <c>22</c>
+              <c>1</c>
+            </r>
+            <r>
+              <c>23</c>
+              <c>2</c>
+            </r>
+            <r>
+              <c>24</c>
+              <c>3</c>
+            </r>
+            <r>
+              <c>25</c>
+              <c>0</c>
+            </r>
+            <r>
+              <c>26</c>
+              <c>1</c>
+            </r>
+            <r>
+              <c>27</c>
+              <c>2</c>
+            </r>
+            <r>
+              <c>28</c>
+              <c>3</c>
+            </r>
+            <r>
+              <c>29</c>
+              <c>0</c>
+            </r>
+            <r>
+              <c>30</c>
+              <c>1</c>
+            </r>
+            <r>
+              <c>31</c>
+              <c>2</c>
+            </r>
+            <r>
+              <c>32</c>
+              <c>3</c>
+            </r>
+            <r>
+              <c>33</c>
+              <c>0</c>
+            </r>
+            <r>
+              <c>34</c>
+              <c>1</c>
+            </r>
+            <r>
+              <c>35</c>
+              <c>2</c>
+            </r>
+            <r>
+              <c>36</c>
+              <c>3</c>
+            </r>
+            <r>
+              <c>37</c>
+              <c>0</c>
+            </r>
+            <r>
+              <c>38</c>
+              <c>1</c>
+            </r>
+            <r>
+              <c>39</c>
+              <c>2</c>
+            </r>
+            <r>
+              <c>40</c>
+              <c>3</c>
+            </r>
+            <r>
+              <c>41</c>
+              <c>0</c>
+            </r>
+            <r>
+              <c>42</c>
+              <c>1</c>
+            </r>
+            <r>
+              <c>43</c>
+              <c>2</c>
+            </r>
+            <r>
+              <c>44</c>
+              <c>3</c>
+            </r>
+            <r>
+              <c>45</c>
+              <c>0</c>
+            </r>
+            <r>
+              <c>46</c>
+              <c>1</c>
+            </r>
+            <r>
+              <c>47</c>
+              <c>2</c>
+            </r>
+            <r>
+              <c>48</c>
+              <c>3</c>
+            </r>
+            <r>
+              <c>49</c>
+              <c>0</c>
+            </r>
+            <r>
+              <c>50</c>
+              <c>1</c>
+            </r>
+            <r>
+              <c>51</c>
+              <c>2</c>
+            </r>
+            <r>
+              <c>52</c>
+              <c>3</c>
+            </r>
+            <r>
+              <c>53</c>
+              <c>0</c>
+            </r>
+            <r>
+              <c>54</c>
+              <c>1</c>
+            </r>
+            <r>
+              <c>55</c>
+              <c>2</c>
+            </r>
+            <r>
+              <c>56</c>
+              <c>3</c>
+            </r>
+            <r>
+              <c>57</c>
+              <c>0</c>
+            </r>
+            <r>
+              <c>58</c>
+              <c>1</c>
+            </r>
+            <r>
+              <c>59</c>
+              <c>2</c>
+            </r>
+            <r>
+              <c>60</c>
+              <c>3</c>
+            </r>
+            <r>
+              <c>61</c>
+              <c>0</c>
+            </r>
+            <r>
+              <c>62</c>
+              <c>1</c>
+            </r>
+            <r>
+              <c>63</c>
+              <c>2</c>
+            </r>
+            <r>
+              <c>64</c>
+              <c>3</c>
+            </r>
+            <r>
+              <c>65</c>
+              <c>0</c>
+            </r>
+            <r>
+              <c>66</c>
+              <c>1</c>
+            </r>
+            <r>
+              <c>67</c>
+              <c>2</c>
+            </r>
+            <r>
+              <c>68</c>
+              <c>3</c>
+            </r>
+            <r>
+              <c>69</c>
+              <c>0</c>
+            </r>
+            <r>
+              <c>70</c>
+              <c>1</c>
+            </r>
+            <r>
+              <c>71</c>
+              <c>2</c>
+            </r>
+            <r>
+              <c>72</c>
+              <c>3</c>
+            </r>
+            <r>
+              <c>73</c>
+              <c>0</c>
+            </r>
+            <r>
+              <c>74</c>
+              <c>1</c>
+            </r>
+            <r>
+              <c>75</c>
+              <c>2</c>
+            </r>
+            <r>
+              <c>76</c>
+              <c>3</c>
+            </r>
+            <r>
+              <c>77</c>
+              <c>0</c>
+            </r>
+            <r>
+              <c>78</c>
+              <c>1</c>
+            </r>
+            <r>
+              <c>79</c>
+              <c>2</c>
+            </r>
+            <r>
+              <c>80</c>
+              <c>3</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Example</AnnotationText>
+          <DefaultAnnotationText>Example</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Iteration" source="TextInput:" type="Byte" />
+            <Field name="Monkey" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="19">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="246" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Worry" selected="True" type="Double" size="8" />
+            <SelectField field="Worry Equation" selected="False" />
+            <SelectField field="Expression" selected="False" />
+            <SelectField field="MonkeyIfTrue" selected="False" />
+            <SelectField field="MonkeyifFalse" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="ItemID" source="TextInput:" type="Byte" />
+            <Field name="MonkeyItemID" source="TextInput:" type="Byte" />
+            <Field name="Monkey" source="TextInput:" type="Byte" />
+            <Field name="Worry" source="TextInput:" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="20">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
+        <Position x="162" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UseFileInput value="False" />
+          <Name>Input20</Name>
+          <Abbrev />
+          <ShowFieldMap value="False" />
+          <Optional value="False" />
+          <TextInput>
+            <Configuration>
+              <NumRows value="4" />
+              <Fields>
+                <Field name="Monkey" />
+                <Field name="Worry Equation" />
+                <Field name="Expression" />
+                <Field name="MonkeyIfTrue" />
+                <Field name="MonkeyifFalse" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>2</c>
+                  <c>[Worry] * [Worry]</c>
+                  <c>13</c>
+                  <c>1</c>
+                  <c>3</c>
+                </r>
+                <r>
+                  <c>0</c>
+                  <c>[Worry] * 19</c>
+                  <c>23</c>
+                  <c>2</c>
+                  <c>3</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>[Worry] + 6</c>
+                  <c>19</c>
+                  <c>2</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>3</c>
+                  <c>[Worry] + 3</c>
+                  <c>17</c>
+                  <c>0</c>
+                  <c>1</c>
+                </r>
+              </Data>
+            </Configuration>
+          </TextInput>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Input</DefaultAnnotationText>
+          <Left value="True" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Monkey" source="TextInput:" type="Byte" />
+            <Field name="Worry Equation" size="17" source="TextInput:" type="String" />
+            <Field name="Expression" source="TextInput:" type="Byte" />
+            <Field name="MonkeyIfTrue" source="TextInput:" type="Byte" />
+            <Field name="MonkeyifFalse" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroInput" />
+    </Node>
+    <Node ToolID="21">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="402" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Monkey" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Monkey" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_Monkey" selected="False" rename="Right_Monkey" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="Iteration" source="File: D:\Users\clmc9601\Documents\Alteryx\Advent-of-Code-solutions\2022 Alteryx\AoC Day 11 Part 2 Iterations.yxdb" type="Int32" />
+            <Field name="Monkey" source="Formula: [Tile_SequenceNum]-1" type="Int32" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="Monkey" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field name="Iteration" source="File: D:\Users\clmc9601\Documents\Alteryx\Advent-of-Code-solutions\2022 Alteryx\AoC Day 11 Part 2 Iterations.yxdb" type="Int32" />
+            <Field name="Monkey" source="Formula: [Tile_SequenceNum]-1" type="Int32" />
+            <Field name="Worry Equation" size="17" source="TextInput:" type="String" />
+            <Field name="Expression" source="TextInput:" type="Byte" />
+            <Field name="MonkeyIfTrue" source="TextInput:" type="Byte" />
+            <Field name="MonkeyifFalse" source="TextInput:" type="Byte" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="Monkey" order="" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="Monkey" source="TextInput:" type="Byte" />
+            <Field name="Worry Equation" size="17" source="TextInput:" type="String" />
+            <Field name="Expression" source="TextInput:" type="Byte" />
+            <Field name="MonkeyIfTrue" source="TextInput:" type="Byte" />
+            <Field name="MonkeyifFalse" source="TextInput:" type="Byte" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="Monkey" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="22">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="918" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Iteration" selected="False" />
+            <SelectField field="Worry Equation" selected="False" />
+            <SelectField field="Expression" selected="False" />
+            <SelectField field="MonkeyIfTrue" selected="False" />
+            <SelectField field="MonkeyifFalse" selected="False" />
+            <SelectField field="Evaluation" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="ItemID" source="TextInput:" type="Byte" />
+            <Field name="MonkeyItemID" source="TextInput:" type="Byte" />
+            <Field name="Monkey" source="(Multiple Sources)" type="Int32" />
+            <Field name="Worry" source="(Multiple Sources)" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="23">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="150" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">AoC Day 11 Part 2 Iterations.yxdb</File>
+          <FormatSpecificOptions />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>AoC Day 11 Part 2 Iterations.yxdb</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Iteration" source="File: D:\Users\clmc9601\Documents\Alteryx\Advent-of-Code-solutions\2022 Alteryx\AoC Day 11 Part 2 Iterations.yxdb" type="Int32" />
+            <Field name="Monkey" source="Formula: [Tile_SequenceNum]-1" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="30">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="810" y="414" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Monkey" action="GroupBy" rename="Monkey" />
+            <SummarizeField field="ItemID" action="Count" rename="Count" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Monkey" source="Summarize: GroupBy - Monkey" type="Byte" />
+            <Field name="Count" source="Summarize: Count" type="Int64" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="Monkey" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="19" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="True" />
+      <Destination ToolID="21" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="20" Connection="Output" />
+      <Destination ToolID="21" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Join" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="6" Connection="Left" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="30" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Output" />
+      <Destination ToolID="22" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="True" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="19" Connection="Output" />
+      <Destination ToolID="6" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="21" Connection="Join" />
+      <Destination ToolID="6" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="22" Connection="Output" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="23" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="30" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <Constants>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Macro Output (8)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Macro Output (11)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Macro Input (20)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+    </Constants>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>AoCDay11Iterative</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="dc738b7e-83b5-469f-a7bc-13822786a6d0" />
+      <Telemetry>
+        <PreviousWorkflowId value="f02ddc1d-cab8-4166-9c9a-e0355c5f4f60" />
+        <OriginWorkflowId value="dc738b7e-83b5-469f-a7bc-13822786a6d0" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="False" />
+    </Events>
+    <RuntimeProperties>
+      <Actions />
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Tab (2)</Name>
+          <ToolId value="2" />
+          <Questions>
+            <Question>
+              <Type>MacroInput</Type>
+              <Description />
+              <Name>Macro Input (1)</Name>
+              <ToolId value="1" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description>Macro Output (8)</Description>
+              <Name>Macro Output (8)</Name>
+              <ToolId value="8" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description>Macro Output (11)</Description>
+              <Name>Macro Output (11)</Name>
+              <ToolId value="11" />
+            </Question>
+            <Question>
+              <Type>MacroInput</Type>
+              <Description />
+              <Name>Macro Input (20)</Name>
+              <ToolId value="20" />
+            </Question>
+          </Questions>
+        </Question>
+      </Questions>
+      <ModuleType>Macro</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImageStd value="39" />
+      <MacroInputs />
+      <MacroOutputs />
+      <IterativeMacro>
+        <Input>Input1</Input>
+        <Output>Iteration</Output>
+        <IterationLimit value="80002" />
+        <LimitBehavior>Ignore</LimitBehavior>
+        <OutputMode>AutoByName</OutputMode>
+      </IterativeMacro>
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="1" Selected="True" />
+        <Tool ToolId="8" Selected="True" />
+        <Tool ToolId="11" Selected="True" />
+        <Tool ToolId="20" Selected="True" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>

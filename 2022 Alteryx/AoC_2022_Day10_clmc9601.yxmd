@@ -1,0 +1,849 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2021.2">
+  <Nodes>
+    <Node ToolID="18">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="54" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="146" />
+          <Fields>
+            <Field name="data" />
+          </Fields>
+          <Data>
+            <r>
+              <c>addx 15</c>
+            </r>
+            <r>
+              <c>addx -11</c>
+            </r>
+            <r>
+              <c>addx 6</c>
+            </r>
+            <r>
+              <c>addx -3</c>
+            </r>
+            <r>
+              <c>addx 5</c>
+            </r>
+            <r>
+              <c>addx -1</c>
+            </r>
+            <r>
+              <c>addx -8</c>
+            </r>
+            <r>
+              <c>addx 13</c>
+            </r>
+            <r>
+              <c>addx 4</c>
+            </r>
+            <r>
+              <c>noop</c>
+            </r>
+            <r>
+              <c>addx -1</c>
+            </r>
+            <r>
+              <c>addx 5</c>
+            </r>
+            <r>
+              <c>addx -1</c>
+            </r>
+            <r>
+              <c>addx 5</c>
+            </r>
+            <r>
+              <c>addx -1</c>
+            </r>
+            <r>
+              <c>addx 5</c>
+            </r>
+            <r>
+              <c>addx -1</c>
+            </r>
+            <r>
+              <c>addx 5</c>
+            </r>
+            <r>
+              <c>addx -1</c>
+            </r>
+            <r>
+              <c>addx -35</c>
+            </r>
+            <r>
+              <c>addx 1</c>
+            </r>
+            <r>
+              <c>addx 24</c>
+            </r>
+            <r>
+              <c>addx -19</c>
+            </r>
+            <r>
+              <c>addx 1</c>
+            </r>
+            <r>
+              <c>addx 16</c>
+            </r>
+            <r>
+              <c>addx -11</c>
+            </r>
+            <r>
+              <c>noop</c>
+            </r>
+            <r>
+              <c>noop</c>
+            </r>
+            <r>
+              <c>addx 21</c>
+            </r>
+            <r>
+              <c>addx -15</c>
+            </r>
+            <r>
+              <c>noop</c>
+            </r>
+            <r>
+              <c>noop</c>
+            </r>
+            <r>
+              <c>addx -3</c>
+            </r>
+            <r>
+              <c>addx 9</c>
+            </r>
+            <r>
+              <c>addx 1</c>
+            </r>
+            <r>
+              <c>addx -3</c>
+            </r>
+            <r>
+              <c>addx 8</c>
+            </r>
+            <r>
+              <c>addx 1</c>
+            </r>
+            <r>
+              <c>addx 5</c>
+            </r>
+            <r>
+              <c>noop</c>
+            </r>
+            <r>
+              <c>noop</c>
+            </r>
+            <r>
+              <c>noop</c>
+            </r>
+            <r>
+              <c>noop</c>
+            </r>
+            <r>
+              <c>noop</c>
+            </r>
+            <r>
+              <c>addx -36</c>
+            </r>
+            <r>
+              <c>noop</c>
+            </r>
+            <r>
+              <c>addx 1</c>
+            </r>
+            <r>
+              <c>addx 7</c>
+            </r>
+            <r>
+              <c>noop</c>
+            </r>
+            <r>
+              <c>noop</c>
+            </r>
+            <r>
+              <c>noop</c>
+            </r>
+            <r>
+              <c>addx 2</c>
+            </r>
+            <r>
+              <c>addx 6</c>
+            </r>
+            <r>
+              <c>noop</c>
+            </r>
+            <r>
+              <c>noop</c>
+            </r>
+            <r>
+              <c>noop</c>
+            </r>
+            <r>
+              <c>noop</c>
+            </r>
+            <r>
+              <c>noop</c>
+            </r>
+            <r>
+              <c>addx 1</c>
+            </r>
+            <r>
+              <c>noop</c>
+            </r>
+            <r>
+              <c>noop</c>
+            </r>
+            <r>
+              <c>addx 7</c>
+            </r>
+            <r>
+              <c>addx 1</c>
+            </r>
+            <r>
+              <c>noop</c>
+            </r>
+            <r>
+              <c>addx -13</c>
+            </r>
+            <r>
+              <c>addx 13</c>
+            </r>
+            <r>
+              <c>addx 7</c>
+            </r>
+            <r>
+              <c>noop</c>
+            </r>
+            <r>
+              <c>addx 1</c>
+            </r>
+            <r>
+              <c>addx -33</c>
+            </r>
+            <r>
+              <c>noop</c>
+            </r>
+            <r>
+              <c>noop</c>
+            </r>
+            <r>
+              <c>noop</c>
+            </r>
+            <r>
+              <c>addx 2</c>
+            </r>
+            <r>
+              <c>noop</c>
+            </r>
+            <r>
+              <c>noop</c>
+            </r>
+            <r>
+              <c>noop</c>
+            </r>
+            <r>
+              <c>addx 8</c>
+            </r>
+            <r>
+              <c>noop</c>
+            </r>
+            <r>
+              <c>addx -1</c>
+            </r>
+            <r>
+              <c>addx 2</c>
+            </r>
+            <r>
+              <c>addx 1</c>
+            </r>
+            <r>
+              <c>noop</c>
+            </r>
+            <r>
+              <c>addx 17</c>
+            </r>
+            <r>
+              <c>addx -9</c>
+            </r>
+            <r>
+              <c>addx 1</c>
+            </r>
+            <r>
+              <c>addx 1</c>
+            </r>
+            <r>
+              <c>addx -3</c>
+            </r>
+            <r>
+              <c>addx 11</c>
+            </r>
+            <r>
+              <c>noop</c>
+            </r>
+            <r>
+              <c>noop</c>
+            </r>
+            <r>
+              <c>addx 1</c>
+            </r>
+            <r>
+              <c>noop</c>
+            </r>
+            <r>
+              <c>addx 1</c>
+            </r>
+            <r>
+              <c>noop</c>
+            </r>
+            <r>
+              <c>noop</c>
+            </r>
+            <r>
+              <c>addx -13</c>
+            </r>
+            <r>
+              <c>addx -19</c>
+            </r>
+            <r>
+              <c>addx 1</c>
+            </r>
+            <r>
+              <c>addx 3</c>
+            </r>
+            <r>
+              <c>addx 26</c>
+            </r>
+            <r>
+              <c>addx -30</c>
+            </r>
+            <r>
+              <c>addx 12</c>
+            </r>
+            <r>
+              <c>addx -1</c>
+            </r>
+            <r>
+              <c>addx 3</c>
+            </r>
+            <r>
+              <c>addx 1</c>
+            </r>
+            <r>
+              <c>noop</c>
+            </r>
+            <r>
+              <c>noop</c>
+            </r>
+            <r>
+              <c>noop</c>
+            </r>
+            <r>
+              <c>addx -9</c>
+            </r>
+            <r>
+              <c>addx 18</c>
+            </r>
+            <r>
+              <c>addx 1</c>
+            </r>
+            <r>
+              <c>addx 2</c>
+            </r>
+            <r>
+              <c>noop</c>
+            </r>
+            <r>
+              <c>noop</c>
+            </r>
+            <r>
+              <c>addx 9</c>
+            </r>
+            <r>
+              <c>noop</c>
+            </r>
+            <r>
+              <c>noop</c>
+            </r>
+            <r>
+              <c>noop</c>
+            </r>
+            <r>
+              <c>addx -1</c>
+            </r>
+            <r>
+              <c>addx 2</c>
+            </r>
+            <r>
+              <c>addx -37</c>
+            </r>
+            <r>
+              <c>addx 1</c>
+            </r>
+            <r>
+              <c>addx 3</c>
+            </r>
+            <r>
+              <c>noop</c>
+            </r>
+            <r>
+              <c>addx 15</c>
+            </r>
+            <r>
+              <c>addx -21</c>
+            </r>
+            <r>
+              <c>addx 22</c>
+            </r>
+            <r>
+              <c>addx -6</c>
+            </r>
+            <r>
+              <c>addx 1</c>
+            </r>
+            <r>
+              <c>noop</c>
+            </r>
+            <r>
+              <c>addx 2</c>
+            </r>
+            <r>
+              <c>addx 1</c>
+            </r>
+            <r>
+              <c>noop</c>
+            </r>
+            <r>
+              <c>addx -10</c>
+            </r>
+            <r>
+              <c>noop</c>
+            </r>
+            <r>
+              <c>noop</c>
+            </r>
+            <r>
+              <c>addx 20</c>
+            </r>
+            <r>
+              <c>addx 1</c>
+            </r>
+            <r>
+              <c>addx 2</c>
+            </r>
+            <r>
+              <c>addx 2</c>
+            </r>
+            <r>
+              <c>addx -6</c>
+            </r>
+            <r>
+              <c>addx -11</c>
+            </r>
+            <r>
+              <c>noop</c>
+            </r>
+            <r>
+              <c>noop</c>
+            </r>
+            <r>
+              <c>noop</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Example</AnnotationText>
+          <DefaultAnnotationText>Example</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="30">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="175" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="1" field="X" size="8" type="Int64" />
+            <FormulaField expression="IF [data]='noop'&#xA;THEN 1&#xA;ELSE 2&#xA;ENDIF" field="CycleAdd" size="2" type="Int16" />
+            <FormulaField expression="tonumber(GetWord([data], 1))" field="XAdd" size="4" type="Int32" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Initialize X, calculate number of cycles per command and register increase</AnnotationText>
+          <DefaultAnnotationText>X = 1
+CycleAdd = IF [data]='noop'
+THEN 1
+ELSE 2
+ENDIF
+XAdd = tonumber(GetWord([d...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="31">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.GenerateRows.GenerateRows">
+        <Position x="283" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="False" />
+          <UpdateField_Name>CycleAdd</UpdateField_Name>
+          <CreateField_Name>RowCount</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <Expression_Init>1</Expression_Init>
+          <Expression_Cond>RowCount &lt;= CycleAdd</Expression_Cond>
+          <Expression_Loop>RowCount + 1</Expression_Loop>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Split into cycles</AnnotationText>
+          <DefaultAnnotationText>Split into cycles</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxGenerateRows" />
+    </Node>
+    <Node ToolID="32">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+        <Position x="391" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldName>CycleID</FieldName>
+          <StartValue>1</StartValue>
+          <FieldType>Int32</FieldType>
+          <FieldSize>6</FieldSize>
+          <Position>0</Position>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Count cycles</AnnotationText>
+          <DefaultAnnotationText>Count cycles</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+    </Node>
+    <Node ToolID="33">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="583" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[X]*[CycleID]" field="Strength" size="8" type="Int64" />
+            <FormulaField expression="[X]-1" field="SpriteL" size="4" type="Int32" />
+            <FormulaField expression="[X]+1" field="SpriteR" size="4" type="Int32" />
+            <FormulaField expression="IF Mod([CycleID],40) IN ([X], [SpriteL], [SpriteR])&#xA;THEN '★'&#xA;ELSE '_._'&#xA;ENDIF" field="Lit" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Calculate cycle strength and whether pixels are lit</AnnotationText>
+          <DefaultAnnotationText>Strength = [X]*[CycleID]
+SpriteL = [X]-1
+SpriteR = [X]+1
+Lit = IF Mod([CycleID],...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="34">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+        <Position x="475" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="True" />
+          <UpdateField_Name>X</UpdateField_Name>
+          <CreateField_Name>X</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <OtherRows>Nearest</OtherRows>
+          <NumRows value="1" />
+          <Expression>IF Contains([data], 'addx') and [RowCount]=2
+THEN [Row-1:X]+[XAdd]
+ELSE [Row-1:X]
+ENDIF</Expression>
+          <GroupByFields />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Update register values</AnnotationText>
+          <DefaultAnnotationText>IF Contains([data], 'addx') and [RowCount]=2
+THEN [Row-1:X]+[...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+    </Node>
+    <Node ToolID="36">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="895" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Strength" action="Sum" rename="Sum_Strength" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="37">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="787" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>Mod([CycleID]-20, 40)==0 or [CycleID]=20</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Only include Cycle 20 and every 40th after</AnnotationText>
+          <DefaultAnnotationText>Mod([CycleID]-20, 40)==0 or [CycleID]=20</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="38">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Tile.Tile">
+        <Position x="787" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Method>EqualRecords</Method>
+          <EqualRecords>
+            <NumTiles value="6" />
+            <SortLocale>1033</SortLocale>
+          </EqualRecords>
+          <GroupFields orderChanged="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Split into display lines</AnnotationText>
+          <DefaultAnnotationText>Split into display lines</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTile" />
+    </Node>
+    <Node ToolID="39">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="895" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Tile_Num" action="GroupBy" rename="Tile_Num" />
+            <SummarizeField field="Lit" action="Concat" rename="Concat_Lit">
+              <Concat_Start />
+              <Separator />
+              <Concat_End />
+            </SummarizeField>
+            <SummarizeField field="Lit" action="Concat" rename="Concat_Lit_readable">
+              <Concat_Start />
+              <Separator><![CDATA[ ]]></Separator>
+              <Concat_End />
+            </SummarizeField>
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="43">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="991" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="1033">
+            <Field field="Tile_Num" order="Ascending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Tile_Num - Ascending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="44">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1111" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>D:\Users\clmc9601\AppData\Local\Temp\61\Engine_35648_75628ba32947492db34339dcd08e9d39_\Engine_62316_6bcc9548a2c742ec90065452d0ccc65d_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="45">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">AoC_2022_Input_Day_10.csv</File>
+          <FormatSpecificOptions>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreErrors>False</IgnoreErrors>
+            <AllowShareWrite>False</AllowShareWrite>
+            <ImportLine>1</ImportLine>
+            <FieldLen>254000</FieldLen>
+            <SingleThreadRead>False</SingleThreadRead>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <Delimeter>,</Delimeter>
+            <QuoteRecordBreak>False</QuoteRecordBreak>
+            <CodePage>65001</CodePage>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>AoC_2022_Input_Day_10.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="data" size="254000" source="File: D:\Users\clmc9601\Documents\Alteryx\Advent-of-Code-solutions\2022 Alteryx\AoC_2022_Input_Day_10.csv" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="30" Connection="Output" />
+      <Destination ToolID="31" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="31" Connection="Output" />
+      <Destination ToolID="32" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="32" Connection="Output" />
+      <Destination ToolID="34" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="33" Connection="Output" />
+      <Destination ToolID="37" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="33" Connection="Output" />
+      <Destination ToolID="38" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="34" Connection="Output" />
+      <Destination ToolID="33" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="37" Connection="True" />
+      <Destination ToolID="36" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="38" Connection="Output" />
+      <Destination ToolID="39" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="39" Connection="Output" />
+      <Destination ToolID="43" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="43" Connection="Output" />
+      <Destination ToolID="44" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="45" Connection="Output" />
+      <Destination ToolID="30" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>AoC_2022_Day10_clmc9601</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="91422cb2-f1c4-439c-943d-47b73b3b745d" />
+      <Telemetry>
+        <PreviousWorkflowId value="3632a1dd-bbf2-40a3-b6e4-b6e208a9c005" />
+        <OriginWorkflowId value="e4b763f2-04a0-4b9e-89b3-1ef240206095" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

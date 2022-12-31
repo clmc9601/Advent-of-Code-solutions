@@ -1,0 +1,896 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2021.2">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
+        <Position x="54" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UseFileInput value="False" />
+          <Name>AllNeighbors</Name>
+          <Abbrev />
+          <ShowFieldMap value="False" />
+          <Optional value="False" />
+          <TextInput>
+            <Configuration>
+              <NumRows value="11" />
+              <Fields>
+                <Field name="RowID" />
+                <Field name="ColID" />
+                <Field name="Elevation" />
+                <Field name="NeighborCol" />
+                <Field name="NeighborRow" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>1</c>
+                  <c>1</c>
+                  <c>1</c>
+                  <c>2</c>
+                  <c>1</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>2</c>
+                  <c>2</c>
+                  <c>3</c>
+                  <c>1</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>3</c>
+                  <c>1</c>
+                  <c>4</c>
+                  <c>1</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>4</c>
+                  <c>1</c>
+                  <c>5</c>
+                  <c>1</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>5</c>
+                  <c>1</c>
+                  <c>6</c>
+                  <c>1</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>6</c>
+                  <c>1</c>
+                  <c>7</c>
+                  <c>1</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>7</c>
+                  <c>1</c>
+                  <c>8</c>
+                  <c>1</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>8</c>
+                  <c>3</c>
+                  <c>9</c>
+                  <c>1</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>9</c>
+                  <c>3</c>
+                  <c>10</c>
+                  <c>1</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>10</c>
+                  <c>3</c>
+                  <c>11</c>
+                  <c>1</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>11</c>
+                  <c>3</c>
+                  <c>12</c>
+                  <c>1</c>
+                </r>
+              </Data>
+            </Configuration>
+          </TextInput>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Input</DefaultAnnotationText>
+          <Left value="True" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="RowID" source="TextInput:" type="Byte" />
+            <Field name="ColID" source="TextInput:" type="Byte" />
+            <Field name="Elevation" source="TextInput:" type="Byte" />
+            <Field name="NeighborCol" source="TextInput:" type="Byte" />
+            <Field name="NeighborRow" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
+        <Position x="54" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UseFileInput value="False" />
+          <Name>CurrentPosition</Name>
+          <Abbrev />
+          <ShowFieldMap value="False" />
+          <Optional value="False" />
+          <TextInput>
+            <Configuration>
+              <NumRows value="1" />
+              <Fields>
+                <Field name="Penalty" />
+                <Field name="RowID" />
+                <Field name="ColID" />
+                <Field name="Elevation" />
+                <Field name="Steps" />
+                <Field name="Pairs" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>6666666777777777</c>
+                  <c>21</c>
+                  <c>1</c>
+                  <c>1</c>
+                  <c>6666666777777777</c>
+                  <c>ToString([RowID])+','+ToString([ColID])+';'</c>
+                </r>
+              </Data>
+            </Configuration>
+          </TextInput>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Input</DefaultAnnotationText>
+          <Left value="True" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Penalty" source="TextInput:" type="Int64" />
+            <Field name="RowID" source="TextInput:" type="Byte" />
+            <Field name="ColID" source="TextInput:" type="Byte" />
+            <Field name="Elevation" source="TextInput:" type="Byte" />
+            <Field name="Steps" source="TextInput:" type="Int64" />
+            <Field name="Pairs" size="43" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroInput" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="174" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="RowID" />
+            <Field field="ColID" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="NeighborRow" />
+            <Field field="NeighborCol" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_RowID" selected="True" rename="Right_RowID" input="Right_" />
+                <SelectField field="Right_ColID" selected="True" rename="Right_ColID" input="Right_" />
+                <SelectField field="Right_Elevation" selected="True" rename="Right_Elevation" input="Right_" />
+                <SelectField field="Right_NeighborCol" selected="True" rename="Right_NeighborCol" input="Right_" />
+                <SelectField field="Right_NeighborRow" selected="True" rename="Right_NeighborRow" input="Right_" />
+                <SelectField field="Left_NeighborCol" selected="False" input="Left_" />
+                <SelectField field="Left_NeighborRow" selected="False" input="Left_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="Penalty" source="TextInput:" type="Int64" />
+            <Field name="RowID" source="TextInput:" type="Byte" />
+            <Field name="ColID" source="TextInput:" type="Byte" />
+            <Field name="Elevation" source="TextInput:" type="Byte" />
+            <Field name="Steps" source="TextInput:" type="Int64" />
+            <Field name="Pairs" size="43" source="TextInput:" type="String" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="RowID" />
+            <Field field="ColID" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field name="Penalty" source="TextInput:" type="Int64" />
+            <Field name="RowID" source="TextInput:" type="Byte" />
+            <Field name="ColID" source="TextInput:" type="Byte" />
+            <Field name="Elevation" source="TextInput:" type="Byte" />
+            <Field name="Steps" source="TextInput:" type="Int64" />
+            <Field name="Pairs" size="43" source="TextInput:" type="String" />
+            <Field name="Right_RowID" source="TextInput:" type="Byte" />
+            <Field name="Right_ColID" source="TextInput:" type="Byte" />
+            <Field name="Right_Elevation" source="TextInput:" type="Byte" />
+            <Field name="Right_NeighborCol" source="TextInput:" type="Byte" />
+            <Field name="Right_NeighborRow" source="TextInput:" type="Byte" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="RowID" order="" />
+            <Field field="ColID" order="" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="RowID" source="TextInput:" type="Byte" />
+            <Field name="ColID" source="TextInput:" type="Byte" />
+            <Field name="Elevation" source="TextInput:" type="Byte" />
+            <Field name="NeighborCol" source="TextInput:" type="Byte" />
+            <Field name="NeighborRow" source="TextInput:" type="Byte" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="NeighborRow" />
+            <Field field="NeighborCol" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="270" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression><![CDATA[!Contains([Pairs], ';'+ToString([Right_RowID])+','+ToString([Right_ColID])+';')
+]]></Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Reject the option to repeat previous locations</AnnotationText>
+          <DefaultAnnotationText><![CDATA[!Contains([Pairs], ';'+ToString([Right_RowID])+','+ToString([Right_ColID])+';')
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="Penalty" source="TextInput:" type="Int64" />
+            <Field name="RowID" source="TextInput:" type="Byte" />
+            <Field name="ColID" source="TextInput:" type="Byte" />
+            <Field name="Elevation" source="TextInput:" type="Byte" />
+            <Field name="Steps" source="TextInput:" type="Int64" />
+            <Field name="Pairs" size="43" source="TextInput:" type="String" />
+            <Field name="Right_RowID" source="TextInput:" type="Byte" />
+            <Field name="Right_ColID" source="TextInput:" type="Byte" />
+            <Field name="Right_Elevation" source="TextInput:" type="Byte" />
+            <Field name="Right_NeighborCol" source="TextInput:" type="Byte" />
+            <Field name="Right_NeighborRow" source="TextInput:" type="Byte" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="RowID" order="" />
+            <Field field="ColID" order="" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="Penalty" source="TextInput:" type="Int64" />
+            <Field name="RowID" source="TextInput:" type="Byte" />
+            <Field name="ColID" source="TextInput:" type="Byte" />
+            <Field name="Elevation" source="TextInput:" type="Byte" />
+            <Field name="Steps" source="TextInput:" type="Int64" />
+            <Field name="Pairs" size="43" source="TextInput:" type="String" />
+            <Field name="Right_RowID" source="TextInput:" type="Byte" />
+            <Field name="Right_ColID" source="TextInput:" type="Byte" />
+            <Field name="Right_Elevation" source="TextInput:" type="Byte" />
+            <Field name="Right_NeighborCol" source="TextInput:" type="Byte" />
+            <Field name="Right_NeighborRow" source="TextInput:" type="Byte" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="RowID" order="" />
+            <Field field="ColID" order="" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="522" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[Steps]+1" field="Steps" size="8" type="Int64" />
+            <FormulaField expression="[Pairs]+ToString([Right_RowID])+','+ToString([Right_ColID])+';'" field="Pairs" size="43" type="String" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Update number of steps and cumulative path string</AnnotationText>
+          <DefaultAnnotationText>Steps = [Steps]+1
+Pairs = [Pairs]+ToString([Right_RowID])+','+ToString([Right_Co...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Penalty" source="TextInput:" type="Int64" />
+            <Field name="RowID" source="TextInput:" type="Byte" />
+            <Field name="ColID" source="TextInput:" type="Byte" />
+            <Field name="Elevation" source="TextInput:" type="Byte" />
+            <Field name="Steps" source="Formula: [Steps]+1" type="Int64" />
+            <Field name="Pairs" size="43" source="Formula: [Pairs]+ToString([Right_RowID])+','+ToString([Right_ColID])+';'" type="String" />
+            <Field name="Right_RowID" source="TextInput:" type="Byte" />
+            <Field name="Right_ColID" source="TextInput:" type="Byte" />
+            <Field name="Right_Elevation" source="TextInput:" type="Byte" />
+            <Field name="Right_NeighborCol" source="TextInput:" type="Byte" />
+            <Field name="Right_NeighborRow" source="TextInput:" type="Byte" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="Right_RowID" order="Asc" />
+            <Field field="Right_ColID" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="618" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Steps" selected="True" />
+            <SelectField field="Pairs" selected="True" />
+            <SelectField field="Right_RowID" selected="True" rename="RowID" />
+            <SelectField field="Right_ColID" selected="True" rename="ColID" />
+            <SelectField field="Right_Elevation" selected="True" rename="Elevation" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Steps" source="Formula: [Steps]+1" type="Int64" />
+            <Field name="Pairs" size="43" source="Formula: [Pairs]+ToString([Right_RowID])+','+ToString([Right_ColID])+';'" type="String" />
+            <Field name="RowID" source="TextInput:" type="Byte" />
+            <Field name="ColID" source="TextInput:" type="Byte" />
+            <Field name="Elevation" source="TextInput:" type="Byte" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="RowID" order="Asc" />
+            <Field field="ColID" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="714" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>// [RowID] = 21 and [ColID]=1 // part 1 , E to S
+// [RowID] = 21 and [ColID] = 59 // part 1, S to E
+[Elevation]=1 // part 2</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Check if it reached the end</AnnotationText>
+          <DefaultAnnotationText>// [RowID] = 21 and [ColID]=1 // part 1 , E to S
+// [RowID] = 21 and [ColID] = 5...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="Steps" source="Formula: [Steps]+1" type="Int64" />
+            <Field name="Pairs" size="43" source="Formula: [Pairs]+ToString([Right_RowID])+','+ToString([Right_ColID])+';'" type="String" />
+            <Field name="RowID" source="TextInput:" type="Byte" />
+            <Field name="ColID" source="TextInput:" type="Byte" />
+            <Field name="Elevation" source="TextInput:" type="Byte" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="RowID" order="Asc" />
+            <Field field="ColID" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="Steps" source="Formula: [Steps]+1" type="Int64" />
+            <Field name="Pairs" size="43" source="Formula: [Pairs]+ToString([Right_RowID])+','+ToString([Right_ColID])+';'" type="String" />
+            <Field name="RowID" source="TextInput:" type="Byte" />
+            <Field name="ColID" source="TextInput:" type="Byte" />
+            <Field name="Elevation" source="TextInput:" type="Byte" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="RowID" order="Asc" />
+            <Field field="ColID" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="906" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>Exit</Name>
+          <Abbrev />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Output</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="1206" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>Iterate</Name>
+          <Abbrev />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Output</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings>
+        <Position x="822" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output9">
+          <RecordInfo>
+            <Field name="Count" source="(Multiple Sources)" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings Macro="CountRecords.yxmc" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="906" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Steps" source="Formula: [Steps]+1" type="Int64" />
+            <Field name="Pairs" size="43" source="Formula: [Pairs]+ToString([Right_RowID])+','+ToString([Right_ColID])+';'" type="String" />
+            <Field name="RowID" source="TextInput:" type="Byte" />
+            <Field name="ColID" source="TextInput:" type="Byte" />
+            <Field name="Elevation" source="TextInput:" type="Byte" />
+            <Field name="Count" source="(Multiple Sources)" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1002" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression><![CDATA[[Count] = 0 ]]></Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Stop iterating if any paths have fnished</AnnotationText>
+          <DefaultAnnotationText><![CDATA[[Count] = 0 ]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="Steps" source="Formula: [Steps]+1" type="Int64" />
+            <Field name="Pairs" size="43" source="Formula: [Pairs]+ToString([Right_RowID])+','+ToString([Right_ColID])+';'" type="String" />
+            <Field name="RowID" source="TextInput:" type="Byte" />
+            <Field name="ColID" source="TextInput:" type="Byte" />
+            <Field name="Elevation" source="TextInput:" type="Byte" />
+            <Field name="Count" source="(Multiple Sources)" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="Steps" source="Formula: [Steps]+1" type="Int64" />
+            <Field name="Pairs" size="43" source="Formula: [Pairs]+ToString([Right_RowID])+','+ToString([Right_ColID])+';'" type="String" />
+            <Field name="RowID" source="TextInput:" type="Byte" />
+            <Field name="ColID" source="TextInput:" type="Byte" />
+            <Field name="Elevation" source="TextInput:" type="Byte" />
+            <Field name="Count" source="(Multiple Sources)" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="14">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1110" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Count" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Steps" source="Formula: [Steps]+1" type="Int64" />
+            <Field name="Pairs" size="43" source="Formula: [Pairs]+ToString([Right_RowID])+','+ToString([Right_ColID])+';'" type="String" />
+            <Field name="RowID" source="TextInput:" type="Byte" />
+            <Field name="ColID" source="TextInput:" type="Byte" />
+            <Field name="Elevation" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="23">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
+        <Position x="390" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UniqueFields>
+            <Field field="Right_RowID" />
+            <Field field="Right_ColID" />
+          </UniqueFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>If any two paths with the same number of steps reach the same location, only keep one path. It doesn't matter exactly how it got there.</AnnotationText>
+          <DefaultAnnotationText>If any two paths with the same number of steps reach the same location, only keep one path. It doesn't matter exactly how it got there.</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Unique">
+          <RecordInfo>
+            <Field name="Penalty" source="TextInput:" type="Int64" />
+            <Field name="RowID" source="TextInput:" type="Byte" />
+            <Field name="ColID" source="TextInput:" type="Byte" />
+            <Field name="Elevation" source="TextInput:" type="Byte" />
+            <Field name="Steps" source="TextInput:" type="Int64" />
+            <Field name="Pairs" size="43" source="TextInput:" type="String" />
+            <Field name="Right_RowID" source="TextInput:" type="Byte" />
+            <Field name="Right_ColID" source="TextInput:" type="Byte" />
+            <Field name="Right_Elevation" source="TextInput:" type="Byte" />
+            <Field name="Right_NeighborCol" source="TextInput:" type="Byte" />
+            <Field name="Right_NeighborRow" source="TextInput:" type="Byte" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="Right_RowID" order="Asc" />
+            <Field field="Right_ColID" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Duplicates">
+          <RecordInfo>
+            <Field name="Penalty" source="TextInput:" type="Int64" />
+            <Field name="RowID" source="TextInput:" type="Byte" />
+            <Field name="ColID" source="TextInput:" type="Byte" />
+            <Field name="Elevation" source="TextInput:" type="Byte" />
+            <Field name="Steps" source="TextInput:" type="Int64" />
+            <Field name="Pairs" size="43" source="TextInput:" type="String" />
+            <Field name="Right_RowID" source="TextInput:" type="Byte" />
+            <Field name="Right_ColID" source="TextInput:" type="Byte" />
+            <Field name="Right_Elevation" source="TextInput:" type="Byte" />
+            <Field name="Right_NeighborCol" source="TextInput:" type="Byte" />
+            <Field name="Right_NeighborRow" source="TextInput:" type="Byte" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="Right_RowID" order="Asc" />
+            <Field field="Right_ColID" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnique" />
+    </Node>
+    <Node ToolID="24">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="186" y="438" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="RowID" selected="True" rename="NeighborRow" />
+            <SelectField field="ColID" selected="True" rename="NeighborCol" />
+            <SelectField field="NeighborCol" selected="True" rename="ColID" />
+            <SelectField field="NeighborRow" selected="True" rename="RowID" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Use this for going from Start to End. Default goes End to Start</AnnotationText>
+          <DefaultAnnotationText>switch for going forwards vs backwards</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="NeighborRow" source="TextInput:" type="Byte" />
+            <Field name="NeighborCol" source="TextInput:" type="Byte" />
+            <Field name="Elevation" source="TextInput:" type="Byte" />
+            <Field name="ColID" source="TextInput:" type="Byte" />
+            <Field name="RowID" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="25">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="702" y="54" width="100" height="40" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>update part 2 here</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection Wireless="True">
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="24" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="4" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="4" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Join" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="True" />
+      <Destination ToolID="23" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="True" />
+      <Destination ToolID="11" Connection="Input8" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="False" />
+      <Destination ToolID="12" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output9" />
+      <Destination ToolID="12" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="True" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="True" />
+      <Destination ToolID="14" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="Output" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="23" Connection="Unique" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>AoCDay12Iterative</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="c417f947-a2f4-4ea6-ae59-9a6bb96d12f0" />
+      <Telemetry>
+        <PreviousWorkflowId value="82c82a33-dfd9-47f1-a5e8-6ba91400ff2e" />
+        <OriginWorkflowId value="c417f947-a2f4-4ea6-ae59-9a6bb96d12f0" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="False" />
+    </Events>
+    <RuntimeProperties>
+      <Actions />
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Tab (2)</Name>
+          <ToolId value="2" />
+          <Questions>
+            <Question>
+              <Type>MacroInput</Type>
+              <Description />
+              <Name>Macro Input (3)</Name>
+              <ToolId value="3" />
+            </Question>
+            <Question>
+              <Type>MacroInput</Type>
+              <Description />
+              <Name>Macro Input (1)</Name>
+              <ToolId value="1" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description>Macro Output (9)</Description>
+              <Name>Macro Output (9)</Name>
+              <ToolId value="9" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description>Macro Output (10)</Description>
+              <Name>Macro Output (10)</Name>
+              <ToolId value="10" />
+            </Question>
+          </Questions>
+        </Question>
+      </Questions>
+      <ModuleType>Macro</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImageStd value="39" />
+      <MacroInputs />
+      <MacroOutputs />
+      <IterativeMacro>
+        <Input>CurrentPosition</Input>
+        <Output>Iterate</Output>
+        <IterationLimit value="1000" />
+        <LimitBehavior>Ignore</LimitBehavior>
+        <OutputMode>AllSame</OutputMode>
+      </IterativeMacro>
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="1" Selected="True" />
+        <Tool ToolId="3" Selected="True" />
+        <Tool ToolId="9" Selected="True" />
+        <Tool ToolId="10" Selected="True" />
+        <Tool ToolId="11" Selected="True" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>

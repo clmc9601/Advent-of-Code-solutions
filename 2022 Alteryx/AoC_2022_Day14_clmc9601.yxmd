@@ -1,0 +1,3886 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2021.2">
+  <Nodes>
+    <Node ToolID="18">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="90" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="2" />
+          <Fields>
+            <Field name="data" />
+          </Fields>
+          <Data>
+            <r>
+              <c>498,4 -&gt; 498,6 -&gt; 496,6</c>
+            </r>
+            <r>
+              <c>503,4 -&gt; 502,4 -&gt; 502,9 -&gt; 494,9</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Example</AnnotationText>
+          <DefaultAnnotationText>Example</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="45">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="1639" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="1" />
+          <Fields>
+            <Field name="xsand" />
+            <Field name="ysand" />
+          </Fields>
+          <Data>
+            <r>
+              <c>500</c>
+              <c>0</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="133">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1279" y="474" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="-[yrock]/170*10" field="yrock_scaled" size="8" type="Double" />
+            <FormulaField expression="([xrock]-400)/200*10" field="xrock_scaled" size="8" type="Double" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[yrock_scaled = -[yrock]/170*10
+xrock_scaled = ([xrock]-400)/200*10
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="134">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.CreatePoints.CreatePoints">
+        <Position x="1351" y="474" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Fields fieldX="xrock_scaled" fieldY="yrock_scaled" />
+          <Mode>Double</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxCreatePoints" />
+    </Node>
+    <Node ToolID="135">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1447" y="474" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="xrock" selected="True" />
+            <SelectField field="yrock" selected="True" />
+            <SelectField field="Centroid" selected="True" rename="Rocks" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="136">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.ReportMap.ReportMap">
+        <Position x="1543" y="474" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TemporaryFileLocationXML>D:\Users\clmc9601\AppData\Local\Temp\61\Engine_27016_51d17b464f1b42b38619892fcd019182_\Engine_62316_9001b815487c4a73a136972c3962772a_.xml</TemporaryFileLocationXML>
+          <IsMetric value="False" />
+          <ImageWidth>8</ImageWidth>
+          <ImageHeight>6</ImageHeight>
+          <ImageResolution>2</ImageResolution>
+          <ReferenceMap />
+          <BackgroundColor>#fdfeff</BackgroundColor>
+          <DropShadow>False</DropShadow>
+          <ScaleUnits>Miles</ScaleUnits>
+          <ExpandExtent>10</ExpandExtent>
+          <MinimumWidth>0.5</MinimumWidth>
+          <DataConnections>
+            <DataConnection name="#1">
+              <ConnectionType>IncomingConnection</ConnectionType>
+              <Connection>#1</Connection>
+            </DataConnection>
+          </DataConnections>
+          <Layers>
+            <Layer name="1" order="0">
+              <LayerType>Points</LayerType>
+              <isBaseLayer value="False" />
+              <isReorderedBaseLayer value="False" />
+              <isRestlyedBaseLayer value="False" />
+              <baseLabelOverriden value="False" />
+              <isThemeLayer value="False" />
+              <DisplayName>Sand</DisplayName>
+              <DataConnection>#1</DataConnection>
+              <ShowInLegend value="True" />
+              <ZoomToLayer value="True" />
+              <Disable value="False" />
+              <PointStyle Color="#808080" OutlineColor="#808080" OutlineSize="0" Size="3" />
+              <ThemeStyle ColorMethod="Ramp" EndColor="#ff0000" ManualTiles="" NoneSpecificValuesAction="Color" NumTiles="5" SpecificValues="" StartColor="#0000ff" TileMethod="SmartTile" UniqueColors="#dc143c,#6495ed,#f0e68c,#228b22,#a9a9a9,#ffa500,#ba55d3,#a0522d,#ff69b4,#4b0082,#d3d3d3,#9acd32,#00ffff,#808000,#ffb6c1" UpperCutoffIncludedExcluded="Excluded" />
+              <LabelStyle Disabled="false" />
+            </Layer>
+            <Layer name="Base Layers - Points" order="1">
+              <DisplayName>Base Layers - Points</DisplayName>
+              <DataConnection />
+              <LayerType>Placeholder</LayerType>
+              <ShowLabel value="False" />
+            </Layer>
+            <Layer name="Base Layers - Lines" order="2">
+              <DisplayName>Base Layers - Lines</DisplayName>
+              <DataConnection />
+              <LayerType>Placeholder</LayerType>
+              <ShowLabel value="False" />
+            </Layer>
+            <Layer name="Base Layers - Polygons" order="3">
+              <DisplayName>Base Layers - Polygons</DisplayName>
+              <DataConnection />
+              <LayerType>Placeholder</LayerType>
+              <ShowLabel value="False" />
+            </Layer>
+          </Layers>
+          <Legend>
+            <LegendStyle Position="Right" UseCommaSeparators="false" />
+          </Legend>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxReportMap" />
+    </Node>
+    <Node ToolID="137">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1651" y="474" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>D:\Users\clmc9601\AppData\Local\Temp\61\Engine_27016_51d17b464f1b42b38619892fcd019182_\Engine_62316_3f4162069869411a9afd24437533a7e9_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Report</DefaultTab>
+              <Hints>
+                <Map>
+                  <BaseMap>Latest:CloudMade</BaseMap>
+                </Map>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="183">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="2167" y="174" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="-[yrock]/170*10" field="yrock_scaled" size="8" type="Double" />
+            <FormulaField expression="([xrock]-400)/200*10" field="xrock_scaled" size="8" type="Double" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[yrock_scaled = -[yrock]/170*10
+xrock_scaled = ([xrock]-400)/200*10
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="184">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.CreatePoints.CreatePoints">
+        <Position x="2251" y="174" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Fields fieldX="xrock_scaled" fieldY="yrock_scaled" />
+          <Mode>Double</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxCreatePoints" />
+    </Node>
+    <Node ToolID="185">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="2335" y="174" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="xrock" selected="True" />
+            <SelectField field="yrock" selected="True" />
+            <SelectField field="Centroid" selected="True" rename="Rocks" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="186">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.ReportMap.ReportMap">
+        <Position x="2431" y="174" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TemporaryFileLocationXML>D:\Users\clmc9601\AppData\Local\Temp\61\Engine_27016_51d17b464f1b42b38619892fcd019182_\Engine_62316_c2a0bc035b654d16ae657e1cd1acc5ce_.xml</TemporaryFileLocationXML>
+          <IsMetric value="False" />
+          <ImageWidth>8</ImageWidth>
+          <ImageHeight>6</ImageHeight>
+          <ImageResolution>2</ImageResolution>
+          <ReferenceMap />
+          <BackgroundColor>#fdfeff</BackgroundColor>
+          <DropShadow>False</DropShadow>
+          <ScaleUnits>Miles</ScaleUnits>
+          <ExpandExtent>10</ExpandExtent>
+          <MinimumWidth>0.5</MinimumWidth>
+          <DataConnections>
+            <DataConnection name="#1">
+              <ConnectionType>IncomingConnection</ConnectionType>
+              <Connection>#1</Connection>
+            </DataConnection>
+          </DataConnections>
+          <Layers>
+            <Layer name="1" order="0">
+              <LayerType>Points</LayerType>
+              <isBaseLayer value="False" />
+              <isReorderedBaseLayer value="False" />
+              <isRestlyedBaseLayer value="False" />
+              <baseLabelOverriden value="False" />
+              <isThemeLayer value="False" />
+              <DisplayName>Sand</DisplayName>
+              <DataConnection>#1</DataConnection>
+              <ShowInLegend value="True" />
+              <ZoomToLayer value="True" />
+              <Disable value="False" />
+              <PointStyle Color="#ff8000" OutlineColor="#ff8000" OutlineSize="0" Size="3" />
+              <ThemeStyle ColorMethod="Ramp" EndColor="#ff0000" ManualTiles="" NoneSpecificValuesAction="Color" NumTiles="5" SpecificValues="" StartColor="#0000ff" TileMethod="SmartTile" UniqueColors="#dc143c,#6495ed,#f0e68c,#228b22,#a9a9a9,#ffa500,#ba55d3,#a0522d,#ff69b4,#4b0082,#d3d3d3,#9acd32,#00ffff,#808000,#ffb6c1" UpperCutoffIncludedExcluded="Excluded" />
+              <LabelStyle Disabled="false" />
+            </Layer>
+            <Layer name="Base Layers - Points" order="1">
+              <DisplayName>Base Layers - Points</DisplayName>
+              <DataConnection />
+              <LayerType>Placeholder</LayerType>
+              <ShowLabel value="False" />
+            </Layer>
+            <Layer name="Base Layers - Lines" order="2">
+              <DisplayName>Base Layers - Lines</DisplayName>
+              <DataConnection />
+              <LayerType>Placeholder</LayerType>
+              <ShowLabel value="False" />
+            </Layer>
+            <Layer name="Base Layers - Polygons" order="3">
+              <DisplayName>Base Layers - Polygons</DisplayName>
+              <DataConnection />
+              <LayerType>Placeholder</LayerType>
+              <ShowLabel value="False" />
+            </Layer>
+          </Layers>
+          <Legend>
+            <LegendStyle Position="Right" UseCommaSeparators="false" />
+          </Legend>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxReportMap" />
+    </Node>
+    <Node ToolID="187">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="2539" y="174" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>D:\Users\clmc9601\AppData\Local\Temp\61\Engine_27016_51d17b464f1b42b38619892fcd019182_\Engine_62316_bd610d15059a4f03bbfbfe65b8f30497_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Report</DefaultTab>
+              <Hints>
+                <Map>
+                  <BaseMap>Latest:CloudMade</BaseMap>
+                </Map>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="194">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="90" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">AoC_2022_Input_Day_14.csv</File>
+          <FormatSpecificOptions>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreErrors>False</IgnoreErrors>
+            <AllowShareWrite>False</AllowShareWrite>
+            <ImportLine>1</ImportLine>
+            <FieldLen>254000</FieldLen>
+            <SingleThreadRead>False</SingleThreadRead>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <Delimeter>,</Delimeter>
+            <QuoteRecordBreak>False</QuoteRecordBreak>
+            <CodePage>65001</CodePage>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>AoC_2022_Input_Day_14.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="data" size="254000" source="File: D:\Users\clmc9601\Documents\Alteryx\Advent-of-Code-solutions\2022 Alteryx\AoC_2022_Input_Day_14.csv" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="179">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="257" y="137" width="589" height="165" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Parse rocks</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="30">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+            <Position x="282" y="186" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FieldName>RockGroupID</FieldName>
+              <StartValue>1</StartValue>
+              <FieldType>Int32</FieldType>
+              <FieldSize>6</FieldSize>
+              <Position>0</Position>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+        </Node>
+        <Node ToolID="31">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+            <Position x="366" y="186" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Field>data</Field>
+              <Delimeters value="-&gt;" />
+              <NumFields value="1" />
+              <Flags value="0" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns" />
+        </Node>
+        <Node ToolID="32">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+            <Position x="606" y="186" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Field>data</Field>
+              <ErrorHandling>Last</ErrorHandling>
+              <RootName>
+              </RootName>
+              <Delimeters value="," />
+              <NumFields value="2" />
+              <Flags value="0" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns" />
+        </Node>
+        <Node ToolID="33">
+          <GuiSettings>
+            <Position x="534" y="186" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="FieldName">RockLineID</Value>
+              <Value name="LastColumn">False</Value>
+              <Value name="StartingValue">1</Value>
+              <Value name="GroupingFields">"RockGroupID"</Value>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit>
+                <Dependency Path="D:\Users\clmc9601\Documents\Alteryx\CReW_Macros_clmc9601\CReW GroupByRecordID.yxmc" Package="True" IsMacro="True" IsOutput="False" IsAlias="False" />
+              </Implicit>
+            </Dependencies>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field description="Formula: IIF(ISNULL([Row-1:__RecordID__]),[#1],[Row-1:__RecordID__]+1)" name="RockLineID" source="Formula: [_CurrentField_]" type="Int64" />
+                <Field name="RockGroupID" source="RecordID: Starting Value=1" type="Int32" />
+                <Field description="TextToColumns: Parsed from data" name="data" size="254000" source="TextToColumns: Parsed from data" type="V_WString" />
+              </RecordInfo>
+              <SortInfo>
+                <Field field="RockGroupID" order="Asc" />
+              </SortInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings Macro="CReW GroupByRecordID.yxmc" />
+        </Node>
+        <Node ToolID="34">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="450" y="186" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>!IsEmpty(trim([data]))</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>!IsEmpty(trim([data]))</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="35">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.MultiFieldFormula.MultiFieldFormula">
+            <Position x="678" y="186" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FieldType>Text</FieldType>
+              <Fields orderChanged="False">
+                <Field name="1" />
+                <Field name="2" />
+                <Field name="data" selected="False" />
+                <Field name="*Unknown" selected="False" />
+              </Fields>
+              <CopyOutput value="False" />
+              <Expression>ToNumber(Trim([_CurrentField_]))</Expression>
+              <ChangeFieldType value="True" />
+              <OutputFieldType type="Int32" size="4" scale="1" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>ToNumber(Trim([_CurrentField_]))</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiFieldFormula" />
+        </Node>
+        <Node ToolID="37">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="762" y="186" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="1" selected="True" rename="x" />
+                <SelectField field="2" selected="True" rename="y" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="188">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="2429" y="652" width="1681" height="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Add back sand falling to the left</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="91">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+            <Position x="2574" y="702" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FieldName>RemainingRockID</FieldName>
+              <StartValue>1</StartValue>
+              <FieldType>Int32</FieldType>
+              <FieldSize>6</FieldSize>
+              <Position>0</Position>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+        </Node>
+        <Node ToolID="92">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.GenerateRows.GenerateRows">
+            <Position x="2766" y="701" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UpdateField value="True" />
+              <UpdateField_Name>yrock</UpdateField_Name>
+              <CreateField_Name>RowCount</CreateField_Name>
+              <CreateField_Type>Int32</CreateField_Type>
+              <CreateField_Size>4</CreateField_Size>
+              <Expression_Init>yrock</Expression_Init>
+              <Expression_Cond>yrock &lt;= [User.yfloor]</Expression_Cond>
+              <Expression_Loop>yrock + 1</Expression_Loop>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxGenerateRows" />
+        </Node>
+        <Node ToolID="93">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="2670" y="702" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="[yrock]" field="original_yrock" size="4" type="Int32" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[original_yrock = [yrock]
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="94">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="2862" y="702" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="[xrock]-([yrock]-[original_yrock])" field="xrock" size="2" type="Int16" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[xrock = [xrock]-([yrock]-[original_yrock])
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="95">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="2958" y="702" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="RemainingRockID" action="GroupBy" rename="RemainingRockID" />
+                <SummarizeField field="xrock" action="GroupBy" rename="xrock" />
+                <SummarizeField field="yrock" action="GroupBy" rename="yrock" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="96">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+            <Position x="2454" y="701" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SortInfo locale="1033">
+                <Field field="xrock" order="Ascending" />
+                <Field field="yrock" order="Ascending" />
+              </SortInfo>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>xrock - Ascending
+yrock - Ascending</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+        </Node>
+        <Node ToolID="97">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="3042" y="714" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="xrock" />
+                <Field field="yrock" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="xrock" />
+                <Field field="yrock" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Right_xrock" selected="False" rename="Right_xrock" input="Right_" />
+                    <SelectField field="Right_yrock" selected="False" rename="Right_yrock" input="Right_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="99">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="3138" y="750" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="RemainingRockID" action="GroupBy" rename="RemainingRockID" />
+                <SummarizeField field="xrock" action="Max" rename="Max_xrock" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="100">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="3246" y="714" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="RemainingRockID" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="RemainingRockID" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Right_RemainingRockID" selected="False" rename="Right_RemainingRockID" input="Right_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="101">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="3438" y="714" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[xrock] &gt; [Max_xrock] or IsNull([Max_xrock])</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[xrock] &gt; [Max_xrock] or IsNull([Max_xrock])</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="107">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="3642" y="702" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="-[yrock]/170*10" field="yrock_scaled" size="8" type="Double" />
+                <FormulaField expression="([xrock]-400)/200*10" field="xrock_scaled" size="8" type="Double" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[yrock_scaled = -[yrock]/170*10
+xrock_scaled = ([xrock]-400)/200*10
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="108">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.CreatePoints.CreatePoints">
+            <Position x="3738" y="702" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Fields fieldX="xrock_scaled" fieldY="yrock_scaled" />
+              <Mode>Double</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxCreatePoints" />
+        </Node>
+        <Node ToolID="109">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="3834" y="702" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="xrock" selected="True" />
+                <SelectField field="yrock" selected="True" />
+                <SelectField field="Centroid" selected="True" rename="Rocks" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="110">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.ReportMap.ReportMap">
+            <Position x="3930" y="702" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TemporaryFileLocationXML>D:\Users\clmc9601\AppData\Local\Temp\61\Engine_27016_51d17b464f1b42b38619892fcd019182_\Engine_62316_37d5ee80cea043ca805966c3150e91e7_.xml</TemporaryFileLocationXML>
+              <IsMetric value="False" />
+              <ImageWidth>8</ImageWidth>
+              <ImageHeight>6</ImageHeight>
+              <ImageResolution>2</ImageResolution>
+              <ReferenceMap />
+              <BackgroundColor>#fdfeff</BackgroundColor>
+              <DropShadow>False</DropShadow>
+              <ScaleUnits>Miles</ScaleUnits>
+              <ExpandExtent>10</ExpandExtent>
+              <MinimumWidth>0.5</MinimumWidth>
+              <DataConnections>
+                <DataConnection name="#1">
+                  <ConnectionType>IncomingConnection</ConnectionType>
+                  <Connection>#1</Connection>
+                </DataConnection>
+              </DataConnections>
+              <Layers>
+                <Layer name="1" order="0">
+                  <LayerType>Points</LayerType>
+                  <isBaseLayer value="False" />
+                  <isReorderedBaseLayer value="False" />
+                  <isRestlyedBaseLayer value="False" />
+                  <baseLabelOverriden value="False" />
+                  <isThemeLayer value="False" />
+                  <DisplayName>Sand</DisplayName>
+                  <DataConnection>#1</DataConnection>
+                  <ShowInLegend value="True" />
+                  <ZoomToLayer value="True" />
+                  <Disable value="False" />
+                  <PointStyle Color="#ff8000" OutlineColor="#ff8000" OutlineSize="0" Size="3" />
+                  <ThemeStyle ColorMethod="Ramp" EndColor="#ff0000" ManualTiles="" NoneSpecificValuesAction="Color" NumTiles="5" SpecificValues="" StartColor="#0000ff" TileMethod="SmartTile" UniqueColors="#dc143c,#6495ed,#f0e68c,#228b22,#a9a9a9,#ffa500,#ba55d3,#a0522d,#ff69b4,#4b0082,#d3d3d3,#9acd32,#00ffff,#808000,#ffb6c1" UpperCutoffIncludedExcluded="Excluded" />
+                  <LabelStyle Disabled="false" />
+                </Layer>
+                <Layer name="Base Layers - Points" order="1">
+                  <DisplayName>Base Layers - Points</DisplayName>
+                  <DataConnection />
+                  <LayerType>Placeholder</LayerType>
+                  <ShowLabel value="False" />
+                </Layer>
+                <Layer name="Base Layers - Lines" order="2">
+                  <DisplayName>Base Layers - Lines</DisplayName>
+                  <DataConnection />
+                  <LayerType>Placeholder</LayerType>
+                  <ShowLabel value="False" />
+                </Layer>
+                <Layer name="Base Layers - Polygons" order="3">
+                  <DisplayName>Base Layers - Polygons</DisplayName>
+                  <DataConnection />
+                  <LayerType>Placeholder</LayerType>
+                  <ShowLabel value="False" />
+                </Layer>
+              </Layers>
+              <Legend>
+                <LegendStyle Position="Right" UseCommaSeparators="false" />
+              </Legend>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxReportMap" />
+        </Node>
+        <Node ToolID="111">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="4026" y="702" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>D:\Users\clmc9601\AppData\Local\Temp\61\Engine_27016_51d17b464f1b42b38619892fcd019182_\Engine_62316_4a591dd569c54083ac7cb900e413df36_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Report</DefaultTab>
+                  <Hints>
+                    <Map>
+                      <BaseMap>Latest:CloudMade</BaseMap>
+                    </Map>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="124">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+            <Position x="3342" y="714" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <ByName_ErrorMode>Warning</ByName_ErrorMode>
+              <ByName_OutputMode>All</ByName_OutputMode>
+              <Mode>ByName</Mode>
+              <SetOutputOrder value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+        </Node>
+        <Node ToolID="126">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="3522" y="702" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="xrock" action="GroupBy" rename="xrock" />
+                <SummarizeField field="yrock" action="GroupBy" rename="yrock" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="189">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="3629" y="880" width="1705" height="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Add back sand falling to the right</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="98">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="4122" y="930" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="[xrock]+([yrock]-[original_yrock])" field="xrock" size="2" type="Int16" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[xrock = [xrock]+([yrock]-[original_yrock])
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="102">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="4218" y="930" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="RemainingRockID" action="GroupBy" rename="RemainingRockID" />
+                <SummarizeField field="xrock" action="GroupBy" rename="xrock" />
+                <SummarizeField field="yrock" action="GroupBy" rename="yrock" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="103">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="4302" y="942" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="xrock" />
+                <Field field="yrock" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="xrock" />
+                <Field field="yrock" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Right_xrock" selected="False" rename="Right_xrock" input="Right_" />
+                    <SelectField field="Right_yrock" selected="False" rename="Right_yrock" input="Right_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="104">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="4410" y="990" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="RemainingRockID" action="GroupBy" rename="RemainingRockID" />
+                <SummarizeField field="xrock" action="Min" rename="Min_xrock" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="105">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="4506" y="942" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="RemainingRockID" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="RemainingRockID" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Right_RemainingRockID" selected="False" rename="Right_RemainingRockID" input="Right_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="106">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="4698" y="942" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[xrock] &lt; [Min_xrock] or IsNull([Min_xrock])</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[xrock] &lt; [Min_xrock] or IsNull([Min_xrock])</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="112">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="4866" y="930" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="-[yrock]/170*10" field="yrock_scaled" size="8" type="Double" />
+                <FormulaField expression="([xrock]-400)/200*10" field="xrock_scaled" size="8" type="Double" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[yrock_scaled = -[yrock]/170*10
+xrock_scaled = ([xrock]-400)/200*10
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="113">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.CreatePoints.CreatePoints">
+            <Position x="4962" y="930" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Fields fieldX="xrock_scaled" fieldY="yrock_scaled" />
+              <Mode>Double</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxCreatePoints" />
+        </Node>
+        <Node ToolID="114">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="5058" y="930" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="xrock" selected="True" />
+                <SelectField field="yrock" selected="True" />
+                <SelectField field="Centroid" selected="True" rename="Rocks" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="115">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.ReportMap.ReportMap">
+            <Position x="5154" y="930" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TemporaryFileLocationXML>D:\Users\clmc9601\AppData\Local\Temp\61\Engine_27016_51d17b464f1b42b38619892fcd019182_\Engine_62316_0821b5cf39c64ea19f5b111088c2a2e7_.xml</TemporaryFileLocationXML>
+              <IsMetric value="False" />
+              <ImageWidth>8</ImageWidth>
+              <ImageHeight>6</ImageHeight>
+              <ImageResolution>1</ImageResolution>
+              <ReferenceMap />
+              <BackgroundColor>#fdfeff</BackgroundColor>
+              <DropShadow>False</DropShadow>
+              <ScaleUnits>Miles</ScaleUnits>
+              <ExpandExtent>10</ExpandExtent>
+              <MinimumWidth>0.5</MinimumWidth>
+              <DataConnections>
+                <DataConnection name="#1">
+                  <ConnectionType>IncomingConnection</ConnectionType>
+                  <Connection>#1</Connection>
+                </DataConnection>
+              </DataConnections>
+              <Layers>
+                <Layer name="1" order="0">
+                  <LayerType>Points</LayerType>
+                  <isBaseLayer value="False" />
+                  <isReorderedBaseLayer value="False" />
+                  <isRestlyedBaseLayer value="False" />
+                  <baseLabelOverriden value="False" />
+                  <isThemeLayer value="False" />
+                  <DisplayName>Sand</DisplayName>
+                  <DataConnection>#1</DataConnection>
+                  <ShowInLegend value="True" />
+                  <ZoomToLayer value="True" />
+                  <Disable value="False" />
+                  <PointStyle Color="#ff8000" OutlineColor="#ff8000" OutlineSize="0" Size="3" />
+                  <ThemeStyle ColorMethod="Ramp" EndColor="#ff0000" ManualTiles="" NoneSpecificValuesAction="Color" NumTiles="5" SpecificValues="" StartColor="#0000ff" TileMethod="SmartTile" UniqueColors="#dc143c,#6495ed,#f0e68c,#228b22,#a9a9a9,#ffa500,#ba55d3,#a0522d,#ff69b4,#4b0082,#d3d3d3,#9acd32,#00ffff,#808000,#ffb6c1" UpperCutoffIncludedExcluded="Excluded" />
+                  <LabelStyle Disabled="false" />
+                </Layer>
+                <Layer name="Base Layers - Points" order="1">
+                  <DisplayName>Base Layers - Points</DisplayName>
+                  <DataConnection />
+                  <LayerType>Placeholder</LayerType>
+                  <ShowLabel value="False" />
+                </Layer>
+                <Layer name="Base Layers - Lines" order="2">
+                  <DisplayName>Base Layers - Lines</DisplayName>
+                  <DataConnection />
+                  <LayerType>Placeholder</LayerType>
+                  <ShowLabel value="False" />
+                </Layer>
+                <Layer name="Base Layers - Polygons" order="3">
+                  <DisplayName>Base Layers - Polygons</DisplayName>
+                  <DataConnection />
+                  <LayerType>Placeholder</LayerType>
+                  <ShowLabel value="False" />
+                </Layer>
+              </Layers>
+              <Legend>
+                <LegendStyle Position="Right" UseCommaSeparators="false" />
+              </Legend>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxReportMap" />
+        </Node>
+        <Node ToolID="116">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="5250" y="930" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>D:\Users\clmc9601\AppData\Local\Temp\61\Engine_27016_51d17b464f1b42b38619892fcd019182_\Engine_62316_9fa493603c74474a851c91ff803b94d8_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Report</DefaultTab>
+                  <Hints>
+                    <Map>
+                      <BaseMap>Latest:CloudMade</BaseMap>
+                    </Map>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="117">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+            <Position x="3654" y="930" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <ByName_ErrorMode>Warning</ByName_ErrorMode>
+              <ByName_OutputMode>All</ByName_OutputMode>
+              <Mode>ByName</Mode>
+              <SetOutputOrder value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+        </Node>
+        <Node ToolID="118">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="3738" y="930" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="xrock" action="GroupBy" rename="xrock" />
+                <SummarizeField field="yrock" action="GroupBy" rename="yrock" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="125">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+            <Position x="4602" y="942" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <ByName_ErrorMode>Warning</ByName_ErrorMode>
+              <ByName_OutputMode>All</ByName_OutputMode>
+              <Mode>ByName</Mode>
+              <SetOutputOrder value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+        </Node>
+        <Node ToolID="127">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="4782" y="930" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="xrock" action="GroupBy" rename="xrock" />
+                <SummarizeField field="yrock" action="GroupBy" rename="yrock" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="128">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.GenerateRows.GenerateRows">
+            <Position x="4038" y="930" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UpdateField value="True" />
+              <UpdateField_Name>yrock</UpdateField_Name>
+              <CreateField_Name>RowCount</CreateField_Name>
+              <CreateField_Type>Int32</CreateField_Type>
+              <CreateField_Size>4</CreateField_Size>
+              <Expression_Init>yrock</Expression_Init>
+              <Expression_Cond>yrock &lt;= [User.yfloor]</Expression_Cond>
+              <Expression_Loop>yrock + 1</Expression_Loop>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxGenerateRows" />
+        </Node>
+        <Node ToolID="129">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+            <Position x="3834" y="930" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FieldName>RemainingRockID</FieldName>
+              <StartValue>1</StartValue>
+              <FieldType>Int32</FieldType>
+              <FieldSize>6</FieldSize>
+              <Position>0</Position>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+        </Node>
+        <Node ToolID="130">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="3930" y="929" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="[yrock]" field="original_yrock" size="4" type="Int32" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[original_yrock = [yrock]
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="191">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="8237" y="1253" width="493" height="258" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Visualize</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="119">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="8262" y="1350" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="-[yrock]/170*10" field="yrock_scaled" size="8" type="Double" />
+                <FormulaField expression="([xrock]-400)/200*10" field="xrock_scaled" size="8" type="Double" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[yrock_scaled = -[yrock]/170*10
+xrock_scaled = ([xrock]-400)/200*10
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="120">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.CreatePoints.CreatePoints">
+            <Position x="8358" y="1350" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Fields fieldX="xrock_scaled" fieldY="yrock_scaled" />
+              <Mode>Double</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxCreatePoints" />
+        </Node>
+        <Node ToolID="121">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="8454" y="1350" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="xrock" selected="True" />
+                <SelectField field="yrock" selected="True" />
+                <SelectField field="Centroid" selected="True" rename="Rocks" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="122">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.ReportMap.ReportMap">
+            <Position x="8550" y="1350" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TemporaryFileLocationXML>D:\Users\clmc9601\AppData\Local\Temp\61\Engine_27016_51d17b464f1b42b38619892fcd019182_\Engine_62316_d9066f7c7dbf43cb880061084f6fc465_.xml</TemporaryFileLocationXML>
+              <IsMetric value="False" />
+              <ImageWidth>12</ImageWidth>
+              <ImageHeight>9</ImageHeight>
+              <ImageResolution>3</ImageResolution>
+              <ReferenceMap />
+              <BackgroundColor>#fdfeff</BackgroundColor>
+              <DropShadow>False</DropShadow>
+              <ScaleUnits>Miles</ScaleUnits>
+              <ExpandExtent>10</ExpandExtent>
+              <MinimumWidth>0.5</MinimumWidth>
+              <DataConnections>
+                <DataConnection name="#1">
+                  <ConnectionType>IncomingConnection</ConnectionType>
+                  <Connection>#1</Connection>
+                </DataConnection>
+                <DataConnection name="#2">
+                  <ConnectionType>IncomingConnection</ConnectionType>
+                  <Connection>#2</Connection>
+                </DataConnection>
+              </DataConnections>
+              <Layers>
+                <Layer name="1" order="0">
+                  <LayerType>Points</LayerType>
+                  <isBaseLayer value="False" />
+                  <isReorderedBaseLayer value="False" />
+                  <isRestlyedBaseLayer value="False" />
+                  <baseLabelOverriden value="False" />
+                  <isThemeLayer value="False" />
+                  <DisplayName>Sand</DisplayName>
+                  <DataConnection>#1</DataConnection>
+                  <ShowInLegend value="True" />
+                  <ZoomToLayer value="True" />
+                  <Disable value="False" />
+                  <PointStyle Color="#f5d20a" OutlineColor="#f5d200" OutlineSize="0" Size="4" />
+                  <ThemeStyle ColorMethod="Ramp" EndColor="#ff0000" ManualTiles="" NoneSpecificValuesAction="Color" NumTiles="5" SpecificValues="" StartColor="#0000ff" TileMethod="SmartTile" UniqueColors="#dc143c,#6495ed,#f0e68c,#228b22,#a9a9a9,#ffa500,#ba55d3,#a0522d,#ff69b4,#4b0082,#d3d3d3,#9acd32,#00ffff,#808000,#ffb6c1" UpperCutoffIncludedExcluded="Excluded" />
+                  <LabelStyle Disabled="false" />
+                </Layer>
+                <Layer name="2" order="1">
+                  <LayerType>Points</LayerType>
+                  <isBaseLayer value="False" />
+                  <isReorderedBaseLayer value="False" />
+                  <isRestlyedBaseLayer value="False" />
+                  <baseLabelOverriden value="False" />
+                  <isThemeLayer value="False" />
+                  <DisplayName>Rocks</DisplayName>
+                  <DataConnection>#2</DataConnection>
+                  <ShowInLegend value="True" />
+                  <ZoomToLayer value="True" />
+                  <Disable value="False" />
+                  <PointStyle Color="#808080" OutlineColor="#808080" OutlineSize="0" Size="3" StockPointStyle="square" />
+                  <ThemeStyle ColorMethod="Ramp" EndColor="#ff0000" ManualTiles="" NoneSpecificValuesAction="Color" NumTiles="5" SpecificValues="" StartColor="#0000ff" TileMethod="SmartTile" UniqueColors="#dc143c,#6495ed,#f0e68c,#228b22,#a9a9a9,#ffa500,#ba55d3,#a0522d,#ff69b4,#4b0082,#d3d3d3,#9acd32,#00ffff,#808000,#ffb6c1" UpperCutoffIncludedExcluded="Excluded" />
+                  <LabelStyle Disabled="false" />
+                </Layer>
+                <Layer name="Base Layers - Points" order="2">
+                  <DisplayName>Base Layers - Points</DisplayName>
+                  <DataConnection />
+                  <LayerType>Placeholder</LayerType>
+                  <ShowLabel value="False" />
+                </Layer>
+                <Layer name="Base Layers - Lines" order="3">
+                  <DisplayName>Base Layers - Lines</DisplayName>
+                  <DataConnection />
+                  <LayerType>Placeholder</LayerType>
+                  <ShowLabel value="False" />
+                </Layer>
+                <Layer name="Base Layers - Polygons" order="4">
+                  <DisplayName>Base Layers - Polygons</DisplayName>
+                  <DataConnection />
+                  <LayerType>Placeholder</LayerType>
+                  <ShowLabel value="False" />
+                </Layer>
+              </Layers>
+              <Legend>
+                <LegendStyle Position="Right" UseCommaSeparators="false" />
+              </Legend>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxReportMap" />
+        </Node>
+        <Node ToolID="123">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="8646" y="1350" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>D:\Users\clmc9601\AppData\Local\Temp\61\Engine_27016_51d17b464f1b42b38619892fcd019182_\Engine_62316_82d6d869e2034d8f8029ac8544069433_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Report</DefaultTab>
+                  <Hints>
+                    <Map>
+                      <BaseMap>Latest:CloudMade</BaseMap>
+                    </Map>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="178">
+          <GuiSettings>
+            <Position x="8358" y="1302" />
+          </GuiSettings>
+          <Properties>
+            <Configuration />
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings Macro="CountRecords.yxmc" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="190">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="4937" y="1108" width="3265" height="399" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Repeat sand falling down, left, and right</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="131">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+            <Position x="4962" y="1157" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <ByName_ErrorMode>Warning</ByName_ErrorMode>
+              <ByName_OutputMode>All</ByName_OutputMode>
+              <Mode>ByName</Mode>
+              <SetOutputOrder value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+        </Node>
+        <Node ToolID="132">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="5058" y="1157" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="xrock" action="GroupBy" rename="xrock" />
+                <SummarizeField field="yrock" action="GroupBy" rename="yrock" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="138">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.GenerateRows.GenerateRows">
+            <Position x="5250" y="1157" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UpdateField value="True" />
+              <UpdateField_Name>yrock</UpdateField_Name>
+              <CreateField_Name>RowCount</CreateField_Name>
+              <CreateField_Type>Int32</CreateField_Type>
+              <CreateField_Size>4</CreateField_Size>
+              <Expression_Init>yrock</Expression_Init>
+              <Expression_Cond>yrock &lt;= [User.yfloor]</Expression_Cond>
+              <Expression_Loop>yrock + 1</Expression_Loop>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxGenerateRows" />
+        </Node>
+        <Node ToolID="139">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="5826" y="1158" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="xrock" action="GroupBy" rename="xrock" />
+                <SummarizeField field="yrock" action="GroupBy" rename="yrock" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="140">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="5346" y="1169" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="xrock" />
+                <Field field="yrock" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="xrock" />
+                <Field field="yrock" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Right_xrock" selected="True" rename="Right_xrock" input="Right_" />
+                    <SelectField field="Right_yrock" selected="True" rename="Right_yrock" input="Right_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="141">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+            <Position x="5154" y="1158" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FieldName>RemainingRockID</FieldName>
+              <StartValue>1</StartValue>
+              <FieldType>Int32</FieldType>
+              <FieldSize>6</FieldSize>
+              <Position>0</Position>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+        </Node>
+        <Node ToolID="142">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="5442" y="1230" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="RemainingRockID" action="GroupBy" rename="RemainingRockID" />
+                <SummarizeField field="yrock" action="Min" rename="Min_yrock" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="143">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="5514" y="1169" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="RemainingRockID" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="RemainingRockID" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Right_RemainingRockID" selected="False" rename="Right_RemainingRockID" input="Right_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="144">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+            <Position x="5598" y="1169" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <ByName_ErrorMode>Warning</ByName_ErrorMode>
+              <ByName_OutputMode>All</ByName_OutputMode>
+              <Mode>ByName</Mode>
+              <SetOutputOrder value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+        </Node>
+        <Node ToolID="145">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="5718" y="1170" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[yrock] &lt; [Min_yrock] or IsNull([Min_yrock])</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[yrock] &lt; [Min_yrock] or IsNull([Min_yrock])</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="149">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+            <Position x="5922" y="1242" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FieldName>RemainingRockID</FieldName>
+              <StartValue>1</StartValue>
+              <FieldType>Int32</FieldType>
+              <FieldSize>6</FieldSize>
+              <Position>0</Position>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+        </Node>
+        <Node ToolID="150">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.GenerateRows.GenerateRows">
+            <Position x="6114" y="1242" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UpdateField value="True" />
+              <UpdateField_Name>yrock</UpdateField_Name>
+              <CreateField_Name>RowCount</CreateField_Name>
+              <CreateField_Type>Int32</CreateField_Type>
+              <CreateField_Size>4</CreateField_Size>
+              <Expression_Init>yrock</Expression_Init>
+              <Expression_Cond>yrock &lt;= [User.yfloor]</Expression_Cond>
+              <Expression_Loop>yrock + 1</Expression_Loop>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxGenerateRows" />
+        </Node>
+        <Node ToolID="151">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="6018" y="1242" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="[yrock]" field="original_yrock" size="4" type="Int32" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[original_yrock = [yrock]
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="152">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="6210" y="1242" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="[xrock]-([yrock]-[original_yrock])" field="xrock" size="2" type="Int16" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[xrock = [xrock]-([yrock]-[original_yrock])
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="153">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="6306" y="1242" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="RemainingRockID" action="GroupBy" rename="RemainingRockID" />
+                <SummarizeField field="xrock" action="GroupBy" rename="xrock" />
+                <SummarizeField field="yrock" action="GroupBy" rename="yrock" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="154">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="6390" y="1254" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="xrock" />
+                <Field field="yrock" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="xrock" />
+                <Field field="yrock" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Right_xrock" selected="False" rename="Right_xrock" input="Right_" />
+                    <SelectField field="Right_yrock" selected="False" rename="Right_yrock" input="Right_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="155">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="7458" y="1350" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="[xrock]+([yrock]-[original_yrock])" field="xrock" size="2" type="Int16" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[xrock = [xrock]+([yrock]-[original_yrock])
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="156">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="6486" y="1290" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="RemainingRockID" action="GroupBy" rename="RemainingRockID" />
+                <SummarizeField field="xrock" action="Max" rename="Max_xrock" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="157">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="6594" y="1254" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="RemainingRockID" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="RemainingRockID" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Right_RemainingRockID" selected="False" rename="Right_RemainingRockID" input="Right_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="158">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="6786" y="1254" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[xrock] &gt; [Max_xrock] or IsNull([Max_xrock])</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[xrock] &gt; [Max_xrock] or IsNull([Max_xrock])</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="159">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="7554" y="1350" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="RemainingRockID" action="GroupBy" rename="RemainingRockID" />
+                <SummarizeField field="xrock" action="GroupBy" rename="xrock" />
+                <SummarizeField field="yrock" action="GroupBy" rename="yrock" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="160">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="7638" y="1362" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="xrock" />
+                <Field field="yrock" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="xrock" />
+                <Field field="yrock" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Right_xrock" selected="False" rename="Right_xrock" input="Right_" />
+                    <SelectField field="Right_yrock" selected="False" rename="Right_yrock" input="Right_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="161">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="7746" y="1410" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="RemainingRockID" action="GroupBy" rename="RemainingRockID" />
+                <SummarizeField field="xrock" action="Min" rename="Min_xrock" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="162">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="7842" y="1362" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="RemainingRockID" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="RemainingRockID" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Right_RemainingRockID" selected="False" rename="Right_RemainingRockID" input="Right_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="163">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="8034" y="1362" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[xrock] &lt; [Min_xrock] or IsNull([Min_xrock])</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[xrock] &lt; [Min_xrock] or IsNull([Min_xrock])</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="169">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+            <Position x="6990" y="1350" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <ByName_ErrorMode>Warning</ByName_ErrorMode>
+              <ByName_OutputMode>All</ByName_OutputMode>
+              <Mode>ByName</Mode>
+              <SetOutputOrder value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+        </Node>
+        <Node ToolID="170">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="7074" y="1350" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="xrock" action="GroupBy" rename="xrock" />
+                <SummarizeField field="yrock" action="GroupBy" rename="yrock" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="171">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+            <Position x="6690" y="1254" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <ByName_ErrorMode>Warning</ByName_ErrorMode>
+              <ByName_OutputMode>All</ByName_OutputMode>
+              <Mode>ByName</Mode>
+              <SetOutputOrder value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+        </Node>
+        <Node ToolID="172">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+            <Position x="7938" y="1362" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <ByName_ErrorMode>Warning</ByName_ErrorMode>
+              <ByName_OutputMode>All</ByName_OutputMode>
+              <Mode>ByName</Mode>
+              <SetOutputOrder value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+        </Node>
+        <Node ToolID="173">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="6870" y="1242" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="xrock" action="GroupBy" rename="xrock" />
+                <SummarizeField field="yrock" action="GroupBy" rename="yrock" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="174">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="8118" y="1350" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="xrock" action="GroupBy" rename="xrock" />
+                <SummarizeField field="yrock" action="GroupBy" rename="yrock" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="175">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.GenerateRows.GenerateRows">
+            <Position x="7374" y="1350" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UpdateField value="True" />
+              <UpdateField_Name>yrock</UpdateField_Name>
+              <CreateField_Name>RowCount</CreateField_Name>
+              <CreateField_Type>Int32</CreateField_Type>
+              <CreateField_Size>4</CreateField_Size>
+              <Expression_Init>yrock</Expression_Init>
+              <Expression_Cond>yrock &lt;= [User.yfloor]</Expression_Cond>
+              <Expression_Loop>yrock + 1</Expression_Loop>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxGenerateRows" />
+        </Node>
+        <Node ToolID="176">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+            <Position x="7170" y="1350" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FieldName>RemainingRockID</FieldName>
+              <StartValue>1</StartValue>
+              <FieldType>Int32</FieldType>
+              <FieldSize>6</FieldSize>
+              <Position>0</Position>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+        </Node>
+        <Node ToolID="177">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="7266" y="1350" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="[yrock]" field="original_yrock" size="4" type="Int32" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[original_yrock = [yrock]
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="182">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="2189" y="425" width="709" height="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Remove sand from pyramid with rocks as complete vertical barrier</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="84">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="2310" y="486" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="xrock" />
+                <Field field="yrock" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="xrock" />
+                <Field field="yrock" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Right_xrock" selected="True" rename="Right_xrock" input="Right_" />
+                    <SelectField field="Right_yrock" selected="True" rename="Right_yrock" input="Right_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="85">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="2442" y="474" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="-[yrock]/170*10" field="yrock_scaled" size="8" type="Double" />
+                <FormulaField expression="([xrock]-400)/200*10" field="xrock_scaled" size="8" type="Double" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[yrock_scaled = -[yrock]/170*10
+xrock_scaled = ([xrock]-400)/200*10
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="86">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.CreatePoints.CreatePoints">
+            <Position x="2514" y="474" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Fields fieldX="xrock_scaled" fieldY="yrock_scaled" />
+              <Mode>Double</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxCreatePoints" />
+        </Node>
+        <Node ToolID="87">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="2610" y="474" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="xrock" selected="True" />
+                <SelectField field="yrock" selected="True" />
+                <SelectField field="Centroid" selected="True" rename="Rocks" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="88">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.ReportMap.ReportMap">
+            <Position x="2706" y="474" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TemporaryFileLocationXML>D:\Users\clmc9601\AppData\Local\Temp\61\Engine_27016_51d17b464f1b42b38619892fcd019182_\Engine_62316_2670be3779844e6dac0e5780972ba895_.xml</TemporaryFileLocationXML>
+              <IsMetric value="False" />
+              <ImageWidth>8</ImageWidth>
+              <ImageHeight>6</ImageHeight>
+              <ImageResolution>2</ImageResolution>
+              <ReferenceMap />
+              <BackgroundColor>#fdfeff</BackgroundColor>
+              <DropShadow>False</DropShadow>
+              <ScaleUnits>Miles</ScaleUnits>
+              <ExpandExtent>10</ExpandExtent>
+              <MinimumWidth>0.5</MinimumWidth>
+              <DataConnections>
+                <DataConnection name="#1">
+                  <ConnectionType>IncomingConnection</ConnectionType>
+                  <Connection>#1</Connection>
+                </DataConnection>
+              </DataConnections>
+              <Layers>
+                <Layer name="1" order="0">
+                  <LayerType>Points</LayerType>
+                  <isBaseLayer value="False" />
+                  <isReorderedBaseLayer value="False" />
+                  <isRestlyedBaseLayer value="False" />
+                  <baseLabelOverriden value="False" />
+                  <isThemeLayer value="False" />
+                  <DisplayName>Sand</DisplayName>
+                  <DataConnection>#1</DataConnection>
+                  <ShowInLegend value="True" />
+                  <ZoomToLayer value="True" />
+                  <Disable value="False" />
+                  <PointStyle Color="#ff8000" OutlineColor="#ff8000" OutlineSize="0" Size="3" />
+                  <ThemeStyle ColorMethod="Ramp" EndColor="#ff0000" ManualTiles="" NoneSpecificValuesAction="Color" NumTiles="5" SpecificValues="" StartColor="#0000ff" TileMethod="SmartTile" UniqueColors="#dc143c,#6495ed,#f0e68c,#228b22,#a9a9a9,#ffa500,#ba55d3,#a0522d,#ff69b4,#4b0082,#d3d3d3,#9acd32,#00ffff,#808000,#ffb6c1" UpperCutoffIncludedExcluded="Excluded" />
+                  <LabelStyle Disabled="false" />
+                </Layer>
+                <Layer name="Base Layers - Points" order="1">
+                  <DisplayName>Base Layers - Points</DisplayName>
+                  <DataConnection />
+                  <LayerType>Placeholder</LayerType>
+                  <ShowLabel value="False" />
+                </Layer>
+                <Layer name="Base Layers - Lines" order="2">
+                  <DisplayName>Base Layers - Lines</DisplayName>
+                  <DataConnection />
+                  <LayerType>Placeholder</LayerType>
+                  <ShowLabel value="False" />
+                </Layer>
+                <Layer name="Base Layers - Polygons" order="3">
+                  <DisplayName>Base Layers - Polygons</DisplayName>
+                  <DataConnection />
+                  <LayerType>Placeholder</LayerType>
+                  <ShowLabel value="False" />
+                </Layer>
+              </Layers>
+              <Legend>
+                <LegendStyle Position="Right" UseCommaSeparators="false" />
+              </Legend>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxReportMap" />
+        </Node>
+        <Node ToolID="89">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="2814" y="474" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>D:\Users\clmc9601\AppData\Local\Temp\61\Engine_27016_51d17b464f1b42b38619892fcd019182_\Engine_62316_5ca7b3e7916642a097b2a622944c92b3_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Report</DefaultTab>
+                  <Hints>
+                    <Map>
+                      <BaseMap>Latest:CloudMade</BaseMap>
+                    </Map>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="90">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.GenerateRows.GenerateRows">
+            <Position x="2214" y="534" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UpdateField value="True" />
+              <UpdateField_Name>yrock</UpdateField_Name>
+              <CreateField_Name>RowCount</CreateField_Name>
+              <CreateField_Type>Int32</CreateField_Type>
+              <CreateField_Size>4</CreateField_Size>
+              <Expression_Init>yrock</Expression_Init>
+              <Expression_Cond>yrock &lt;= [User.yfloor]</Expression_Cond>
+              <Expression_Loop>yrock + 1</Expression_Loop>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxGenerateRows" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="181">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="1781" y="425" width="385" height="165" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Find sand pyramid without rocks</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="79">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.GenerateRows.GenerateRows">
+            <Position x="1890" y="474" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UpdateField value="True" />
+              <UpdateField_Name>yrock</UpdateField_Name>
+              <CreateField_Name>RowCount</CreateField_Name>
+              <CreateField_Type>Int32</CreateField_Type>
+              <CreateField_Size>4</CreateField_Size>
+              <Expression_Init>yrock</Expression_Init>
+              <Expression_Cond>yrock &lt;= [User.yfloor]</Expression_Cond>
+              <Expression_Loop>yrock + 1</Expression_Loop>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxGenerateRows" />
+        </Node>
+        <Node ToolID="81">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.GenerateRows.GenerateRows">
+            <Position x="2082" y="474" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UpdateField value="True" />
+              <UpdateField_Name>xrock</UpdateField_Name>
+              <CreateField_Name>yrock_new</CreateField_Name>
+              <CreateField_Type>Int32</CreateField_Type>
+              <CreateField_Size>4</CreateField_Size>
+              <Expression_Init>500-yrock</Expression_Init>
+              <Expression_Cond>xrock &lt;= 500+yrock</Expression_Cond>
+              <Expression_Loop>xrock + 1</Expression_Loop>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxGenerateRows" />
+        </Node>
+        <Node ToolID="82">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="1986" y="474" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="[yrock]*2+1" field="RockCount" size="4" type="Int32" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[RockCount = [yrock]*2+1
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="147">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="1806" y="474" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="xsand" selected="True" rename="xrock" />
+                <SelectField field="ysand" selected="True" rename="yrock" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="77">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="1781" y="89" width="361" height="205" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Part 1 iterative</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="55">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="2058" y="138" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>D:\Users\clmc9601\AppData\Local\Temp\61\Engine2_125100_9847c8b11785724e8c3ec5a6969d6f61_\Engine_125100_bb490ed0d92c0c40bee4f23e73d691c4~.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="62">
+          <GuiSettings>
+            <Position x="2058" y="210" />
+          </GuiSettings>
+          <Properties>
+            <Configuration />
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings Macro="CountRecords.yxmc" />
+        </Node>
+        <Node ToolID="51">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+            <Position x="1902" y="186" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <ByName_ErrorMode>Ignore</ByName_ErrorMode>
+              <ByName_OutputMode>All</ByName_OutputMode>
+              <Mode>ByName</Mode>
+              <SetOutputOrder value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+        </Node>
+        <Node ToolID="53">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="1806" y="186" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="0" field="sandflag" size="2" type="Int16" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[sandflag = 0
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="192">
+          <GuiSettings>
+            <Position x="1962" y="186" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="Numeric Up Down (25)">170</Value>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name>AoCDay14RocksIterate (54)</Name>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings Macro="AoCDay14RocksIterate.yxmc" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="180">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="857" y="136" width="889" height="288" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Generate all rock coordinates</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="36">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.GenerateRows.GenerateRows">
+            <Position x="1074" y="186" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UpdateField value="False" />
+              <UpdateField_Name>x</UpdateField_Name>
+              <CreateField_Name>x1</CreateField_Name>
+              <CreateField_Type>Int32</CreateField_Type>
+              <CreateField_Size>4</CreateField_Size>
+              <Expression_Init>Min([x], [Next x])</Expression_Init>
+              <Expression_Cond>[x1] &lt;= Max([x], [Next x])</Expression_Cond>
+              <Expression_Loop>[x1] + 1</Expression_Loop>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxGenerateRows" />
+        </Node>
+        <Node ToolID="38">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+            <Position x="978" y="186" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UpdateField value="False" />
+              <UpdateField_Name>RockLineID</UpdateField_Name>
+              <CreateField_Name>Next x</CreateField_Name>
+              <CreateField_Type>Int32</CreateField_Type>
+              <CreateField_Size>4</CreateField_Size>
+              <OtherRows>Nearest</OtherRows>
+              <NumRows value="1" />
+              <Expression><![CDATA[[Row+1:x]
+]]></Expression>
+              <GroupByFields>
+                <Field field="RockGroupID" />
+              </GroupByFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[[Row+1:x]
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+        </Node>
+        <Node ToolID="39">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+            <Position x="1266" y="186" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UpdateField value="False" />
+              <UpdateField_Name>RockLineID</UpdateField_Name>
+              <CreateField_Name>Next y</CreateField_Name>
+              <CreateField_Type>Int32</CreateField_Type>
+              <CreateField_Size>4</CreateField_Size>
+              <OtherRows>Nearest</OtherRows>
+              <NumRows value="1" />
+              <Expression>[Row+1:y]</Expression>
+              <GroupByFields>
+                <Field field="RockGroupID" />
+              </GroupByFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[Row+1:y]</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+        </Node>
+        <Node ToolID="40">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.GenerateRows.GenerateRows">
+            <Position x="1362" y="186" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UpdateField value="False" />
+              <UpdateField_Name>y</UpdateField_Name>
+              <CreateField_Name>y1</CreateField_Name>
+              <CreateField_Type>Int32</CreateField_Type>
+              <CreateField_Size>4</CreateField_Size>
+              <Expression_Init>Min([y], [Next y])</Expression_Init>
+              <Expression_Cond>[y1] &lt;= Max([y],  [Next y])</Expression_Cond>
+              <Expression_Loop>y1 + 1</Expression_Loop>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxGenerateRows" />
+        </Node>
+        <Node ToolID="41">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="1458" y="186" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="RockLineID" selected="False" />
+                <SelectField field="RockGroupID" selected="False" />
+                <SelectField field="data" selected="False" />
+                <SelectField field="x" selected="False" rename="xrock" />
+                <SelectField field="y" selected="False" rename="yrock" />
+                <SelectField field="Next x" selected="False" />
+                <SelectField field="x1" selected="True" rename="xrock" />
+                <SelectField field="Next y" selected="False" />
+                <SelectField field="y1" selected="True" rename="yrock" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="44">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+            <Position x="882" y="185" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SortInfo locale="1033">
+                <Field field="RockGroupID" order="Ascending" />
+                <Field field="RockLineID" order="Ascending" />
+                <Field field="x" order="Ascending" />
+                <Field field="y" order="Ascending" />
+              </SortInfo>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>RockGroupID - Ascending
+RockLineID - Ascending
+x - Ascending
+y - Ascending</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+        </Node>
+        <Node ToolID="59">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+            <Position x="1170" y="186" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SortInfo locale="1033">
+                <Field field="RockGroupID" order="Ascending" />
+                <Field field="RockLineID" order="Ascending" />
+                <Field field="x" order="Ascending" />
+                <Field field="y" order="Ascending" />
+              </SortInfo>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>RockGroupID - Ascending
+RockLineID - Ascending
+x - Ascending
+y - Ascending</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+        </Node>
+        <Node ToolID="66">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.GenerateRows.GenerateRows">
+            <Position x="1266" y="294" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UpdateField value="False" />
+              <UpdateField_Name />
+              <CreateField_Name>xrock</CreateField_Name>
+              <CreateField_Type>Int32</CreateField_Type>
+              <CreateField_Size>4</CreateField_Size>
+              <Expression_Init>300</Expression_Init>
+              <Expression_Cond>xrock &lt;= 700</Expression_Cond>
+              <Expression_Loop>xrock + 1</Expression_Loop>
+              <RecordCount value="401" />
+              <RecordCount value="0" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxGenerateRows" />
+        </Node>
+        <Node ToolID="67">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="1362" y="294" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="[User.yfloor]&#xA;// 11" field="yrock" size="4" type="Int32" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[yrock = [User.yfloor]
+// 11
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="68">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+            <Position x="1590" y="318" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <ByName_ErrorMode>Warning</ByName_ErrorMode>
+              <ByName_OutputMode>All</ByName_OutputMode>
+              <Mode>ByName</Mode>
+              <SetOutputOrder value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+        </Node>
+        <Node ToolID="52">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="1590" y="246" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="yrock" action="Max" rename="Max_yrock" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="43">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="1662" y="318" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="xrock" action="GroupBy" rename="xrock" />
+                <SummarizeField field="yrock" action="GroupBy" rename="yrock" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="193">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="1590" y="186" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="xrock" action="GroupBy" rename="xrock" />
+                <SummarizeField field="yrock" action="GroupBy" rename="yrock" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection name="#2">
+      <Origin ToolID="45" Connection="Output" />
+      <Destination ToolID="51" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="53" Connection="Output" />
+      <Destination ToolID="51" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="45" Connection="Output" />
+      <Destination ToolID="147" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="133" Connection="Output" />
+      <Destination ToolID="134" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="134" Connection="Output" />
+      <Destination ToolID="135" Connection="Input" />
+    </Connection>
+    <Connection name="#2" Wireless="True">
+      <Origin ToolID="135" Connection="Output" />
+      <Destination ToolID="122" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="121" Connection="Output" />
+      <Destination ToolID="122" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="135" Connection="Output" />
+      <Destination ToolID="136" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="136" Connection="Output" />
+      <Destination ToolID="137" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="183" Connection="Output" />
+      <Destination ToolID="184" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="184" Connection="Output" />
+      <Destination ToolID="185" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="185" Connection="Output" />
+      <Destination ToolID="186" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="186" Connection="Output" />
+      <Destination ToolID="187" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="194" Connection="Output" />
+      <Destination ToolID="30" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="30" Connection="Output" />
+      <Destination ToolID="31" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="31" Connection="Output" />
+      <Destination ToolID="34" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="32" Connection="Output" />
+      <Destination ToolID="35" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="33" Connection="Output" />
+      <Destination ToolID="32" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="34" Connection="True" />
+      <Destination ToolID="33" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="35" Connection="Output" />
+      <Destination ToolID="37" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="37" Connection="Output" />
+      <Destination ToolID="44" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="91" Connection="Output" />
+      <Destination ToolID="93" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="92" Connection="Output" />
+      <Destination ToolID="94" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="93" Connection="Output" />
+      <Destination ToolID="92" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="94" Connection="Output" />
+      <Destination ToolID="95" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="95" Connection="Output" />
+      <Destination ToolID="97" Connection="Left" />
+    </Connection>
+    <Connection Wireless="True">
+      <Origin ToolID="43" Connection="Output" />
+      <Destination ToolID="97" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="96" Connection="Output" />
+      <Destination ToolID="91" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="97" Connection="Join" />
+      <Destination ToolID="99" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="97" Connection="Left" />
+      <Destination ToolID="100" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="99" Connection="Output" />
+      <Destination ToolID="100" Connection="Right" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="100" Connection="Join" />
+      <Destination ToolID="124" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="100" Connection="Left" />
+      <Destination ToolID="124" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="101" Connection="True" />
+      <Destination ToolID="126" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="107" Connection="Output" />
+      <Destination ToolID="108" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="108" Connection="Output" />
+      <Destination ToolID="109" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="109" Connection="Output" />
+      <Destination ToolID="110" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="110" Connection="Output" />
+      <Destination ToolID="111" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="124" Connection="Output" />
+      <Destination ToolID="101" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="126" Connection="Output" />
+      <Destination ToolID="117" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="84" Connection="Left" />
+      <Destination ToolID="117" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="126" Connection="Output" />
+      <Destination ToolID="107" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="98" Connection="Output" />
+      <Destination ToolID="102" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="102" Connection="Output" />
+      <Destination ToolID="103" Connection="Left" />
+    </Connection>
+    <Connection Wireless="True">
+      <Origin ToolID="43" Connection="Output" />
+      <Destination ToolID="103" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="103" Connection="Join" />
+      <Destination ToolID="104" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="103" Connection="Left" />
+      <Destination ToolID="105" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="104" Connection="Output" />
+      <Destination ToolID="105" Connection="Right" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="105" Connection="Join" />
+      <Destination ToolID="125" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="105" Connection="Left" />
+      <Destination ToolID="125" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="106" Connection="True" />
+      <Destination ToolID="127" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="112" Connection="Output" />
+      <Destination ToolID="113" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="113" Connection="Output" />
+      <Destination ToolID="114" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="114" Connection="Output" />
+      <Destination ToolID="115" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="115" Connection="Output" />
+      <Destination ToolID="116" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="117" Connection="Output" />
+      <Destination ToolID="118" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="118" Connection="Output" />
+      <Destination ToolID="129" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="118" Connection="Output" />
+      <Destination ToolID="131" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="127" Connection="Output" />
+      <Destination ToolID="131" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="125" Connection="Output" />
+      <Destination ToolID="106" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="127" Connection="Output" />
+      <Destination ToolID="112" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="128" Connection="Output" />
+      <Destination ToolID="98" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="129" Connection="Output" />
+      <Destination ToolID="130" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="130" Connection="Output" />
+      <Destination ToolID="128" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="119" Connection="Output" />
+      <Destination ToolID="120" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="119" Connection="Output" />
+      <Destination ToolID="178" Connection="Input8" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="120" Connection="Output" />
+      <Destination ToolID="121" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="122" Connection="Output" />
+      <Destination ToolID="123" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="131" Connection="Output" />
+      <Destination ToolID="132" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="132" Connection="Output" />
+      <Destination ToolID="141" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="138" Connection="Output" />
+      <Destination ToolID="140" Connection="Left" />
+    </Connection>
+    <Connection Wireless="True">
+      <Origin ToolID="43" Connection="Output" />
+      <Destination ToolID="140" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="139" Connection="Output" />
+      <Destination ToolID="149" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="140" Connection="Join" />
+      <Destination ToolID="142" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="140" Connection="Left" />
+      <Destination ToolID="143" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="142" Connection="Output" />
+      <Destination ToolID="143" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="141" Connection="Output" />
+      <Destination ToolID="138" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="143" Connection="Join" />
+      <Destination ToolID="144" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="143" Connection="Left" />
+      <Destination ToolID="144" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="144" Connection="Output" />
+      <Destination ToolID="145" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="145" Connection="True" />
+      <Destination ToolID="139" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="149" Connection="Output" />
+      <Destination ToolID="151" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="150" Connection="Output" />
+      <Destination ToolID="152" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="151" Connection="Output" />
+      <Destination ToolID="150" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="152" Connection="Output" />
+      <Destination ToolID="153" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="153" Connection="Output" />
+      <Destination ToolID="154" Connection="Left" />
+    </Connection>
+    <Connection Wireless="True">
+      <Origin ToolID="43" Connection="Output" />
+      <Destination ToolID="154" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="154" Connection="Join" />
+      <Destination ToolID="156" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="154" Connection="Left" />
+      <Destination ToolID="157" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="156" Connection="Output" />
+      <Destination ToolID="157" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="155" Connection="Output" />
+      <Destination ToolID="159" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="157" Connection="Join" />
+      <Destination ToolID="171" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="157" Connection="Left" />
+      <Destination ToolID="171" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="158" Connection="True" />
+      <Destination ToolID="173" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="159" Connection="Output" />
+      <Destination ToolID="160" Connection="Left" />
+    </Connection>
+    <Connection Wireless="True">
+      <Origin ToolID="43" Connection="Output" />
+      <Destination ToolID="160" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="160" Connection="Join" />
+      <Destination ToolID="161" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="160" Connection="Left" />
+      <Destination ToolID="162" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="161" Connection="Output" />
+      <Destination ToolID="162" Connection="Right" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="162" Connection="Join" />
+      <Destination ToolID="172" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="162" Connection="Left" />
+      <Destination ToolID="172" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="163" Connection="True" />
+      <Destination ToolID="174" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="169" Connection="Output" />
+      <Destination ToolID="170" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="170" Connection="Output" />
+      <Destination ToolID="176" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="171" Connection="Output" />
+      <Destination ToolID="158" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="172" Connection="Output" />
+      <Destination ToolID="163" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="173" Connection="Output" />
+      <Destination ToolID="169" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="174" Connection="Output" />
+      <Destination ToolID="119" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="175" Connection="Output" />
+      <Destination ToolID="155" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="176" Connection="Output" />
+      <Destination ToolID="177" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="177" Connection="Output" />
+      <Destination ToolID="175" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="84" Connection="Left" />
+      <Destination ToolID="85" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="84" Connection="Left" />
+      <Destination ToolID="96" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="85" Connection="Output" />
+      <Destination ToolID="86" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="86" Connection="Output" />
+      <Destination ToolID="87" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="87" Connection="Output" />
+      <Destination ToolID="88" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="88" Connection="Output" />
+      <Destination ToolID="89" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="90" Connection="Output" />
+      <Destination ToolID="84" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="81" Connection="Output" />
+      <Destination ToolID="84" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="79" Connection="Output" />
+      <Destination ToolID="82" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="82" Connection="Output" />
+      <Destination ToolID="81" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="147" Connection="Output" />
+      <Destination ToolID="79" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="51" Connection="Output" />
+      <Destination ToolID="192" Connection="Rocks" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="192" Connection="SandRest" />
+      <Destination ToolID="55" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="192" Connection="SandRest" />
+      <Destination ToolID="62" Connection="Input8" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="192" Connection="SandRest" />
+      <Destination ToolID="183" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="36" Connection="Output" />
+      <Destination ToolID="59" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="38" Connection="Output" />
+      <Destination ToolID="36" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="39" Connection="Output" />
+      <Destination ToolID="40" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="40" Connection="Output" />
+      <Destination ToolID="41" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="41" Connection="Output" />
+      <Destination ToolID="68" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="67" Connection="Output" />
+      <Destination ToolID="68" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="41" Connection="Output" />
+      <Destination ToolID="52" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="41" Connection="Output" />
+      <Destination ToolID="193" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="44" Connection="Output" />
+      <Destination ToolID="38" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="59" Connection="Output" />
+      <Destination ToolID="39" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="66" Connection="Output" />
+      <Destination ToolID="67" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="68" Connection="Output" />
+      <Destination ToolID="43" Connection="Input" />
+    </Connection>
+    <Connection Wireless="True">
+      <Origin ToolID="43" Connection="Output" />
+      <Destination ToolID="90" Connection="Input" />
+    </Connection>
+    <Connection Wireless="True">
+      <Origin ToolID="43" Connection="Output" />
+      <Destination ToolID="133" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="193" Connection="Output" />
+      <Destination ToolID="53" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <Constants>
+      <Constant>
+        <Namespace>User</Namespace>
+        <Name>yfloor</Name>
+        <Value>172</Value>
+        <IsNumeric value="True" />
+      </Constant>
+      <Constant>
+        <Namespace>User</Namespace>
+        <Name />
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+    </Constants>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>AoC_2022_Day14_clmc9601</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="5b4242b2-4c09-492f-814e-cbac7d44c0e2" />
+      <Telemetry>
+        <PreviousWorkflowId value="3632a1dd-bbf2-40a3-b6e4-b6e208a9c005" />
+        <OriginWorkflowId value="e4b763f2-04a0-4b9e-89b3-1ef240206095" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

@@ -1,0 +1,975 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2021.2">
+  <Nodes>
+    <Node ToolID="18">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="90" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="5" />
+          <Fields>
+            <Field name="data" />
+          </Fields>
+          <Data>
+            <r>
+              <c>30373</c>
+            </r>
+            <r>
+              <c>25512</c>
+            </r>
+            <r>
+              <c>65332</c>
+            </r>
+            <r>
+              <c>33549</c>
+            </r>
+            <r>
+              <c>35390</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Example</AnnotationText>
+          <DefaultAnnotationText>Example</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="30">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RegEx.RegEx">
+        <Position x="200" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>data</Field>
+          <RegExExpression value="." />
+          <CaseInsensitve value="True" />
+          <Method>ParseSimple</Method>
+          <Replace expression="">
+            <CopyUnmatched value="True" />
+          </Replace>
+          <ParseSimple>
+            <SplitToRows value="False" />
+            <RootName>
+            </RootName>
+            <NumFields value="99" />
+            <ErrorHandling>Warn</ErrorHandling>
+          </ParseSimple>
+          <ParseComplex>
+            <Field field="No Marked Groups Found" type="No Marked Groups Found" size="No Marked Groups Found" />
+          </ParseComplex>
+          <Match>
+            <Field>data_Matched</Field>
+            <ErrorUnmatched value="False" />
+          </Match>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Parse into columns</AnnotationText>
+          <DefaultAnnotationText>Parse into columns</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRegEx" />
+    </Node>
+    <Node ToolID="31">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="366" y="462" width="100" height="40" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>if column = 1 or 99 or if row = 1 or 99 then visible</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="32">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="284" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="data" selected="False" />
+            <SelectField field="1" selected="True" type="Int16" size="2" />
+            <SelectField field="2" selected="True" type="Int16" size="2" />
+            <SelectField field="3" selected="True" type="Int16" size="2" />
+            <SelectField field="4" selected="True" type="Int16" size="2" />
+            <SelectField field="5" selected="True" type="Int16" size="2" />
+            <SelectField field="6" selected="True" type="Int16" size="2" />
+            <SelectField field="7" selected="True" type="Int16" size="2" />
+            <SelectField field="8" selected="True" type="Int16" size="2" />
+            <SelectField field="9" selected="True" type="Int16" size="2" />
+            <SelectField field="10" selected="True" type="Int16" size="2" />
+            <SelectField field="11" selected="True" type="Int16" size="2" />
+            <SelectField field="12" selected="True" type="Int16" size="2" />
+            <SelectField field="13" selected="True" type="Int16" size="2" />
+            <SelectField field="14" selected="True" type="Int16" size="2" />
+            <SelectField field="15" selected="True" type="Int16" size="2" />
+            <SelectField field="16" selected="True" type="Int16" size="2" />
+            <SelectField field="17" selected="True" type="Int16" size="2" />
+            <SelectField field="18" selected="True" type="Int16" size="2" />
+            <SelectField field="19" selected="True" type="Int16" size="2" />
+            <SelectField field="20" selected="True" type="Int16" size="2" />
+            <SelectField field="21" selected="True" type="Int16" size="2" />
+            <SelectField field="22" selected="True" type="Int16" size="2" />
+            <SelectField field="23" selected="True" type="Int16" size="2" />
+            <SelectField field="24" selected="True" type="Int16" size="2" />
+            <SelectField field="25" selected="True" type="Int16" size="2" />
+            <SelectField field="26" selected="True" type="Int16" size="2" />
+            <SelectField field="27" selected="True" type="Int16" size="2" />
+            <SelectField field="28" selected="True" type="Int16" size="2" />
+            <SelectField field="29" selected="True" type="Int16" size="2" />
+            <SelectField field="30" selected="True" type="Int16" size="2" />
+            <SelectField field="31" selected="True" type="Int16" size="2" />
+            <SelectField field="32" selected="True" type="Int16" size="2" />
+            <SelectField field="33" selected="True" type="Int16" size="2" />
+            <SelectField field="34" selected="True" type="Int16" size="2" />
+            <SelectField field="35" selected="True" type="Int16" size="2" />
+            <SelectField field="36" selected="True" type="Int16" size="2" />
+            <SelectField field="37" selected="True" type="Int16" size="2" />
+            <SelectField field="38" selected="True" type="Int16" size="2" />
+            <SelectField field="39" selected="True" type="Int16" size="2" />
+            <SelectField field="40" selected="True" type="Int16" size="2" />
+            <SelectField field="41" selected="True" type="Int16" size="2" />
+            <SelectField field="42" selected="True" type="Int16" size="2" />
+            <SelectField field="43" selected="True" type="Int16" size="2" />
+            <SelectField field="44" selected="True" type="Int16" size="2" />
+            <SelectField field="45" selected="True" type="Int16" size="2" />
+            <SelectField field="46" selected="True" type="Int16" size="2" />
+            <SelectField field="47" selected="True" type="Int16" size="2" />
+            <SelectField field="48" selected="True" type="Int16" size="2" />
+            <SelectField field="49" selected="True" type="Int16" size="2" />
+            <SelectField field="50" selected="True" type="Int16" size="2" />
+            <SelectField field="51" selected="True" type="Int16" size="2" />
+            <SelectField field="52" selected="True" type="Int16" size="2" />
+            <SelectField field="53" selected="True" type="Int16" size="2" />
+            <SelectField field="54" selected="True" type="Int16" size="2" />
+            <SelectField field="55" selected="True" type="Int16" size="2" />
+            <SelectField field="56" selected="True" type="Int16" size="2" />
+            <SelectField field="57" selected="True" type="Int16" size="2" />
+            <SelectField field="58" selected="True" type="Int16" size="2" />
+            <SelectField field="59" selected="True" type="Int16" size="2" />
+            <SelectField field="60" selected="True" type="Int16" size="2" />
+            <SelectField field="61" selected="True" type="Int16" size="2" />
+            <SelectField field="62" selected="True" type="Int16" size="2" />
+            <SelectField field="63" selected="True" type="Int16" size="2" />
+            <SelectField field="64" selected="True" type="Int16" size="2" />
+            <SelectField field="65" selected="True" type="Int16" size="2" />
+            <SelectField field="66" selected="True" type="Int16" size="2" />
+            <SelectField field="67" selected="True" type="Int16" size="2" />
+            <SelectField field="68" selected="True" type="Int16" size="2" />
+            <SelectField field="69" selected="True" type="Int16" size="2" />
+            <SelectField field="70" selected="True" type="Int16" size="2" />
+            <SelectField field="71" selected="True" type="Int16" size="2" />
+            <SelectField field="72" selected="True" type="Int16" size="2" />
+            <SelectField field="73" selected="True" type="Int16" size="2" />
+            <SelectField field="74" selected="True" type="Int16" size="2" />
+            <SelectField field="75" selected="True" type="Int16" size="2" />
+            <SelectField field="76" selected="True" type="Int16" size="2" />
+            <SelectField field="77" selected="True" type="Int16" size="2" />
+            <SelectField field="78" selected="True" type="Int16" size="2" />
+            <SelectField field="79" selected="True" type="Int16" size="2" />
+            <SelectField field="80" selected="True" type="Int16" size="2" />
+            <SelectField field="81" selected="True" type="Int16" size="2" />
+            <SelectField field="82" selected="True" type="Int16" size="2" />
+            <SelectField field="83" selected="True" type="Int16" size="2" />
+            <SelectField field="84" selected="True" type="Int16" size="2" />
+            <SelectField field="85" selected="True" type="Int16" size="2" />
+            <SelectField field="86" selected="True" type="Int16" size="2" />
+            <SelectField field="87" selected="True" type="Int16" size="2" />
+            <SelectField field="88" selected="True" type="Int16" size="2" />
+            <SelectField field="89" selected="True" type="Int16" size="2" />
+            <SelectField field="90" selected="True" type="Int16" size="2" />
+            <SelectField field="91" selected="True" type="Int16" size="2" />
+            <SelectField field="92" selected="True" type="Int16" size="2" />
+            <SelectField field="93" selected="True" type="Int16" size="2" />
+            <SelectField field="94" selected="True" type="Int16" size="2" />
+            <SelectField field="95" selected="True" type="Int16" size="2" />
+            <SelectField field="96" selected="True" type="Int16" size="2" />
+            <SelectField field="97" selected="True" type="Int16" size="2" />
+            <SelectField field="98" selected="True" type="Int16" size="2" />
+            <SelectField field="99" selected="True" type="Int16" size="2" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Change to numeric data type</AnnotationText>
+          <DefaultAnnotationText>Change to numeric data type</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="34">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+        <Position x="392" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldName>Row</FieldName>
+          <StartValue>1</StartValue>
+          <FieldType>Int32</FieldType>
+          <FieldSize>6</FieldSize>
+          <Position>0</Position>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Assign row numbers</AnnotationText>
+          <DefaultAnnotationText>Assign row numbers</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+    </Node>
+    <Node ToolID="33">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Transpose.Transpose">
+        <Position x="512" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ErrorWarn>Warn</ErrorWarn>
+          <KeyFields>
+            <Field field="Row" />
+          </KeyFields>
+          <DataFields>
+            <Field field="Row" selected="False" />
+            <Field field="1" selected="True" />
+            <Field field="2" selected="True" />
+            <Field field="3" selected="True" />
+            <Field field="4" selected="True" />
+            <Field field="5" selected="True" />
+            <Field field="6" selected="True" />
+            <Field field="7" selected="True" />
+            <Field field="8" selected="True" />
+            <Field field="9" selected="True" />
+            <Field field="10" selected="True" />
+            <Field field="11" selected="True" />
+            <Field field="12" selected="True" />
+            <Field field="13" selected="True" />
+            <Field field="14" selected="True" />
+            <Field field="15" selected="True" />
+            <Field field="16" selected="True" />
+            <Field field="17" selected="True" />
+            <Field field="18" selected="True" />
+            <Field field="19" selected="True" />
+            <Field field="20" selected="True" />
+            <Field field="21" selected="True" />
+            <Field field="22" selected="True" />
+            <Field field="23" selected="True" />
+            <Field field="24" selected="True" />
+            <Field field="25" selected="True" />
+            <Field field="26" selected="True" />
+            <Field field="27" selected="True" />
+            <Field field="28" selected="True" />
+            <Field field="29" selected="True" />
+            <Field field="30" selected="True" />
+            <Field field="31" selected="True" />
+            <Field field="32" selected="True" />
+            <Field field="33" selected="True" />
+            <Field field="34" selected="True" />
+            <Field field="35" selected="True" />
+            <Field field="36" selected="True" />
+            <Field field="37" selected="True" />
+            <Field field="38" selected="True" />
+            <Field field="39" selected="True" />
+            <Field field="40" selected="True" />
+            <Field field="41" selected="True" />
+            <Field field="42" selected="True" />
+            <Field field="43" selected="True" />
+            <Field field="44" selected="True" />
+            <Field field="45" selected="True" />
+            <Field field="46" selected="True" />
+            <Field field="47" selected="True" />
+            <Field field="48" selected="True" />
+            <Field field="49" selected="True" />
+            <Field field="50" selected="True" />
+            <Field field="51" selected="True" />
+            <Field field="52" selected="True" />
+            <Field field="53" selected="True" />
+            <Field field="54" selected="True" />
+            <Field field="55" selected="True" />
+            <Field field="56" selected="True" />
+            <Field field="57" selected="True" />
+            <Field field="58" selected="True" />
+            <Field field="59" selected="True" />
+            <Field field="60" selected="True" />
+            <Field field="61" selected="True" />
+            <Field field="62" selected="True" />
+            <Field field="63" selected="True" />
+            <Field field="64" selected="True" />
+            <Field field="65" selected="True" />
+            <Field field="66" selected="True" />
+            <Field field="67" selected="True" />
+            <Field field="68" selected="True" />
+            <Field field="69" selected="True" />
+            <Field field="70" selected="True" />
+            <Field field="71" selected="True" />
+            <Field field="72" selected="True" />
+            <Field field="73" selected="True" />
+            <Field field="74" selected="True" />
+            <Field field="75" selected="True" />
+            <Field field="76" selected="True" />
+            <Field field="77" selected="True" />
+            <Field field="78" selected="True" />
+            <Field field="79" selected="True" />
+            <Field field="80" selected="True" />
+            <Field field="81" selected="True" />
+            <Field field="82" selected="True" />
+            <Field field="83" selected="True" />
+            <Field field="84" selected="True" />
+            <Field field="85" selected="True" />
+            <Field field="86" selected="True" />
+            <Field field="87" selected="True" />
+            <Field field="88" selected="True" />
+            <Field field="89" selected="True" />
+            <Field field="90" selected="True" />
+            <Field field="91" selected="True" />
+            <Field field="92" selected="True" />
+            <Field field="93" selected="True" />
+            <Field field="94" selected="True" />
+            <Field field="95" selected="True" />
+            <Field field="96" selected="True" />
+            <Field field="97" selected="True" />
+            <Field field="98" selected="True" />
+            <Field field="99" selected="True" />
+            <Field field="*Unknown" selected="True" />
+          </DataFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Put all trees in rows with their coordinates</AnnotationText>
+          <DefaultAnnotationText>Put all trees in rows with their coordinates</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTranspose" />
+    </Node>
+    <Node ToolID="86">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="90" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">AoC_2022_Input_Day_8.csv</File>
+          <FormatSpecificOptions>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreErrors>False</IgnoreErrors>
+            <AllowShareWrite>False</AllowShareWrite>
+            <ImportLine>1</ImportLine>
+            <FieldLen>254000</FieldLen>
+            <SingleThreadRead>False</SingleThreadRead>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <Delimeter>,</Delimeter>
+            <QuoteRecordBreak>False</QuoteRecordBreak>
+            <CodePage>65001</CodePage>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>AoC_2022_Input_Day_8.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="data" size="254000" source="File: D:\Users\clmc9601\Documents\Alteryx\Advent-of-Code-solutions\2022 Alteryx\AoC_2022_Input_Day_8.csv" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="54">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="677" y="136" width="1141" height="195" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Part 1</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="35">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+            <Position x="786" y="186" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UpdateField value="False" />
+              <UpdateField_Name>Row</UpdateField_Name>
+              <CreateField_Name>TopTallest</CreateField_Name>
+              <CreateField_Type>Byte</CreateField_Type>
+              <CreateField_Size>1</CreateField_Size>
+              <OtherRows>Empty</OtherRows>
+              <NumRows value="1" />
+              <Expression>max([Row-1:Value], [Row-1:TopTallest])</Expression>
+              <GroupByFields>
+                <Field field="Row" />
+              </GroupByFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>max([Row-1:Value], [Row-1:TopTallest])</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+        </Node>
+        <Node ToolID="36">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+            <Position x="894" y="185" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SortInfo locale="1033">
+                <Field field="Row" order="Ascending" />
+                <Field field="Column" order="Descending" />
+              </SortInfo>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Row - Ascending
+Column - Descending</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+        </Node>
+        <Node ToolID="37">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+            <Position x="1014" y="186" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UpdateField value="False" />
+              <UpdateField_Name>Visible</UpdateField_Name>
+              <CreateField_Name>BottomTallest</CreateField_Name>
+              <CreateField_Type>Byte</CreateField_Type>
+              <CreateField_Size>1</CreateField_Size>
+              <OtherRows>Empty</OtherRows>
+              <NumRows value="1" />
+              <Expression>max([Row-1:Value], [Row-1:BottomTallest])</Expression>
+              <GroupByFields>
+                <Field field="Row" />
+              </GroupByFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>max([Row-1:Value], [Row-1:BottomTallest])</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+        </Node>
+        <Node ToolID="41">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+            <Position x="1230" y="186" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UpdateField value="False" />
+              <UpdateField_Name>Row</UpdateField_Name>
+              <CreateField_Name>Right_TopTallest</CreateField_Name>
+              <CreateField_Type>Byte</CreateField_Type>
+              <CreateField_Size>1</CreateField_Size>
+              <OtherRows>Empty</OtherRows>
+              <NumRows value="1" />
+              <Expression>max([Row-1:Value], [Row-1:Right_TopTallest])</Expression>
+              <GroupByFields>
+                <Field field="Column" />
+              </GroupByFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>max([Row-1:Value], [Row-1:Right_TopTallest])</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+        </Node>
+        <Node ToolID="42">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+            <Position x="1338" y="186" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SortInfo locale="1033">
+                <Field field="Column" order="Ascending" />
+                <Field field="Row" order="Descending" />
+              </SortInfo>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Column - Ascending
+Row - Descending</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+        </Node>
+        <Node ToolID="43">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+            <Position x="1446" y="186" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UpdateField value="False" />
+              <UpdateField_Name>Visible</UpdateField_Name>
+              <CreateField_Name>Right_BottomTallest</CreateField_Name>
+              <CreateField_Type>Byte</CreateField_Type>
+              <CreateField_Size>1</CreateField_Size>
+              <OtherRows>Empty</OtherRows>
+              <NumRows value="1" />
+              <Expression>max([Row-1:Value], [Row-1:Right_BottomTallest])</Expression>
+              <GroupByFields>
+                <Field field="Column" />
+              </GroupByFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>max([Row-1:Value], [Row-1:Right_BottomTallest])</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+        </Node>
+        <Node ToolID="44">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+            <Position x="1122" y="185" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SortInfo locale="1033">
+                <Field field="Column" order="Ascending" />
+                <Field field="Row" order="Ascending" />
+              </SortInfo>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Column - Ascending
+Row - Ascending</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+        </Node>
+        <Node ToolID="46">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="1638" y="186" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="IF [Row] in (1, 99) or [Column] in (1,99)&#xA;THEN 1&#xA;ELSEIF [Value]&gt;Min([TopTallest], [Right_TopTallest], [BottomTallest], [Right_BottomTallest])&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" field="Max_Visible" size="2" type="Int16" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Calculate if the tree was visible from any direction</AnnotationText>
+              <DefaultAnnotationText>Max_Visible = IF [Row] in (1, 99) or [Column] in (1,99)
+THEN 1
+ELSEIF [Value]&gt;Mi...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="48">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="1542" y="186" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="49">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="1734" y="186" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="Max_Visible" action="Sum" rename="Sum_Max_Visible" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="52">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="702" y="185" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Name" selected="True" rename="Column" type="Int16" size="2" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="85">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="677" y="353" width="517" height="300" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Part 2</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="78">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="702" y="402" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="Row" action="GroupBy" rename="Row" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="79">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="894" y="462" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="Row" />
+                <Field field="Column" />
+                <Field field="Value" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="Row" />
+                <Field field="Column" />
+                <Field field="Value" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Right_Row" selected="True" rename="Right_Row" input="Right_" />
+                    <SelectField field="Right_Column" selected="True" rename="Right_Column" input="Right_" />
+                    <SelectField field="Right_Value" selected="True" rename="Right_Value" input="Right_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Combine left-right tree counts with up-down tree counts</AnnotationText>
+              <DefaultAnnotationText>Combine left-right tree counts with up-down tree counts</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="80">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="1002" y="462" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="IF [Row] IN (1,99) or [Column] IN (1,99)&#xA;THEN 0 &#xA;ELSE [TreesUp]*[TreesDown]*[TreesLeft]*[TreesRight]&#xA;ENDIF" field="ScenicScore" size="8" type="Int64" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>ScenicScore = IF [Row] IN (1,99) or [Column] IN (1,99)
+THEN 0 
+ELSE [TreesUp]*[T...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="81">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="702" y="474" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Name" selected="True" rename="Column" type="Byte" size="1" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="83">
+          <GuiSettings>
+            <Position x="798" y="462" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="BatchMacroGroupBy" />
+              <Value name="ControlParams"><![CDATA[Control Parameter (37)=Row
+]]></Value>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name>AoCDay8 (77)</Name>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Rows">
+              <RecordInfo>
+                <Field name="Row" source="Summarize: GroupBy - Row (BatchMacro)" type="Int32" />
+                <Field name="Column" source="Summarize: GroupBy - Column (BatchMacro)" type="Byte" />
+                <Field description="RegEx: Parsed from data" name="Value" source="Summarize: GroupBy - Value (BatchMacro)" type="Int16" />
+                <Field name="TreesLeft" source="Summarize: Sum - Trees (BatchMacro)" type="Int64" />
+                <Field name="TreesRight" source="Summarize: Sum - Trees (BatchMacro)" type="Int64" />
+              </RecordInfo>
+            </MetaInfo>
+            <MetaInfo connection="Columns">
+              <RecordInfo>
+                <Field name="Row" source="Summarize: GroupBy - Row (BatchMacro)" type="Int32" />
+                <Field name="Column" source="Summarize: GroupBy - Column (BatchMacro)" type="Byte" />
+                <Field description="RegEx: Parsed from data" name="Value" source="Summarize: GroupBy - Value (BatchMacro)" type="Int16" />
+                <Field name="TreesUp" source="Summarize: Sum - Trees (BatchMacro)" type="Int64" />
+                <Field name="TreesDown" source="Summarize: Sum - Trees (BatchMacro)" type="Int64" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings Macro="AoCDay8.yxmc" />
+        </Node>
+        <Node ToolID="84">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="1110" y="462" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="ScenicScore" action="Max" rename="Max_ScenicScore" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="30" Connection="Output" />
+      <Destination ToolID="32" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="32" Connection="Output" />
+      <Destination ToolID="34" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="34" Connection="Output" />
+      <Destination ToolID="33" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="33" Connection="Output" />
+      <Destination ToolID="52" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="33" Connection="Output" />
+      <Destination ToolID="78" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="33" Connection="Output" />
+      <Destination ToolID="81" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="86" Connection="Output" />
+      <Destination ToolID="30" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="35" Connection="Output" />
+      <Destination ToolID="36" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="36" Connection="Output" />
+      <Destination ToolID="37" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="37" Connection="Output" />
+      <Destination ToolID="44" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="41" Connection="Output" />
+      <Destination ToolID="42" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="42" Connection="Output" />
+      <Destination ToolID="43" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="43" Connection="Output" />
+      <Destination ToolID="48" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="44" Connection="Output" />
+      <Destination ToolID="41" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="46" Connection="Output" />
+      <Destination ToolID="49" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="48" Connection="Output" />
+      <Destination ToolID="46" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="52" Connection="Output" />
+      <Destination ToolID="35" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="78" Connection="Output" />
+      <Destination ToolID="83" Connection="Control" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="81" Connection="Output" />
+      <Destination ToolID="83" Connection="Input1" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="79" Connection="Join" />
+      <Destination ToolID="80" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="80" Connection="Output" />
+      <Destination ToolID="84" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="83" Connection="Columns" />
+      <Destination ToolID="79" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="83" Connection="Rows" />
+      <Destination ToolID="79" Connection="Right" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>AoC_2022_Day8_clmc9601</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="444745fa-5fe4-49e4-be49-de3500650f28" />
+      <Telemetry>
+        <PreviousWorkflowId value="3632a1dd-bbf2-40a3-b6e4-b6e208a9c005" />
+        <OriginWorkflowId value="e4b763f2-04a0-4b9e-89b3-1ef240206095" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
