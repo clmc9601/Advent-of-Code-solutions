@@ -1,0 +1,1292 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2021.2">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
+        <Position x="174" y="282" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UseFileInput value="False" />
+          <Name>Rocks</Name>
+          <Abbrev />
+          <ShowFieldMap value="False" />
+          <Optional value="False" />
+          <TextInput>
+            <Configuration>
+              <NumRows value="21" />
+              <Fields>
+                <Field name="xrock" />
+                <Field name="yrock" />
+                <Field name="xsand" />
+                <Field name="ysand" />
+                <Field name="sandflag" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>494</c>
+                  <c>9</c>
+                  <c />
+                  <c />
+                  <c>1</c>
+                </r>
+                <r>
+                  <c>495</c>
+                  <c>9</c>
+                  <c />
+                  <c />
+                  <c>1</c>
+                </r>
+                <r>
+                  <c>496</c>
+                  <c>6</c>
+                  <c />
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>496</c>
+                  <c>9</c>
+                  <c />
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>497</c>
+                  <c>6</c>
+                  <c />
+                  <c />
+                  <c>1</c>
+                </r>
+                <r>
+                  <c>497</c>
+                  <c>9</c>
+                  <c />
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>498</c>
+                  <c>4</c>
+                  <c />
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>498</c>
+                  <c>5</c>
+                  <c />
+                  <c />
+                  <c>1</c>
+                </r>
+                <r>
+                  <c>498</c>
+                  <c>6</c>
+                  <c />
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>498</c>
+                  <c>9</c>
+                  <c />
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>499</c>
+                  <c>9</c>
+                  <c />
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>500</c>
+                  <c>9</c>
+                  <c />
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>501</c>
+                  <c>9</c>
+                  <c />
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>502</c>
+                  <c>4</c>
+                  <c />
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>502</c>
+                  <c>5</c>
+                  <c />
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>502</c>
+                  <c>6</c>
+                  <c />
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>502</c>
+                  <c>7</c>
+                  <c />
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>502</c>
+                  <c>8</c>
+                  <c />
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>502</c>
+                  <c>9</c>
+                  <c />
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>503</c>
+                  <c>4</c>
+                  <c />
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c />
+                  <c />
+                  <c>500</c>
+                  <c>0</c>
+                  <c />
+                </r>
+              </Data>
+            </Configuration>
+          </TextInput>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Input</DefaultAnnotationText>
+          <Left value="True" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="xrock" source="TextInput:" type="Int16" />
+            <Field name="yrock" source="TextInput:" type="Byte" />
+            <Field name="xsand" source="TextInput:" type="Int16" />
+            <Field name="ysand" source="TextInput:" type="Byte" />
+            <Field name="sandflag" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="546" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[ysand]+1" field="ysand_new" size="4" type="Int32" />
+            <FormulaField expression="IF [RowCount]=2&#xA;THEN [xsand]-1&#xA;ELSEIF [RowCount]=3&#xA;THEN [xsand]+1&#xA;ELSE [xsand]&#xA;ENDIF" field="xsand_new" size="4" type="Int32" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>calculate new coordinates</AnnotationText>
+          <DefaultAnnotationText>ysand_new = [ysand]+1
+xsand_new = IF [RowCount]=2
+THEN [xsand]-1
+ELSEIF [RowCoun...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="xsand" source="TextInput:" type="Int16" />
+            <Field name="ysand" source="TextInput:" type="Byte" />
+            <Field name="RowCount" type="Int32" />
+            <Field name="ysand_new" source="Formula: [ysand]+1" type="Int32" />
+            <Field name="xsand_new" source="Formula: IF [RowCount]=2&#xA;THEN [xsand]-1&#xA;ELSEIF [RowCount]=3&#xA;THEN [xsand]+1&#xA;ELSE [xsand]&#xA;ENDIF" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="630" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="xsand_new" />
+            <Field field="ysand_new" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="xrock" />
+            <Field field="yrock" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_xsand" selected="True" rename="xrock" input="Left_" />
+                <SelectField field="Left_ysand" selected="True" rename="yrock" input="Left_" />
+                <SelectField field="Left_RowCount" selected="False" input="Left_" />
+                <SelectField field="Left_ysand_new" selected="False" input="Left_" />
+                <SelectField field="Left_xsand_new" selected="False" input="Left_" />
+                <SelectField field="Right_xrock" selected="False" input="Right_" />
+                <SelectField field="Right_yrock" selected="False" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>evaluate if a rock blocks the sand</AnnotationText>
+          <DefaultAnnotationText>evaluate if a rock blocks the sand</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="xsand" source="TextInput:" type="Int16" />
+            <Field name="ysand" source="TextInput:" type="Byte" />
+            <Field name="RowCount" type="Int32" />
+            <Field name="ysand_new" source="Formula: [ysand]+1" type="Int32" />
+            <Field name="xsand_new" source="Formula: IF [RowCount]=2&#xA;THEN [xsand]-1&#xA;ELSEIF [RowCount]=3&#xA;THEN [xsand]+1&#xA;ELSE [xsand]&#xA;ENDIF" type="Int32" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="xsand_new" />
+            <Field field="ysand_new" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field name="xrock" source="TextInput:" type="Int16" />
+            <Field name="yrock" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="xrock" source="Summarize: GroupBy - xrock" type="Int16" />
+            <Field name="yrock" source="Summarize: GroupBy - yrock" type="Byte" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="xrock" />
+            <Field field="yrock" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.GenerateRows.GenerateRows">
+        <Position x="438" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="False" />
+          <UpdateField_Name>xsand</UpdateField_Name>
+          <CreateField_Name>RowCount</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <Expression_Init>1</Expression_Init>
+          <Expression_Cond>RowCount &lt;= 3</Expression_Cond>
+          <Expression_Loop>RowCount + 1</Expression_Loop>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>generate three new options</AnnotationText>
+          <DefaultAnnotationText>generate three new options</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="xsand" source="TextInput:" type="Int16" />
+            <Field name="ysand" source="TextInput:" type="Byte" />
+            <Field name="RowCount" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxGenerateRows" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="714" y="174" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="1033">
+            <Field field="RowCount" order="Ascending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>RowCount - Ascending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="xsand" source="TextInput:" type="Int16" />
+            <Field name="ysand" source="TextInput:" type="Byte" />
+            <Field name="RowCount" type="Int32" />
+            <Field name="ysand_new" source="Formula: [ysand]+1" type="Int32" />
+            <Field name="xsand_new" source="Formula: IF [RowCount]=2&#xA;THEN [xsand]-1&#xA;ELSEIF [RowCount]=3&#xA;THEN [xsand]+1&#xA;ELSE [xsand]&#xA;ENDIF" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sample.Sample">
+        <Position x="1026" y="174" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>First</Mode>
+          <N>1</N>
+          <GroupFields orderChanged="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>If all options are blocked, start over with a new unit</AnnotationText>
+          <DefaultAnnotationText>First 1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="xsand" source="TextInput:" type="Int16" />
+            <Field name="ysand" source="TextInput:" type="Byte" />
+            <Field name="RowCount" type="Int32" />
+            <Field name="ysand_new" source="(Multiple Sources)" type="Int32" />
+            <Field name="xsand_new" source="(Multiple Sources)" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSample" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="246" y="282" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>IsNotNull</Operator>
+            <Field>xsand</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2022-12-13 21:38:24</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>
+              </Operand>
+              <StartDate>2022-12-13 21:38:24</StartDate>
+              <EndDate>2022-12-13 21:38:24</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>!IsNull([xsand])</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="xrock" source="TextInput:" type="Int16" />
+            <Field name="yrock" source="TextInput:" type="Byte" />
+            <Field name="xsand" source="TextInput:" type="Int16" />
+            <Field name="ysand" source="TextInput:" type="Byte" />
+            <Field name="sandflag" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="xrock" source="TextInput:" type="Int16" />
+            <Field name="yrock" source="TextInput:" type="Byte" />
+            <Field name="xsand" source="TextInput:" type="Int16" />
+            <Field name="ysand" source="TextInput:" type="Byte" />
+            <Field name="sandflag" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="342" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="xsand" selected="True" />
+            <SelectField field="ysand" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>get sand coordinates</AnnotationText>
+          <DefaultAnnotationText>get sand coordinates</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="xsand" source="TextInput:" type="Int16" />
+            <Field name="ysand" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="342" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="xrock" selected="True" />
+            <SelectField field="yrock" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>get rock information</AnnotationText>
+          <DefaultAnnotationText>get rock information</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="xrock" source="TextInput:" type="Int16" />
+            <Field name="yrock" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings>
+        <Position x="822" y="342" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output9">
+          <RecordInfo>
+            <Field name="Count" source="(Multiple Sources)" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings Macro="CountRecords.yxmc" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="822" y="402" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="xrock" action="GroupBy" rename="xrock" />
+            <SummarizeField field="yrock" action="GroupBy" rename="yrock" />
+            <SummarizeField field="xrock" action="CountDistinct" rename="sandflag" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>if all options are blocked, settle the sand</AnnotationText>
+          <DefaultAnnotationText>if all options are blocked, settle the sand</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="xrock" source="Summarize: GroupBy - xrock" type="Int16" />
+            <Field name="yrock" source="Summarize: GroupBy - yrock" type="Byte" />
+            <Field name="sandflag" source="Summarize: CountDistinct - xrock" type="Int64" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="xrock" order="Asc" />
+            <Field field="yrock" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="942" y="414" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="xrock" source="Summarize: GroupBy - xrock" type="Int16" />
+            <Field name="yrock" source="Summarize: GroupBy - yrock" type="Byte" />
+            <Field name="sandflag" source="Summarize: CountDistinct - xrock" type="Int64" />
+            <Field name="Count" source="(Multiple Sources)" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="14">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1026" y="414" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>Count</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2022-12-13 21:46:48</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>0</Operand>
+              <StartDate>2022-12-13 21:46:48</StartDate>
+              <EndDate>2022-12-13 21:46:48</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Count] = 0</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="xrock" source="Summarize: GroupBy - xrock" type="Int16" />
+            <Field name="yrock" source="Summarize: GroupBy - yrock" type="Byte" />
+            <Field name="sandflag" source="Summarize: CountDistinct - xrock" type="Int64" />
+            <Field name="Count" source="(Multiple Sources)" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="xrock" source="Summarize: GroupBy - xrock" type="Int16" />
+            <Field name="yrock" source="Summarize: GroupBy - yrock" type="Byte" />
+            <Field name="sandflag" source="Summarize: CountDistinct - xrock" type="Int64" />
+            <Field name="Count" source="(Multiple Sources)" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="1254" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Ignore</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>iterate through sand and rocks together</AnnotationText>
+          <DefaultAnnotationText>iterate through sand and rocks together</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="xrock" source="(Multiple Sources)" type="Int16" />
+            <Field name="yrock" source="(Multiple Sources)" type="Byte" />
+            <Field name="sandflag" source="Summarize: CountDistinct - xrock" type="Int64" />
+            <Field name="ysand" source="(Multiple Sources)" type="Int32" />
+            <Field name="xsand" source="(Multiple Sources)" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="16">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1122" y="402" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="xrock" selected="True" />
+            <SelectField field="yrock" selected="True" />
+            <SelectField field="sandflag" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="xrock" source="Summarize: GroupBy - xrock" type="Int16" />
+            <Field name="yrock" source="Summarize: GroupBy - yrock" type="Byte" />
+            <Field name="sandflag" source="Summarize: CountDistinct - xrock" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="17">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="822" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="1" />
+          <Fields>
+            <Field name="xsand_new" />
+            <Field name="ysand_new" />
+          </Fields>
+          <Data>
+            <r>
+              <c>500</c>
+              <c>0</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="xsand_new" source="TextInput:" type="Int16" />
+            <Field name="ysand_new" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="18">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="930" y="174" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Ignore</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="True" />
+          <OutputOrder>
+            <Connection>#1</Connection>
+            <Connection>#2</Connection>
+          </OutputOrder>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="xsand" source="TextInput:" type="Int16" />
+            <Field name="ysand" source="TextInput:" type="Byte" />
+            <Field name="RowCount" type="Int32" />
+            <Field name="ysand_new" source="(Multiple Sources)" type="Int32" />
+            <Field name="xsand_new" source="(Multiple Sources)" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="19">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1122" y="174" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="xsand" selected="False" />
+            <SelectField field="ysand" selected="False" />
+            <SelectField field="RowCount" selected="False" />
+            <SelectField field="ysand_new" selected="True" rename="ysand" />
+            <SelectField field="xsand_new" selected="True" rename="xsand" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="ysand" source="(Multiple Sources)" type="Int32" />
+            <Field name="xsand" source="(Multiple Sources)" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="20">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="1254" y="402" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>SandRest</Name>
+          <Abbrev />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Track settled sand</AnnotationText>
+          <DefaultAnnotationText>Output</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="21">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="1686" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>Iterate</Name>
+          <Abbrev />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Output</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="23">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sample.Sample">
+        <Position x="822" y="174" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>First</Mode>
+          <N>1</N>
+          <GroupFields orderChanged="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>get the highest priority option that isn't blocked</AnnotationText>
+          <DefaultAnnotationText>First 1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="xsand" source="TextInput:" type="Int16" />
+            <Field name="ysand" source="TextInput:" type="Byte" />
+            <Field name="RowCount" type="Int32" />
+            <Field name="ysand_new" source="Formula: [ysand]+1" type="Int32" />
+            <Field name="xsand_new" source="Formula: IF [RowCount]=2&#xA;THEN [xsand]-1&#xA;ELSEIF [RowCount]=3&#xA;THEN [xsand]+1&#xA;ELSE [xsand]&#xA;ENDIF" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSample" />
+    </Node>
+    <Node ToolID="24">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="438" y="246" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="xrock" action="GroupBy" rename="xrock" />
+            <SummarizeField field="yrock" action="GroupBy" rename="yrock" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="xrock" source="Summarize: GroupBy - xrock" type="Int16" />
+            <Field name="yrock" source="Summarize: GroupBy - yrock" type="Byte" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="xrock" order="Asc" />
+            <Field field="yrock" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="25">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.NumericUpDown.NumericUpDown">
+        <Position x="1494" y="66" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Numeric Up Down (25)</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="28">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="1398" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Source_ysand" selected="True" rename="Source_ysand" input="Source_" />
+                <SelectField field="Source_xsand" selected="True" rename="Source_xsand" input="Source_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="xrock" source="(Multiple Sources)" type="Int16" />
+            <Field name="yrock" source="(Multiple Sources)" type="Byte" />
+            <Field name="sandflag" source="Summarize: CountDistinct - xrock" type="Int64" />
+            <Field name="ysand" source="(Multiple Sources)" type="Int32" />
+            <Field name="xsand" source="(Multiple Sources)" type="Int32" />
+            <Field name="Source_ysand" source="(Multiple Sources)" type="Int32" />
+            <Field name="Source_xsand" source="(Multiple Sources)" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="29">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1494" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>&lt;=</Operator>
+            <Field>Source_ysand</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2022-12-13 22:03:13</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>170</Operand>
+              <StartDate>2022-12-13 22:03:13</StartDate>
+              <EndDate>2022-12-13 22:03:13</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Source_ysand] &lt;= 170</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="xrock" source="(Multiple Sources)" type="Int16" />
+            <Field name="yrock" source="(Multiple Sources)" type="Byte" />
+            <Field name="sandflag" source="Summarize: CountDistinct - xrock" type="Int64" />
+            <Field name="ysand" source="(Multiple Sources)" type="Int32" />
+            <Field name="xsand" source="(Multiple Sources)" type="Int32" />
+            <Field name="Source_ysand" source="(Multiple Sources)" type="Int32" />
+            <Field name="Source_xsand" source="(Multiple Sources)" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="xrock" source="(Multiple Sources)" type="Int16" />
+            <Field name="yrock" source="(Multiple Sources)" type="Byte" />
+            <Field name="sandflag" source="Summarize: CountDistinct - xrock" type="Int64" />
+            <Field name="ysand" source="(Multiple Sources)" type="Int32" />
+            <Field name="xsand" source="(Multiple Sources)" type="Int32" />
+            <Field name="Source_ysand" source="(Multiple Sources)" type="Int32" />
+            <Field name="Source_xsand" source="(Multiple Sources)" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="30">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1590" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="xrock" selected="True" />
+            <SelectField field="yrock" selected="True" />
+            <SelectField field="sandflag" selected="True" />
+            <SelectField field="ysand" selected="True" />
+            <SelectField field="xsand" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="xrock" source="(Multiple Sources)" type="Int16" />
+            <Field name="yrock" source="(Multiple Sources)" type="Byte" />
+            <Field name="sandflag" source="Summarize: CountDistinct - xrock" type="Int64" />
+            <Field name="ysand" source="(Multiple Sources)" type="Int32" />
+            <Field name="xsand" source="(Multiple Sources)" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="38">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
+        <Position x="1506" y="186" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Update Value</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="4" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="24" Connection="Output" />
+      <Destination ToolID="4" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Left" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Join" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="11" Connection="Input8" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="23" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="19" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="True" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="False" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="10" Connection="Output" />
+      <Destination ToolID="15" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="15" Connection="Input" />
+    </Connection>
+    <Connection name="#3">
+      <Origin ToolID="19" Connection="Output" />
+      <Destination ToolID="15" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Output" />
+      <Destination ToolID="24" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output9" />
+      <Destination ToolID="13" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="13" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="14" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="True" />
+      <Destination ToolID="16" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="Output" />
+      <Destination ToolID="28" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="19" Connection="Output" />
+      <Destination ToolID="28" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="20" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="17" Connection="Output" />
+      <Destination ToolID="18" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="23" Connection="Output" />
+      <Destination ToolID="18" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="Output" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="25" Connection="Question" />
+      <Destination ToolID="38" Connection="Question" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="28" Connection="Output" />
+      <Destination ToolID="29" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="38" Connection="Action" />
+      <Destination ToolID="29" Connection="Action" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="29" Connection="True" />
+      <Destination ToolID="30" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="30" Connection="Output" />
+      <Destination ToolID="21" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <Constants>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Numeric Up Down (25)</Name>
+        <Value />
+        <IsNumeric value="True" />
+      </Constant>
+    </Constants>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>AoCDay14RocksIterate</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="8bed0cd2-d0a3-4058-88d9-8ca59125414d" />
+      <Telemetry>
+        <PreviousWorkflowId value="46c785b3-4c48-4e84-a96d-a10ad15f1415" />
+        <OriginWorkflowId value="8bed0cd2-d0a3-4058-88d9-8ca59125414d" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="False" />
+    </Events>
+    <RuntimeProperties>
+      <Actions>
+        <NoCondition>
+          <Type>NoCondition</Type>
+          <Description>(Always Run)</Description>
+          <True>
+            <Action>
+              <Type>UpdateValue</Type>
+              <Description />
+              <ToolId value="38" />
+              <Mode>Simple</Mode>
+              <Variable />
+              <Replace value="False" />
+              <Destination>29/Simple/Operands/Operand</Destination>
+            </Action>
+          </True>
+        </NoCondition>
+      </Actions>
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Tab (2)</Name>
+          <ToolId value="2" />
+          <Questions>
+            <Question>
+              <Type>MacroInput</Type>
+              <Description />
+              <Name>Macro Input (1)</Name>
+              <ToolId value="1" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description>Macro Output (20)</Description>
+              <Name>Macro Output (20)</Name>
+              <ToolId value="20" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description>Macro Output (21)</Description>
+              <Name>Macro Output (21)</Name>
+              <ToolId value="21" />
+            </Question>
+            <Question>
+              <Type>NumericUpDown</Type>
+              <Description>Max Y before Abyss</Description>
+              <Name>Numeric Up Down (25)</Name>
+              <ToolId value="25" />
+              <Minimum value="0" />
+              <Maximum value="1000" />
+              <Increment value="1" />
+              <Default value="170" />
+              <Decimals value="0" />
+            </Question>
+          </Questions>
+        </Question>
+      </Questions>
+      <ModuleType>Macro</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImageStd value="39" />
+      <MacroInputs />
+      <MacroOutputs />
+      <IterativeMacro>
+        <Input>Rocks</Input>
+        <Output>Iterate</Output>
+        <IterationLimit value="4000000" />
+        <LimitBehavior>Warn</LimitBehavior>
+        <OutputMode>AutoByName</OutputMode>
+      </IterativeMacro>
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="1" Selected="True" />
+        <Tool ToolId="11" Selected="True" />
+        <Tool ToolId="20" Selected="True" />
+        <Tool ToolId="21" Selected="True" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>
