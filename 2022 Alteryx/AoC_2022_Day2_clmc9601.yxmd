@@ -1,0 +1,614 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2021.2">
+  <Nodes>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="1183" y="560" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="1" />
+          <Fields>
+            <Field name="Field1" />
+            <Field name="Field2" />
+          </Fields>
+          <Data>
+            <r>
+              <c>13628</c>
+              <c>wrong</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="18">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="354" y="331" width="153" height="225" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Step 4</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="12">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+            <Position x="379" y="380" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <NumRows value="9" />
+              <Fields>
+                <Field name="Response" />
+                <Field name="Score" />
+                <Field name="Name" />
+                <Field name="Source_Play" />
+                <Field name="Source_Name" />
+                <Field name="Outcome" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>Y</c>
+                  <c>1</c>
+                  <c>Rock</c>
+                  <c>A</c>
+                  <c>Rock</c>
+                  <c>3</c>
+                </r>
+                <r>
+                  <c>X</c>
+                  <c>1</c>
+                  <c>Rock</c>
+                  <c>B</c>
+                  <c>Paper</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>Z</c>
+                  <c>1</c>
+                  <c>Rock</c>
+                  <c>C</c>
+                  <c>Scissors</c>
+                  <c>6</c>
+                </r>
+                <r>
+                  <c>Z</c>
+                  <c>2</c>
+                  <c>Paper</c>
+                  <c>A</c>
+                  <c>Rock</c>
+                  <c>6</c>
+                </r>
+                <r>
+                  <c>Y</c>
+                  <c>2</c>
+                  <c>Paper</c>
+                  <c>B</c>
+                  <c>Paper</c>
+                  <c>3</c>
+                </r>
+                <r>
+                  <c>X</c>
+                  <c>2</c>
+                  <c>Paper</c>
+                  <c>C</c>
+                  <c>Scissors</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>X</c>
+                  <c>3</c>
+                  <c>Scissors</c>
+                  <c>A</c>
+                  <c>Rock</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>Z</c>
+                  <c>3</c>
+                  <c>Scissors</c>
+                  <c>B</c>
+                  <c>Paper</c>
+                  <c>6</c>
+                </r>
+                <r>
+                  <c>Y</c>
+                  <c>3</c>
+                  <c>Scissors</c>
+                  <c>C</c>
+                  <c>Scissors</c>
+                  <c>3</c>
+                </r>
+              </Data>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Reassign appropriate response based on desired outcome points... manually</AnnotationText>
+              <DefaultAnnotationText>Reassign appropriate response based on desired outcome points... manually</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="354" y="151" width="146" height="165" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Step 2</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="13">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+            <Position x="379" y="200" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <NumRows value="9" />
+              <Fields>
+                <Field name="Response" />
+                <Field name="Score" />
+                <Field name="Name" />
+                <Field name="Source_Play" />
+                <Field name="Source_Name" />
+                <Field name="Outcome" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>X</c>
+                  <c>1</c>
+                  <c>Rock</c>
+                  <c>A</c>
+                  <c>Rock</c>
+                  <c>3</c>
+                </r>
+                <r>
+                  <c>X</c>
+                  <c>1</c>
+                  <c>Rock</c>
+                  <c>B</c>
+                  <c>Paper</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>X</c>
+                  <c>1</c>
+                  <c>Rock</c>
+                  <c>C</c>
+                  <c>Scissors</c>
+                  <c>6</c>
+                </r>
+                <r>
+                  <c>Y</c>
+                  <c>2</c>
+                  <c>Paper</c>
+                  <c>A</c>
+                  <c>Rock</c>
+                  <c>6</c>
+                </r>
+                <r>
+                  <c>Y</c>
+                  <c>2</c>
+                  <c>Paper</c>
+                  <c>B</c>
+                  <c>Paper</c>
+                  <c>3</c>
+                </r>
+                <r>
+                  <c>Y</c>
+                  <c>2</c>
+                  <c>Paper</c>
+                  <c>C</c>
+                  <c>Scissors</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>Z</c>
+                  <c>3</c>
+                  <c>Scissors</c>
+                  <c>A</c>
+                  <c>Rock</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>Z</c>
+                  <c>3</c>
+                  <c>Scissors</c>
+                  <c>B</c>
+                  <c>Paper</c>
+                  <c>6</c>
+                </r>
+                <r>
+                  <c>Z</c>
+                  <c>3</c>
+                  <c>Scissors</c>
+                  <c>C</c>
+                  <c>Scissors</c>
+                  <c>3</c>
+                </r>
+              </Data>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Assign outcome points manually</AnnotationText>
+              <DefaultAnnotationText>Assign outcome points manually</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="17">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="558" y="54" width="523" height="276" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Step 3</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="4">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="583" y="199" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="[Score]+[Outcome]" field="Total Score" size="2" type="Int16" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[Total Score = [Score]+[Outcome]
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="6">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+            <Position x="691" y="104" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Field>Field_1</Field>
+              <ErrorHandling>Last</ErrorHandling>
+              <RootName>
+              </RootName>
+              <Delimeters value=" " />
+              <NumFields value="2" />
+              <Flags value="0" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Parse columns</AnnotationText>
+              <DefaultAnnotationText>Parse columns</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns" />
+        </Node>
+        <Node ToolID="7">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="775" y="104" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Field_1" selected="False" />
+                <SelectField field="1" selected="True" rename="Play" />
+                <SelectField field="2" selected="True" rename="Response" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="8">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="895" y="116" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="Play" />
+                <Field field="Response" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="Source_Play" />
+                <Field field="Response" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Right_Response" selected="True" rename="Right_Response" input="Right_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="9">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="979" y="116" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="Total Score" action="Sum" rename="Sum_Total Score" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Add up total points</AnnotationText>
+              <DefaultAnnotationText>Add up total points</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="5">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="583" y="103" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">AoC_2022_Input_Day_2.txt</File>
+              <FormatSpecificOptions>
+                <HeaderRow>False</HeaderRow>
+                <IgnoreErrors>False</IgnoreErrors>
+                <AllowShareWrite>False</AllowShareWrite>
+                <ImportLine>1</ImportLine>
+                <FieldLen>254</FieldLen>
+                <SingleThreadRead>False</SingleThreadRead>
+                <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+                <Delimeter>\0</Delimeter>
+                <QuoteRecordBreak>False</QuoteRecordBreak>
+                <CodePage>28591</CodePage>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>AoC_2022_Input_Day_2.txt</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Field_1" size="254" source="File: D:\Users\clmc9601\Documents\Alteryx\Advent-of-Code-solutions\2022 Alteryx\AoC_2022_Input_Day_2.txt" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="14">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="54" y="150" width="259" height="178" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Step 1</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="2">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+            <Position x="79" y="199" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <NumRows value="3" />
+              <Fields>
+                <Field name="Response" />
+                <Field name="Score" />
+                <Field name="Play" />
+                <Field name="Name" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>X</c>
+                  <c>1</c>
+                  <c>A</c>
+                  <c>Rock</c>
+                </r>
+                <r>
+                  <c>Y</c>
+                  <c>2</c>
+                  <c>B</c>
+                  <c>Paper</c>
+                </r>
+                <r>
+                  <c>Z</c>
+                  <c>3</c>
+                  <c>C</c>
+                  <c>Scissors</c>
+                </r>
+              </Data>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+        </Node>
+        <Node ToolID="3">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+            <Position x="187" y="212" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <CartesianMode>Error</CartesianMode>
+              <SelectConfiguration>
+                <Configuration outputConnection="Output">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Target_Play" selected="False" input="Target_" />
+                    <SelectField field="Source_Response" selected="False" rename="Source_Response" input="Source_" />
+                    <SelectField field="Source_Score" selected="True" rename="Source_Score" input="Source_" />
+                    <SelectField field="Source_Play" selected="True" rename="Source_Play" input="Source_" />
+                    <SelectField field="Source_Name" selected="True" rename="Source_Name" input="Source_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Calculate all nine possible games</AnnotationText>
+              <DefaultAnnotationText>Calculate all nine possible games</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="8" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="8" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Join" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="3" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="3" Connection="Source" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>AoC_2022_Day2_clmc9601</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="4a37bb06-6629-4715-a867-0de47b4b2341" />
+      <Telemetry>
+        <PreviousWorkflowId value="7d421a50-3a4b-4c3b-96d5-894cd3111d98" />
+        <OriginWorkflowId value="4a37bb06-6629-4715-a867-0de47b4b2341" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
