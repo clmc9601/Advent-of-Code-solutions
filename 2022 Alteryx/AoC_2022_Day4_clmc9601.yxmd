@@ -1,0 +1,322 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2021.2">
+  <Nodes>
+    <Node ToolID="18">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="176" y="223" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="6" />
+          <Fields>
+            <Field name="Data" />
+          </Fields>
+          <Data>
+            <r>
+              <c>2-4,6-8</c>
+            </r>
+            <r>
+              <c>2-3,4-5</c>
+            </r>
+            <r>
+              <c>5-7,7-9</c>
+            </r>
+            <r>
+              <c>2-8,3-7</c>
+            </r>
+            <r>
+              <c>6-6,4-6</c>
+            </r>
+            <r>
+              <c>2-6,4-8</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Example</AnnotationText>
+          <DefaultAnnotationText>Example</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="30">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="512" y="103" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="IF [SectionID_Part1]&lt;=[SectionID_Part3] and [SectionID_Part2]&gt;=[SectionID_Part4]&#xA;THEN 1&#xA;ELSEIF [SectionID_Part1]&gt;=[SectionID_Part3] and [SectionID_Part2]&lt;=[SectionID_Part4]&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" field="Contains" size="1" type="Byte" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Evaluate if either section contains the other</AnnotationText>
+          <DefaultAnnotationText>Contains = IF [SectionID_Part1]&lt;=[SectionID_Part3] and [SectionID_Part2]&gt;=[Secti...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="31">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+        <Position x="320" y="103" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>data</Field>
+          <ErrorHandling>Last</ErrorHandling>
+          <RootName>SectionID_Part</RootName>
+          <Delimeters value=",-" />
+          <NumFields value="4" />
+          <Flags value="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Split data into min and max fields per assignment</AnnotationText>
+          <DefaultAnnotationText>Split data into min and max fields per assignment</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns" />
+    </Node>
+    <Node ToolID="32">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="416" y="103" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="SectionID_Part1" selected="True" type="Int64" size="8" />
+            <SelectField field="SectionID_Part2" selected="True" type="Int64" size="8" />
+            <SelectField field="SectionID_Part3" selected="True" type="Int64" size="8" />
+            <SelectField field="SectionID_Part4" selected="True" type="Int64" size="8" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="33">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="620" y="103" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Contains" action="Sum" rename="Sum_Contains" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Count instances</AnnotationText>
+          <DefaultAnnotationText>Count instances</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="34">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="512" y="283" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="IF [SectionID_Part2]&lt;=[SectionID_Part4] and [SectionID_Part2]&gt;=[SectionID_Part3]&#xA;THEN 1&#xA;ELSEIF [SectionID_Part1]&lt;=[SectionID_Part4] and [SectionID_Part1]&gt;=[SectionID_Part3]&#xA;THEN 1&#xA;ELSEIF [SectionID_Part3]&gt;=[SectionID_Part1] and [SectionID_Part3]&lt;=[SectionID_Part2]&#xA;THEN 1&#xA;ELSEIF [SectionID_Part4]&gt;=[SectionID_Part1] and [SectionID_Part4]&lt;=[SectionID_Part2]&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" field="Contains" size="1" type="Byte" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Evaluate if any side of the section is within the other</AnnotationText>
+          <DefaultAnnotationText>Contains = IF [SectionID_Part2]&lt;=[SectionID_Part4] and [SectionID_Part2]&gt;=[Secti...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="35">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="620" y="283" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Contains" action="Sum" rename="Sum_Contains" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Count instances</AnnotationText>
+          <DefaultAnnotationText>Count instances</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="27">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="54" y="54" width="238" height="165" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Read Data</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="23">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+            <Position x="79" y="103" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <NumRows value="1" />
+              <Fields>
+                <Field name="Filename" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>AoC_2022_Input_Day_4</c>
+                </r>
+              </Data>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+        </Node>
+        <Node ToolID="25">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DynamicInput.DynamicInput">
+            <Position x="176" y="103" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <InputConfiguration>
+                <Configuration>
+                  <Passwords />
+                  <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">AoC_2022_Input_Day_3.csv</File>
+                  <FormatSpecificOptions>
+                    <HeaderRow>True</HeaderRow>
+                    <IgnoreErrors>False</IgnoreErrors>
+                    <AllowShareWrite>False</AllowShareWrite>
+                    <ImportLine>1</ImportLine>
+                    <FieldLen>2540000</FieldLen>
+                    <SingleThreadRead>False</SingleThreadRead>
+                    <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+                    <Delimeter>,</Delimeter>
+                    <QuoteRecordBreak>False</QuoteRecordBreak>
+                    <CodePage>65001</CodePage>
+                  </FormatSpecificOptions>
+                </Configuration>
+              </InputConfiguration>
+              <Mode>ReadList</Mode>
+              <ReadList_Field>Filename</ReadList_Field>
+              <ReadList_Type>FileName</ReadList_Type>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Read in today's input</AnnotationText>
+              <DefaultAnnotationText>Read in today's input</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDynamicInput" />
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="30" Connection="Output" />
+      <Destination ToolID="33" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="31" Connection="Output" />
+      <Destination ToolID="32" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="32" Connection="Output" />
+      <Destination ToolID="30" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="32" Connection="Output" />
+      <Destination ToolID="34" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="34" Connection="Output" />
+      <Destination ToolID="35" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="23" Connection="Output" />
+      <Destination ToolID="25" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="25" Connection="Output" />
+      <Destination ToolID="31" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>AoC_2022_Day4_clmc9601</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="37b23410-87d0-4b71-a38f-5bcb8366d2ad" />
+      <Telemetry>
+        <PreviousWorkflowId value="3632a1dd-bbf2-40a3-b6e4-b6e208a9c005" />
+        <OriginWorkflowId value="e4b763f2-04a0-4b9e-89b3-1ef240206095" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

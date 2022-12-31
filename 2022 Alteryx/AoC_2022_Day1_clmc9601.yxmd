@@ -27,9 +27,6 @@
           <DefaultAnnotationText>AoC_2022_Input_Day_1.txt</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
-        <Dependencies>
-          <Implicit />
-        </Dependencies>
         <MetaInfo connection="Output">
           <RecordInfo>
             <Field name="Field_1" size="254" source="File: D:\Users\clmc9601\Documents\Alteryx\Advent-of-Code-solutions\2022 Alteryx\AoC_2022_Input_Day_1.txt" type="V_String" />

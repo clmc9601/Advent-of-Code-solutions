@@ -1,32 +1,6 @@
 <?xml version="1.0"?>
 <AlteryxDocument yxmdVer="2021.2">
   <Nodes>
-    <Node ToolID="10">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
-        <Position x="1183" y="560" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <NumRows value="1" />
-          <Fields>
-            <Field name="Field1" />
-            <Field name="Field2" />
-          </Fields>
-          <Data>
-            <r>
-              <c>13628</c>
-              <c>wrong</c>
-            </r>
-          </Data>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText />
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
-    </Node>
     <Node ToolID="18">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
         <Position x="354" y="331" width="153" height="225" />
@@ -426,9 +400,6 @@
               <DefaultAnnotationText>AoC_2022_Input_Day_2.txt</DefaultAnnotationText>
               <Left value="False" />
             </Annotation>
-            <Dependencies>
-              <Implicit />
-            </Dependencies>
             <MetaInfo connection="Output">
               <RecordInfo>
                 <Field name="Field_1" size="254" source="File: D:\Users\clmc9601\Documents\Alteryx\Advent-of-Code-solutions\2022 Alteryx\AoC_2022_Input_Day_2.txt" type="V_String" />
