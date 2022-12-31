@@ -446,6 +446,9 @@ FromStackField = '[Stack'+[FromStack]+']'
           <DefaultAnnotationText>Nested macro</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
       </Properties>
       <EngineSettings Macro="AoC5Iterative.yxmc" />
     </Node>
@@ -491,7 +494,7 @@ FromStackField = '[Stack'+[FromStack]+']'
     </Node>
     <Node ToolID="27">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="173" y="293" width="303" height="134" />
+        <Position x="281" y="293" width="151" height="165" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -507,85 +510,42 @@ FromStackField = '[Stack'+[FromStack]+']'
         </Annotation>
       </Properties>
       <ChildNodes>
-        <Node ToolID="23">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
-            <Position x="198" y="342" />
+        <Node ToolID="57">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="306" y="342" />
           </GuiSettings>
           <Properties>
             <Configuration>
-              <NumRows value="1" />
-              <Fields>
-                <Field name="Filename" />
-              </Fields>
-              <Data>
-                <r>
-                  <c>AoC_2022_Input_Day_5</c>
-                </r>
-              </Data>
+              <Passwords />
+              <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">AoC_2022_Input_Day_5.csv</File>
+              <FormatSpecificOptions>
+                <HeaderRow>True</HeaderRow>
+                <IgnoreErrors>False</IgnoreErrors>
+                <AllowShareWrite>False</AllowShareWrite>
+                <ImportLine>1</ImportLine>
+                <FieldLen>254000</FieldLen>
+                <SingleThreadRead>False</SingleThreadRead>
+                <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+                <Delimeter>,</Delimeter>
+                <QuoteRecordBreak>False</QuoteRecordBreak>
+                <CodePage>65001</CodePage>
+              </FormatSpecificOptions>
             </Configuration>
             <Annotation DisplayMode="0">
               <Name />
-              <DefaultAnnotationText />
+              <DefaultAnnotationText>AoC_2022_Input_Day_5.csv</DefaultAnnotationText>
               <Left value="False" />
             </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="data" size="254000" source="File: D:\Users\clmc9601\Documents\Alteryx\Advent-of-Code-solutions\2022 Alteryx\AoC_2022_Input_Day_5.csv" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
           </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
-        </Node>
-        <Node ToolID="25">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.DynamicInput.DynamicInput">
-            <Position x="296" y="343" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <InputConfiguration>
-                <Configuration>
-                  <Passwords />
-                  <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">AoC_2022_Input_Day_3.csv</File>
-                  <FormatSpecificOptions>
-                    <HeaderRow>True</HeaderRow>
-                    <IgnoreErrors>False</IgnoreErrors>
-                    <AllowShareWrite>False</AllowShareWrite>
-                    <ImportLine>1</ImportLine>
-                    <FieldLen>2540000</FieldLen>
-                    <SingleThreadRead>False</SingleThreadRead>
-                    <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
-                    <Delimeter>,</Delimeter>
-                    <QuoteRecordBreak>False</QuoteRecordBreak>
-                    <CodePage>65001</CodePage>
-                  </FormatSpecificOptions>
-                </Configuration>
-              </InputConfiguration>
-              <Mode>ReadList</Mode>
-              <ReadList_Field>Filename</ReadList_Field>
-              <ReadList_Type>FileName</ReadList_Type>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText />
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDynamicInput" />
-        </Node>
-        <Node ToolID="26">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="392" y="343" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <OrderChanged value="False" />
-              <CommaDecimal value="False" />
-              <SelectFields>
-                <SelectField field="*Unknown" selected="True" />
-              </SelectFields>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText />
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
         </Node>
       </ChildNodes>
     </Node>
@@ -652,19 +612,11 @@ FromStackField = '[Stack'+[FromStack]+']'
       <Destination ToolID="46" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="23" Connection="Output" />
-      <Destination ToolID="25" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="25" Connection="Output" />
-      <Destination ToolID="26" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="26" Connection="Output" />
+      <Origin ToolID="57" Connection="Output" />
       <Destination ToolID="28" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="26" Connection="Output" />
+      <Origin ToolID="57" Connection="Output" />
       <Destination ToolID="29" Connection="Input" />
     </Connection>
   </Connections>
