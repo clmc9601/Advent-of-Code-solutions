@@ -1,0 +1,1522 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2022.3">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
+        <Position x="90" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UseFileInput value="False" />
+          <Name>PossibleMoves</Name>
+          <Abbrev />
+          <ShowFieldMap value="True" />
+          <Optional value="False" />
+          <TextInput>
+            <Configuration>
+              <NumRows value="136" />
+              <Fields>
+                <Field name="t0" />
+                <Field name="t1" />
+                <Field name="FlowPerMin" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>TM</c>
+                  <c>WB</c>
+                  <c>3</c>
+                </r>
+                <r>
+                  <c>TM</c>
+                  <c>PE</c>
+                  <c>3</c>
+                </r>
+                <r>
+                  <c>TM</c>
+                  <c>DX</c>
+                  <c>3</c>
+                </r>
+                <r>
+                  <c>TM</c>
+                  <c>TK</c>
+                  <c>3</c>
+                </r>
+                <r>
+                  <c>TM</c>
+                  <c>CH</c>
+                  <c>3</c>
+                </r>
+                <r>
+                  <c>ST</c>
+                  <c>NS</c>
+                  <c>21</c>
+                </r>
+                <r>
+                  <c>ST</c>
+                  <c>DE</c>
+                  <c>21</c>
+                </r>
+                <r>
+                  <c>ST</c>
+                  <c>UX</c>
+                  <c>21</c>
+                </r>
+                <r>
+                  <c>ST</c>
+                  <c>XU</c>
+                  <c>21</c>
+                </r>
+                <r>
+                  <c>IX</c>
+                  <c>DK</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>IX</c>
+                  <c>LR</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>OG</c>
+                  <c>MN</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>OG</c>
+                  <c>FK</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>FR</c>
+                  <c>JQ</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>FR</c>
+                  <c>GS</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>HU</c>
+                  <c>TJ</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>HU</c>
+                  <c>XX</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>WC</c>
+                  <c>TJ</c>
+                  <c>15</c>
+                </r>
+                <r>
+                  <c>JT</c>
+                  <c>OV</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>JT</c>
+                  <c>AA</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>DW</c>
+                  <c>FK</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>DW</c>
+                  <c>AA</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>RG</c>
+                  <c>PS</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>RG</c>
+                  <c>DK</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>JQ</c>
+                  <c>VM</c>
+                  <c>14</c>
+                </r>
+                <r>
+                  <c>JQ</c>
+                  <c>FR</c>
+                  <c>14</c>
+                </r>
+                <r>
+                  <c>XX</c>
+                  <c>GP</c>
+                  <c>5</c>
+                </r>
+                <r>
+                  <c>XX</c>
+                  <c>MN</c>
+                  <c>5</c>
+                </r>
+                <r>
+                  <c>XX</c>
+                  <c>WB</c>
+                  <c>5</c>
+                </r>
+                <r>
+                  <c>XX</c>
+                  <c>LM</c>
+                  <c>5</c>
+                </r>
+                <r>
+                  <c>XX</c>
+                  <c>HU</c>
+                  <c>5</c>
+                </r>
+                <r>
+                  <c>IN</c>
+                  <c>OK</c>
+                  <c>11</c>
+                </r>
+                <r>
+                  <c>IN</c>
+                  <c>GS</c>
+                  <c>11</c>
+                </r>
+                <r>
+                  <c>IN</c>
+                  <c>DU</c>
+                  <c>11</c>
+                </r>
+                <r>
+                  <c>LR</c>
+                  <c>IX</c>
+                  <c>7</c>
+                </r>
+                <r>
+                  <c>LR</c>
+                  <c>NR</c>
+                  <c>7</c>
+                </r>
+                <r>
+                  <c>LR</c>
+                  <c>YY</c>
+                  <c>7</c>
+                </r>
+                <r>
+                  <c>LR</c>
+                  <c>HZ</c>
+                  <c>7</c>
+                </r>
+                <r>
+                  <c>LR</c>
+                  <c>PR</c>
+                  <c>7</c>
+                </r>
+                <r>
+                  <c>TK</c>
+                  <c>TM</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>TK</c>
+                  <c>OV</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>VM</c>
+                  <c>KQ</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>VM</c>
+                  <c>JQ</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>IC</c>
+                  <c>FK</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>IC</c>
+                  <c>DU</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>CH</c>
+                  <c>EZ</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>CH</c>
+                  <c>TM</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>OV</c>
+                  <c>YW</c>
+                  <c>10</c>
+                </r>
+                <r>
+                  <c>OV</c>
+                  <c>JT</c>
+                  <c>10</c>
+                </r>
+                <r>
+                  <c>OV</c>
+                  <c>NN</c>
+                  <c>10</c>
+                </r>
+                <r>
+                  <c>OV</c>
+                  <c>TK</c>
+                  <c>10</c>
+                </r>
+                <r>
+                  <c>KQ</c>
+                  <c>VM</c>
+                  <c>17</c>
+                </r>
+                <r>
+                  <c>KQ</c>
+                  <c>YW</c>
+                  <c>17</c>
+                </r>
+                <r>
+                  <c>KQ</c>
+                  <c>CY</c>
+                  <c>17</c>
+                </r>
+                <r>
+                  <c>NR</c>
+                  <c>FK</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>NR</c>
+                  <c>LR</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>MN</c>
+                  <c>OG</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>MN</c>
+                  <c>XX</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>YY</c>
+                  <c>LR</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>YY</c>
+                  <c>LM</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>OK</c>
+                  <c>CY</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>OK</c>
+                  <c>IN</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>DK</c>
+                  <c>FA</c>
+                  <c>20</c>
+                </r>
+                <r>
+                  <c>DK</c>
+                  <c>RG</c>
+                  <c>20</c>
+                </r>
+                <r>
+                  <c>DK</c>
+                  <c>IX</c>
+                  <c>20</c>
+                </r>
+                <r>
+                  <c>CY</c>
+                  <c>KQ</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>CY</c>
+                  <c>OK</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>PR</c>
+                  <c>DX</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>PR</c>
+                  <c>LR</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>DE</c>
+                  <c>ST</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>DE</c>
+                  <c>EL</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>TJ</c>
+                  <c>WC</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>TJ</c>
+                  <c>HU</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>NS</c>
+                  <c>WU</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>NS</c>
+                  <c>ST</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>PE</c>
+                  <c>TM</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>PE</c>
+                  <c>XO</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>DU</c>
+                  <c>IN</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>DU</c>
+                  <c>IC</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>DX</c>
+                  <c>TM</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>DX</c>
+                  <c>PR</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>EQ</c>
+                  <c>AA</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>EQ</c>
+                  <c>GP</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>AA</c>
+                  <c>JT</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>AA</c>
+                  <c>EZ</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>AA</c>
+                  <c>HZ</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>AA</c>
+                  <c>DW</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>AA</c>
+                  <c>EQ</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>WB</c>
+                  <c>TM</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>WB</c>
+                  <c>XX</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>PF</c>
+                  <c>BP</c>
+                  <c>23</c>
+                </r>
+                <r>
+                  <c>PF</c>
+                  <c>WU</c>
+                  <c>23</c>
+                </r>
+                <r>
+                  <c>FJ</c>
+                  <c>DO</c>
+                  <c>19</c>
+                </r>
+                <r>
+                  <c>FJ</c>
+                  <c>TY</c>
+                  <c>19</c>
+                </r>
+                <r>
+                  <c>FJ</c>
+                  <c>NN</c>
+                  <c>19</c>
+                </r>
+                <r>
+                  <c>FJ</c>
+                  <c>PS</c>
+                  <c>19</c>
+                </r>
+                <r>
+                  <c>GP</c>
+                  <c>XX</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>GP</c>
+                  <c>EQ</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>FK</c>
+                  <c>DW</c>
+                  <c>4</c>
+                </r>
+                <r>
+                  <c>FK</c>
+                  <c>XO</c>
+                  <c>4</c>
+                </r>
+                <r>
+                  <c>FK</c>
+                  <c>OG</c>
+                  <c>4</c>
+                </r>
+                <r>
+                  <c>FK</c>
+                  <c>IC</c>
+                  <c>4</c>
+                </r>
+                <r>
+                  <c>FK</c>
+                  <c>NR</c>
+                  <c>4</c>
+                </r>
+                <r>
+                  <c>DO</c>
+                  <c>XU</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>DO</c>
+                  <c>FJ</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>XO</c>
+                  <c>FK</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>XO</c>
+                  <c>PE</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>PS</c>
+                  <c>RG</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>PS</c>
+                  <c>FJ</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>MD</c>
+                  <c>BP</c>
+                  <c>25</c>
+                </r>
+                <r>
+                  <c>EZ</c>
+                  <c>CH</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>EZ</c>
+                  <c>AA</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>GS</c>
+                  <c>IN</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>GS</c>
+                  <c>FR</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>XU</c>
+                  <c>DO</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>XU</c>
+                  <c>ST</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>WU</c>
+                  <c>PF</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>WU</c>
+                  <c>NS</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>YW</c>
+                  <c>OV</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>YW</c>
+                  <c>KQ</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>HZ</c>
+                  <c>LR</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>HZ</c>
+                  <c>AA</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>TY</c>
+                  <c>FJ</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>TY</c>
+                  <c>EL</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>BP</c>
+                  <c>MD</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>BP</c>
+                  <c>PF</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>EL</c>
+                  <c>DE</c>
+                  <c>18</c>
+                </r>
+                <r>
+                  <c>EL</c>
+                  <c>TY</c>
+                  <c>18</c>
+                </r>
+                <r>
+                  <c>UX</c>
+                  <c>FA</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>UX</c>
+                  <c>ST</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>FA</c>
+                  <c>UX</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>FA</c>
+                  <c>DK</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>NN</c>
+                  <c>OV</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>NN</c>
+                  <c>FJ</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>LM</c>
+                  <c>XX</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>LM</c>
+                  <c>YY</c>
+                  <c>0</c>
+                </r>
+              </Data>
+            </Configuration>
+          </TextInput>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Input</DefaultAnnotationText>
+          <Left value="True" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="t0" size="2" source="TextInput:" type="String" />
+            <Field name="t1" size="2" source="TextInput:" type="String" />
+            <Field name="FlowPerMin" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
+        <Position x="90" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UseFileInput value="False" />
+          <Name>Iteration</Name>
+          <Abbrev />
+          <ShowFieldMap value="True" />
+          <Optional value="False" />
+          <TextInput>
+            <Configuration>
+              <NumRows value="1" />
+              <Fields>
+                <Field name="t0" />
+                <Field name="MinLeft" />
+                <Field name="PressureReleased" />
+                <Field name="Path" />
+                <Field name="Max_Pressure" />
+                <Field name="ReleasePath" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>AA</c>
+                  <c>30</c>
+                  <c>7777777777777</c>
+                  <c>AA;</c>
+                  <c>0</c>
+                  <c>AA;</c>
+                </r>
+              </Data>
+            </Configuration>
+          </TextInput>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Input</DefaultAnnotationText>
+          <Left value="True" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="t0" size="2" source="TextInput:" type="String" />
+            <Field name="MinLeft" source="TextInput:" type="Byte" />
+            <Field name="PressureReleased" source="TextInput:" type="Int64" />
+            <Field name="Path" size="3" source="TextInput:" type="String" />
+            <Field name="Max_Pressure" source="TextInput:" type="Byte" />
+            <Field name="ReleasePath" size="3" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroInput" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="198" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="t0" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="t0" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_t0" selected="False" rename="Right_t0" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>find next possible moves</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="t0" size="2" source="TextInput:" type="String" />
+            <Field name="MinLeft" source="TextInput:" type="Byte" />
+            <Field name="PressureReleased" source="TextInput:" type="Int64" />
+            <Field name="Path" size="3" source="TextInput:" type="String" />
+            <Field name="Max_Pressure" source="TextInput:" type="Byte" />
+            <Field name="ReleasePath" size="3" source="TextInput:" type="String" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="t0" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field name="t0" size="2" source="TextInput:" type="String" />
+            <Field name="MinLeft" source="TextInput:" type="Byte" />
+            <Field name="PressureReleased" source="TextInput:" type="Int64" />
+            <Field name="Path" size="3" source="TextInput:" type="String" />
+            <Field name="Max_Pressure" source="TextInput:" type="Byte" />
+            <Field name="ReleasePath" size="3" source="TextInput:" type="String" />
+            <Field name="t1" size="2" source="TextInput:" type="String" />
+            <Field name="FlowPerMin" source="TextInput:" type="Byte" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="t0" order="" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="t0" size="2" source="TextInput:" type="String" />
+            <Field name="t1" size="2" source="TextInput:" type="String" />
+            <Field name="FlowPerMin" source="TextInput:" type="Byte" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="t0" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="534" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[MinLeft]-1" field="MinLeft" size="1" type="Byte" />
+            <FormulaField expression="[MinLeft]*[FlowPerMin] + [PressureReleased]" field="PressureReleased" size="8" type="Int64" />
+            <FormulaField expression="[ReleasePath]+[t0]+';'" field="ReleasePath" size="3" type="String" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>open valves</AnnotationText>
+          <DefaultAnnotationText>MinLeft = [MinLeft]-1
+PressureReleased = [MinLeft]*[FlowPerMin] + [PressureRelea...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="t0" size="2" source="TextInput:" type="String" />
+            <Field name="MinLeft" source="Formula: [MinLeft]-1" type="Byte" />
+            <Field name="PressureReleased" source="Formula: [MinLeft]*[FlowPerMin] + [PressureReleased]" type="Int64" />
+            <Field name="Path" size="3" source="TextInput:" type="String" />
+            <Field name="Max_Pressure" source="TextInput:" type="Byte" />
+            <Field name="ReleasePath" size="3" source="Formula: [ReleasePath]+[t0]+';'" type="String" />
+            <Field name="t1" size="2" source="TextInput:" type="String" />
+            <Field name="FlowPerMin" source="TextInput:" type="Byte" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="t0" order="" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="618" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Option for opening current valve or not</AnnotationText>
+          <DefaultAnnotationText>Option for opening current valve or not</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="t0" size="2" source="TextInput:" type="String" />
+            <Field name="MinLeft" source="(Multiple Sources)" type="Byte" />
+            <Field name="PressureReleased" source="(Multiple Sources)" type="Int64" />
+            <Field name="Path" size="3" source="TextInput:" type="String" />
+            <Field name="Max_Pressure" source="TextInput:" type="Byte" />
+            <Field name="ReleasePath" size="3" source="(Multiple Sources)" type="String" />
+            <Field name="t1" size="2" source="TextInput:" type="String" />
+            <Field name="FlowPerMin" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="426" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>&gt;</Operator>
+            <Field>FlowPerMin</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2022-12-15 21:20:04</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>0</Operand>
+              <StartDate>2022-12-15 21:20:04</StartDate>
+              <EndDate>2022-12-15 21:20:04</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[FlowPerMin] &gt; 0</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="t0" size="2" source="TextInput:" type="String" />
+            <Field name="MinLeft" source="TextInput:" type="Byte" />
+            <Field name="PressureReleased" source="TextInput:" type="Int64" />
+            <Field name="Path" size="3" source="TextInput:" type="String" />
+            <Field name="Max_Pressure" source="TextInput:" type="Byte" />
+            <Field name="ReleasePath" size="3" source="TextInput:" type="String" />
+            <Field name="t1" size="2" source="TextInput:" type="String" />
+            <Field name="FlowPerMin" source="TextInput:" type="Byte" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="t0" order="" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="t0" size="2" source="TextInput:" type="String" />
+            <Field name="MinLeft" source="TextInput:" type="Byte" />
+            <Field name="PressureReleased" source="TextInput:" type="Int64" />
+            <Field name="Path" size="3" source="TextInput:" type="String" />
+            <Field name="Max_Pressure" source="TextInput:" type="Byte" />
+            <Field name="ReleasePath" size="3" source="TextInput:" type="String" />
+            <Field name="t1" size="2" source="TextInput:" type="String" />
+            <Field name="FlowPerMin" source="TextInput:" type="Byte" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="t0" order="" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="726" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[MinLeft] &lt; 2 // even if you make it there, you couldn't open the valve</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>find ending released pressures</AnnotationText>
+          <DefaultAnnotationText>[MinLeft] &lt; 2 // even if you make it there, you couldn't open the valve</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="t0" size="2" source="TextInput:" type="String" />
+            <Field name="MinLeft" source="(Multiple Sources)" type="Byte" />
+            <Field name="PressureReleased" source="(Multiple Sources)" type="Int64" />
+            <Field name="Path" size="3" source="TextInput:" type="String" />
+            <Field name="Max_Pressure" source="TextInput:" type="Byte" />
+            <Field name="ReleasePath" size="3" source="(Multiple Sources)" type="String" />
+            <Field name="t1" size="2" source="TextInput:" type="String" />
+            <Field name="FlowPerMin" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="t0" size="2" source="TextInput:" type="String" />
+            <Field name="MinLeft" source="(Multiple Sources)" type="Byte" />
+            <Field name="PressureReleased" source="(Multiple Sources)" type="Int64" />
+            <Field name="Path" size="3" source="TextInput:" type="String" />
+            <Field name="Max_Pressure" source="TextInput:" type="Byte" />
+            <Field name="ReleasePath" size="3" source="(Multiple Sources)" type="String" />
+            <Field name="t1" size="2" source="TextInput:" type="String" />
+            <Field name="FlowPerMin" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1158" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="MinLeft" selected="True" />
+            <SelectField field="PressureReleased" selected="True" />
+            <SelectField field="Path" selected="True" />
+            <SelectField field="Max_Pressure" selected="True" />
+            <SelectField field="ReleasePath" selected="True" />
+            <SelectField field="t1" selected="True" rename="t0" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="MinLeft" source="Formula: [MinLeft]-1 // travel time" type="Byte" />
+            <Field name="PressureReleased" source="(Multiple Sources)" type="Int64" />
+            <Field name="Path" size="3" source="Formula: [Path]+[t1]+';'" type="String" />
+            <Field name="Max_Pressure" source="Formula: IF [Max_PressureReleased]&gt;[Max_Pressure]&#xA;THEN [Max_PressureReleased]&#xA;ELSE [Max_Pressure]&#xA;ENDIF" type="Byte" />
+            <Field name="ReleasePath" size="3" source="(Multiple Sources)" type="String" />
+            <Field name="t0" size="2" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="726" y="270" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>Exit</Name>
+          <Abbrev />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Output</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="1338" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>Iteration</Name>
+          <Abbrev />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Iterate</AnnotationText>
+          <DefaultAnnotationText>Output</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="14">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
+        <Position x="1242" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UniqueFields>
+            <Field field="MinLeft" />
+            <Field field="PressureReleased" />
+            <Field field="t0" />
+          </UniqueFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>if the route gets to the same place with the same pressure released, it doesn't matter how it got there</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Unique">
+          <RecordInfo>
+            <Field name="MinLeft" source="Formula: [MinLeft]-1 // travel time" type="Byte" />
+            <Field name="PressureReleased" source="(Multiple Sources)" type="Int64" />
+            <Field name="Path" size="3" source="Formula: [Path]+[t1]+';'" type="String" />
+            <Field name="Max_Pressure" source="Formula: IF [Max_PressureReleased]&gt;[Max_Pressure]&#xA;THEN [Max_PressureReleased]&#xA;ELSE [Max_Pressure]&#xA;ENDIF" type="Byte" />
+            <Field name="ReleasePath" size="3" source="(Multiple Sources)" type="String" />
+            <Field name="t0" size="2" source="TextInput:" type="String" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="MinLeft" order="Asc" />
+            <Field field="PressureReleased" order="Asc" />
+            <Field field="t0" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Duplicates">
+          <RecordInfo>
+            <Field name="MinLeft" source="Formula: [MinLeft]-1 // travel time" type="Byte" />
+            <Field name="PressureReleased" source="(Multiple Sources)" type="Int64" />
+            <Field name="Path" size="3" source="Formula: [Path]+[t1]+';'" type="String" />
+            <Field name="Max_Pressure" source="Formula: IF [Max_PressureReleased]&gt;[Max_Pressure]&#xA;THEN [Max_PressureReleased]&#xA;ELSE [Max_Pressure]&#xA;ENDIF" type="Byte" />
+            <Field name="ReleasePath" size="3" source="(Multiple Sources)" type="String" />
+            <Field name="t0" size="2" source="TextInput:" type="String" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="MinLeft" order="Asc" />
+            <Field field="PressureReleased" order="Asc" />
+            <Field field="t0" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnique" />
+    </Node>
+    <Node ToolID="16">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="810" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="PressureReleased" action="Max" rename="Max_PressureReleased" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>max pressure released so far</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Max_PressureReleased" source="(Multiple Sources)" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="17">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="918" y="174" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="t0" size="2" source="TextInput:" type="String" />
+            <Field name="MinLeft" source="(Multiple Sources)" type="Byte" />
+            <Field name="PressureReleased" source="(Multiple Sources)" type="Int64" />
+            <Field name="Path" size="3" source="TextInput:" type="String" />
+            <Field name="Max_Pressure" source="TextInput:" type="Byte" />
+            <Field name="ReleasePath" size="3" source="(Multiple Sources)" type="String" />
+            <Field name="t1" size="2" source="TextInput:" type="String" />
+            <Field name="FlowPerMin" source="TextInput:" type="Byte" />
+            <Field name="Max_PressureReleased" source="(Multiple Sources)" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="18">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1086" y="174" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[PressureReleased] &gt; [Max_Pressure]
+or [Max_Pressure]=0</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>only keep routes that beat the current max pressure</AnnotationText>
+          <DefaultAnnotationText>[PressureReleased] &gt; [Max_Pressure]
+or [Max_Pressure]=0</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="t0" size="2" source="TextInput:" type="String" />
+            <Field name="MinLeft" source="Formula: [MinLeft]-1 // travel time" type="Byte" />
+            <Field name="PressureReleased" source="(Multiple Sources)" type="Int64" />
+            <Field name="Path" size="3" source="Formula: [Path]+[t1]+';'" type="String" />
+            <Field name="Max_Pressure" source="Formula: IF [Max_PressureReleased]&gt;[Max_Pressure]&#xA;THEN [Max_PressureReleased]&#xA;ELSE [Max_Pressure]&#xA;ENDIF" type="Byte" />
+            <Field name="ReleasePath" size="3" source="(Multiple Sources)" type="String" />
+            <Field name="t1" size="2" source="TextInput:" type="String" />
+            <Field name="FlowPerMin" source="TextInput:" type="Byte" />
+            <Field name="Max_PressureReleased" source="(Multiple Sources)" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="t0" size="2" source="TextInput:" type="String" />
+            <Field name="MinLeft" source="Formula: [MinLeft]-1 // travel time" type="Byte" />
+            <Field name="PressureReleased" source="(Multiple Sources)" type="Int64" />
+            <Field name="Path" size="3" source="Formula: [Path]+[t1]+';'" type="String" />
+            <Field name="Max_Pressure" source="Formula: IF [Max_PressureReleased]&gt;[Max_Pressure]&#xA;THEN [Max_PressureReleased]&#xA;ELSE [Max_Pressure]&#xA;ENDIF" type="Byte" />
+            <Field name="ReleasePath" size="3" source="(Multiple Sources)" type="String" />
+            <Field name="t1" size="2" source="TextInput:" type="String" />
+            <Field name="FlowPerMin" source="TextInput:" type="Byte" />
+            <Field name="Max_PressureReleased" source="(Multiple Sources)" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="19">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="990" y="174" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[MinLeft]-1 // travel time" field="MinLeft" size="1" type="Byte" />
+            <FormulaField expression="[Path]+[t1]+';'" field="Path" size="3" type="String" />
+            <FormulaField expression="IF [Max_PressureReleased]&gt;[Max_Pressure]&#xA;THEN [Max_PressureReleased]&#xA;ELSE [Max_Pressure]&#xA;ENDIF" field="Max_Pressure" size="1" type="Byte" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>calculate travel time</AnnotationText>
+          <DefaultAnnotationText>MinLeft = [MinLeft]-1 // travel time
+Path = [Path]+[t1]+';'
+Max_Pressure = IF [M...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="t0" size="2" source="TextInput:" type="String" />
+            <Field name="MinLeft" source="Formula: [MinLeft]-1 // travel time" type="Byte" />
+            <Field name="PressureReleased" source="(Multiple Sources)" type="Int64" />
+            <Field name="Path" size="3" source="Formula: [Path]+[t1]+';'" type="String" />
+            <Field name="Max_Pressure" source="Formula: IF [Max_PressureReleased]&gt;[Max_Pressure]&#xA;THEN [Max_PressureReleased]&#xA;ELSE [Max_Pressure]&#xA;ENDIF" type="Byte" />
+            <Field name="ReleasePath" size="3" source="(Multiple Sources)" type="String" />
+            <Field name="t1" size="2" source="TextInput:" type="String" />
+            <Field name="FlowPerMin" source="TextInput:" type="Byte" />
+            <Field name="Max_PressureReleased" source="(Multiple Sources)" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="20">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="330" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>!Contains([ReleasePath], [t0]+';')</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>only unopened valves</AnnotationText>
+          <DefaultAnnotationText>!Contains([ReleasePath], [t0]+';')</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="t0" size="2" source="TextInput:" type="String" />
+            <Field name="MinLeft" source="TextInput:" type="Byte" />
+            <Field name="PressureReleased" source="TextInput:" type="Int64" />
+            <Field name="Path" size="3" source="TextInput:" type="String" />
+            <Field name="Max_Pressure" source="TextInput:" type="Byte" />
+            <Field name="ReleasePath" size="3" source="TextInput:" type="String" />
+            <Field name="t1" size="2" source="TextInput:" type="String" />
+            <Field name="FlowPerMin" source="TextInput:" type="Byte" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="t0" order="" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="t0" size="2" source="TextInput:" type="String" />
+            <Field name="MinLeft" source="TextInput:" type="Byte" />
+            <Field name="PressureReleased" source="TextInput:" type="Int64" />
+            <Field name="Path" size="3" source="TextInput:" type="String" />
+            <Field name="Max_Pressure" source="TextInput:" type="Byte" />
+            <Field name="ReleasePath" size="3" source="TextInput:" type="String" />
+            <Field name="t1" size="2" source="TextInput:" type="String" />
+            <Field name="FlowPerMin" source="TextInput:" type="Byte" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="t0" order="" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="4" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="4" Connection="Left" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="4" Connection="Join" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Join" />
+      <Destination ToolID="20" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="True" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="True" />
+      <Destination ToolID="16" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="False" />
+      <Destination ToolID="17" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="17" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="14" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="Unique" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="17" Connection="Output" />
+      <Destination ToolID="19" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="True" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="19" Connection="Output" />
+      <Destination ToolID="18" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="20" Connection="True" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>AoCDay16Iterative</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="70e7a9d7-7315-49a5-8391-45e4307725d0" />
+      <Telemetry>
+        <PreviousWorkflowId value="88646930-252b-4ee8-91b1-3c13233cc768" />
+        <OriginWorkflowId value="70e7a9d7-7315-49a5-8391-45e4307725d0" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="False" />
+    </Events>
+    <RuntimeProperties>
+      <Actions />
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Tab (2)</Name>
+          <ToolId value="2" />
+          <Questions>
+            <Question>
+              <Type>MacroInput</Type>
+              <Description />
+              <Name>Macro Input (1)</Name>
+              <ToolId value="1" />
+            </Question>
+            <Question>
+              <Type>MacroInput</Type>
+              <Description />
+              <Name>Macro Input (3)</Name>
+              <ToolId value="3" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description>Macro Output (12)</Description>
+              <Name>Macro Output (12)</Name>
+              <ToolId value="12" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description>Macro Output (13)</Description>
+              <Name>Macro Output (13)</Name>
+              <ToolId value="13" />
+            </Question>
+          </Questions>
+        </Question>
+      </Questions>
+      <ModuleType>Macro</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImageStd value="39" />
+      <MacroInputs />
+      <MacroOutputs />
+      <IterativeMacro>
+        <Input>Iteration</Input>
+        <Output>Iteration</Output>
+        <IterationLimit value="50" />
+        <LimitBehavior>Warn</LimitBehavior>
+        <OutputMode>AutoByName</OutputMode>
+      </IterativeMacro>
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="1" Selected="True" />
+        <Tool ToolId="3" Selected="True" />
+        <Tool ToolId="12" Selected="True" />
+        <Tool ToolId="13" Selected="True" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>

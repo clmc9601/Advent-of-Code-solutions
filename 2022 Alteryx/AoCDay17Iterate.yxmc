@@ -1,0 +1,1923 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2021.2">
+  <Nodes>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
+        <Position x="90" y="258" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UseFileInput value="False" />
+          <Name>Iteration</Name>
+          <Abbrev />
+          <ShowFieldMap value="False" />
+          <Optional value="False" />
+          <TextInput>
+            <Configuration>
+              <NumRows value="1" />
+              <Fields>
+                <Field name="JetID" />
+                <Field name="stack" />
+                <Field name="stack2" />
+                <Field name="Height" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>0</c>
+                  <c>;1,0;2,0;3,0;4,0;5,0;6,0;7,0;</c>
+                  <c>1,0;2,0;3,0;4,0;5,0;6,0;7,0</c>
+                  <c>0</c>
+                </r>
+              </Data>
+            </Configuration>
+          </TextInput>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Input</DefaultAnnotationText>
+          <Left value="True" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="JetID" source="TextInput:" type="Byte" />
+            <Field name="stack" size="29" source="TextInput:" type="String" />
+            <Field name="stack2" size="27" source="TextInput:" type="String" />
+            <Field name="Height" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroInput" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="510" y="366" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Source_JetID" selected="False" input="Source_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Append height of current stack</AnnotationText>
+          <DefaultAnnotationText>Append height of current stack</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="RockID" source="TextInput:" type="Byte" />
+            <Field name="x1" source="TextInput:" type="Byte" />
+            <Field name="y1" source="TextInput:" type="Byte" />
+            <Field name="x2" source="TextInput:" type="Byte" />
+            <Field name="y2" source="TextInput:" type="Byte" />
+            <Field name="x3" source="TextInput:" type="Byte" />
+            <Field name="y3" source="TextInput:" type="Byte" />
+            <Field name="x4" source="TextInput:" type="Byte" />
+            <Field name="y4" source="TextInput:" type="Byte" />
+            <Field name="x5" source="TextInput:" type="Byte" />
+            <Field name="y5" source="TextInput:" type="Byte" />
+            <Field name="Height" source="Summarize: GroupBy - Height" type="Byte" />
+            <Field name="stack" size="1073741823" source="Summarize: GroupBy - stack" type="V_WString" />
+            <Field name="addy" source="TextInput:" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="198" y="366" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[rockID] =  MOD([Engine.IterationNumber]+1,5)</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[rockID] =  MOD([Engine.IterationNumber]+1,5)</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="RockID" source="TextInput:" type="Byte" />
+            <Field name="x1" source="TextInput:" type="Byte" />
+            <Field name="y1" source="TextInput:" type="Byte" />
+            <Field name="x2" source="TextInput:" type="Byte" />
+            <Field name="y2" source="TextInput:" type="Byte" />
+            <Field name="x3" source="TextInput:" type="Byte" />
+            <Field name="y3" source="TextInput:" type="Byte" />
+            <Field name="x4" source="TextInput:" type="Byte" />
+            <Field name="y4" source="TextInput:" type="Byte" />
+            <Field name="x5" source="TextInput:" type="Byte" />
+            <Field name="y5" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="RockID" source="TextInput:" type="Byte" />
+            <Field name="x1" source="TextInput:" type="Byte" />
+            <Field name="y1" source="TextInput:" type="Byte" />
+            <Field name="x2" source="TextInput:" type="Byte" />
+            <Field name="y2" source="TextInput:" type="Byte" />
+            <Field name="x3" source="TextInput:" type="Byte" />
+            <Field name="y3" source="TextInput:" type="Byte" />
+            <Field name="x4" source="TextInput:" type="Byte" />
+            <Field name="y4" source="TextInput:" type="Byte" />
+            <Field name="x5" source="TextInput:" type="Byte" />
+            <Field name="y5" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="42">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
+        <Position x="78" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UseFileInput value="False" />
+          <Name>Jets</Name>
+          <Abbrev />
+          <ShowFieldMap value="False" />
+          <Optional value="False" />
+          <TextInput>
+            <Configuration>
+              <NumRows value="33" />
+              <Fields>
+                <Field name="JetID" />
+                <Field name="data" />
+                <Field name="xeffect" />
+                <Field name="yeffect" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>1</c>
+                  <c>&gt;</c>
+                  <c>1</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>v</c>
+                  <c>0</c>
+                  <c>-1</c>
+                </r>
+                <r>
+                  <c>3</c>
+                  <c>&lt;</c>
+                  <c>-1</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>v</c>
+                  <c>0</c>
+                  <c>-1</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>&lt;</c>
+                  <c>-1</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>v</c>
+                  <c>0</c>
+                  <c>-1</c>
+                </r>
+                <r>
+                  <c>7</c>
+                  <c>&lt;</c>
+                  <c>-1</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>v</c>
+                  <c>0</c>
+                  <c>-1</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>&lt;</c>
+                  <c>-1</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>v</c>
+                  <c>0</c>
+                  <c>-1</c>
+                </r>
+                <r>
+                  <c>11</c>
+                  <c>&gt;</c>
+                  <c>1</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>12</c>
+                  <c>v</c>
+                  <c>0</c>
+                  <c>-1</c>
+                </r>
+                <r>
+                  <c>13</c>
+                  <c>&lt;</c>
+                  <c>-1</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>14</c>
+                  <c>v</c>
+                  <c>0</c>
+                  <c>-1</c>
+                </r>
+                <r>
+                  <c>15</c>
+                  <c>&gt;</c>
+                  <c>1</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>16</c>
+                  <c>v</c>
+                  <c>0</c>
+                  <c>-1</c>
+                </r>
+                <r>
+                  <c>17</c>
+                  <c>&gt;</c>
+                  <c>1</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>18</c>
+                  <c>v</c>
+                  <c>0</c>
+                  <c>-1</c>
+                </r>
+                <r>
+                  <c>19</c>
+                  <c>&lt;</c>
+                  <c>-1</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>20</c>
+                  <c>v</c>
+                  <c>0</c>
+                  <c>-1</c>
+                </r>
+                <r>
+                  <c>21</c>
+                  <c>&lt;</c>
+                  <c>-1</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>22</c>
+                  <c>v</c>
+                  <c>0</c>
+                  <c>-1</c>
+                </r>
+                <r>
+                  <c>23</c>
+                  <c>&lt;</c>
+                  <c>-1</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>24</c>
+                  <c>v</c>
+                  <c>0</c>
+                  <c>-1</c>
+                </r>
+                <r>
+                  <c>25</c>
+                  <c>&gt;</c>
+                  <c>1</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>26</c>
+                  <c>v</c>
+                  <c>0</c>
+                  <c>-1</c>
+                </r>
+                <r>
+                  <c>27</c>
+                  <c>&gt;</c>
+                  <c>1</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>28</c>
+                  <c>v</c>
+                  <c>0</c>
+                  <c>-1</c>
+                </r>
+                <r>
+                  <c>29</c>
+                  <c>&lt;</c>
+                  <c>-1</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>30</c>
+                  <c>v</c>
+                  <c>0</c>
+                  <c>-1</c>
+                </r>
+                <r>
+                  <c>31</c>
+                  <c>&gt;</c>
+                  <c>1</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>32</c>
+                  <c>v</c>
+                  <c>0</c>
+                  <c>-1</c>
+                </r>
+                <r>
+                  <c>33</c>
+                  <c>&gt;</c>
+                  <c>1</c>
+                  <c>0</c>
+                </r>
+              </Data>
+            </Configuration>
+          </TextInput>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Input</DefaultAnnotationText>
+          <Left value="True" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="JetID" source="TextInput:" type="Byte" />
+            <Field name="data" size="1" source="TextInput:" type="String" />
+            <Field name="xeffect" source="TextInput:" type="Int16" />
+            <Field name="yeffect" source="TextInput:" type="Int16" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroInput" />
+    </Node>
+    <Node ToolID="43">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="450" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Target_JetID" selected="True" input="Target_" />
+                <SelectField field="Target_data" selected="True" input="Target_" />
+                <SelectField field="Target_xeffect" selected="True" input="Target_" />
+                <SelectField field="Target_yeffect" selected="True" input="Target_" />
+                <SelectField field="Source_JetID" selected="True" rename="Source_JetID" input="Source_" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Append previous ending jet stream</AnnotationText>
+          <DefaultAnnotationText>Append previous ending jet stream</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="JetID" source="TextInput:" type="Byte" />
+            <Field name="data" size="1" source="TextInput:" type="String" />
+            <Field name="xeffect" source="TextInput:" type="Int16" />
+            <Field name="yeffect" source="TextInput:" type="Int16" />
+            <Field name="Source_JetID" source="Summarize: GroupBy - JetID" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="44">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="558" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[JetID] &gt;  [Source_JetID]</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Place the next jet stream on top</AnnotationText>
+          <DefaultAnnotationText>[JetID] &gt;  [Source_JetID]</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="JetID" source="TextInput:" type="Byte" />
+            <Field name="data" size="1" source="TextInput:" type="String" />
+            <Field name="xeffect" source="TextInput:" type="Int16" />
+            <Field name="yeffect" source="TextInput:" type="Int16" />
+            <Field name="Source_JetID" source="Summarize: GroupBy - JetID" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="JetID" source="TextInput:" type="Byte" />
+            <Field name="data" size="1" source="TextInput:" type="String" />
+            <Field name="xeffect" source="TextInput:" type="Int16" />
+            <Field name="yeffect" source="TextInput:" type="Int16" />
+            <Field name="Source_JetID" source="Summarize: GroupBy - JetID" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="47">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="654" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="True" />
+          <OutputOrder>
+            <Connection>#1</Connection>
+            <Connection>#2</Connection>
+          </OutputOrder>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="JetID" source="TextInput:" type="Byte" />
+            <Field name="data" size="1" source="TextInput:" type="String" />
+            <Field name="xeffect" source="TextInput:" type="Int16" />
+            <Field name="yeffect" source="TextInput:" type="Int16" />
+            <Field name="Source_JetID" source="Summarize: GroupBy - JetID" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="48">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1878" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[Engine.IterationNumber]+1&lt;[#1]</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Stop at number of rocks</AnnotationText>
+          <DefaultAnnotationText>[Engine.IterationNumber]+1&lt;[#1]</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="JetID" source="TextInput:" type="Byte" />
+            <Field name="Height" source="Summarize: GroupBy - Height" type="Byte" />
+            <Field name="stack" size="1073741823" source="Formula: ';'+ToString([x1])+','+ToString([y1])+';'&#xA;+ToString([x2])+','+ToString([y2])+';'&#xA;+ToString([x3])+','+ToString([y3])+';'&#xA;+ToString([x4])+','+ToString([y4])+';'&#xA;&#xA;+&#xA;IF !IsNull([x5])&#xA;THEN ToString([x5])+','+ToString([y5])+';'&#xA;ELSE ''&#xA;ENDIF&#xA;+&#xA;[stack]&#xA;" type="V_WString" />
+            <Field name="stack2" size="1073741823" source="Formula: ToString([x1])+','+ToString([y1])+';'&#xA;+ToString([x2])+','+ToString([y2])+';'&#xA;+ToString([x3])+','+ToString([y3])+';'&#xA;+ToString([x4])+','+ToString([y4])+';'&#xA;&#xA;+&#xA;IF !IsNull([x5])&#xA;THEN ToString([x5])+','+ToString([y5])+';'&#xA;ELSE ''&#xA;ENDIF&#xA;+&#xA;[stack]" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="JetID" source="TextInput:" type="Byte" />
+            <Field name="Height" source="Summarize: GroupBy - Height" type="Byte" />
+            <Field name="stack" size="1073741823" source="Formula: ';'+ToString([x1])+','+ToString([y1])+';'&#xA;+ToString([x2])+','+ToString([y2])+';'&#xA;+ToString([x3])+','+ToString([y3])+';'&#xA;+ToString([x4])+','+ToString([y4])+';'&#xA;&#xA;+&#xA;IF !IsNull([x5])&#xA;THEN ToString([x5])+','+ToString([y5])+';'&#xA;ELSE ''&#xA;ENDIF&#xA;+&#xA;[stack]&#xA;" type="V_WString" />
+            <Field name="stack2" size="1073741823" source="Formula: ToString([x1])+','+ToString([y1])+';'&#xA;+ToString([x2])+','+ToString([y2])+';'&#xA;+ToString([x3])+','+ToString([y3])+';'&#xA;+ToString([x4])+','+ToString([y4])+';'&#xA;&#xA;+&#xA;IF !IsNull([x5])&#xA;THEN ToString([x5])+','+ToString([y5])+';'&#xA;ELSE ''&#xA;ENDIF&#xA;+&#xA;[stack]" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="49">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="1974" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>Iterate</Name>
+          <Abbrev />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Output</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="50">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1878" y="342" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[Engine.IterationNumber]+1" field="RockNum" size="4" type="Int32" />
+            <FormulaField expression="Max([maxy], [Height])" field="Height" size="1" type="Byte" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText><![CDATA[Calculate height
+]]></AnnotationText>
+          <DefaultAnnotationText><![CDATA[RockNum = [Engine.IterationNumber]+1
+Height = Max([maxy], [Height])
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="JetID" source="TextInput:" type="Byte" />
+            <Field name="RockID" source="TextInput:" type="Byte" />
+            <Field name="x1" source="Formula: [_CurrentField_]+[Cum_xeffect]" type="Byte" />
+            <Field name="y1" source="Formula: [_CurrentField_]+[Cum_yeffect]" type="Byte" />
+            <Field name="x2" source="Formula: [_CurrentField_]+[Cum_xeffect]" type="Byte" />
+            <Field name="y2" source="Formula: [_CurrentField_]+[Cum_yeffect]" type="Byte" />
+            <Field name="x3" source="Formula: [_CurrentField_]+[Cum_xeffect]" type="Byte" />
+            <Field name="y3" source="Formula: [_CurrentField_]+[Cum_yeffect]" type="Byte" />
+            <Field name="x4" source="Formula: [_CurrentField_]+[Cum_xeffect]" type="Byte" />
+            <Field name="y4" source="Formula: [_CurrentField_]+[Cum_yeffect]" type="Byte" />
+            <Field name="x5" source="Formula: [_CurrentField_]+[Cum_xeffect]" type="Byte" />
+            <Field name="y5" source="Formula: [_CurrentField_]+[Cum_yeffect]" type="Byte" />
+            <Field name="Height" source="Formula: Max([maxy], [Height])" type="Byte" />
+            <Field name="stack" size="1073741823" source="Formula: ';'+ToString([x1])+','+ToString([y1])+';'&#xA;+ToString([x2])+','+ToString([y2])+';'&#xA;+ToString([x3])+','+ToString([y3])+';'&#xA;+ToString([x4])+','+ToString([y4])+';'&#xA;&#xA;+&#xA;IF !IsNull([x5])&#xA;THEN ToString([x5])+','+ToString([y5])+';'&#xA;ELSE ''&#xA;ENDIF&#xA;+&#xA;[stack]&#xA;" type="V_WString" />
+            <Field name="addy" source="TextInput:" type="Int32" />
+            <Field name="maxy" source="Formula: [_CurrentField_]+[Cum_yeffect]" type="Int32" />
+            <Field description="Formula: IF IsNull([Row-1:Cum_yeffect])&#xA;THEN Null()&#xA;ELSEIF [Row-1:Cum_yeffect]=[Row-3:Cum_yeffect] and [Row-1:Cum_yeffect]&lt;0&#xA;THEN Null()&#xA;ELSEIF Contains([stack], ';'+ToString([x1]+[Cum_xeffect])+','+ToString([y1]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x2]+[Cum_xeffect])+','+ToString([y2]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x3]+[Cum_xeffect])+','+ToString([y3]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x4]+[Cum_xeffect])+','+ToString([y4]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x5]+[Cum_xeffect])+','+ToString([y5]+[Cum_yeffect])+';')&#xA;THEN [Row-1:Cum_yeffect]&#xA;ELSE [Cum_yeffect]&#xA;ENDIF" name="Cum_yeffect" source="Formula: IF IsNull([Row-1:Cum_yeffect])&#xA;THEN Null()&#xA;ELSEIF [Row-1:Cum_yeffect]=[Row-3:Cum_yeffect] and [Row-1:Cum_yeffect]&lt;0&#xA;THEN Null()&#xA;ELSEIF Contains([stack], ';'+ToString([x1]+[Cum_xeffect])+','+ToString([y1]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x2]+[Cum_xeffect])+','+ToString([y2]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x3]+[Cum_xeffect])+','+ToString([y3]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x4]+[Cum_xeffect])+','+ToString([y4]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x5]+[Cum_xeffect])+','+ToString([y5]+[Cum_yeffect])+';')&#xA;THEN [Row-1:Cum_yeffect]&#xA;ELSE [Cum_yeffect]&#xA;ENDIF" type="Int64" />
+            <Field description="Formula: IF ([xeffect] = -1 and [minx]+[Row-1:Cum_xeffect]+[xeffect] &lt; 1) or ([xeffect] = 1 and [maxx]+[Row-1:Cum_xeffect]+[xeffect] &gt; 7)&#xA;THEN [Row-1:Cum_xeffect]&#xA;ELSEIF Contains([stack], ';'+ToString([x1]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y1]+[Cum_yeffect])+';')&#xA;&#xA;or &#xA;Contains([stack], ';'+ToString([x2]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y2]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x3]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y3]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x4]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y4]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x5]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y5]+[Cum_yeffect])+';')&#xA;&#xA;&#xA;THEN [Row-1:Cum_xeffect]&#xA;ELSE [Row-1:Cum_xeffect]+[xeffect]&#xA;ENDIF" name="Cum_xeffect" source="Formula: IF ([xeffect] = -1 and [minx]+[Row-1:Cum_xeffect]+[xeffect] &lt; 1) or ([xeffect] = 1 and [maxx]+[Row-1:Cum_xeffect]+[xeffect] &gt; 7)&#xA;THEN [Row-1:Cum_xeffect]&#xA;ELSEIF Contains([stack], ';'+ToString([x1]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y1]+[Cum_yeffect])+';')&#xA;&#xA;or &#xA;Contains([stack], ';'+ToString([x2]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y2]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x3]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y3]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x4]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y4]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x5]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y5]+[Cum_yeffect])+';')&#xA;&#xA;&#xA;THEN [Row-1:Cum_xeffect]&#xA;ELSE [Row-1:Cum_xeffect]+[xeffect]&#xA;ENDIF" type="Int32" />
+            <Field name="RockNum" source="Formula: [Engine.IterationNumber]+1" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="51">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="1974" y="342" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>Output</Name>
+          <Abbrev />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Output</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="52">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.NumericUpDown.NumericUpDown">
+        <Position x="1866" y="90" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Numeric Up Down (52)</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="55">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RegEx.RegEx">
+        <Position x="174" y="258" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>stack2</Field>
+          <RegExExpression value="\d+,(\d+);" />
+          <CaseInsensitve value="True" />
+          <Method>ParseSimple</Method>
+          <Replace expression="">
+            <CopyUnmatched value="True" />
+          </Replace>
+          <ParseSimple>
+            <SplitToRows value="True" />
+          </ParseSimple>
+          <ParseComplex>
+            <Field field="RegExOut1" type="V_WString" size="1073741823" />
+          </ParseComplex>
+          <Match>
+            <Field>stack_Matched</Field>
+            <ErrorUnmatched value="False" />
+          </Match>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Get y values</AnnotationText>
+          <DefaultAnnotationText>Get y values</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="JetID" source="TextInput:" type="Byte" />
+            <Field name="stack" size="29" source="TextInput:" type="String" />
+            <Field name="stack2" size="27" source="TextInput:" type="String" />
+            <Field name="Height" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRegEx" />
+    </Node>
+    <Node ToolID="56">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="366" y="258" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="JetID" action="GroupBy" rename="JetID" />
+            <SummarizeField field="Height" action="GroupBy" rename="Height" />
+            <SummarizeField field="stack" action="GroupBy" rename="stack" />
+            <SummarizeField field="stack2" action="Max" rename="addy" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Find current height of the stack</AnnotationText>
+          <DefaultAnnotationText>Find current height of the stack</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="JetID" source="Summarize: GroupBy - JetID" type="Byte" />
+            <Field name="Height" source="Summarize: GroupBy - Height" type="Byte" />
+            <Field name="stack" size="1073741823" source="Summarize: GroupBy - stack" type="V_WString" />
+            <Field name="addy" source="TextInput:" type="Int32" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="JetID" order="Asc" />
+            <Field field="Height" order="Asc" />
+            <Field field="stack" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="57">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="270" y="258" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="stack" selected="True" type="V_WString" size="290000000" />
+            <SelectField field="stack2" selected="True" type="Int32" size="4" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="JetID" source="TextInput:" type="Byte" />
+            <Field name="stack" size="1073741823" source="TextInput:" type="V_WString" />
+            <Field name="stack2" source="TextInput:" type="Int32" />
+            <Field name="Height" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="58">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="834" y="354" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Target_JetID" selected="True" input="Target_" />
+                <SelectField field="Target_data" selected="True" input="Target_" />
+                <SelectField field="Target_xeffect" selected="True" input="Target_" />
+                <SelectField field="Target_yeffect" selected="True" input="Target_" />
+                <SelectField field="Source_RockID" selected="True" input="Source_" />
+                <SelectField field="Source_x1" selected="True" input="Source_" />
+                <SelectField field="Source_y1" selected="True" input="Source_" />
+                <SelectField field="Source_x2" selected="True" input="Source_" />
+                <SelectField field="Source_y2" selected="True" input="Source_" />
+                <SelectField field="Source_x3" selected="True" input="Source_" />
+                <SelectField field="Source_y3" selected="True" input="Source_" />
+                <SelectField field="Source_x4" selected="True" input="Source_" />
+                <SelectField field="Source_y4" selected="True" input="Source_" />
+                <SelectField field="Source_x5" selected="True" input="Source_" />
+                <SelectField field="Source_y5" selected="True" input="Source_" />
+                <SelectField field="Source_Height" selected="True" input="Source_" />
+                <SelectField field="Source_stack" selected="True" input="Source_" />
+                <SelectField field="Source_addy" selected="True" input="Source_" />
+                <SelectField field="Source_minx" selected="True" input="Source_" />
+                <SelectField field="Source_maxx" selected="True" input="Source_" />
+                <SelectField field="Source_miny" selected="True" input="Source_" />
+                <SelectField field="Source_maxy" selected="True" input="Source_" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="JetID" source="TextInput:" type="Byte" />
+            <Field name="data" size="1" source="TextInput:" type="String" />
+            <Field name="xeffect" source="TextInput:" type="Int16" />
+            <Field name="yeffect" source="TextInput:" type="Int16" />
+            <Field name="RockID" source="TextInput:" type="Byte" />
+            <Field name="x1" source="TextInput:" type="Byte" />
+            <Field name="y1" source="Formula: [_CurrentField_]+[addy]+3" type="Byte" />
+            <Field name="x2" source="TextInput:" type="Byte" />
+            <Field name="y2" source="Formula: [_CurrentField_]+[addy]+3" type="Byte" />
+            <Field name="x3" source="TextInput:" type="Byte" />
+            <Field name="y3" source="Formula: [_CurrentField_]+[addy]+3" type="Byte" />
+            <Field name="x4" source="TextInput:" type="Byte" />
+            <Field name="y4" source="Formula: [_CurrentField_]+[addy]+3" type="Byte" />
+            <Field name="x5" source="TextInput:" type="Byte" />
+            <Field name="y5" source="Formula: [_CurrentField_]+[addy]+3" type="Byte" />
+            <Field name="Height" source="Summarize: GroupBy - Height" type="Byte" />
+            <Field name="stack" size="1073741823" source="Summarize: GroupBy - stack" type="V_WString" />
+            <Field name="addy" source="TextInput:" type="Int32" />
+            <Field name="minx" source="Formula: IF IsNull([x5])&#xA;THEN Min([x1], [x2], [x3], [x4])&#xA;ELSE Min([x1], [x2], [x3], [x4], [x5])&#xA;ENDIF" type="Int32" />
+            <Field name="maxx" source="Formula: IF IsNull([x5])&#xA;THEN Max([x1], [x2], [x3], [x4])&#xA;ELSE Max([x1], [x2], [x3], [x4], [x5])&#xA;ENDIF" type="Int32" />
+            <Field name="miny" source="Formula: IF IsNull([y5])&#xA;THEN Min([y1], [y2], [y3], [y4])&#xA;ELSE Min([y1], [y2], [y3], [y4], [y5])&#xA;ENDIF" type="Int32" />
+            <Field name="maxy" source="Formula: IF IsNull([y5])&#xA;THEN Max([y1], [y2], [y3], [y4])&#xA;ELSE Max([y1], [y2], [y3], [y4], [y5])&#xA;ENDIF" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="59">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiFieldFormula.MultiFieldFormula">
+        <Position x="618" y="366" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldType>Numeric</FieldType>
+          <Fields orderChanged="False">
+            <Field name="y1" />
+            <Field name="y2" />
+            <Field name="y3" />
+            <Field name="y4" />
+            <Field name="y5" />
+            <Field name="RockID" selected="False" />
+            <Field name="x1" selected="False" />
+            <Field name="x2" selected="False" />
+            <Field name="x3" selected="False" />
+            <Field name="x4" selected="False" />
+            <Field name="x5" selected="False" />
+            <Field name="Height" selected="False" />
+            <Field name="addy" selected="False" />
+            <Field name="*Unknown" selected="False" />
+          </Fields>
+          <CopyOutput value="False" />
+          <Expression>[_CurrentField_]+[addy]+3</Expression>
+          <ChangeFieldType value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Start the current rock 3 units above stack</AnnotationText>
+          <DefaultAnnotationText>[_CurrentField_]+[addy]+3</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="RockID" source="TextInput:" type="Byte" />
+            <Field name="x1" source="TextInput:" type="Byte" />
+            <Field name="y1" source="Formula: [_CurrentField_]+[addy]+3" type="Byte" />
+            <Field name="x2" source="TextInput:" type="Byte" />
+            <Field name="y2" source="Formula: [_CurrentField_]+[addy]+3" type="Byte" />
+            <Field name="x3" source="TextInput:" type="Byte" />
+            <Field name="y3" source="Formula: [_CurrentField_]+[addy]+3" type="Byte" />
+            <Field name="x4" source="TextInput:" type="Byte" />
+            <Field name="y4" source="Formula: [_CurrentField_]+[addy]+3" type="Byte" />
+            <Field name="x5" source="TextInput:" type="Byte" />
+            <Field name="y5" source="Formula: [_CurrentField_]+[addy]+3" type="Byte" />
+            <Field name="Height" source="Summarize: GroupBy - Height" type="Byte" />
+            <Field name="stack" size="1073741823" source="Summarize: GroupBy - stack" type="V_WString" />
+            <Field name="addy" source="TextInput:" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiFieldFormula" />
+    </Node>
+    <Node ToolID="60">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+        <Position x="930" y="354" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="False" />
+          <UpdateField_Name>JetID</UpdateField_Name>
+          <CreateField_Name>Cum_yeffect</CreateField_Name>
+          <CreateField_Type>Int64</CreateField_Type>
+          <CreateField_Size>8</CreateField_Size>
+          <OtherRows>Empty</OtherRows>
+          <NumRows value="1" />
+          <Expression>[Row-1:Cum_yeffect]+[yeffect]</Expression>
+          <GroupByFields />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Calculate cumulative delta y</AnnotationText>
+          <DefaultAnnotationText>[Row-1:Cum_yeffect]+[yeffect]</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="JetID" source="TextInput:" type="Byte" />
+            <Field name="data" size="1" source="TextInput:" type="String" />
+            <Field name="xeffect" source="TextInput:" type="Int16" />
+            <Field name="yeffect" source="TextInput:" type="Int16" />
+            <Field name="RockID" source="TextInput:" type="Byte" />
+            <Field name="x1" source="TextInput:" type="Byte" />
+            <Field name="y1" source="Formula: [_CurrentField_]+[addy]+3" type="Byte" />
+            <Field name="x2" source="TextInput:" type="Byte" />
+            <Field name="y2" source="Formula: [_CurrentField_]+[addy]+3" type="Byte" />
+            <Field name="x3" source="TextInput:" type="Byte" />
+            <Field name="y3" source="Formula: [_CurrentField_]+[addy]+3" type="Byte" />
+            <Field name="x4" source="TextInput:" type="Byte" />
+            <Field name="y4" source="Formula: [_CurrentField_]+[addy]+3" type="Byte" />
+            <Field name="x5" source="TextInput:" type="Byte" />
+            <Field name="y5" source="Formula: [_CurrentField_]+[addy]+3" type="Byte" />
+            <Field name="Height" source="Summarize: GroupBy - Height" type="Byte" />
+            <Field name="stack" size="1073741823" source="Summarize: GroupBy - stack" type="V_WString" />
+            <Field name="addy" source="TextInput:" type="Int32" />
+            <Field name="minx" source="Formula: IF IsNull([x5])&#xA;THEN Min([x1], [x2], [x3], [x4])&#xA;ELSE Min([x1], [x2], [x3], [x4], [x5])&#xA;ENDIF" type="Int32" />
+            <Field name="maxx" source="Formula: IF IsNull([x5])&#xA;THEN Max([x1], [x2], [x3], [x4])&#xA;ELSE Max([x1], [x2], [x3], [x4], [x5])&#xA;ENDIF" type="Int32" />
+            <Field name="miny" source="Formula: IF IsNull([y5])&#xA;THEN Min([y1], [y2], [y3], [y4])&#xA;ELSE Min([y1], [y2], [y3], [y4], [y5])&#xA;ENDIF" type="Int32" />
+            <Field name="maxy" source="Formula: IF IsNull([y5])&#xA;THEN Max([y1], [y2], [y3], [y4])&#xA;ELSE Max([y1], [y2], [y3], [y4], [y5])&#xA;ENDIF" type="Int32" />
+            <Field description="Formula: [Row-1:Cum_yeffect]+[yeffect]" name="Cum_yeffect" source="Formula: [Row-1:Cum_yeffect]+[yeffect]" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+    </Node>
+    <Node ToolID="61">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+        <Position x="1038" y="354" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="False" />
+          <UpdateField_Name>JetID</UpdateField_Name>
+          <CreateField_Name>Cum_xeffect</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <OtherRows>Empty</OtherRows>
+          <NumRows value="1" />
+          <Expression>IF ([xeffect] = -1 and [minx]+[Row-1:Cum_xeffect]+[xeffect] &lt; 1) or ([xeffect] = 1 and [maxx]+[Row-1:Cum_xeffect]+[xeffect] &gt; 7)
+THEN [Row-1:Cum_xeffect]
+ELSEIF Contains([stack], ';'+ToString([x1]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y1]+[Cum_yeffect])+';')
+
+or 
+Contains([stack], ';'+ToString([x2]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y2]+[Cum_yeffect])+';')
+or 
+Contains([stack], ';'+ToString([x3]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y3]+[Cum_yeffect])+';')
+or 
+Contains([stack], ';'+ToString([x4]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y4]+[Cum_yeffect])+';')
+or 
+Contains([stack], ';'+ToString([x5]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y5]+[Cum_yeffect])+';')
+
+
+THEN [Row-1:Cum_xeffect]
+ELSE [Row-1:Cum_xeffect]+[xeffect]
+ENDIF</Expression>
+          <GroupByFields />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Calculate cumulative delta x, adjusting for hitting the walls and colliding with the rock stack</AnnotationText>
+          <DefaultAnnotationText>IF ([xeffect] = -1 and [minx]+[Row-1:Cum_xeffect]+[xeffect] &lt;...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="JetID" source="TextInput:" type="Byte" />
+            <Field name="data" size="1" source="TextInput:" type="String" />
+            <Field name="xeffect" source="TextInput:" type="Int16" />
+            <Field name="yeffect" source="TextInput:" type="Int16" />
+            <Field name="RockID" source="TextInput:" type="Byte" />
+            <Field name="x1" source="TextInput:" type="Byte" />
+            <Field name="y1" source="Formula: [_CurrentField_]+[addy]+3" type="Byte" />
+            <Field name="x2" source="TextInput:" type="Byte" />
+            <Field name="y2" source="Formula: [_CurrentField_]+[addy]+3" type="Byte" />
+            <Field name="x3" source="TextInput:" type="Byte" />
+            <Field name="y3" source="Formula: [_CurrentField_]+[addy]+3" type="Byte" />
+            <Field name="x4" source="TextInput:" type="Byte" />
+            <Field name="y4" source="Formula: [_CurrentField_]+[addy]+3" type="Byte" />
+            <Field name="x5" source="TextInput:" type="Byte" />
+            <Field name="y5" source="Formula: [_CurrentField_]+[addy]+3" type="Byte" />
+            <Field name="Height" source="Summarize: GroupBy - Height" type="Byte" />
+            <Field name="stack" size="1073741823" source="Summarize: GroupBy - stack" type="V_WString" />
+            <Field name="addy" source="TextInput:" type="Int32" />
+            <Field name="minx" source="Formula: IF IsNull([x5])&#xA;THEN Min([x1], [x2], [x3], [x4])&#xA;ELSE Min([x1], [x2], [x3], [x4], [x5])&#xA;ENDIF" type="Int32" />
+            <Field name="maxx" source="Formula: IF IsNull([x5])&#xA;THEN Max([x1], [x2], [x3], [x4])&#xA;ELSE Max([x1], [x2], [x3], [x4], [x5])&#xA;ENDIF" type="Int32" />
+            <Field name="miny" source="Formula: IF IsNull([y5])&#xA;THEN Min([y1], [y2], [y3], [y4])&#xA;ELSE Min([y1], [y2], [y3], [y4], [y5])&#xA;ENDIF" type="Int32" />
+            <Field name="maxy" source="Formula: IF IsNull([y5])&#xA;THEN Max([y1], [y2], [y3], [y4])&#xA;ELSE Max([y1], [y2], [y3], [y4], [y5])&#xA;ENDIF" type="Int32" />
+            <Field description="Formula: [Row-1:Cum_yeffect]+[yeffect]" name="Cum_yeffect" source="Formula: [Row-1:Cum_yeffect]+[yeffect]" type="Int64" />
+            <Field description="Formula: IF ([xeffect] = -1 and [minx]+[Row-1:Cum_xeffect]+[xeffect] &lt; 1) or ([xeffect] = 1 and [maxx]+[Row-1:Cum_xeffect]+[xeffect] &gt; 7)&#xA;THEN [Row-1:Cum_xeffect]&#xA;ELSEIF Contains([stack], ';'+ToString([x1]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y1]+[Cum_yeffect])+';')&#xA;&#xA;or &#xA;Contains([stack], ';'+ToString([x2]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y2]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x3]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y3]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x4]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y4]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x5]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y5]+[Cum_yeffect])+';')&#xA;&#xA;&#xA;THEN [Row-1:Cum_xeffect]&#xA;ELSE [Row-1:Cum_xeffect]+[xeffect]&#xA;ENDIF" name="Cum_xeffect" source="Formula: IF ([xeffect] = -1 and [minx]+[Row-1:Cum_xeffect]+[xeffect] &lt; 1) or ([xeffect] = 1 and [maxx]+[Row-1:Cum_xeffect]+[xeffect] &gt; 7)&#xA;THEN [Row-1:Cum_xeffect]&#xA;ELSEIF Contains([stack], ';'+ToString([x1]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y1]+[Cum_yeffect])+';')&#xA;&#xA;or &#xA;Contains([stack], ';'+ToString([x2]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y2]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x3]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y3]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x4]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y4]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x5]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y5]+[Cum_yeffect])+';')&#xA;&#xA;&#xA;THEN [Row-1:Cum_xeffect]&#xA;ELSE [Row-1:Cum_xeffect]+[xeffect]&#xA;ENDIF" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+    </Node>
+    <Node ToolID="62">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="726" y="366" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="IF IsNull([x5])&#xA;THEN Min([x1], [x2], [x3], [x4])&#xA;ELSE Min([x1], [x2], [x3], [x4], [x5])&#xA;ENDIF" field="minx" size="4" type="Int32" />
+            <FormulaField expression="IF IsNull([x5])&#xA;THEN Max([x1], [x2], [x3], [x4])&#xA;ELSE Max([x1], [x2], [x3], [x4], [x5])&#xA;ENDIF" field="maxx" size="4" type="Int32" />
+            <FormulaField expression="IF IsNull([y5])&#xA;THEN Min([y1], [y2], [y3], [y4])&#xA;ELSE Min([y1], [y2], [y3], [y4], [y5])&#xA;ENDIF" field="miny" size="4" type="Int32" />
+            <FormulaField expression="IF IsNull([y5])&#xA;THEN Max([y1], [y2], [y3], [y4])&#xA;ELSE Max([y1], [y2], [y3], [y4], [y5])&#xA;ENDIF" field="maxy" size="4" type="Int32" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Calculate min and max x and y</AnnotationText>
+          <DefaultAnnotationText>minx = IF IsNull([x5])
+THEN Min([x1], [x2], [x3], [x4])
+ELSE Min([x1], [x2], [x3...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="RockID" source="TextInput:" type="Byte" />
+            <Field name="x1" source="TextInput:" type="Byte" />
+            <Field name="y1" source="Formula: [_CurrentField_]+[addy]+3" type="Byte" />
+            <Field name="x2" source="TextInput:" type="Byte" />
+            <Field name="y2" source="Formula: [_CurrentField_]+[addy]+3" type="Byte" />
+            <Field name="x3" source="TextInput:" type="Byte" />
+            <Field name="y3" source="Formula: [_CurrentField_]+[addy]+3" type="Byte" />
+            <Field name="x4" source="TextInput:" type="Byte" />
+            <Field name="y4" source="Formula: [_CurrentField_]+[addy]+3" type="Byte" />
+            <Field name="x5" source="TextInput:" type="Byte" />
+            <Field name="y5" source="Formula: [_CurrentField_]+[addy]+3" type="Byte" />
+            <Field name="Height" source="Summarize: GroupBy - Height" type="Byte" />
+            <Field name="stack" size="1073741823" source="Summarize: GroupBy - stack" type="V_WString" />
+            <Field name="addy" source="TextInput:" type="Int32" />
+            <Field name="minx" source="Formula: IF IsNull([x5])&#xA;THEN Min([x1], [x2], [x3], [x4])&#xA;ELSE Min([x1], [x2], [x3], [x4], [x5])&#xA;ENDIF" type="Int32" />
+            <Field name="maxx" source="Formula: IF IsNull([x5])&#xA;THEN Max([x1], [x2], [x3], [x4])&#xA;ELSE Max([x1], [x2], [x3], [x4], [x5])&#xA;ENDIF" type="Int32" />
+            <Field name="miny" source="Formula: IF IsNull([y5])&#xA;THEN Min([y1], [y2], [y3], [y4])&#xA;ELSE Min([y1], [y2], [y3], [y4], [y5])&#xA;ENDIF" type="Int32" />
+            <Field name="maxy" source="Formula: IF IsNull([y5])&#xA;THEN Max([y1], [y2], [y3], [y4])&#xA;ELSE Max([y1], [y2], [y3], [y4], [y5])&#xA;ENDIF" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="63">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+        <Position x="1158" y="354" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="True" />
+          <UpdateField_Name>Cum_yeffect</UpdateField_Name>
+          <CreateField_Name>New Field</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <OtherRows>Empty</OtherRows>
+          <NumRows value="3" />
+          <Expression>IF IsNull([Row-1:Cum_yeffect])
+THEN Null()
+ELSEIF [Row-1:Cum_yeffect]=[Row-3:Cum_yeffect] and [Row-1:Cum_yeffect]&lt;0
+THEN Null()
+ELSEIF Contains([stack], ';'+ToString([x1]+[Cum_xeffect])+','+ToString([y1]+[Cum_yeffect])+';')
+or 
+Contains([stack], ';'+ToString([x2]+[Cum_xeffect])+','+ToString([y2]+[Cum_yeffect])+';')
+or 
+Contains([stack], ';'+ToString([x3]+[Cum_xeffect])+','+ToString([y3]+[Cum_yeffect])+';')
+or 
+Contains([stack], ';'+ToString([x4]+[Cum_xeffect])+','+ToString([y4]+[Cum_yeffect])+';')
+or 
+Contains([stack], ';'+ToString([x5]+[Cum_xeffect])+','+ToString([y5]+[Cum_yeffect])+';')
+THEN [Row-1:Cum_yeffect]
+ELSE [Cum_yeffect]
+ENDIF</Expression>
+          <GroupByFields />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Adjust cumulative delta y for hitting the floor or the stack</AnnotationText>
+          <DefaultAnnotationText>IF IsNull([Row-1:Cum_yeffect])
+THEN Null()
+ELSEIF [Row-1:Cum_...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="JetID" source="TextInput:" type="Byte" />
+            <Field name="data" size="1" source="TextInput:" type="String" />
+            <Field name="xeffect" source="TextInput:" type="Int16" />
+            <Field name="yeffect" source="TextInput:" type="Int16" />
+            <Field name="RockID" source="TextInput:" type="Byte" />
+            <Field name="x1" source="TextInput:" type="Byte" />
+            <Field name="y1" source="Formula: [_CurrentField_]+[addy]+3" type="Byte" />
+            <Field name="x2" source="TextInput:" type="Byte" />
+            <Field name="y2" source="Formula: [_CurrentField_]+[addy]+3" type="Byte" />
+            <Field name="x3" source="TextInput:" type="Byte" />
+            <Field name="y3" source="Formula: [_CurrentField_]+[addy]+3" type="Byte" />
+            <Field name="x4" source="TextInput:" type="Byte" />
+            <Field name="y4" source="Formula: [_CurrentField_]+[addy]+3" type="Byte" />
+            <Field name="x5" source="TextInput:" type="Byte" />
+            <Field name="y5" source="Formula: [_CurrentField_]+[addy]+3" type="Byte" />
+            <Field name="Height" source="Summarize: GroupBy - Height" type="Byte" />
+            <Field name="stack" size="1073741823" source="Summarize: GroupBy - stack" type="V_WString" />
+            <Field name="addy" source="TextInput:" type="Int32" />
+            <Field name="minx" source="Formula: IF IsNull([x5])&#xA;THEN Min([x1], [x2], [x3], [x4])&#xA;ELSE Min([x1], [x2], [x3], [x4], [x5])&#xA;ENDIF" type="Int32" />
+            <Field name="maxx" source="Formula: IF IsNull([x5])&#xA;THEN Max([x1], [x2], [x3], [x4])&#xA;ELSE Max([x1], [x2], [x3], [x4], [x5])&#xA;ENDIF" type="Int32" />
+            <Field name="miny" source="Formula: IF IsNull([y5])&#xA;THEN Min([y1], [y2], [y3], [y4])&#xA;ELSE Min([y1], [y2], [y3], [y4], [y5])&#xA;ENDIF" type="Int32" />
+            <Field name="maxy" source="Formula: IF IsNull([y5])&#xA;THEN Max([y1], [y2], [y3], [y4])&#xA;ELSE Max([y1], [y2], [y3], [y4], [y5])&#xA;ENDIF" type="Int32" />
+            <Field description="Formula: IF IsNull([Row-1:Cum_yeffect])&#xA;THEN Null()&#xA;ELSEIF [Row-1:Cum_yeffect]=[Row-3:Cum_yeffect] and [Row-1:Cum_yeffect]&lt;0&#xA;THEN Null()&#xA;ELSEIF Contains([stack], ';'+ToString([x1]+[Cum_xeffect])+','+ToString([y1]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x2]+[Cum_xeffect])+','+ToString([y2]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x3]+[Cum_xeffect])+','+ToString([y3]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x4]+[Cum_xeffect])+','+ToString([y4]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x5]+[Cum_xeffect])+','+ToString([y5]+[Cum_yeffect])+';')&#xA;THEN [Row-1:Cum_yeffect]&#xA;ELSE [Cum_yeffect]&#xA;ENDIF" name="Cum_yeffect" source="Formula: IF IsNull([Row-1:Cum_yeffect])&#xA;THEN Null()&#xA;ELSEIF [Row-1:Cum_yeffect]=[Row-3:Cum_yeffect] and [Row-1:Cum_yeffect]&lt;0&#xA;THEN Null()&#xA;ELSEIF Contains([stack], ';'+ToString([x1]+[Cum_xeffect])+','+ToString([y1]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x2]+[Cum_xeffect])+','+ToString([y2]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x3]+[Cum_xeffect])+','+ToString([y3]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x4]+[Cum_xeffect])+','+ToString([y4]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x5]+[Cum_xeffect])+','+ToString([y5]+[Cum_yeffect])+';')&#xA;THEN [Row-1:Cum_yeffect]&#xA;ELSE [Cum_yeffect]&#xA;ENDIF" type="Int64" />
+            <Field description="Formula: IF ([xeffect] = -1 and [minx]+[Row-1:Cum_xeffect]+[xeffect] &lt; 1) or ([xeffect] = 1 and [maxx]+[Row-1:Cum_xeffect]+[xeffect] &gt; 7)&#xA;THEN [Row-1:Cum_xeffect]&#xA;ELSEIF Contains([stack], ';'+ToString([x1]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y1]+[Cum_yeffect])+';')&#xA;&#xA;or &#xA;Contains([stack], ';'+ToString([x2]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y2]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x3]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y3]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x4]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y4]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x5]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y5]+[Cum_yeffect])+';')&#xA;&#xA;&#xA;THEN [Row-1:Cum_xeffect]&#xA;ELSE [Row-1:Cum_xeffect]+[xeffect]&#xA;ENDIF" name="Cum_xeffect" source="Formula: IF ([xeffect] = -1 and [minx]+[Row-1:Cum_xeffect]+[xeffect] &lt; 1) or ([xeffect] = 1 and [maxx]+[Row-1:Cum_xeffect]+[xeffect] &gt; 7)&#xA;THEN [Row-1:Cum_xeffect]&#xA;ELSEIF Contains([stack], ';'+ToString([x1]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y1]+[Cum_yeffect])+';')&#xA;&#xA;or &#xA;Contains([stack], ';'+ToString([x2]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y2]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x3]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y3]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x4]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y4]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x5]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y5]+[Cum_yeffect])+';')&#xA;&#xA;&#xA;THEN [Row-1:Cum_xeffect]&#xA;ELSE [Row-1:Cum_xeffect]+[xeffect]&#xA;ENDIF" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+    </Node>
+    <Node ToolID="64">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1278" y="354" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>IsNotNull</Operator>
+            <Field>Cum_yeffect</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2022-12-19 14:39:19</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>
+              </Operand>
+              <StartDate>2022-12-19 14:39:19</StartDate>
+              <EndDate>2022-12-19 14:39:19</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Remove unnecessary rows</AnnotationText>
+          <DefaultAnnotationText>!IsNull([Cum_yeffect])</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="JetID" source="TextInput:" type="Byte" />
+            <Field name="data" size="1" source="TextInput:" type="String" />
+            <Field name="xeffect" source="TextInput:" type="Int16" />
+            <Field name="yeffect" source="TextInput:" type="Int16" />
+            <Field name="RockID" source="TextInput:" type="Byte" />
+            <Field name="x1" source="TextInput:" type="Byte" />
+            <Field name="y1" source="Formula: [_CurrentField_]+[addy]+3" type="Byte" />
+            <Field name="x2" source="TextInput:" type="Byte" />
+            <Field name="y2" source="Formula: [_CurrentField_]+[addy]+3" type="Byte" />
+            <Field name="x3" source="TextInput:" type="Byte" />
+            <Field name="y3" source="Formula: [_CurrentField_]+[addy]+3" type="Byte" />
+            <Field name="x4" source="TextInput:" type="Byte" />
+            <Field name="y4" source="Formula: [_CurrentField_]+[addy]+3" type="Byte" />
+            <Field name="x5" source="TextInput:" type="Byte" />
+            <Field name="y5" source="Formula: [_CurrentField_]+[addy]+3" type="Byte" />
+            <Field name="Height" source="Summarize: GroupBy - Height" type="Byte" />
+            <Field name="stack" size="1073741823" source="Summarize: GroupBy - stack" type="V_WString" />
+            <Field name="addy" source="TextInput:" type="Int32" />
+            <Field name="minx" source="Formula: IF IsNull([x5])&#xA;THEN Min([x1], [x2], [x3], [x4])&#xA;ELSE Min([x1], [x2], [x3], [x4], [x5])&#xA;ENDIF" type="Int32" />
+            <Field name="maxx" source="Formula: IF IsNull([x5])&#xA;THEN Max([x1], [x2], [x3], [x4])&#xA;ELSE Max([x1], [x2], [x3], [x4], [x5])&#xA;ENDIF" type="Int32" />
+            <Field name="miny" source="Formula: IF IsNull([y5])&#xA;THEN Min([y1], [y2], [y3], [y4])&#xA;ELSE Min([y1], [y2], [y3], [y4], [y5])&#xA;ENDIF" type="Int32" />
+            <Field name="maxy" source="Formula: IF IsNull([y5])&#xA;THEN Max([y1], [y2], [y3], [y4])&#xA;ELSE Max([y1], [y2], [y3], [y4], [y5])&#xA;ENDIF" type="Int32" />
+            <Field description="Formula: IF IsNull([Row-1:Cum_yeffect])&#xA;THEN Null()&#xA;ELSEIF [Row-1:Cum_yeffect]=[Row-3:Cum_yeffect] and [Row-1:Cum_yeffect]&lt;0&#xA;THEN Null()&#xA;ELSEIF Contains([stack], ';'+ToString([x1]+[Cum_xeffect])+','+ToString([y1]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x2]+[Cum_xeffect])+','+ToString([y2]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x3]+[Cum_xeffect])+','+ToString([y3]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x4]+[Cum_xeffect])+','+ToString([y4]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x5]+[Cum_xeffect])+','+ToString([y5]+[Cum_yeffect])+';')&#xA;THEN [Row-1:Cum_yeffect]&#xA;ELSE [Cum_yeffect]&#xA;ENDIF" name="Cum_yeffect" source="Formula: IF IsNull([Row-1:Cum_yeffect])&#xA;THEN Null()&#xA;ELSEIF [Row-1:Cum_yeffect]=[Row-3:Cum_yeffect] and [Row-1:Cum_yeffect]&lt;0&#xA;THEN Null()&#xA;ELSEIF Contains([stack], ';'+ToString([x1]+[Cum_xeffect])+','+ToString([y1]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x2]+[Cum_xeffect])+','+ToString([y2]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x3]+[Cum_xeffect])+','+ToString([y3]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x4]+[Cum_xeffect])+','+ToString([y4]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x5]+[Cum_xeffect])+','+ToString([y5]+[Cum_yeffect])+';')&#xA;THEN [Row-1:Cum_yeffect]&#xA;ELSE [Cum_yeffect]&#xA;ENDIF" type="Int64" />
+            <Field description="Formula: IF ([xeffect] = -1 and [minx]+[Row-1:Cum_xeffect]+[xeffect] &lt; 1) or ([xeffect] = 1 and [maxx]+[Row-1:Cum_xeffect]+[xeffect] &gt; 7)&#xA;THEN [Row-1:Cum_xeffect]&#xA;ELSEIF Contains([stack], ';'+ToString([x1]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y1]+[Cum_yeffect])+';')&#xA;&#xA;or &#xA;Contains([stack], ';'+ToString([x2]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y2]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x3]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y3]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x4]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y4]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x5]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y5]+[Cum_yeffect])+';')&#xA;&#xA;&#xA;THEN [Row-1:Cum_xeffect]&#xA;ELSE [Row-1:Cum_xeffect]+[xeffect]&#xA;ENDIF" name="Cum_xeffect" source="Formula: IF ([xeffect] = -1 and [minx]+[Row-1:Cum_xeffect]+[xeffect] &lt; 1) or ([xeffect] = 1 and [maxx]+[Row-1:Cum_xeffect]+[xeffect] &gt; 7)&#xA;THEN [Row-1:Cum_xeffect]&#xA;ELSEIF Contains([stack], ';'+ToString([x1]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y1]+[Cum_yeffect])+';')&#xA;&#xA;or &#xA;Contains([stack], ';'+ToString([x2]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y2]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x3]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y3]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x4]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y4]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x5]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y5]+[Cum_yeffect])+';')&#xA;&#xA;&#xA;THEN [Row-1:Cum_xeffect]&#xA;ELSE [Row-1:Cum_xeffect]+[xeffect]&#xA;ENDIF" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="JetID" source="TextInput:" type="Byte" />
+            <Field name="data" size="1" source="TextInput:" type="String" />
+            <Field name="xeffect" source="TextInput:" type="Int16" />
+            <Field name="yeffect" source="TextInput:" type="Int16" />
+            <Field name="RockID" source="TextInput:" type="Byte" />
+            <Field name="x1" source="TextInput:" type="Byte" />
+            <Field name="y1" source="Formula: [_CurrentField_]+[addy]+3" type="Byte" />
+            <Field name="x2" source="TextInput:" type="Byte" />
+            <Field name="y2" source="Formula: [_CurrentField_]+[addy]+3" type="Byte" />
+            <Field name="x3" source="TextInput:" type="Byte" />
+            <Field name="y3" source="Formula: [_CurrentField_]+[addy]+3" type="Byte" />
+            <Field name="x4" source="TextInput:" type="Byte" />
+            <Field name="y4" source="Formula: [_CurrentField_]+[addy]+3" type="Byte" />
+            <Field name="x5" source="TextInput:" type="Byte" />
+            <Field name="y5" source="Formula: [_CurrentField_]+[addy]+3" type="Byte" />
+            <Field name="Height" source="Summarize: GroupBy - Height" type="Byte" />
+            <Field name="stack" size="1073741823" source="Summarize: GroupBy - stack" type="V_WString" />
+            <Field name="addy" source="TextInput:" type="Int32" />
+            <Field name="minx" source="Formula: IF IsNull([x5])&#xA;THEN Min([x1], [x2], [x3], [x4])&#xA;ELSE Min([x1], [x2], [x3], [x4], [x5])&#xA;ENDIF" type="Int32" />
+            <Field name="maxx" source="Formula: IF IsNull([x5])&#xA;THEN Max([x1], [x2], [x3], [x4])&#xA;ELSE Max([x1], [x2], [x3], [x4], [x5])&#xA;ENDIF" type="Int32" />
+            <Field name="miny" source="Formula: IF IsNull([y5])&#xA;THEN Min([y1], [y2], [y3], [y4])&#xA;ELSE Min([y1], [y2], [y3], [y4], [y5])&#xA;ENDIF" type="Int32" />
+            <Field name="maxy" source="Formula: IF IsNull([y5])&#xA;THEN Max([y1], [y2], [y3], [y4])&#xA;ELSE Max([y1], [y2], [y3], [y4], [y5])&#xA;ENDIF" type="Int32" />
+            <Field description="Formula: IF IsNull([Row-1:Cum_yeffect])&#xA;THEN Null()&#xA;ELSEIF [Row-1:Cum_yeffect]=[Row-3:Cum_yeffect] and [Row-1:Cum_yeffect]&lt;0&#xA;THEN Null()&#xA;ELSEIF Contains([stack], ';'+ToString([x1]+[Cum_xeffect])+','+ToString([y1]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x2]+[Cum_xeffect])+','+ToString([y2]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x3]+[Cum_xeffect])+','+ToString([y3]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x4]+[Cum_xeffect])+','+ToString([y4]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x5]+[Cum_xeffect])+','+ToString([y5]+[Cum_yeffect])+';')&#xA;THEN [Row-1:Cum_yeffect]&#xA;ELSE [Cum_yeffect]&#xA;ENDIF" name="Cum_yeffect" source="Formula: IF IsNull([Row-1:Cum_yeffect])&#xA;THEN Null()&#xA;ELSEIF [Row-1:Cum_yeffect]=[Row-3:Cum_yeffect] and [Row-1:Cum_yeffect]&lt;0&#xA;THEN Null()&#xA;ELSEIF Contains([stack], ';'+ToString([x1]+[Cum_xeffect])+','+ToString([y1]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x2]+[Cum_xeffect])+','+ToString([y2]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x3]+[Cum_xeffect])+','+ToString([y3]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x4]+[Cum_xeffect])+','+ToString([y4]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x5]+[Cum_xeffect])+','+ToString([y5]+[Cum_yeffect])+';')&#xA;THEN [Row-1:Cum_yeffect]&#xA;ELSE [Cum_yeffect]&#xA;ENDIF" type="Int64" />
+            <Field description="Formula: IF ([xeffect] = -1 and [minx]+[Row-1:Cum_xeffect]+[xeffect] &lt; 1) or ([xeffect] = 1 and [maxx]+[Row-1:Cum_xeffect]+[xeffect] &gt; 7)&#xA;THEN [Row-1:Cum_xeffect]&#xA;ELSEIF Contains([stack], ';'+ToString([x1]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y1]+[Cum_yeffect])+';')&#xA;&#xA;or &#xA;Contains([stack], ';'+ToString([x2]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y2]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x3]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y3]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x4]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y4]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x5]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y5]+[Cum_yeffect])+';')&#xA;&#xA;&#xA;THEN [Row-1:Cum_xeffect]&#xA;ELSE [Row-1:Cum_xeffect]+[xeffect]&#xA;ENDIF" name="Cum_xeffect" source="Formula: IF ([xeffect] = -1 and [minx]+[Row-1:Cum_xeffect]+[xeffect] &lt; 1) or ([xeffect] = 1 and [maxx]+[Row-1:Cum_xeffect]+[xeffect] &gt; 7)&#xA;THEN [Row-1:Cum_xeffect]&#xA;ELSEIF Contains([stack], ';'+ToString([x1]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y1]+[Cum_yeffect])+';')&#xA;&#xA;or &#xA;Contains([stack], ';'+ToString([x2]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y2]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x3]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y3]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x4]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y4]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x5]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y5]+[Cum_yeffect])+';')&#xA;&#xA;&#xA;THEN [Row-1:Cum_xeffect]&#xA;ELSE [Row-1:Cum_xeffect]+[xeffect]&#xA;ENDIF" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="65">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sample.Sample">
+        <Position x="1362" y="342" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Last</Mode>
+          <N>1</N>
+          <GroupFields orderChanged="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Last 1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="JetID" source="TextInput:" type="Byte" />
+            <Field name="data" size="1" source="TextInput:" type="String" />
+            <Field name="xeffect" source="TextInput:" type="Int16" />
+            <Field name="yeffect" source="TextInput:" type="Int16" />
+            <Field name="RockID" source="TextInput:" type="Byte" />
+            <Field name="x1" source="TextInput:" type="Byte" />
+            <Field name="y1" source="Formula: [_CurrentField_]+[addy]+3" type="Byte" />
+            <Field name="x2" source="TextInput:" type="Byte" />
+            <Field name="y2" source="Formula: [_CurrentField_]+[addy]+3" type="Byte" />
+            <Field name="x3" source="TextInput:" type="Byte" />
+            <Field name="y3" source="Formula: [_CurrentField_]+[addy]+3" type="Byte" />
+            <Field name="x4" source="TextInput:" type="Byte" />
+            <Field name="y4" source="Formula: [_CurrentField_]+[addy]+3" type="Byte" />
+            <Field name="x5" source="TextInput:" type="Byte" />
+            <Field name="y5" source="Formula: [_CurrentField_]+[addy]+3" type="Byte" />
+            <Field name="Height" source="Summarize: GroupBy - Height" type="Byte" />
+            <Field name="stack" size="1073741823" source="Summarize: GroupBy - stack" type="V_WString" />
+            <Field name="addy" source="TextInput:" type="Int32" />
+            <Field name="minx" source="Formula: IF IsNull([x5])&#xA;THEN Min([x1], [x2], [x3], [x4])&#xA;ELSE Min([x1], [x2], [x3], [x4], [x5])&#xA;ENDIF" type="Int32" />
+            <Field name="maxx" source="Formula: IF IsNull([x5])&#xA;THEN Max([x1], [x2], [x3], [x4])&#xA;ELSE Max([x1], [x2], [x3], [x4], [x5])&#xA;ENDIF" type="Int32" />
+            <Field name="miny" source="Formula: IF IsNull([y5])&#xA;THEN Min([y1], [y2], [y3], [y4])&#xA;ELSE Min([y1], [y2], [y3], [y4], [y5])&#xA;ENDIF" type="Int32" />
+            <Field name="maxy" source="Formula: IF IsNull([y5])&#xA;THEN Max([y1], [y2], [y3], [y4])&#xA;ELSE Max([y1], [y2], [y3], [y4], [y5])&#xA;ENDIF" type="Int32" />
+            <Field description="Formula: IF IsNull([Row-1:Cum_yeffect])&#xA;THEN Null()&#xA;ELSEIF [Row-1:Cum_yeffect]=[Row-3:Cum_yeffect] and [Row-1:Cum_yeffect]&lt;0&#xA;THEN Null()&#xA;ELSEIF Contains([stack], ';'+ToString([x1]+[Cum_xeffect])+','+ToString([y1]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x2]+[Cum_xeffect])+','+ToString([y2]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x3]+[Cum_xeffect])+','+ToString([y3]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x4]+[Cum_xeffect])+','+ToString([y4]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x5]+[Cum_xeffect])+','+ToString([y5]+[Cum_yeffect])+';')&#xA;THEN [Row-1:Cum_yeffect]&#xA;ELSE [Cum_yeffect]&#xA;ENDIF" name="Cum_yeffect" source="Formula: IF IsNull([Row-1:Cum_yeffect])&#xA;THEN Null()&#xA;ELSEIF [Row-1:Cum_yeffect]=[Row-3:Cum_yeffect] and [Row-1:Cum_yeffect]&lt;0&#xA;THEN Null()&#xA;ELSEIF Contains([stack], ';'+ToString([x1]+[Cum_xeffect])+','+ToString([y1]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x2]+[Cum_xeffect])+','+ToString([y2]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x3]+[Cum_xeffect])+','+ToString([y3]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x4]+[Cum_xeffect])+','+ToString([y4]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x5]+[Cum_xeffect])+','+ToString([y5]+[Cum_yeffect])+';')&#xA;THEN [Row-1:Cum_yeffect]&#xA;ELSE [Cum_yeffect]&#xA;ENDIF" type="Int64" />
+            <Field description="Formula: IF ([xeffect] = -1 and [minx]+[Row-1:Cum_xeffect]+[xeffect] &lt; 1) or ([xeffect] = 1 and [maxx]+[Row-1:Cum_xeffect]+[xeffect] &gt; 7)&#xA;THEN [Row-1:Cum_xeffect]&#xA;ELSEIF Contains([stack], ';'+ToString([x1]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y1]+[Cum_yeffect])+';')&#xA;&#xA;or &#xA;Contains([stack], ';'+ToString([x2]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y2]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x3]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y3]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x4]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y4]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x5]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y5]+[Cum_yeffect])+';')&#xA;&#xA;&#xA;THEN [Row-1:Cum_xeffect]&#xA;ELSE [Row-1:Cum_xeffect]+[xeffect]&#xA;ENDIF" name="Cum_xeffect" source="Formula: IF ([xeffect] = -1 and [minx]+[Row-1:Cum_xeffect]+[xeffect] &lt; 1) or ([xeffect] = 1 and [maxx]+[Row-1:Cum_xeffect]+[xeffect] &gt; 7)&#xA;THEN [Row-1:Cum_xeffect]&#xA;ELSEIF Contains([stack], ';'+ToString([x1]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y1]+[Cum_yeffect])+';')&#xA;&#xA;or &#xA;Contains([stack], ';'+ToString([x2]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y2]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x3]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y3]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x4]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y4]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x5]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y5]+[Cum_yeffect])+';')&#xA;&#xA;&#xA;THEN [Row-1:Cum_xeffect]&#xA;ELSE [Row-1:Cum_xeffect]+[xeffect]&#xA;ENDIF" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSample" />
+    </Node>
+    <Node ToolID="66">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiFieldFormula.MultiFieldFormula">
+        <Position x="1434" y="342" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldType>Numeric</FieldType>
+          <Fields orderChanged="False">
+            <Field name="x1" />
+            <Field name="x2" />
+            <Field name="x3" />
+            <Field name="x4" />
+            <Field name="x5" />
+            <Field name="minx" />
+            <Field name="maxx" />
+            <Field name="JetID" selected="False" />
+            <Field name="xeffect" selected="False" />
+            <Field name="yeffect" selected="False" />
+            <Field name="RockID" selected="False" />
+            <Field name="y1" selected="False" />
+            <Field name="y2" selected="False" />
+            <Field name="y3" selected="False" />
+            <Field name="y4" selected="False" />
+            <Field name="y5" selected="False" />
+            <Field name="Height" selected="False" />
+            <Field name="addy" selected="False" />
+            <Field name="miny" selected="False" />
+            <Field name="maxy" selected="False" />
+            <Field name="Cum_yeffect" selected="False" />
+            <Field name="Cum_xeffect" selected="False" />
+            <Field name="*Unknown" selected="False" />
+          </Fields>
+          <CopyOutput value="False" />
+          <Expression>[_CurrentField_]+[Cum_xeffect]</Expression>
+          <ChangeFieldType value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Apply delta x</AnnotationText>
+          <DefaultAnnotationText>[_CurrentField_]+[Cum_xeffect]</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="JetID" source="TextInput:" type="Byte" />
+            <Field name="data" size="1" source="TextInput:" type="String" />
+            <Field name="xeffect" source="TextInput:" type="Int16" />
+            <Field name="yeffect" source="TextInput:" type="Int16" />
+            <Field name="RockID" source="TextInput:" type="Byte" />
+            <Field name="x1" source="Formula: [_CurrentField_]+[Cum_xeffect]" type="Byte" />
+            <Field name="y1" source="Formula: [_CurrentField_]+[addy]+3" type="Byte" />
+            <Field name="x2" source="Formula: [_CurrentField_]+[Cum_xeffect]" type="Byte" />
+            <Field name="y2" source="Formula: [_CurrentField_]+[addy]+3" type="Byte" />
+            <Field name="x3" source="Formula: [_CurrentField_]+[Cum_xeffect]" type="Byte" />
+            <Field name="y3" source="Formula: [_CurrentField_]+[addy]+3" type="Byte" />
+            <Field name="x4" source="Formula: [_CurrentField_]+[Cum_xeffect]" type="Byte" />
+            <Field name="y4" source="Formula: [_CurrentField_]+[addy]+3" type="Byte" />
+            <Field name="x5" source="Formula: [_CurrentField_]+[Cum_xeffect]" type="Byte" />
+            <Field name="y5" source="Formula: [_CurrentField_]+[addy]+3" type="Byte" />
+            <Field name="Height" source="Summarize: GroupBy - Height" type="Byte" />
+            <Field name="stack" size="1073741823" source="Summarize: GroupBy - stack" type="V_WString" />
+            <Field name="addy" source="TextInput:" type="Int32" />
+            <Field name="minx" source="Formula: [_CurrentField_]+[Cum_xeffect]" type="Int32" />
+            <Field name="maxx" source="Formula: [_CurrentField_]+[Cum_xeffect]" type="Int32" />
+            <Field name="miny" source="Formula: IF IsNull([y5])&#xA;THEN Min([y1], [y2], [y3], [y4])&#xA;ELSE Min([y1], [y2], [y3], [y4], [y5])&#xA;ENDIF" type="Int32" />
+            <Field name="maxy" source="Formula: IF IsNull([y5])&#xA;THEN Max([y1], [y2], [y3], [y4])&#xA;ELSE Max([y1], [y2], [y3], [y4], [y5])&#xA;ENDIF" type="Int32" />
+            <Field description="Formula: IF IsNull([Row-1:Cum_yeffect])&#xA;THEN Null()&#xA;ELSEIF [Row-1:Cum_yeffect]=[Row-3:Cum_yeffect] and [Row-1:Cum_yeffect]&lt;0&#xA;THEN Null()&#xA;ELSEIF Contains([stack], ';'+ToString([x1]+[Cum_xeffect])+','+ToString([y1]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x2]+[Cum_xeffect])+','+ToString([y2]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x3]+[Cum_xeffect])+','+ToString([y3]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x4]+[Cum_xeffect])+','+ToString([y4]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x5]+[Cum_xeffect])+','+ToString([y5]+[Cum_yeffect])+';')&#xA;THEN [Row-1:Cum_yeffect]&#xA;ELSE [Cum_yeffect]&#xA;ENDIF" name="Cum_yeffect" source="Formula: IF IsNull([Row-1:Cum_yeffect])&#xA;THEN Null()&#xA;ELSEIF [Row-1:Cum_yeffect]=[Row-3:Cum_yeffect] and [Row-1:Cum_yeffect]&lt;0&#xA;THEN Null()&#xA;ELSEIF Contains([stack], ';'+ToString([x1]+[Cum_xeffect])+','+ToString([y1]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x2]+[Cum_xeffect])+','+ToString([y2]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x3]+[Cum_xeffect])+','+ToString([y3]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x4]+[Cum_xeffect])+','+ToString([y4]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x5]+[Cum_xeffect])+','+ToString([y5]+[Cum_yeffect])+';')&#xA;THEN [Row-1:Cum_yeffect]&#xA;ELSE [Cum_yeffect]&#xA;ENDIF" type="Int64" />
+            <Field description="Formula: IF ([xeffect] = -1 and [minx]+[Row-1:Cum_xeffect]+[xeffect] &lt; 1) or ([xeffect] = 1 and [maxx]+[Row-1:Cum_xeffect]+[xeffect] &gt; 7)&#xA;THEN [Row-1:Cum_xeffect]&#xA;ELSEIF Contains([stack], ';'+ToString([x1]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y1]+[Cum_yeffect])+';')&#xA;&#xA;or &#xA;Contains([stack], ';'+ToString([x2]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y2]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x3]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y3]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x4]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y4]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x5]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y5]+[Cum_yeffect])+';')&#xA;&#xA;&#xA;THEN [Row-1:Cum_xeffect]&#xA;ELSE [Row-1:Cum_xeffect]+[xeffect]&#xA;ENDIF" name="Cum_xeffect" source="Formula: IF ([xeffect] = -1 and [minx]+[Row-1:Cum_xeffect]+[xeffect] &lt; 1) or ([xeffect] = 1 and [maxx]+[Row-1:Cum_xeffect]+[xeffect] &gt; 7)&#xA;THEN [Row-1:Cum_xeffect]&#xA;ELSEIF Contains([stack], ';'+ToString([x1]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y1]+[Cum_yeffect])+';')&#xA;&#xA;or &#xA;Contains([stack], ';'+ToString([x2]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y2]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x3]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y3]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x4]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y4]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x5]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y5]+[Cum_yeffect])+';')&#xA;&#xA;&#xA;THEN [Row-1:Cum_xeffect]&#xA;ELSE [Row-1:Cum_xeffect]+[xeffect]&#xA;ENDIF" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiFieldFormula" />
+    </Node>
+    <Node ToolID="67">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiFieldFormula.MultiFieldFormula">
+        <Position x="1530" y="342" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldType>Numeric</FieldType>
+          <Fields orderChanged="False">
+            <Field name="y1" />
+            <Field name="y2" />
+            <Field name="y3" />
+            <Field name="y4" />
+            <Field name="y5" />
+            <Field name="miny" />
+            <Field name="maxy" />
+            <Field name="JetID" selected="False" />
+            <Field name="xeffect" selected="False" />
+            <Field name="yeffect" selected="False" />
+            <Field name="RockID" selected="False" />
+            <Field name="x1" selected="False" />
+            <Field name="x2" selected="False" />
+            <Field name="x3" selected="False" />
+            <Field name="x4" selected="False" />
+            <Field name="x5" selected="False" />
+            <Field name="Height" selected="False" />
+            <Field name="addy" selected="False" />
+            <Field name="minx" selected="False" />
+            <Field name="maxx" selected="False" />
+            <Field name="Cum_yeffect" selected="False" />
+            <Field name="Cum_xeffect" selected="False" />
+            <Field name="*Unknown" selected="False" />
+          </Fields>
+          <CopyOutput value="False" />
+          <Expression>[_CurrentField_]+[Cum_yeffect]</Expression>
+          <ChangeFieldType value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Apply delta y</AnnotationText>
+          <DefaultAnnotationText>[_CurrentField_]+[Cum_yeffect]</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="JetID" source="TextInput:" type="Byte" />
+            <Field name="data" size="1" source="TextInput:" type="String" />
+            <Field name="xeffect" source="TextInput:" type="Int16" />
+            <Field name="yeffect" source="TextInput:" type="Int16" />
+            <Field name="RockID" source="TextInput:" type="Byte" />
+            <Field name="x1" source="Formula: [_CurrentField_]+[Cum_xeffect]" type="Byte" />
+            <Field name="y1" source="Formula: [_CurrentField_]+[Cum_yeffect]" type="Byte" />
+            <Field name="x2" source="Formula: [_CurrentField_]+[Cum_xeffect]" type="Byte" />
+            <Field name="y2" source="Formula: [_CurrentField_]+[Cum_yeffect]" type="Byte" />
+            <Field name="x3" source="Formula: [_CurrentField_]+[Cum_xeffect]" type="Byte" />
+            <Field name="y3" source="Formula: [_CurrentField_]+[Cum_yeffect]" type="Byte" />
+            <Field name="x4" source="Formula: [_CurrentField_]+[Cum_xeffect]" type="Byte" />
+            <Field name="y4" source="Formula: [_CurrentField_]+[Cum_yeffect]" type="Byte" />
+            <Field name="x5" source="Formula: [_CurrentField_]+[Cum_xeffect]" type="Byte" />
+            <Field name="y5" source="Formula: [_CurrentField_]+[Cum_yeffect]" type="Byte" />
+            <Field name="Height" source="Summarize: GroupBy - Height" type="Byte" />
+            <Field name="stack" size="1073741823" source="Summarize: GroupBy - stack" type="V_WString" />
+            <Field name="addy" source="TextInput:" type="Int32" />
+            <Field name="minx" source="Formula: [_CurrentField_]+[Cum_xeffect]" type="Int32" />
+            <Field name="maxx" source="Formula: [_CurrentField_]+[Cum_xeffect]" type="Int32" />
+            <Field name="miny" source="Formula: [_CurrentField_]+[Cum_yeffect]" type="Int32" />
+            <Field name="maxy" source="Formula: [_CurrentField_]+[Cum_yeffect]" type="Int32" />
+            <Field description="Formula: IF IsNull([Row-1:Cum_yeffect])&#xA;THEN Null()&#xA;ELSEIF [Row-1:Cum_yeffect]=[Row-3:Cum_yeffect] and [Row-1:Cum_yeffect]&lt;0&#xA;THEN Null()&#xA;ELSEIF Contains([stack], ';'+ToString([x1]+[Cum_xeffect])+','+ToString([y1]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x2]+[Cum_xeffect])+','+ToString([y2]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x3]+[Cum_xeffect])+','+ToString([y3]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x4]+[Cum_xeffect])+','+ToString([y4]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x5]+[Cum_xeffect])+','+ToString([y5]+[Cum_yeffect])+';')&#xA;THEN [Row-1:Cum_yeffect]&#xA;ELSE [Cum_yeffect]&#xA;ENDIF" name="Cum_yeffect" source="Formula: IF IsNull([Row-1:Cum_yeffect])&#xA;THEN Null()&#xA;ELSEIF [Row-1:Cum_yeffect]=[Row-3:Cum_yeffect] and [Row-1:Cum_yeffect]&lt;0&#xA;THEN Null()&#xA;ELSEIF Contains([stack], ';'+ToString([x1]+[Cum_xeffect])+','+ToString([y1]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x2]+[Cum_xeffect])+','+ToString([y2]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x3]+[Cum_xeffect])+','+ToString([y3]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x4]+[Cum_xeffect])+','+ToString([y4]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x5]+[Cum_xeffect])+','+ToString([y5]+[Cum_yeffect])+';')&#xA;THEN [Row-1:Cum_yeffect]&#xA;ELSE [Cum_yeffect]&#xA;ENDIF" type="Int64" />
+            <Field description="Formula: IF ([xeffect] = -1 and [minx]+[Row-1:Cum_xeffect]+[xeffect] &lt; 1) or ([xeffect] = 1 and [maxx]+[Row-1:Cum_xeffect]+[xeffect] &gt; 7)&#xA;THEN [Row-1:Cum_xeffect]&#xA;ELSEIF Contains([stack], ';'+ToString([x1]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y1]+[Cum_yeffect])+';')&#xA;&#xA;or &#xA;Contains([stack], ';'+ToString([x2]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y2]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x3]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y3]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x4]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y4]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x5]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y5]+[Cum_yeffect])+';')&#xA;&#xA;&#xA;THEN [Row-1:Cum_xeffect]&#xA;ELSE [Row-1:Cum_xeffect]+[xeffect]&#xA;ENDIF" name="Cum_xeffect" source="Formula: IF ([xeffect] = -1 and [minx]+[Row-1:Cum_xeffect]+[xeffect] &lt; 1) or ([xeffect] = 1 and [maxx]+[Row-1:Cum_xeffect]+[xeffect] &gt; 7)&#xA;THEN [Row-1:Cum_xeffect]&#xA;ELSEIF Contains([stack], ';'+ToString([x1]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y1]+[Cum_yeffect])+';')&#xA;&#xA;or &#xA;Contains([stack], ';'+ToString([x2]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y2]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x3]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y3]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x4]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y4]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x5]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y5]+[Cum_yeffect])+';')&#xA;&#xA;&#xA;THEN [Row-1:Cum_xeffect]&#xA;ELSE [Row-1:Cum_xeffect]+[xeffect]&#xA;ENDIF" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiFieldFormula" />
+    </Node>
+    <Node ToolID="68">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1626" y="342" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="IF REGEX_CountMatches([stack], ';')&gt;500&#xA;THEN REGEX_Replace([stack], ';([^;]+;){498}.*', ';$1;')&#xA;ELSE [stack]&#xA;ENDIF" field="stack" size="1073741823" type="V_WString" />
+            <FormulaField expression="';'+ToString([x1])+','+ToString([y1])+';'&#xA;+ToString([x2])+','+ToString([y2])+';'&#xA;+ToString([x3])+','+ToString([y3])+';'&#xA;+ToString([x4])+','+ToString([y4])+';'&#xA;&#xA;+&#xA;IF !IsNull([x5])&#xA;THEN ToString([x5])+','+ToString([y5])+';'&#xA;ELSE ''&#xA;ENDIF&#xA;+&#xA;[stack]&#xA;" field="stack" size="1073741823" type="V_WString" />
+            <FormulaField expression="ToString([x1])+','+ToString([y1])+';'&#xA;+ToString([x2])+','+ToString([y2])+';'&#xA;+ToString([x3])+','+ToString([y3])+';'&#xA;+ToString([x4])+','+ToString([y4])+';'&#xA;&#xA;+&#xA;IF !IsNull([x5])&#xA;THEN ToString([x5])+','+ToString([y5])+';'&#xA;ELSE ''&#xA;ENDIF&#xA;+&#xA;[stack]" field="stack2" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Concatenate the current stack, only keeping the most recent 100 rocks for speed</AnnotationText>
+          <DefaultAnnotationText>stack = IF REGEX_CountMatches([stack], ';')&gt;500
+THEN REGEX_Replace([stack], ';([...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="JetID" source="TextInput:" type="Byte" />
+            <Field name="data" size="1" source="TextInput:" type="String" />
+            <Field name="xeffect" source="TextInput:" type="Int16" />
+            <Field name="yeffect" source="TextInput:" type="Int16" />
+            <Field name="RockID" source="TextInput:" type="Byte" />
+            <Field name="x1" source="Formula: [_CurrentField_]+[Cum_xeffect]" type="Byte" />
+            <Field name="y1" source="Formula: [_CurrentField_]+[Cum_yeffect]" type="Byte" />
+            <Field name="x2" source="Formula: [_CurrentField_]+[Cum_xeffect]" type="Byte" />
+            <Field name="y2" source="Formula: [_CurrentField_]+[Cum_yeffect]" type="Byte" />
+            <Field name="x3" source="Formula: [_CurrentField_]+[Cum_xeffect]" type="Byte" />
+            <Field name="y3" source="Formula: [_CurrentField_]+[Cum_yeffect]" type="Byte" />
+            <Field name="x4" source="Formula: [_CurrentField_]+[Cum_xeffect]" type="Byte" />
+            <Field name="y4" source="Formula: [_CurrentField_]+[Cum_yeffect]" type="Byte" />
+            <Field name="x5" source="Formula: [_CurrentField_]+[Cum_xeffect]" type="Byte" />
+            <Field name="y5" source="Formula: [_CurrentField_]+[Cum_yeffect]" type="Byte" />
+            <Field name="Height" source="Summarize: GroupBy - Height" type="Byte" />
+            <Field name="stack" size="1073741823" source="Formula: ';'+ToString([x1])+','+ToString([y1])+';'&#xA;+ToString([x2])+','+ToString([y2])+';'&#xA;+ToString([x3])+','+ToString([y3])+';'&#xA;+ToString([x4])+','+ToString([y4])+';'&#xA;&#xA;+&#xA;IF !IsNull([x5])&#xA;THEN ToString([x5])+','+ToString([y5])+';'&#xA;ELSE ''&#xA;ENDIF&#xA;+&#xA;[stack]&#xA;" type="V_WString" />
+            <Field name="addy" source="TextInput:" type="Int32" />
+            <Field name="minx" source="Formula: [_CurrentField_]+[Cum_xeffect]" type="Int32" />
+            <Field name="maxx" source="Formula: [_CurrentField_]+[Cum_xeffect]" type="Int32" />
+            <Field name="miny" source="Formula: [_CurrentField_]+[Cum_yeffect]" type="Int32" />
+            <Field name="maxy" source="Formula: [_CurrentField_]+[Cum_yeffect]" type="Int32" />
+            <Field description="Formula: IF IsNull([Row-1:Cum_yeffect])&#xA;THEN Null()&#xA;ELSEIF [Row-1:Cum_yeffect]=[Row-3:Cum_yeffect] and [Row-1:Cum_yeffect]&lt;0&#xA;THEN Null()&#xA;ELSEIF Contains([stack], ';'+ToString([x1]+[Cum_xeffect])+','+ToString([y1]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x2]+[Cum_xeffect])+','+ToString([y2]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x3]+[Cum_xeffect])+','+ToString([y3]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x4]+[Cum_xeffect])+','+ToString([y4]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x5]+[Cum_xeffect])+','+ToString([y5]+[Cum_yeffect])+';')&#xA;THEN [Row-1:Cum_yeffect]&#xA;ELSE [Cum_yeffect]&#xA;ENDIF" name="Cum_yeffect" source="Formula: IF IsNull([Row-1:Cum_yeffect])&#xA;THEN Null()&#xA;ELSEIF [Row-1:Cum_yeffect]=[Row-3:Cum_yeffect] and [Row-1:Cum_yeffect]&lt;0&#xA;THEN Null()&#xA;ELSEIF Contains([stack], ';'+ToString([x1]+[Cum_xeffect])+','+ToString([y1]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x2]+[Cum_xeffect])+','+ToString([y2]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x3]+[Cum_xeffect])+','+ToString([y3]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x4]+[Cum_xeffect])+','+ToString([y4]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x5]+[Cum_xeffect])+','+ToString([y5]+[Cum_yeffect])+';')&#xA;THEN [Row-1:Cum_yeffect]&#xA;ELSE [Cum_yeffect]&#xA;ENDIF" type="Int64" />
+            <Field description="Formula: IF ([xeffect] = -1 and [minx]+[Row-1:Cum_xeffect]+[xeffect] &lt; 1) or ([xeffect] = 1 and [maxx]+[Row-1:Cum_xeffect]+[xeffect] &gt; 7)&#xA;THEN [Row-1:Cum_xeffect]&#xA;ELSEIF Contains([stack], ';'+ToString([x1]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y1]+[Cum_yeffect])+';')&#xA;&#xA;or &#xA;Contains([stack], ';'+ToString([x2]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y2]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x3]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y3]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x4]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y4]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x5]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y5]+[Cum_yeffect])+';')&#xA;&#xA;&#xA;THEN [Row-1:Cum_xeffect]&#xA;ELSE [Row-1:Cum_xeffect]+[xeffect]&#xA;ENDIF" name="Cum_xeffect" source="Formula: IF ([xeffect] = -1 and [minx]+[Row-1:Cum_xeffect]+[xeffect] &lt; 1) or ([xeffect] = 1 and [maxx]+[Row-1:Cum_xeffect]+[xeffect] &gt; 7)&#xA;THEN [Row-1:Cum_xeffect]&#xA;ELSEIF Contains([stack], ';'+ToString([x1]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y1]+[Cum_yeffect])+';')&#xA;&#xA;or &#xA;Contains([stack], ';'+ToString([x2]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y2]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x3]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y3]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x4]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y4]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x5]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y5]+[Cum_yeffect])+';')&#xA;&#xA;&#xA;THEN [Row-1:Cum_xeffect]&#xA;ELSE [Row-1:Cum_xeffect]+[xeffect]&#xA;ENDIF" type="Int32" />
+            <Field name="stack2" size="1073741823" source="Formula: ToString([x1])+','+ToString([y1])+';'&#xA;+ToString([x2])+','+ToString([y2])+';'&#xA;+ToString([x3])+','+ToString([y3])+';'&#xA;+ToString([x4])+','+ToString([y4])+';'&#xA;&#xA;+&#xA;IF !IsNull([x5])&#xA;THEN ToString([x5])+','+ToString([y5])+';'&#xA;ELSE ''&#xA;ENDIF&#xA;+&#xA;[stack]" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="69">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1782" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="JetID" selected="True" />
+            <SelectField field="Height" selected="True" />
+            <SelectField field="stack" selected="True" />
+            <SelectField field="stack2" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="JetID" source="TextInput:" type="Byte" />
+            <Field name="Height" source="Summarize: GroupBy - Height" type="Byte" />
+            <Field name="stack" size="1073741823" source="Formula: ';'+ToString([x1])+','+ToString([y1])+';'&#xA;+ToString([x2])+','+ToString([y2])+';'&#xA;+ToString([x3])+','+ToString([y3])+';'&#xA;+ToString([x4])+','+ToString([y4])+';'&#xA;&#xA;+&#xA;IF !IsNull([x5])&#xA;THEN ToString([x5])+','+ToString([y5])+';'&#xA;ELSE ''&#xA;ENDIF&#xA;+&#xA;[stack]&#xA;" type="V_WString" />
+            <Field name="stack2" size="1073741823" source="Formula: ToString([x1])+','+ToString([y1])+';'&#xA;+ToString([x2])+','+ToString([y2])+';'&#xA;+ToString([x3])+','+ToString([y3])+';'&#xA;+ToString([x4])+','+ToString([y4])+';'&#xA;&#xA;+&#xA;IF !IsNull([x5])&#xA;THEN ToString([x5])+','+ToString([y5])+';'&#xA;ELSE ''&#xA;ENDIF&#xA;+&#xA;[stack]" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="70">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="78" y="366" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="5" />
+          <Fields>
+            <Field name="RockID" />
+            <Field name="x1" />
+            <Field name="y1" />
+            <Field name="x2" />
+            <Field name="y2" />
+            <Field name="x3" />
+            <Field name="y3" />
+            <Field name="x4" />
+            <Field name="y4" />
+            <Field name="x5" />
+            <Field name="y5" />
+          </Fields>
+          <Data>
+            <r>
+              <c>1</c>
+              <c>3</c>
+              <c>1</c>
+              <c>4</c>
+              <c>1</c>
+              <c>5</c>
+              <c>1</c>
+              <c>6</c>
+              <c>1</c>
+              <c />
+              <c />
+            </r>
+            <r>
+              <c>2</c>
+              <c>3</c>
+              <c>2</c>
+              <c>4</c>
+              <c>1</c>
+              <c>4</c>
+              <c>2</c>
+              <c>4</c>
+              <c>3</c>
+              <c>5</c>
+              <c>2</c>
+            </r>
+            <r>
+              <c>3</c>
+              <c>3</c>
+              <c>1</c>
+              <c>4</c>
+              <c>1</c>
+              <c>5</c>
+              <c>1</c>
+              <c>5</c>
+              <c>2</c>
+              <c>5</c>
+              <c>3</c>
+            </r>
+            <r>
+              <c>4</c>
+              <c>3</c>
+              <c>1</c>
+              <c>3</c>
+              <c>2</c>
+              <c>3</c>
+              <c>3</c>
+              <c>3</c>
+              <c>4</c>
+              <c />
+              <c />
+            </r>
+            <r>
+              <c>0</c>
+              <c>3</c>
+              <c>1</c>
+              <c>3</c>
+              <c>2</c>
+              <c>4</c>
+              <c>1</c>
+              <c>4</c>
+              <c>2</c>
+              <c />
+              <c />
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Five kinds of rocks</AnnotationText>
+          <DefaultAnnotationText>Five kinds of rocks</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="RockID" source="TextInput:" type="Byte" />
+            <Field name="x1" source="TextInput:" type="Byte" />
+            <Field name="y1" source="TextInput:" type="Byte" />
+            <Field name="x2" source="TextInput:" type="Byte" />
+            <Field name="y2" source="TextInput:" type="Byte" />
+            <Field name="x3" source="TextInput:" type="Byte" />
+            <Field name="y3" source="TextInput:" type="Byte" />
+            <Field name="x4" source="TextInput:" type="Byte" />
+            <Field name="y4" source="TextInput:" type="Byte" />
+            <Field name="x5" source="TextInput:" type="Byte" />
+            <Field name="y5" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="71">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1782" y="342" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="data" selected="False" />
+            <SelectField field="xeffect" selected="False" />
+            <SelectField field="yeffect" selected="False" />
+            <SelectField field="minx" selected="False" />
+            <SelectField field="maxx" selected="False" />
+            <SelectField field="miny" selected="False" />
+            <SelectField field="stack2" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="JetID" source="TextInput:" type="Byte" />
+            <Field name="RockID" source="TextInput:" type="Byte" />
+            <Field name="x1" source="Formula: [_CurrentField_]+[Cum_xeffect]" type="Byte" />
+            <Field name="y1" source="Formula: [_CurrentField_]+[Cum_yeffect]" type="Byte" />
+            <Field name="x2" source="Formula: [_CurrentField_]+[Cum_xeffect]" type="Byte" />
+            <Field name="y2" source="Formula: [_CurrentField_]+[Cum_yeffect]" type="Byte" />
+            <Field name="x3" source="Formula: [_CurrentField_]+[Cum_xeffect]" type="Byte" />
+            <Field name="y3" source="Formula: [_CurrentField_]+[Cum_yeffect]" type="Byte" />
+            <Field name="x4" source="Formula: [_CurrentField_]+[Cum_xeffect]" type="Byte" />
+            <Field name="y4" source="Formula: [_CurrentField_]+[Cum_yeffect]" type="Byte" />
+            <Field name="x5" source="Formula: [_CurrentField_]+[Cum_xeffect]" type="Byte" />
+            <Field name="y5" source="Formula: [_CurrentField_]+[Cum_yeffect]" type="Byte" />
+            <Field name="Height" source="Summarize: GroupBy - Height" type="Byte" />
+            <Field name="stack" size="1073741823" source="Formula: ';'+ToString([x1])+','+ToString([y1])+';'&#xA;+ToString([x2])+','+ToString([y2])+';'&#xA;+ToString([x3])+','+ToString([y3])+';'&#xA;+ToString([x4])+','+ToString([y4])+';'&#xA;&#xA;+&#xA;IF !IsNull([x5])&#xA;THEN ToString([x5])+','+ToString([y5])+';'&#xA;ELSE ''&#xA;ENDIF&#xA;+&#xA;[stack]&#xA;" type="V_WString" />
+            <Field name="addy" source="TextInput:" type="Int32" />
+            <Field name="maxy" source="Formula: [_CurrentField_]+[Cum_yeffect]" type="Int32" />
+            <Field description="Formula: IF IsNull([Row-1:Cum_yeffect])&#xA;THEN Null()&#xA;ELSEIF [Row-1:Cum_yeffect]=[Row-3:Cum_yeffect] and [Row-1:Cum_yeffect]&lt;0&#xA;THEN Null()&#xA;ELSEIF Contains([stack], ';'+ToString([x1]+[Cum_xeffect])+','+ToString([y1]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x2]+[Cum_xeffect])+','+ToString([y2]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x3]+[Cum_xeffect])+','+ToString([y3]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x4]+[Cum_xeffect])+','+ToString([y4]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x5]+[Cum_xeffect])+','+ToString([y5]+[Cum_yeffect])+';')&#xA;THEN [Row-1:Cum_yeffect]&#xA;ELSE [Cum_yeffect]&#xA;ENDIF" name="Cum_yeffect" source="Formula: IF IsNull([Row-1:Cum_yeffect])&#xA;THEN Null()&#xA;ELSEIF [Row-1:Cum_yeffect]=[Row-3:Cum_yeffect] and [Row-1:Cum_yeffect]&lt;0&#xA;THEN Null()&#xA;ELSEIF Contains([stack], ';'+ToString([x1]+[Cum_xeffect])+','+ToString([y1]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x2]+[Cum_xeffect])+','+ToString([y2]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x3]+[Cum_xeffect])+','+ToString([y3]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x4]+[Cum_xeffect])+','+ToString([y4]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x5]+[Cum_xeffect])+','+ToString([y5]+[Cum_yeffect])+';')&#xA;THEN [Row-1:Cum_yeffect]&#xA;ELSE [Cum_yeffect]&#xA;ENDIF" type="Int64" />
+            <Field description="Formula: IF ([xeffect] = -1 and [minx]+[Row-1:Cum_xeffect]+[xeffect] &lt; 1) or ([xeffect] = 1 and [maxx]+[Row-1:Cum_xeffect]+[xeffect] &gt; 7)&#xA;THEN [Row-1:Cum_xeffect]&#xA;ELSEIF Contains([stack], ';'+ToString([x1]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y1]+[Cum_yeffect])+';')&#xA;&#xA;or &#xA;Contains([stack], ';'+ToString([x2]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y2]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x3]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y3]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x4]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y4]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x5]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y5]+[Cum_yeffect])+';')&#xA;&#xA;&#xA;THEN [Row-1:Cum_xeffect]&#xA;ELSE [Row-1:Cum_xeffect]+[xeffect]&#xA;ENDIF" name="Cum_xeffect" source="Formula: IF ([xeffect] = -1 and [minx]+[Row-1:Cum_xeffect]+[xeffect] &lt; 1) or ([xeffect] = 1 and [maxx]+[Row-1:Cum_xeffect]+[xeffect] &gt; 7)&#xA;THEN [Row-1:Cum_xeffect]&#xA;ELSEIF Contains([stack], ';'+ToString([x1]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y1]+[Cum_yeffect])+';')&#xA;&#xA;or &#xA;Contains([stack], ';'+ToString([x2]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y2]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x3]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y3]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x4]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y4]+[Cum_yeffect])+';')&#xA;or &#xA;Contains([stack], ';'+ToString([x5]+[Row-1:Cum_xeffect]+[xeffect])+','+ToString([y5]+[Cum_yeffect])+';')&#xA;&#xA;&#xA;THEN [Row-1:Cum_xeffect]&#xA;ELSE [Row-1:Cum_xeffect]+[xeffect]&#xA;ENDIF" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="72">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sample.Sample">
+        <Position x="726" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>First</Mode>
+          <N>160</N>
+          <GroupFields orderChanged="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>All 20k aren't necessary. Remove some for speed</AnnotationText>
+          <DefaultAnnotationText>First 160</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="JetID" source="TextInput:" type="Byte" />
+            <Field name="data" size="1" source="TextInput:" type="String" />
+            <Field name="xeffect" source="TextInput:" type="Int16" />
+            <Field name="yeffect" source="TextInput:" type="Int16" />
+            <Field name="Source_JetID" source="Summarize: GroupBy - JetID" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSample" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="55" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="59" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="True" />
+      <Destination ToolID="4" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="56" Connection="Output" />
+      <Destination ToolID="4" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="42" Connection="Output" />
+      <Destination ToolID="43" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="56" Connection="Output" />
+      <Destination ToolID="43" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="43" Connection="Output" />
+      <Destination ToolID="44" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="44" Connection="True" />
+      <Destination ToolID="47" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="44" Connection="False" />
+      <Destination ToolID="47" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="47" Connection="Output" />
+      <Destination ToolID="72" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="48" Connection="True" />
+      <Destination ToolID="49" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="50" Connection="Output" />
+      <Destination ToolID="51" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="52" Connection="Question" />
+      <Destination ToolID="48" Connection="Question" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="69" Connection="Output" />
+      <Destination ToolID="48" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="55" Connection="Output" />
+      <Destination ToolID="57" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="57" Connection="Output" />
+      <Destination ToolID="56" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="58" Connection="Output" />
+      <Destination ToolID="60" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="59" Connection="Output" />
+      <Destination ToolID="62" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="60" Connection="Output" />
+      <Destination ToolID="61" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="61" Connection="Output" />
+      <Destination ToolID="63" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="62" Connection="Output" />
+      <Destination ToolID="58" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="72" Connection="Output" />
+      <Destination ToolID="58" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="63" Connection="Output" />
+      <Destination ToolID="64" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="64" Connection="True" />
+      <Destination ToolID="65" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="65" Connection="Output" />
+      <Destination ToolID="66" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="66" Connection="Output" />
+      <Destination ToolID="67" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="67" Connection="Output" />
+      <Destination ToolID="68" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="68" Connection="Output" />
+      <Destination ToolID="69" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="68" Connection="Output" />
+      <Destination ToolID="71" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="70" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="71" Connection="Output" />
+      <Destination ToolID="50" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <Constants>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Macro Input (42)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Macro Output (49)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Macro Output (51)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Numeric Up Down (52)</Name>
+        <Value />
+        <IsNumeric value="True" />
+      </Constant>
+    </Constants>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>AoCDay17Iterate</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="20bbd342-3f7f-4121-ac41-a5b60bebcc9b" />
+      <Telemetry>
+        <PreviousWorkflowId value="6a0c167a-81cd-48b9-be85-b1e63af07d07" />
+        <OriginWorkflowId value="20bbd342-3f7f-4121-ac41-a5b60bebcc9b" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="False" />
+    </Events>
+    <RuntimeProperties>
+      <Actions />
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Tab (2)</Name>
+          <ToolId value="2" />
+          <Questions>
+            <Question>
+              <Type>MacroInput</Type>
+              <Description />
+              <Name>Macro Input (3)</Name>
+              <ToolId value="3" />
+            </Question>
+            <Question>
+              <Type>MacroInput</Type>
+              <Description />
+              <Name>Macro Input (42)</Name>
+              <ToolId value="42" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description>Macro Output (49)</Description>
+              <Name>Macro Output (49)</Name>
+              <ToolId value="49" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description>Macro Output (51)</Description>
+              <Name>Macro Output (51)</Name>
+              <ToolId value="51" />
+            </Question>
+            <Question>
+              <Type>NumericUpDown</Type>
+              <Description>Number of Rocks</Description>
+              <Name>Numeric Up Down (52)</Name>
+              <ToolId value="52" />
+              <Minimum value="0" />
+              <Maximum value="10000" />
+              <Increment value="1" />
+              <Default value="2022" />
+              <Decimals value="0" />
+            </Question>
+          </Questions>
+        </Question>
+      </Questions>
+      <ModuleType>Macro</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImageStd value="39" />
+      <MacroInputs />
+      <MacroOutputs />
+      <IterativeMacro>
+        <Input>Iteration</Input>
+        <Output>Iterate</Output>
+        <IterationLimit value="8000" />
+        <LimitBehavior>Warn</LimitBehavior>
+        <OutputMode>AllSame</OutputMode>
+      </IterativeMacro>
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="3" Selected="True" />
+        <Tool ToolId="42" Selected="True" />
+        <Tool ToolId="49" Selected="True" />
+        <Tool ToolId="51" Selected="True" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>
