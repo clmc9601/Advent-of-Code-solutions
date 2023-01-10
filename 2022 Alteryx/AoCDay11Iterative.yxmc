@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<AlteryxDocument yxmdVer="2021.2">
+<AlteryxDocument yxmdVer="2022.3">
   <Nodes>
     <Node ToolID="1">
       <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
@@ -448,7 +448,7 @@ IF Contains([Worry Equation], '+') or Contains([Worry E...</DefaultAnnotationTex
             <Field name="MonkeyItemID" source="TextInput:" type="Byte" />
             <Field name="Monkey" source="TextInput:" type="Byte" />
             <Field name="Worry" source="TextInput:" type="Double" />
-            <Field name="Iteration" source="File: D:\Users\clmc9601\Documents\Alteryx\Advent-of-Code-solutions\2022 Alteryx\AoC Day 11 Part 2 Iterations.yxdb" type="Int32" />
+            <Field name="Iteration" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\Advent-of-Code-solutions\2022 Alteryx\AoCDay11 Part 2 Iterations.yxdb" type="Int32" />
             <Field name="Worry Equation" size="17" source="TextInput:" type="String" />
             <Field name="Expression" source="TextInput:" type="Byte" />
             <Field name="MonkeyIfTrue" source="TextInput:" type="Byte" />
@@ -480,13 +480,13 @@ IF Contains([Worry Equation], '+') or Contains([Worry E...</DefaultAnnotationTex
         </Annotation>
         <MetaInfo connection="True">
           <RecordInfo>
-            <Field name="Iteration" source="File: D:\Users\clmc9601\Documents\Alteryx\Advent-of-Code-solutions\2022 Alteryx\AoC Day 11 Part 2 Iterations.yxdb" type="Int32" />
+            <Field name="Iteration" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\Advent-of-Code-solutions\2022 Alteryx\AoCDay11 Part 2 Iterations.yxdb" type="Int32" />
             <Field name="Monkey" source="Formula: [Tile_SequenceNum]-1" type="Int32" />
           </RecordInfo>
         </MetaInfo>
         <MetaInfo connection="False">
           <RecordInfo>
-            <Field name="Iteration" source="File: D:\Users\clmc9601\Documents\Alteryx\Advent-of-Code-solutions\2022 Alteryx\AoC Day 11 Part 2 Iterations.yxdb" type="Int32" />
+            <Field name="Iteration" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\Advent-of-Code-solutions\2022 Alteryx\AoCDay11 Part 2 Iterations.yxdb" type="Int32" />
             <Field name="Monkey" source="Formula: [Tile_SequenceNum]-1" type="Int32" />
           </RecordInfo>
         </MetaInfo>
@@ -538,7 +538,7 @@ IF Contains([Worry Equation], '+') or Contains([Worry E...</DefaultAnnotationTex
             <Field name="MonkeyItemID" source="TextInput:" type="Byte" />
             <Field name="Monkey" source="TextInput:" type="Byte" />
             <Field name="Worry" source="TextInput:" type="Double" />
-            <Field name="Iteration" source="File: D:\Users\clmc9601\Documents\Alteryx\Advent-of-Code-solutions\2022 Alteryx\AoC Day 11 Part 2 Iterations.yxdb" type="Int32" />
+            <Field name="Iteration" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\Advent-of-Code-solutions\2022 Alteryx\AoCDay11 Part 2 Iterations.yxdb" type="Int32" />
             <Field name="Worry Equation" size="17" source="TextInput:" type="String" />
             <Field name="Expression" source="TextInput:" type="Byte" />
             <Field name="MonkeyIfTrue" source="TextInput:" type="Byte" />
@@ -550,7 +550,7 @@ IF Contains([Worry Equation], '+') or Contains([Worry E...</DefaultAnnotationTex
         </MetaInfo>
         <MetaInfo connection="Right">
           <RecordInfo>
-            <Field name="Iteration" source="File: D:\Users\clmc9601\Documents\Alteryx\Advent-of-Code-solutions\2022 Alteryx\AoC Day 11 Part 2 Iterations.yxdb" type="Int32" />
+            <Field name="Iteration" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\Advent-of-Code-solutions\2022 Alteryx\AoCDay11 Part 2 Iterations.yxdb" type="Int32" />
             <Field name="Monkey" source="Formula: [Tile_SequenceNum]-1" type="Int32" />
             <Field name="Worry Equation" size="17" source="TextInput:" type="String" />
             <Field name="Expression" source="TextInput:" type="Byte" />
@@ -599,7 +599,7 @@ IF Contains([Worry Equation], '+') or Contains([Worry E...</DefaultAnnotationTex
             <Field name="MonkeyItemID" source="TextInput:" type="Byte" />
             <Field name="Monkey" source="TextInput:" type="Byte" />
             <Field name="Worry" source="TextInput:" type="Double" />
-            <Field name="Iteration" source="File: D:\Users\clmc9601\Documents\Alteryx\Advent-of-Code-solutions\2022 Alteryx\AoC Day 11 Part 2 Iterations.yxdb" type="Int32" />
+            <Field name="Iteration" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\Advent-of-Code-solutions\2022 Alteryx\AoCDay11 Part 2 Iterations.yxdb" type="Int32" />
             <Field name="Worry Equation" size="17" source="TextInput:" type="String" />
             <Field name="Expression" source="TextInput:" type="Byte" />
             <Field name="MonkeyIfTrue" source="TextInput:" type="Byte" />
@@ -657,7 +657,7 @@ IF Contains([Worry Equation], '+') or Contains([Worry E...</DefaultAnnotationTex
           <RecordInfo>
             <Field name="ItemID" source="TextInput:" type="Byte" />
             <Field name="MonkeyItemID" source="TextInput:" type="Byte" />
-            <Field name="Iteration" source="File: D:\Users\clmc9601\Documents\Alteryx\Advent-of-Code-solutions\2022 Alteryx\AoC Day 11 Part 2 Iterations.yxdb" type="Int32" />
+            <Field name="Iteration" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\Advent-of-Code-solutions\2022 Alteryx\AoCDay11 Part 2 Iterations.yxdb" type="Int32" />
             <Field name="Worry Equation" size="17" source="TextInput:" type="String" />
             <Field name="Expression" source="TextInput:" type="Byte" />
             <Field name="MonkeyIfTrue" source="TextInput:" type="Byte" />
@@ -692,7 +692,7 @@ IF Contains([Worry Equation], '+') or Contains([Worry E...</DefaultAnnotationTex
             <Field name="MonkeyItemID" source="TextInput:" type="Byte" />
             <Field name="Monkey" source="(Multiple Sources)" type="Int32" />
             <Field name="Worry" source="(Multiple Sources)" type="Double" />
-            <Field name="Iteration" source="File: D:\Users\clmc9601\Documents\Alteryx\Advent-of-Code-solutions\2022 Alteryx\AoC Day 11 Part 2 Iterations.yxdb" type="Int32" />
+            <Field name="Iteration" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\Advent-of-Code-solutions\2022 Alteryx\AoCDay11 Part 2 Iterations.yxdb" type="Int32" />
             <Field name="Worry Equation" size="17" source="TextInput:" type="String" />
             <Field name="Expression" source="TextInput:" type="Byte" />
             <Field name="MonkeyIfTrue" source="TextInput:" type="Byte" />
@@ -1909,7 +1909,7 @@ IF Contains([Worry Equation], '+') or Contains([Worry E...</DefaultAnnotationTex
         </Annotation>
         <MetaInfo connection="Left">
           <RecordInfo>
-            <Field name="Iteration" source="File: D:\Users\clmc9601\Documents\Alteryx\Advent-of-Code-solutions\2022 Alteryx\AoC Day 11 Part 2 Iterations.yxdb" type="Int32" />
+            <Field name="Iteration" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\Advent-of-Code-solutions\2022 Alteryx\AoCDay11 Part 2 Iterations.yxdb" type="Int32" />
             <Field name="Monkey" source="Formula: [Tile_SequenceNum]-1" type="Int32" />
           </RecordInfo>
           <SortInfo noProgress="True">
@@ -1918,7 +1918,7 @@ IF Contains([Worry Equation], '+') or Contains([Worry E...</DefaultAnnotationTex
         </MetaInfo>
         <MetaInfo connection="Join">
           <RecordInfo>
-            <Field name="Iteration" source="File: D:\Users\clmc9601\Documents\Alteryx\Advent-of-Code-solutions\2022 Alteryx\AoC Day 11 Part 2 Iterations.yxdb" type="Int32" />
+            <Field name="Iteration" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\Advent-of-Code-solutions\2022 Alteryx\AoCDay11 Part 2 Iterations.yxdb" type="Int32" />
             <Field name="Monkey" source="Formula: [Tile_SequenceNum]-1" type="Int32" />
             <Field name="Worry Equation" size="17" source="TextInput:" type="String" />
             <Field name="Expression" source="TextInput:" type="Byte" />
@@ -1985,12 +1985,12 @@ IF Contains([Worry Equation], '+') or Contains([Worry E...</DefaultAnnotationTex
       <Properties>
         <Configuration>
           <Passwords />
-          <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">AoC Day 11 Part 2 Iterations.yxdb</File>
+          <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">AoCDay11 Part 2 Iterations.yxdb</File>
           <FormatSpecificOptions />
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
-          <DefaultAnnotationText>AoC Day 11 Part 2 Iterations.yxdb</DefaultAnnotationText>
+          <DefaultAnnotationText>AoCDay11 Part 2 Iterations.yxdb</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
         <Dependencies>
@@ -1998,7 +1998,7 @@ IF Contains([Worry Equation], '+') or Contains([Worry E...</DefaultAnnotationTex
         </Dependencies>
         <MetaInfo connection="Output">
           <RecordInfo>
-            <Field name="Iteration" source="File: D:\Users\clmc9601\Documents\Alteryx\Advent-of-Code-solutions\2022 Alteryx\AoC Day 11 Part 2 Iterations.yxdb" type="Int32" />
+            <Field name="Iteration" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\Advent-of-Code-solutions\2022 Alteryx\AoCDay11 Part 2 Iterations.yxdb" type="Int32" />
             <Field name="Monkey" source="Formula: [Tile_SequenceNum]-1" type="Int32" />
           </RecordInfo>
         </MetaInfo>
