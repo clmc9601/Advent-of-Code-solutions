@@ -1,0 +1,2681 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2022.3">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
+        <Position x="66" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UseFileInput value="False" />
+          <Name>Input1</Name>
+          <Abbrev />
+          <ShowFieldMap value="False" />
+          <Optional value="False" />
+          <TextInput>
+            <Configuration>
+              <NumRows value="1" />
+              <Fields>
+                <Field name="CurrentRowID" />
+                <Field name="CurrentColID" />
+                <Field name="sect" />
+                <Field name="direction" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>1</c>
+                  <c>53</c>
+                  <c>B</c>
+                  <c>0</c>
+                </r>
+              </Data>
+            </Configuration>
+          </TextInput>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Input</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="True" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="CurrentRowID" source="TextInput:" type="Byte" />
+            <Field name="CurrentColID" source="TextInput:" type="Byte" />
+            <Field name="sect" size="1" source="TextInput:" type="String" />
+            <Field name="direction" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
+        <Position x="66" y="330" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UseFileInput value="True" />
+          <Name>Grid</Name>
+          <Abbrev>G</Abbrev>
+          <ShowFieldMap value="False" />
+          <Optional value="False" />
+          <FileInput>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">Day22GridInfo.yxdb</File>
+              <FormatSpecificOptions />
+            </Configuration>
+          </FileInput>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Day22GridInfo.yxdb</DefaultAnnotationText>
+          <Left value="True" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="WallsRowID" size="11" source="RecordID: Starting Value=1" type="V_String" />
+            <Field name="ColsOfWalls" size="2147483647" source="Summarize: Concat - ColID" type="V_String" />
+            <Field name="WallsColID" size="21" source="Formula: [_CurrentField_]" type="V_String" />
+            <Field name="RowsOfWalls" size="2147483647" source="Summarize: Concat - RowID" type="V_String" />
+            <Field name="RowID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="Min_ColID" source="Formula: [_CurrentField_]" type="Int64" />
+            <Field name="Max_ColID" source="Formula: [_CurrentField_]" type="Int64" />
+            <Field name="ColID" source="Formula: [_CurrentField_]" type="Int64" />
+            <Field name="Min_RowID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="Max_RowID" source="RecordID: Starting Value=1" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroInput" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
+        <Position x="66" y="474" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UseFileInput value="True" />
+          <Name>Instructions</Name>
+          <Abbrev>I</Abbrev>
+          <ShowFieldMap value="False" />
+          <Optional value="False" />
+          <FileInput>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">Day22Instructions.yxdb</File>
+              <FormatSpecificOptions />
+            </Configuration>
+          </FileInput>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Day22Instructions.yxdb</DefaultAnnotationText>
+          <Left value="True" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="InstructionID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="data" source="Formula: Trim([data],'RL')" type="Byte" />
+            <Field name="dirChange" source="Formula: IF StartsWith([data], 'R')&#xA;THEN 1&#xA;ELSEIF StartsWith([data], 'L')&#xA;THEN -1&#xA;ELSE 0&#xA;ENDIF" type="Int16" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroInput" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="186" y="474" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[InstructionID] = [Engine.IterationNumber]+1</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Get current instruction step</AnnotationText>
+          <DefaultAnnotationText>[InstructionID] = [Engine.IterationNumber]+1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="InstructionID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="data" source="Formula: Trim([data],'RL')" type="Byte" />
+            <Field name="dirChange" source="Formula: IF StartsWith([data], 'R')&#xA;THEN 1&#xA;ELSEIF StartsWith([data], 'L')&#xA;THEN -1&#xA;ELSE 0&#xA;ENDIF" type="Int16" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="InstructionID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="data" source="Formula: Trim([data],'RL')" type="Byte" />
+            <Field name="dirChange" source="Formula: IF StartsWith([data], 'R')&#xA;THEN 1&#xA;ELSEIF StartsWith([data], 'L')&#xA;THEN -1&#xA;ELSE 0&#xA;ENDIF" type="Int16" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="438" y="438" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="WallsRowID" selected="True" rename="RowID" type="Int32" size="4" />
+            <SelectField field="ColsOfWalls" selected="True" rename="ColID" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="RowID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="ColID" size="2147483647" source="Summarize: Concat - ColID" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="150" y="282" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="RowID" selected="True" />
+            <SelectField field="Min_ColID" selected="True" />
+            <SelectField field="Max_ColID" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="RowID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="Min_ColID" source="Formula: [_CurrentField_]" type="Int64" />
+            <Field name="Max_ColID" source="Formula: [_CurrentField_]" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="246" y="330" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="ColID" selected="True" />
+            <SelectField field="Min_RowID" selected="True" />
+            <SelectField field="Max_RowID" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="ColID" source="Formula: [_CurrentField_]" type="Int64" />
+            <Field name="Min_RowID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="Max_RowID" source="RecordID: Starting Value=1" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.JoinMultiple.JoinMultiple">
+        <Position x="246" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <JoinByRecPos value="False" />
+          <JoinFields>
+            <JoinInfo connection="#1">
+              <Field field="CurrentRowID" />
+            </JoinInfo>
+            <JoinInfo connection="#3">
+              <Field field="RowID" />
+            </JoinInfo>
+          </JoinFields>
+          <CartesianMode>Error</CartesianMode>
+          <OutputJoinOnly value="True" />
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Input_#1_direction" selected="True" type="Int16" size="2" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Add map size by row</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="CurrentRowID" source="TextInput:" type="Byte" />
+            <Field name="CurrentColID" source="TextInput:" type="Byte" />
+            <Field name="sect" size="1" source="TextInput:" type="String" />
+            <Field name="direction" source="TextInput:" type="Int16" />
+            <Field name="RowID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="Min_ColID" source="Formula: [_CurrentField_]" type="Int64" />
+            <Field name="Max_ColID" source="Formula: [_CurrentField_]" type="Int64" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="CurrentRowID" order="" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoinMultiple" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.JoinMultiple.JoinMultiple">
+        <Position x="378" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <JoinByRecPos value="False" />
+          <JoinFields>
+            <JoinInfo connection="#1">
+              <Field field="CurrentColID" />
+            </JoinInfo>
+            <JoinInfo connection="#3">
+              <Field field="ColID" />
+            </JoinInfo>
+          </JoinFields>
+          <CartesianMode>Error</CartesianMode>
+          <OutputJoinOnly value="True" />
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Add map size by column</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="CurrentRowID" source="TextInput:" type="Byte" />
+            <Field name="CurrentColID" source="TextInput:" type="Byte" />
+            <Field name="sect" size="1" source="TextInput:" type="String" />
+            <Field name="direction" source="TextInput:" type="Int16" />
+            <Field name="RowID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="Min_ColID" source="Formula: [_CurrentField_]" type="Int64" />
+            <Field name="Max_ColID" source="Formula: [_CurrentField_]" type="Int64" />
+            <Field name="ColID" source="Formula: [_CurrentField_]" type="Int64" />
+            <Field name="Min_RowID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="Max_RowID" source="RecordID: Starting Value=1" type="Int32" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="CurrentColID" order="" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoinMultiple" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="510" y="246" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="True">
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Add instructions</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="CurrentRowID" source="TextInput:" type="Byte" />
+            <Field name="CurrentColID" source="TextInput:" type="Byte" />
+            <Field name="sect" size="1" source="TextInput:" type="String" />
+            <Field name="direction" source="TextInput:" type="Int16" />
+            <Field name="RowID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="Min_ColID" source="Formula: [_CurrentField_]" type="Int64" />
+            <Field name="Max_ColID" source="Formula: [_CurrentField_]" type="Int64" />
+            <Field name="ColID" source="Formula: [_CurrentField_]" type="Int64" />
+            <Field name="Min_RowID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="Max_RowID" source="RecordID: Starting Value=1" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field name="CurrentRowID" source="TextInput:" type="Byte" />
+            <Field name="CurrentColID" source="TextInput:" type="Byte" />
+            <Field name="sect" size="1" source="TextInput:" type="String" />
+            <Field name="direction" source="TextInput:" type="Int16" />
+            <Field name="RowID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="Min_ColID" source="Formula: [_CurrentField_]" type="Int64" />
+            <Field name="Max_ColID" source="Formula: [_CurrentField_]" type="Int64" />
+            <Field name="ColID" source="Formula: [_CurrentField_]" type="Int64" />
+            <Field name="Min_RowID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="Max_RowID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="InstructionID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="data" source="Formula: Trim([data],'RL')" type="Byte" />
+            <Field name="dirChange" source="Formula: IF StartsWith([data], 'R')&#xA;THEN 1&#xA;ELSEIF StartsWith([data], 'L')&#xA;THEN -1&#xA;ELSE 0&#xA;ENDIF" type="Int16" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="InstructionID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="data" source="Formula: Trim([data],'RL')" type="Byte" />
+            <Field name="dirChange" source="Formula: IF StartsWith([data], 'R')&#xA;THEN 1&#xA;ELSEIF StartsWith([data], 'L')&#xA;THEN -1&#xA;ELSE 0&#xA;ENDIF" type="Int16" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="14">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1134" y="246" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="IF [direction]=3&#xA;THEN [CurrentRowID]-ToNumber([data])&#xA;ELSE [CurrentRowID]&#xA;ENDIF" field="PotentialRowIDMin" size="4" type="Int32" />
+            <FormulaField expression="IF [direction]=1&#xA;THEN [CurrentRowID]+ToNumber([data])&#xA;ELSE [CurrentRowID]&#xA;ENDIF" field="PotentialRowIDMax" size="4" type="Int32" />
+            <FormulaField expression="IF [direction]=2&#xA;THEN [CurrentColID]-ToNumber([data])&#xA;ELSE [CurrentColID]&#xA;ENDIF" field="PotentialColIDMin" size="4" type="Int32" />
+            <FormulaField expression="IF [direction]=0&#xA;THEN [CurrentColID]+ToNumber([data])&#xA;ELSE [CurrentColID]&#xA;ENDIF" field="PotentialColIDMax" size="4" type="Int32" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Calculate coordinates to expand based on direction</AnnotationText>
+          <DefaultAnnotationText>PotentialRowIDMin = IF [direction]=3
+THEN [CurrentRowID]-ToNumber([data])
+ELSE [...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="CurrentRowID_abs" source="TextInput:" type="Byte" />
+            <Field name="CurrentColID_abs" source="TextInput:" type="Byte" />
+            <Field name="sect" size="1" source="TextInput:" type="String" />
+            <Field name="direction" source="Formula: IF [sect]='C' and [joinsheet]='EFAC'&#xA;THEN Switch([direction],Null(),0,3,2,1)&#xA;ELSEIF [sect]='F' and [joinsheet]='BCDF'&#xA;THEN Switch([direction],Null(),0,3,2,1)&#xA;ELSEIF [joinsheet]='BADE' and ([sect] in ('D','E'))&#xA;THEN Switch([direction],Null(),0,2,2,0)&#xA;ELSE [direction]&#xA;ENDIF&#xA;&#xA;&#xA;/* the C in EFAC, F in BCDF, and DE in BADE are all rotated from the other positioning */" type="Int16" />
+            <Field name="InstructionID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="data" source="Formula: Trim([data],'RL')" type="Byte" />
+            <Field name="dirChange" source="Formula: IF StartsWith([data], 'R')&#xA;THEN 1&#xA;ELSEIF StartsWith([data], 'L')&#xA;THEN -1&#xA;ELSE 0&#xA;ENDIF" type="Int16" />
+            <Field name="joinsheet" size="1073741823" source="Formula: IF ([sect] IN ('B','A','D','E')) and ([direction] in (0,2))&#xA;THEN 'BADE'&#xA;ELSEIF ([sect] IN ('B','C','D')) and ([direction] IN (1,3))&#xA;THEN 'BCDF'&#xA;ELSEIF ([sect] IN ('E','F','A')) and ([direction] IN (1,3))&#xA;THEN 'EFAC'&#xA;ELSEIF [sect]='C' and ([direction] in (0,2))&#xA;THEN 'EFAC'&#xA;ELSEIF [sect]='F' and ([direction] in (0,2))&#xA;THEN 'BCDF'&#xA;ELSE Null()&#xA;ENDIF " type="V_WString" />
+            <Field name="CurrentRowID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="CurrentColID" source="Transpose:" type="Int32" />
+            <Field name="rotate" size="1073741823" source="Formula: IF Contains([FileName], 'EFAC') and [sect]='C'&#xA;THEN 'row col switch 1-row'&#xA;ELSEIF Contains([FileName], 'BCDF') and [sect]='F'&#xA;THEN 'row col switch 1-row'&#xA;ELSEIF Contains([FileName],'BADE') and ([sect] in ('E','D'))&#xA;THEN '1-row 1-col'&#xA;ELSE 'none'&#xA;ENDIF&#xA;" type="V_WString" />
+            <Field name="Sheet" size="1073741823" source="Formula: Trim(Right([FileName], 7), '`$')" type="V_WString" />
+            <Field name="Min_ColID" source="Formula: 1" type="Byte" />
+            <Field name="Max_ColID" source="Formula: IF [Sheet] = 'BADE'&#xA;THEN 200&#xA;ELSE 50&#xA;ENDIF" type="Byte" />
+            <Field name="Min_RowID" source="Formula: 1" type="Byte" />
+            <Field name="Max_RowID" source="Formula: IF [Sheet] = 'BADE'&#xA;THEN 50&#xA;ELSE 200&#xA;ENDIF" type="Byte" />
+            <Field name="PotentialRowIDMin" source="Formula: IF [direction]=3&#xA;THEN [CurrentRowID]-ToNumber([data])&#xA;ELSE [CurrentRowID]&#xA;ENDIF" type="Int32" />
+            <Field name="PotentialRowIDMax" source="Formula: IF [direction]=1&#xA;THEN [CurrentRowID]+ToNumber([data])&#xA;ELSE [CurrentRowID]&#xA;ENDIF" type="Int32" />
+            <Field name="PotentialColIDMin" source="Formula: IF [direction]=2&#xA;THEN [CurrentColID]-ToNumber([data])&#xA;ELSE [CurrentColID]&#xA;ENDIF" type="Int32" />
+            <Field name="PotentialColIDMax" source="Formula: IF [direction]=0&#xA;THEN [CurrentColID]+ToNumber([data])&#xA;ELSE [CurrentColID]&#xA;ENDIF" type="Int32" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="CurrentRowID_abs" order="" />
+            <Field field="CurrentColID_abs" order="" />
+            <Field field="joinsheet" order="" />
+            <Field field="sect" order="" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.GenerateRows.GenerateRows">
+        <Position x="1242" y="246" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="True" />
+          <UpdateField_Name>PotentialRowIDMin</UpdateField_Name>
+          <CreateField_Name>RowCount</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <Expression_Init>PotentialRowIDMin</Expression_Init>
+          <Expression_Cond>PotentialRowIDMin &lt;= PotentialRowIDMax</Expression_Cond>
+          <Expression_Loop>PotentialRowIDMin + 1</Expression_Loop>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Expand vertically</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="CurrentRowID_abs" source="TextInput:" type="Byte" />
+            <Field name="CurrentColID_abs" source="TextInput:" type="Byte" />
+            <Field name="sect" size="1" source="TextInput:" type="String" />
+            <Field name="direction" source="Formula: IF [sect]='C' and [joinsheet]='EFAC'&#xA;THEN Switch([direction],Null(),0,3,2,1)&#xA;ELSEIF [sect]='F' and [joinsheet]='BCDF'&#xA;THEN Switch([direction],Null(),0,3,2,1)&#xA;ELSEIF [joinsheet]='BADE' and ([sect] in ('D','E'))&#xA;THEN Switch([direction],Null(),0,2,2,0)&#xA;ELSE [direction]&#xA;ENDIF&#xA;&#xA;&#xA;/* the C in EFAC, F in BCDF, and DE in BADE are all rotated from the other positioning */" type="Int16" />
+            <Field name="InstructionID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="data" source="Formula: Trim([data],'RL')" type="Byte" />
+            <Field name="dirChange" source="Formula: IF StartsWith([data], 'R')&#xA;THEN 1&#xA;ELSEIF StartsWith([data], 'L')&#xA;THEN -1&#xA;ELSE 0&#xA;ENDIF" type="Int16" />
+            <Field name="joinsheet" size="1073741823" source="Formula: IF ([sect] IN ('B','A','D','E')) and ([direction] in (0,2))&#xA;THEN 'BADE'&#xA;ELSEIF ([sect] IN ('B','C','D')) and ([direction] IN (1,3))&#xA;THEN 'BCDF'&#xA;ELSEIF ([sect] IN ('E','F','A')) and ([direction] IN (1,3))&#xA;THEN 'EFAC'&#xA;ELSEIF [sect]='C' and ([direction] in (0,2))&#xA;THEN 'EFAC'&#xA;ELSEIF [sect]='F' and ([direction] in (0,2))&#xA;THEN 'BCDF'&#xA;ELSE Null()&#xA;ENDIF " type="V_WString" />
+            <Field name="CurrentRowID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="CurrentColID" source="Transpose:" type="Int32" />
+            <Field name="rotate" size="1073741823" source="Formula: IF Contains([FileName], 'EFAC') and [sect]='C'&#xA;THEN 'row col switch 1-row'&#xA;ELSEIF Contains([FileName], 'BCDF') and [sect]='F'&#xA;THEN 'row col switch 1-row'&#xA;ELSEIF Contains([FileName],'BADE') and ([sect] in ('E','D'))&#xA;THEN '1-row 1-col'&#xA;ELSE 'none'&#xA;ENDIF&#xA;" type="V_WString" />
+            <Field name="Sheet" size="1073741823" source="Formula: Trim(Right([FileName], 7), '`$')" type="V_WString" />
+            <Field name="Min_ColID" source="Formula: 1" type="Byte" />
+            <Field name="Max_ColID" source="Formula: IF [Sheet] = 'BADE'&#xA;THEN 200&#xA;ELSE 50&#xA;ENDIF" type="Byte" />
+            <Field name="Min_RowID" source="Formula: 1" type="Byte" />
+            <Field name="Max_RowID" source="Formula: IF [Sheet] = 'BADE'&#xA;THEN 50&#xA;ELSE 200&#xA;ENDIF" type="Byte" />
+            <Field name="PotentialRowIDMin" source="Formula: IF [direction]=3&#xA;THEN [CurrentRowID]-ToNumber([data])&#xA;ELSE [CurrentRowID]&#xA;ENDIF" type="Int32" />
+            <Field name="PotentialRowIDMax" source="Formula: IF [direction]=1&#xA;THEN [CurrentRowID]+ToNumber([data])&#xA;ELSE [CurrentRowID]&#xA;ENDIF" type="Int32" />
+            <Field name="PotentialColIDMin" source="Formula: IF [direction]=2&#xA;THEN [CurrentColID]-ToNumber([data])&#xA;ELSE [CurrentColID]&#xA;ENDIF" type="Int32" />
+            <Field name="PotentialColIDMax" source="Formula: IF [direction]=0&#xA;THEN [CurrentColID]+ToNumber([data])&#xA;ELSE [CurrentColID]&#xA;ENDIF" type="Int32" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="CurrentRowID_abs" order="" />
+            <Field field="CurrentColID_abs" order="" />
+            <Field field="joinsheet" order="" />
+            <Field field="sect" order="" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxGenerateRows" />
+    </Node>
+    <Node ToolID="16">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.GenerateRows.GenerateRows">
+        <Position x="1350" y="246" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="True" />
+          <UpdateField_Name>PotentialColIDMin</UpdateField_Name>
+          <CreateField_Name>RowCount</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <Expression_Init>PotentialColIDMin</Expression_Init>
+          <Expression_Cond>PotentialColIDMin &lt;= PotentialColIDMax</Expression_Cond>
+          <Expression_Loop>PotentialColIDMin + 1</Expression_Loop>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Expand horizontally</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="CurrentRowID_abs" source="TextInput:" type="Byte" />
+            <Field name="CurrentColID_abs" source="TextInput:" type="Byte" />
+            <Field name="sect" size="1" source="TextInput:" type="String" />
+            <Field name="direction" source="Formula: IF [sect]='C' and [joinsheet]='EFAC'&#xA;THEN Switch([direction],Null(),0,3,2,1)&#xA;ELSEIF [sect]='F' and [joinsheet]='BCDF'&#xA;THEN Switch([direction],Null(),0,3,2,1)&#xA;ELSEIF [joinsheet]='BADE' and ([sect] in ('D','E'))&#xA;THEN Switch([direction],Null(),0,2,2,0)&#xA;ELSE [direction]&#xA;ENDIF&#xA;&#xA;&#xA;/* the C in EFAC, F in BCDF, and DE in BADE are all rotated from the other positioning */" type="Int16" />
+            <Field name="InstructionID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="data" source="Formula: Trim([data],'RL')" type="Byte" />
+            <Field name="dirChange" source="Formula: IF StartsWith([data], 'R')&#xA;THEN 1&#xA;ELSEIF StartsWith([data], 'L')&#xA;THEN -1&#xA;ELSE 0&#xA;ENDIF" type="Int16" />
+            <Field name="joinsheet" size="1073741823" source="Formula: IF ([sect] IN ('B','A','D','E')) and ([direction] in (0,2))&#xA;THEN 'BADE'&#xA;ELSEIF ([sect] IN ('B','C','D')) and ([direction] IN (1,3))&#xA;THEN 'BCDF'&#xA;ELSEIF ([sect] IN ('E','F','A')) and ([direction] IN (1,3))&#xA;THEN 'EFAC'&#xA;ELSEIF [sect]='C' and ([direction] in (0,2))&#xA;THEN 'EFAC'&#xA;ELSEIF [sect]='F' and ([direction] in (0,2))&#xA;THEN 'BCDF'&#xA;ELSE Null()&#xA;ENDIF " type="V_WString" />
+            <Field name="CurrentRowID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="CurrentColID" source="Transpose:" type="Int32" />
+            <Field name="rotate" size="1073741823" source="Formula: IF Contains([FileName], 'EFAC') and [sect]='C'&#xA;THEN 'row col switch 1-row'&#xA;ELSEIF Contains([FileName], 'BCDF') and [sect]='F'&#xA;THEN 'row col switch 1-row'&#xA;ELSEIF Contains([FileName],'BADE') and ([sect] in ('E','D'))&#xA;THEN '1-row 1-col'&#xA;ELSE 'none'&#xA;ENDIF&#xA;" type="V_WString" />
+            <Field name="Sheet" size="1073741823" source="Formula: Trim(Right([FileName], 7), '`$')" type="V_WString" />
+            <Field name="Min_ColID" source="Formula: 1" type="Byte" />
+            <Field name="Max_ColID" source="Formula: IF [Sheet] = 'BADE'&#xA;THEN 200&#xA;ELSE 50&#xA;ENDIF" type="Byte" />
+            <Field name="Min_RowID" source="Formula: 1" type="Byte" />
+            <Field name="Max_RowID" source="Formula: IF [Sheet] = 'BADE'&#xA;THEN 50&#xA;ELSE 200&#xA;ENDIF" type="Byte" />
+            <Field name="PotentialRowIDMin" source="Formula: IF [direction]=3&#xA;THEN [CurrentRowID]-ToNumber([data])&#xA;ELSE [CurrentRowID]&#xA;ENDIF" type="Int32" />
+            <Field name="PotentialRowIDMax" source="Formula: IF [direction]=1&#xA;THEN [CurrentRowID]+ToNumber([data])&#xA;ELSE [CurrentRowID]&#xA;ENDIF" type="Int32" />
+            <Field name="PotentialColIDMin" source="Formula: IF [direction]=2&#xA;THEN [CurrentColID]-ToNumber([data])&#xA;ELSE [CurrentColID]&#xA;ENDIF" type="Int32" />
+            <Field name="PotentialColIDMax" source="Formula: IF [direction]=0&#xA;THEN [CurrentColID]+ToNumber([data])&#xA;ELSE [CurrentColID]&#xA;ENDIF" type="Int32" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="CurrentRowID_abs" order="" />
+            <Field field="CurrentColID_abs" order="" />
+            <Field field="joinsheet" order="" />
+            <Field field="sect" order="" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxGenerateRows" />
+    </Node>
+    <Node ToolID="17">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1494" y="246" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="IF [PotentialRowIDMin]=[CurrentRowID]&#xA;THEN [PotentialRowIDMin]&#xA;ELSEIF [direction]=1 and [PotentialRowIDMin]&gt;[Max_RowID]&#xA;THEN [Min_RowID]+([PotentialRowIDMin]-[Max_RowID])-1&#xA;ELSEIF [direction]=3 and [PotentialRowIDMin]&lt;[Min_RowID]&#xA;THEN [Max_RowID]-([Min_RowID] - [PotentialRowIDMin])+1&#xA;ELSE [PotentialRowIDMin]&#xA;ENDIF" field="PotentialRowIDMin" size="4" type="Int32" />
+            <FormulaField expression="IF [PotentialColIDMin]=[CurrentColID]&#xA;THEN [PotentialColIDMin]&#xA;ELSEIF [direction]=2 and [PotentialColIDMin]&lt;[Min_ColID]&#xA;THEN [Max_ColID]-([Min_ColID] - [PotentialColIDMin])+1&#xA;ELSEIF [direction]=0 and [PotentialColIDMin]&gt;[Max_ColID]&#xA;THEN [Min_ColID]+([PotentialColIDMin]-[Max_ColID])-1&#xA;ELSE [PotentialColIDMin]&#xA;ENDIF" field="PotentialColIDMin" size="4" type="Int32" />
+            <FormulaField expression="IF [PotentialColIDMax]=[CurrentColID] and [PotentialRowIDMax]=[CurrentRowID]&#xA;THEN ToNumber([data])+2-[AttemptOrder]&#xA;ELSE [AttemptOrder]&#xA;ENDIF" field="AttemptOrder" size="4" type="Int32" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Apply runoff rule to land in new location</AnnotationText>
+          <DefaultAnnotationText>PotentialRowIDMin = IF [PotentialRowIDMin]=[CurrentRowID]
+THEN [PotentialRowIDMi...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="AttemptOrder" source="Formula: IF [PotentialColIDMax]=[CurrentColID] and [PotentialRowIDMax]=[CurrentRowID]&#xA;THEN ToNumber([data])+2-[AttemptOrder]&#xA;ELSE [AttemptOrder]&#xA;ENDIF" type="Int32" />
+            <Field name="CurrentRowID_abs" source="TextInput:" type="Byte" />
+            <Field name="CurrentColID_abs" source="TextInput:" type="Byte" />
+            <Field name="sect" size="1" source="TextInput:" type="String" />
+            <Field name="direction" source="Formula: IF [sect]='C' and [joinsheet]='EFAC'&#xA;THEN Switch([direction],Null(),0,3,2,1)&#xA;ELSEIF [sect]='F' and [joinsheet]='BCDF'&#xA;THEN Switch([direction],Null(),0,3,2,1)&#xA;ELSEIF [joinsheet]='BADE' and ([sect] in ('D','E'))&#xA;THEN Switch([direction],Null(),0,2,2,0)&#xA;ELSE [direction]&#xA;ENDIF&#xA;&#xA;&#xA;/* the C in EFAC, F in BCDF, and DE in BADE are all rotated from the other positioning */" type="Int16" />
+            <Field name="InstructionID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="data" source="Formula: Trim([data],'RL')" type="Byte" />
+            <Field name="dirChange" source="Formula: IF StartsWith([data], 'R')&#xA;THEN 1&#xA;ELSEIF StartsWith([data], 'L')&#xA;THEN -1&#xA;ELSE 0&#xA;ENDIF" type="Int16" />
+            <Field name="joinsheet" size="1073741823" source="Formula: IF ([sect] IN ('B','A','D','E')) and ([direction] in (0,2))&#xA;THEN 'BADE'&#xA;ELSEIF ([sect] IN ('B','C','D')) and ([direction] IN (1,3))&#xA;THEN 'BCDF'&#xA;ELSEIF ([sect] IN ('E','F','A')) and ([direction] IN (1,3))&#xA;THEN 'EFAC'&#xA;ELSEIF [sect]='C' and ([direction] in (0,2))&#xA;THEN 'EFAC'&#xA;ELSEIF [sect]='F' and ([direction] in (0,2))&#xA;THEN 'BCDF'&#xA;ELSE Null()&#xA;ENDIF " type="V_WString" />
+            <Field name="CurrentRowID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="CurrentColID" source="Transpose:" type="Int32" />
+            <Field name="rotate" size="1073741823" source="Formula: IF Contains([FileName], 'EFAC') and [sect]='C'&#xA;THEN 'row col switch 1-row'&#xA;ELSEIF Contains([FileName], 'BCDF') and [sect]='F'&#xA;THEN 'row col switch 1-row'&#xA;ELSEIF Contains([FileName],'BADE') and ([sect] in ('E','D'))&#xA;THEN '1-row 1-col'&#xA;ELSE 'none'&#xA;ENDIF&#xA;" type="V_WString" />
+            <Field name="Sheet" size="1073741823" source="Formula: Trim(Right([FileName], 7), '`$')" type="V_WString" />
+            <Field name="Min_ColID" source="Formula: 1" type="Byte" />
+            <Field name="Max_ColID" source="Formula: IF [Sheet] = 'BADE'&#xA;THEN 200&#xA;ELSE 50&#xA;ENDIF" type="Byte" />
+            <Field name="Min_RowID" source="Formula: 1" type="Byte" />
+            <Field name="Max_RowID" source="Formula: IF [Sheet] = 'BADE'&#xA;THEN 50&#xA;ELSE 200&#xA;ENDIF" type="Byte" />
+            <Field name="PotentialRowIDMin" source="Formula: IF [PotentialRowIDMin]=[CurrentRowID]&#xA;THEN [PotentialRowIDMin]&#xA;ELSEIF [direction]=1 and [PotentialRowIDMin]&gt;[Max_RowID]&#xA;THEN [Min_RowID]+([PotentialRowIDMin]-[Max_RowID])-1&#xA;ELSEIF [direction]=3 and [PotentialRowIDMin]&lt;[Min_RowID]&#xA;THEN [Max_RowID]-([Min_RowID] - [PotentialRowIDMin])+1&#xA;ELSE [PotentialRowIDMin]&#xA;ENDIF" type="Int32" />
+            <Field name="PotentialRowIDMax" source="Formula: IF [direction]=1&#xA;THEN [CurrentRowID]+ToNumber([data])&#xA;ELSE [CurrentRowID]&#xA;ENDIF" type="Int32" />
+            <Field name="PotentialColIDMin" source="Formula: IF [PotentialColIDMin]=[CurrentColID]&#xA;THEN [PotentialColIDMin]&#xA;ELSEIF [direction]=2 and [PotentialColIDMin]&lt;[Min_ColID]&#xA;THEN [Max_ColID]-([Min_ColID] - [PotentialColIDMin])+1&#xA;ELSEIF [direction]=0 and [PotentialColIDMin]&gt;[Max_ColID]&#xA;THEN [Min_ColID]+([PotentialColIDMin]-[Max_ColID])-1&#xA;ELSE [PotentialColIDMin]&#xA;ENDIF" type="Int32" />
+            <Field name="PotentialColIDMax" source="Formula: IF [direction]=0&#xA;THEN [CurrentColID]+ToNumber([data])&#xA;ELSE [CurrentColID]&#xA;ENDIF" type="Int32" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="CurrentRowID_abs" order="" />
+            <Field field="CurrentColID_abs" order="" />
+            <Field field="joinsheet" order="" />
+            <Field field="sect" order="" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="19">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1578" y="246" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="data" selected="False" />
+            <SelectField field="PotentialRowIDMax" selected="False" />
+            <SelectField field="PotentialColIDMax" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="AttemptOrder" source="Formula: IF [PotentialColIDMax]=[CurrentColID] and [PotentialRowIDMax]=[CurrentRowID]&#xA;THEN ToNumber([data])+2-[AttemptOrder]&#xA;ELSE [AttemptOrder]&#xA;ENDIF" type="Int32" />
+            <Field name="CurrentRowID_abs" source="TextInput:" type="Byte" />
+            <Field name="CurrentColID_abs" source="TextInput:" type="Byte" />
+            <Field name="sect" size="1" source="TextInput:" type="String" />
+            <Field name="direction" source="Formula: IF [sect]='C' and [joinsheet]='EFAC'&#xA;THEN Switch([direction],Null(),0,3,2,1)&#xA;ELSEIF [sect]='F' and [joinsheet]='BCDF'&#xA;THEN Switch([direction],Null(),0,3,2,1)&#xA;ELSEIF [joinsheet]='BADE' and ([sect] in ('D','E'))&#xA;THEN Switch([direction],Null(),0,2,2,0)&#xA;ELSE [direction]&#xA;ENDIF&#xA;&#xA;&#xA;/* the C in EFAC, F in BCDF, and DE in BADE are all rotated from the other positioning */" type="Int16" />
+            <Field name="InstructionID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="dirChange" source="Formula: IF StartsWith([data], 'R')&#xA;THEN 1&#xA;ELSEIF StartsWith([data], 'L')&#xA;THEN -1&#xA;ELSE 0&#xA;ENDIF" type="Int16" />
+            <Field name="joinsheet" size="1073741823" source="Formula: IF ([sect] IN ('B','A','D','E')) and ([direction] in (0,2))&#xA;THEN 'BADE'&#xA;ELSEIF ([sect] IN ('B','C','D')) and ([direction] IN (1,3))&#xA;THEN 'BCDF'&#xA;ELSEIF ([sect] IN ('E','F','A')) and ([direction] IN (1,3))&#xA;THEN 'EFAC'&#xA;ELSEIF [sect]='C' and ([direction] in (0,2))&#xA;THEN 'EFAC'&#xA;ELSEIF [sect]='F' and ([direction] in (0,2))&#xA;THEN 'BCDF'&#xA;ELSE Null()&#xA;ENDIF " type="V_WString" />
+            <Field name="CurrentRowID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="CurrentColID" source="Transpose:" type="Int32" />
+            <Field name="rotate" size="1073741823" source="Formula: IF Contains([FileName], 'EFAC') and [sect]='C'&#xA;THEN 'row col switch 1-row'&#xA;ELSEIF Contains([FileName], 'BCDF') and [sect]='F'&#xA;THEN 'row col switch 1-row'&#xA;ELSEIF Contains([FileName],'BADE') and ([sect] in ('E','D'))&#xA;THEN '1-row 1-col'&#xA;ELSE 'none'&#xA;ENDIF&#xA;" type="V_WString" />
+            <Field name="Sheet" size="1073741823" source="Formula: Trim(Right([FileName], 7), '`$')" type="V_WString" />
+            <Field name="Min_ColID" source="Formula: 1" type="Byte" />
+            <Field name="Max_ColID" source="Formula: IF [Sheet] = 'BADE'&#xA;THEN 200&#xA;ELSE 50&#xA;ENDIF" type="Byte" />
+            <Field name="Min_RowID" source="Formula: 1" type="Byte" />
+            <Field name="Max_RowID" source="Formula: IF [Sheet] = 'BADE'&#xA;THEN 50&#xA;ELSE 200&#xA;ENDIF" type="Byte" />
+            <Field name="PotentialRowIDMin" source="Formula: IF [PotentialRowIDMin]=[CurrentRowID]&#xA;THEN [PotentialRowIDMin]&#xA;ELSEIF [direction]=1 and [PotentialRowIDMin]&gt;[Max_RowID]&#xA;THEN [Min_RowID]+([PotentialRowIDMin]-[Max_RowID])-1&#xA;ELSEIF [direction]=3 and [PotentialRowIDMin]&lt;[Min_RowID]&#xA;THEN [Max_RowID]-([Min_RowID] - [PotentialRowIDMin])+1&#xA;ELSE [PotentialRowIDMin]&#xA;ENDIF" type="Int32" />
+            <Field name="PotentialColIDMin" source="Formula: IF [PotentialColIDMin]=[CurrentColID]&#xA;THEN [PotentialColIDMin]&#xA;ELSEIF [direction]=2 and [PotentialColIDMin]&lt;[Min_ColID]&#xA;THEN [Max_ColID]-([Min_ColID] - [PotentialColIDMin])+1&#xA;ELSEIF [direction]=0 and [PotentialColIDMin]&gt;[Max_ColID]&#xA;THEN [Min_ColID]+([PotentialColIDMin]-[Max_ColID])-1&#xA;ELSE [PotentialColIDMin]&#xA;ENDIF" type="Int32" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="CurrentRowID_abs" order="" />
+            <Field field="CurrentColID_abs" order="" />
+            <Field field="joinsheet" order="" />
+            <Field field="sect" order="" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="20">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="1662" y="258" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="PotentialRowIDMin" />
+            <Field field="PotentialColIDMin" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="RowID" />
+            <Field field="ColID" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_sect" selected="True" rename="Right_sect" input="Right_" />
+                <SelectField field="Right_RowID" selected="True" rename="Right_RowID" input="Right_" />
+                <SelectField field="Right_ColID" selected="True" rename="Right_ColID" input="Right_" />
+                <SelectField field="Right_Sheet" selected="True" rename="Right_Sheet" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Remove movements that run into walls</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="AttemptOrder" source="Formula: IF [PotentialColIDMax]=[CurrentColID] and [PotentialRowIDMax]=[CurrentRowID]&#xA;THEN ToNumber([data])+2-[AttemptOrder]&#xA;ELSE [AttemptOrder]&#xA;ENDIF" type="Int32" />
+            <Field name="CurrentRowID_abs" source="TextInput:" type="Byte" />
+            <Field name="CurrentColID_abs" source="TextInput:" type="Byte" />
+            <Field name="sect" size="1" source="TextInput:" type="String" />
+            <Field name="direction" source="Formula: IF [sect]='C' and [joinsheet]='EFAC'&#xA;THEN Switch([direction],Null(),0,3,2,1)&#xA;ELSEIF [sect]='F' and [joinsheet]='BCDF'&#xA;THEN Switch([direction],Null(),0,3,2,1)&#xA;ELSEIF [joinsheet]='BADE' and ([sect] in ('D','E'))&#xA;THEN Switch([direction],Null(),0,2,2,0)&#xA;ELSE [direction]&#xA;ENDIF&#xA;&#xA;&#xA;/* the C in EFAC, F in BCDF, and DE in BADE are all rotated from the other positioning */" type="Int16" />
+            <Field name="InstructionID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="dirChange" source="Formula: IF StartsWith([data], 'R')&#xA;THEN 1&#xA;ELSEIF StartsWith([data], 'L')&#xA;THEN -1&#xA;ELSE 0&#xA;ENDIF" type="Int16" />
+            <Field name="joinsheet" size="1073741823" source="Formula: IF ([sect] IN ('B','A','D','E')) and ([direction] in (0,2))&#xA;THEN 'BADE'&#xA;ELSEIF ([sect] IN ('B','C','D')) and ([direction] IN (1,3))&#xA;THEN 'BCDF'&#xA;ELSEIF ([sect] IN ('E','F','A')) and ([direction] IN (1,3))&#xA;THEN 'EFAC'&#xA;ELSEIF [sect]='C' and ([direction] in (0,2))&#xA;THEN 'EFAC'&#xA;ELSEIF [sect]='F' and ([direction] in (0,2))&#xA;THEN 'BCDF'&#xA;ELSE Null()&#xA;ENDIF " type="V_WString" />
+            <Field name="CurrentRowID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="CurrentColID" source="Transpose:" type="Int32" />
+            <Field name="rotate" size="1073741823" source="Formula: IF Contains([FileName], 'EFAC') and [sect]='C'&#xA;THEN 'row col switch 1-row'&#xA;ELSEIF Contains([FileName], 'BCDF') and [sect]='F'&#xA;THEN 'row col switch 1-row'&#xA;ELSEIF Contains([FileName],'BADE') and ([sect] in ('E','D'))&#xA;THEN '1-row 1-col'&#xA;ELSE 'none'&#xA;ENDIF&#xA;" type="V_WString" />
+            <Field name="Sheet" size="1073741823" source="Formula: Trim(Right([FileName], 7), '`$')" type="V_WString" />
+            <Field name="Min_ColID" source="Formula: 1" type="Byte" />
+            <Field name="Max_ColID" source="Formula: IF [Sheet] = 'BADE'&#xA;THEN 200&#xA;ELSE 50&#xA;ENDIF" type="Byte" />
+            <Field name="Min_RowID" source="Formula: 1" type="Byte" />
+            <Field name="Max_RowID" source="Formula: IF [Sheet] = 'BADE'&#xA;THEN 50&#xA;ELSE 200&#xA;ENDIF" type="Byte" />
+            <Field name="PotentialRowIDMin" source="Formula: IF [PotentialRowIDMin]=[CurrentRowID]&#xA;THEN [PotentialRowIDMin]&#xA;ELSEIF [direction]=1 and [PotentialRowIDMin]&gt;[Max_RowID]&#xA;THEN [Min_RowID]+([PotentialRowIDMin]-[Max_RowID])-1&#xA;ELSEIF [direction]=3 and [PotentialRowIDMin]&lt;[Min_RowID]&#xA;THEN [Max_RowID]-([Min_RowID] - [PotentialRowIDMin])+1&#xA;ELSE [PotentialRowIDMin]&#xA;ENDIF" type="Int32" />
+            <Field name="PotentialColIDMin" source="Formula: IF [PotentialColIDMin]=[CurrentColID]&#xA;THEN [PotentialColIDMin]&#xA;ELSEIF [direction]=2 and [PotentialColIDMin]&lt;[Min_ColID]&#xA;THEN [Max_ColID]-([Min_ColID] - [PotentialColIDMin])+1&#xA;ELSEIF [direction]=0 and [PotentialColIDMin]&gt;[Max_ColID]&#xA;THEN [Min_ColID]+([PotentialColIDMin]-[Max_ColID])-1&#xA;ELSE [PotentialColIDMin]&#xA;ENDIF" type="Int32" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="PotentialRowIDMin" />
+            <Field field="PotentialColIDMin" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field name="AttemptOrder" source="Formula: IF [PotentialColIDMax]=[CurrentColID] and [PotentialRowIDMax]=[CurrentRowID]&#xA;THEN ToNumber([data])+2-[AttemptOrder]&#xA;ELSE [AttemptOrder]&#xA;ENDIF" type="Int32" />
+            <Field name="CurrentRowID_abs" source="TextInput:" type="Byte" />
+            <Field name="CurrentColID_abs" source="TextInput:" type="Byte" />
+            <Field name="sect" size="1" source="TextInput:" type="String" />
+            <Field name="direction" source="Formula: IF [sect]='C' and [joinsheet]='EFAC'&#xA;THEN Switch([direction],Null(),0,3,2,1)&#xA;ELSEIF [sect]='F' and [joinsheet]='BCDF'&#xA;THEN Switch([direction],Null(),0,3,2,1)&#xA;ELSEIF [joinsheet]='BADE' and ([sect] in ('D','E'))&#xA;THEN Switch([direction],Null(),0,2,2,0)&#xA;ELSE [direction]&#xA;ENDIF&#xA;&#xA;&#xA;/* the C in EFAC, F in BCDF, and DE in BADE are all rotated from the other positioning */" type="Int16" />
+            <Field name="InstructionID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="dirChange" source="Formula: IF StartsWith([data], 'R')&#xA;THEN 1&#xA;ELSEIF StartsWith([data], 'L')&#xA;THEN -1&#xA;ELSE 0&#xA;ENDIF" type="Int16" />
+            <Field name="joinsheet" size="1073741823" source="Formula: IF ([sect] IN ('B','A','D','E')) and ([direction] in (0,2))&#xA;THEN 'BADE'&#xA;ELSEIF ([sect] IN ('B','C','D')) and ([direction] IN (1,3))&#xA;THEN 'BCDF'&#xA;ELSEIF ([sect] IN ('E','F','A')) and ([direction] IN (1,3))&#xA;THEN 'EFAC'&#xA;ELSEIF [sect]='C' and ([direction] in (0,2))&#xA;THEN 'EFAC'&#xA;ELSEIF [sect]='F' and ([direction] in (0,2))&#xA;THEN 'BCDF'&#xA;ELSE Null()&#xA;ENDIF " type="V_WString" />
+            <Field name="CurrentRowID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="CurrentColID" source="Transpose:" type="Int32" />
+            <Field name="rotate" size="1073741823" source="Formula: IF Contains([FileName], 'EFAC') and [sect]='C'&#xA;THEN 'row col switch 1-row'&#xA;ELSEIF Contains([FileName], 'BCDF') and [sect]='F'&#xA;THEN 'row col switch 1-row'&#xA;ELSEIF Contains([FileName],'BADE') and ([sect] in ('E','D'))&#xA;THEN '1-row 1-col'&#xA;ELSE 'none'&#xA;ENDIF&#xA;" type="V_WString" />
+            <Field name="Sheet" size="1073741823" source="Formula: Trim(Right([FileName], 7), '`$')" type="V_WString" />
+            <Field name="Min_ColID" source="Formula: 1" type="Byte" />
+            <Field name="Max_ColID" source="Formula: IF [Sheet] = 'BADE'&#xA;THEN 200&#xA;ELSE 50&#xA;ENDIF" type="Byte" />
+            <Field name="Min_RowID" source="Formula: 1" type="Byte" />
+            <Field name="Max_RowID" source="Formula: IF [Sheet] = 'BADE'&#xA;THEN 50&#xA;ELSE 200&#xA;ENDIF" type="Byte" />
+            <Field name="PotentialRowIDMin" source="Formula: IF [PotentialRowIDMin]=[CurrentRowID]&#xA;THEN [PotentialRowIDMin]&#xA;ELSEIF [direction]=1 and [PotentialRowIDMin]&gt;[Max_RowID]&#xA;THEN [Min_RowID]+([PotentialRowIDMin]-[Max_RowID])-1&#xA;ELSEIF [direction]=3 and [PotentialRowIDMin]&lt;[Min_RowID]&#xA;THEN [Max_RowID]-([Min_RowID] - [PotentialRowIDMin])+1&#xA;ELSE [PotentialRowIDMin]&#xA;ENDIF" type="Int32" />
+            <Field name="PotentialColIDMin" source="Formula: IF [PotentialColIDMin]=[CurrentColID]&#xA;THEN [PotentialColIDMin]&#xA;ELSEIF [direction]=2 and [PotentialColIDMin]&lt;[Min_ColID]&#xA;THEN [Max_ColID]-([Min_ColID] - [PotentialColIDMin])+1&#xA;ELSEIF [direction]=0 and [PotentialColIDMin]&gt;[Max_ColID]&#xA;THEN [Min_ColID]+([PotentialColIDMin]-[Max_ColID])-1&#xA;ELSE [PotentialColIDMin]&#xA;ENDIF" type="Int32" />
+            <Field name="Right_sect" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Right_RowID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="Right_ColID" source="Transpose:" type="Int32" />
+            <Field name="Right_Sheet" size="1073741823" source="Formula: Trim(Right([FileName], 7), '`$')" type="V_WString" />
+            <Field name="RowID_abs" source="Formula: IF [rotate] = 'none'&#xA;THEN [RowID_sect]+[Min_RowID_abs]-1&#xA;ELSEIF [rotate] = 'row col switch 1-row'&#xA;THEN [ColID_sect]+[Min_RowID_abs]-1&#xA;ELSEIF [rotate] = '1-row 1-col'&#xA;THEN (50-[RowID_sect])+[Min_RowID_abs]&#xA;ELSE null()&#xA;ENDIF" type="Int32" />
+            <Field name="ColID_abs" source="Formula: IF [rotate]='none'&#xA;THEN [ColID_sect]+[Min_ColID_abs]-1&#xA;ELSEIF [rotate]='row col switch 1-row'&#xA;THEN (50-[RowID_sect]-1)+[Min_ColID_abs]+1&#xA;ELSEIF [rotate]='1-row 1-col'&#xA;THEN (50-[ColID_sect])+[Min_ColID_abs]&#xA;ELSE null()&#xA;ENDIF" type="Int32" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="PotentialRowIDMin" order="" />
+            <Field field="PotentialColIDMin" order="" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="sect" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="RowID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="ColID" source="Transpose:" type="Int32" />
+            <Field name="Sheet" size="1073741823" source="Formula: Trim(Right([FileName], 7), '`$')" type="V_WString" />
+            <Field name="RowID_abs" source="Formula: IF [rotate] = 'none'&#xA;THEN [RowID_sect]+[Min_RowID_abs]-1&#xA;ELSEIF [rotate] = 'row col switch 1-row'&#xA;THEN [ColID_sect]+[Min_RowID_abs]-1&#xA;ELSEIF [rotate] = '1-row 1-col'&#xA;THEN (50-[RowID_sect])+[Min_RowID_abs]&#xA;ELSE null()&#xA;ENDIF" type="Int32" />
+            <Field name="ColID_abs" source="Formula: IF [rotate]='none'&#xA;THEN [ColID_sect]+[Min_ColID_abs]-1&#xA;ELSEIF [rotate]='row col switch 1-row'&#xA;THEN (50-[RowID_sect]-1)+[Min_ColID_abs]+1&#xA;ELSEIF [rotate]='1-row 1-col'&#xA;THEN (50-[ColID_sect])+[Min_ColID_abs]&#xA;ELSE null()&#xA;ENDIF" type="Int32" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="RowID" />
+            <Field field="ColID" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="21">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+        <Position x="522" y="438" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>ColID</Field>
+          <Delimeters value="," />
+          <NumFields value="1" />
+          <Flags value="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Parse wall coordinates</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="RowID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="TextToColumns: Parsed from ColID" name="ColID" size="2147483647" source="TextToColumns: Parsed from ColID" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns" />
+    </Node>
+    <Node ToolID="22">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="606" y="438" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="ColID" selected="True" type="Int32" size="4" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="RowID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="TextToColumns: Parsed from ColID" name="ColID" source="TextToColumns: Parsed from ColID" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="23">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="1794" y="246" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="1033">
+            <Field field="AttemptOrder" order="Ascending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>AttemptOrder - Ascending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="AttemptOrder" source="Formula: IF [PotentialColIDMax]=[CurrentColID] and [PotentialRowIDMax]=[CurrentRowID]&#xA;THEN ToNumber([data])+2-[AttemptOrder]&#xA;ELSE [AttemptOrder]&#xA;ENDIF" type="Int32" />
+            <Field name="CurrentRowID_abs" source="TextInput:" type="Byte" />
+            <Field name="CurrentColID_abs" source="TextInput:" type="Byte" />
+            <Field name="sect" size="1" source="TextInput:" type="String" />
+            <Field name="direction" source="Formula: IF [sect]='C' and [joinsheet]='EFAC'&#xA;THEN Switch([direction],Null(),0,3,2,1)&#xA;ELSEIF [sect]='F' and [joinsheet]='BCDF'&#xA;THEN Switch([direction],Null(),0,3,2,1)&#xA;ELSEIF [joinsheet]='BADE' and ([sect] in ('D','E'))&#xA;THEN Switch([direction],Null(),0,2,2,0)&#xA;ELSE [direction]&#xA;ENDIF&#xA;&#xA;&#xA;/* the C in EFAC, F in BCDF, and DE in BADE are all rotated from the other positioning */" type="Int16" />
+            <Field name="InstructionID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="dirChange" source="Formula: IF StartsWith([data], 'R')&#xA;THEN 1&#xA;ELSEIF StartsWith([data], 'L')&#xA;THEN -1&#xA;ELSE 0&#xA;ENDIF" type="Int16" />
+            <Field name="joinsheet" size="1073741823" source="Formula: IF ([sect] IN ('B','A','D','E')) and ([direction] in (0,2))&#xA;THEN 'BADE'&#xA;ELSEIF ([sect] IN ('B','C','D')) and ([direction] IN (1,3))&#xA;THEN 'BCDF'&#xA;ELSEIF ([sect] IN ('E','F','A')) and ([direction] IN (1,3))&#xA;THEN 'EFAC'&#xA;ELSEIF [sect]='C' and ([direction] in (0,2))&#xA;THEN 'EFAC'&#xA;ELSEIF [sect]='F' and ([direction] in (0,2))&#xA;THEN 'BCDF'&#xA;ELSE Null()&#xA;ENDIF " type="V_WString" />
+            <Field name="CurrentRowID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="CurrentColID" source="Transpose:" type="Int32" />
+            <Field name="rotate" size="1073741823" source="Formula: IF Contains([FileName], 'EFAC') and [sect]='C'&#xA;THEN 'row col switch 1-row'&#xA;ELSEIF Contains([FileName], 'BCDF') and [sect]='F'&#xA;THEN 'row col switch 1-row'&#xA;ELSEIF Contains([FileName],'BADE') and ([sect] in ('E','D'))&#xA;THEN '1-row 1-col'&#xA;ELSE 'none'&#xA;ENDIF&#xA;" type="V_WString" />
+            <Field name="Sheet" size="1073741823" source="Formula: Trim(Right([FileName], 7), '`$')" type="V_WString" />
+            <Field name="Min_ColID" source="Formula: 1" type="Byte" />
+            <Field name="Max_ColID" source="Formula: IF [Sheet] = 'BADE'&#xA;THEN 200&#xA;ELSE 50&#xA;ENDIF" type="Byte" />
+            <Field name="Min_RowID" source="Formula: 1" type="Byte" />
+            <Field name="Max_RowID" source="Formula: IF [Sheet] = 'BADE'&#xA;THEN 50&#xA;ELSE 200&#xA;ENDIF" type="Byte" />
+            <Field name="PotentialRowIDMin" source="Formula: IF [PotentialRowIDMin]=[CurrentRowID]&#xA;THEN [PotentialRowIDMin]&#xA;ELSEIF [direction]=1 and [PotentialRowIDMin]&gt;[Max_RowID]&#xA;THEN [Min_RowID]+([PotentialRowIDMin]-[Max_RowID])-1&#xA;ELSEIF [direction]=3 and [PotentialRowIDMin]&lt;[Min_RowID]&#xA;THEN [Max_RowID]-([Min_RowID] - [PotentialRowIDMin])+1&#xA;ELSE [PotentialRowIDMin]&#xA;ENDIF" type="Int32" />
+            <Field name="PotentialColIDMin" source="Formula: IF [PotentialColIDMin]=[CurrentColID]&#xA;THEN [PotentialColIDMin]&#xA;ELSEIF [direction]=2 and [PotentialColIDMin]&lt;[Min_ColID]&#xA;THEN [Max_ColID]-([Min_ColID] - [PotentialColIDMin])+1&#xA;ELSEIF [direction]=0 and [PotentialColIDMin]&gt;[Max_ColID]&#xA;THEN [Min_ColID]+([PotentialColIDMin]-[Max_ColID])-1&#xA;ELSE [PotentialColIDMin]&#xA;ENDIF" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="24">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+        <Position x="1902" y="246" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="True" />
+          <UpdateField_Name>PotentialRowIDMin</UpdateField_Name>
+          <CreateField_Name>New Field</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <OtherRows>Empty</OtherRows>
+          <NumRows value="1" />
+          <Expression>IF [AttemptOrder]-[Row-1:AttemptOrder]&gt;1
+THEN Null()
+ELSEIF IsNull([Row-1:PotentialRowIDMin])
+THEN Null()
+ELSE [PotentialRowIDMin]
+ENDIF</Expression>
+          <GroupByFields />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Stop moving as soon as hit the first wall</AnnotationText>
+          <DefaultAnnotationText>IF [AttemptOrder]-[Row-1:AttemptOrder]&gt;1
+THEN Null()
+ELSEIF I...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="AttemptOrder" source="Formula: IF [PotentialColIDMax]=[CurrentColID] and [PotentialRowIDMax]=[CurrentRowID]&#xA;THEN ToNumber([data])+2-[AttemptOrder]&#xA;ELSE [AttemptOrder]&#xA;ENDIF" type="Int32" />
+            <Field name="CurrentRowID_abs" source="TextInput:" type="Byte" />
+            <Field name="CurrentColID_abs" source="TextInput:" type="Byte" />
+            <Field name="sect" size="1" source="TextInput:" type="String" />
+            <Field name="direction" source="Formula: IF [sect]='C' and [joinsheet]='EFAC'&#xA;THEN Switch([direction],Null(),0,3,2,1)&#xA;ELSEIF [sect]='F' and [joinsheet]='BCDF'&#xA;THEN Switch([direction],Null(),0,3,2,1)&#xA;ELSEIF [joinsheet]='BADE' and ([sect] in ('D','E'))&#xA;THEN Switch([direction],Null(),0,2,2,0)&#xA;ELSE [direction]&#xA;ENDIF&#xA;&#xA;&#xA;/* the C in EFAC, F in BCDF, and DE in BADE are all rotated from the other positioning */" type="Int16" />
+            <Field name="InstructionID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="dirChange" source="Formula: IF StartsWith([data], 'R')&#xA;THEN 1&#xA;ELSEIF StartsWith([data], 'L')&#xA;THEN -1&#xA;ELSE 0&#xA;ENDIF" type="Int16" />
+            <Field name="joinsheet" size="1073741823" source="Formula: IF ([sect] IN ('B','A','D','E')) and ([direction] in (0,2))&#xA;THEN 'BADE'&#xA;ELSEIF ([sect] IN ('B','C','D')) and ([direction] IN (1,3))&#xA;THEN 'BCDF'&#xA;ELSEIF ([sect] IN ('E','F','A')) and ([direction] IN (1,3))&#xA;THEN 'EFAC'&#xA;ELSEIF [sect]='C' and ([direction] in (0,2))&#xA;THEN 'EFAC'&#xA;ELSEIF [sect]='F' and ([direction] in (0,2))&#xA;THEN 'BCDF'&#xA;ELSE Null()&#xA;ENDIF " type="V_WString" />
+            <Field name="CurrentRowID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="CurrentColID" source="Transpose:" type="Int32" />
+            <Field name="rotate" size="1073741823" source="Formula: IF Contains([FileName], 'EFAC') and [sect]='C'&#xA;THEN 'row col switch 1-row'&#xA;ELSEIF Contains([FileName], 'BCDF') and [sect]='F'&#xA;THEN 'row col switch 1-row'&#xA;ELSEIF Contains([FileName],'BADE') and ([sect] in ('E','D'))&#xA;THEN '1-row 1-col'&#xA;ELSE 'none'&#xA;ENDIF&#xA;" type="V_WString" />
+            <Field name="Sheet" size="1073741823" source="Formula: Trim(Right([FileName], 7), '`$')" type="V_WString" />
+            <Field name="Min_ColID" source="Formula: 1" type="Byte" />
+            <Field name="Max_ColID" source="Formula: IF [Sheet] = 'BADE'&#xA;THEN 200&#xA;ELSE 50&#xA;ENDIF" type="Byte" />
+            <Field name="Min_RowID" source="Formula: 1" type="Byte" />
+            <Field name="Max_RowID" source="Formula: IF [Sheet] = 'BADE'&#xA;THEN 50&#xA;ELSE 200&#xA;ENDIF" type="Byte" />
+            <Field description="Formula: IF [AttemptOrder]-[Row-1:AttemptOrder]&gt;1&#xA;THEN Null()&#xA;ELSEIF IsNull([Row-1:PotentialRowIDMin])&#xA;THEN Null()&#xA;ELSE [PotentialRowIDMin]&#xA;ENDIF" name="PotentialRowIDMin" source="Formula: IF [AttemptOrder]-[Row-1:AttemptOrder]&gt;1&#xA;THEN Null()&#xA;ELSEIF IsNull([Row-1:PotentialRowIDMin])&#xA;THEN Null()&#xA;ELSE [PotentialRowIDMin]&#xA;ENDIF" type="Int32" />
+            <Field name="PotentialColIDMin" source="Formula: IF [PotentialColIDMin]=[CurrentColID]&#xA;THEN [PotentialColIDMin]&#xA;ELSEIF [direction]=2 and [PotentialColIDMin]&lt;[Min_ColID]&#xA;THEN [Max_ColID]-([Min_ColID] - [PotentialColIDMin])+1&#xA;ELSEIF [direction]=0 and [PotentialColIDMin]&gt;[Max_ColID]&#xA;THEN [Min_ColID]+([PotentialColIDMin]-[Max_ColID])-1&#xA;ELSE [PotentialColIDMin]&#xA;ENDIF" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+    </Node>
+    <Node ToolID="26">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="2010" y="246" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>!IsNull([PotentialRowIDMin])</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>!IsNull([PotentialRowIDMin])</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="AttemptOrder" source="Formula: IF [PotentialColIDMax]=[CurrentColID] and [PotentialRowIDMax]=[CurrentRowID]&#xA;THEN ToNumber([data])+2-[AttemptOrder]&#xA;ELSE [AttemptOrder]&#xA;ENDIF" type="Int32" />
+            <Field name="CurrentRowID_abs" source="TextInput:" type="Byte" />
+            <Field name="CurrentColID_abs" source="TextInput:" type="Byte" />
+            <Field name="sect" size="1" source="TextInput:" type="String" />
+            <Field name="direction" source="Formula: IF [sect]='C' and [joinsheet]='EFAC'&#xA;THEN Switch([direction],Null(),0,3,2,1)&#xA;ELSEIF [sect]='F' and [joinsheet]='BCDF'&#xA;THEN Switch([direction],Null(),0,3,2,1)&#xA;ELSEIF [joinsheet]='BADE' and ([sect] in ('D','E'))&#xA;THEN Switch([direction],Null(),0,2,2,0)&#xA;ELSE [direction]&#xA;ENDIF&#xA;&#xA;&#xA;/* the C in EFAC, F in BCDF, and DE in BADE are all rotated from the other positioning */" type="Int16" />
+            <Field name="InstructionID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="dirChange" source="Formula: IF StartsWith([data], 'R')&#xA;THEN 1&#xA;ELSEIF StartsWith([data], 'L')&#xA;THEN -1&#xA;ELSE 0&#xA;ENDIF" type="Int16" />
+            <Field name="joinsheet" size="1073741823" source="Formula: IF ([sect] IN ('B','A','D','E')) and ([direction] in (0,2))&#xA;THEN 'BADE'&#xA;ELSEIF ([sect] IN ('B','C','D')) and ([direction] IN (1,3))&#xA;THEN 'BCDF'&#xA;ELSEIF ([sect] IN ('E','F','A')) and ([direction] IN (1,3))&#xA;THEN 'EFAC'&#xA;ELSEIF [sect]='C' and ([direction] in (0,2))&#xA;THEN 'EFAC'&#xA;ELSEIF [sect]='F' and ([direction] in (0,2))&#xA;THEN 'BCDF'&#xA;ELSE Null()&#xA;ENDIF " type="V_WString" />
+            <Field name="CurrentRowID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="CurrentColID" source="Transpose:" type="Int32" />
+            <Field name="rotate" size="1073741823" source="Formula: IF Contains([FileName], 'EFAC') and [sect]='C'&#xA;THEN 'row col switch 1-row'&#xA;ELSEIF Contains([FileName], 'BCDF') and [sect]='F'&#xA;THEN 'row col switch 1-row'&#xA;ELSEIF Contains([FileName],'BADE') and ([sect] in ('E','D'))&#xA;THEN '1-row 1-col'&#xA;ELSE 'none'&#xA;ENDIF&#xA;" type="V_WString" />
+            <Field name="Sheet" size="1073741823" source="Formula: Trim(Right([FileName], 7), '`$')" type="V_WString" />
+            <Field name="Min_ColID" source="Formula: 1" type="Byte" />
+            <Field name="Max_ColID" source="Formula: IF [Sheet] = 'BADE'&#xA;THEN 200&#xA;ELSE 50&#xA;ENDIF" type="Byte" />
+            <Field name="Min_RowID" source="Formula: 1" type="Byte" />
+            <Field name="Max_RowID" source="Formula: IF [Sheet] = 'BADE'&#xA;THEN 50&#xA;ELSE 200&#xA;ENDIF" type="Byte" />
+            <Field description="Formula: IF [AttemptOrder]-[Row-1:AttemptOrder]&gt;1&#xA;THEN Null()&#xA;ELSEIF IsNull([Row-1:PotentialRowIDMin])&#xA;THEN Null()&#xA;ELSE [PotentialRowIDMin]&#xA;ENDIF" name="PotentialRowIDMin" source="Formula: IF [AttemptOrder]-[Row-1:AttemptOrder]&gt;1&#xA;THEN Null()&#xA;ELSEIF IsNull([Row-1:PotentialRowIDMin])&#xA;THEN Null()&#xA;ELSE [PotentialRowIDMin]&#xA;ENDIF" type="Int32" />
+            <Field name="PotentialColIDMin" source="Formula: IF [PotentialColIDMin]=[CurrentColID]&#xA;THEN [PotentialColIDMin]&#xA;ELSEIF [direction]=2 and [PotentialColIDMin]&lt;[Min_ColID]&#xA;THEN [Max_ColID]-([Min_ColID] - [PotentialColIDMin])+1&#xA;ELSEIF [direction]=0 and [PotentialColIDMin]&gt;[Max_ColID]&#xA;THEN [Min_ColID]+([PotentialColIDMin]-[Max_ColID])-1&#xA;ELSE [PotentialColIDMin]&#xA;ENDIF" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="AttemptOrder" source="Formula: IF [PotentialColIDMax]=[CurrentColID] and [PotentialRowIDMax]=[CurrentRowID]&#xA;THEN ToNumber([data])+2-[AttemptOrder]&#xA;ELSE [AttemptOrder]&#xA;ENDIF" type="Int32" />
+            <Field name="CurrentRowID_abs" source="TextInput:" type="Byte" />
+            <Field name="CurrentColID_abs" source="TextInput:" type="Byte" />
+            <Field name="sect" size="1" source="TextInput:" type="String" />
+            <Field name="direction" source="Formula: IF [sect]='C' and [joinsheet]='EFAC'&#xA;THEN Switch([direction],Null(),0,3,2,1)&#xA;ELSEIF [sect]='F' and [joinsheet]='BCDF'&#xA;THEN Switch([direction],Null(),0,3,2,1)&#xA;ELSEIF [joinsheet]='BADE' and ([sect] in ('D','E'))&#xA;THEN Switch([direction],Null(),0,2,2,0)&#xA;ELSE [direction]&#xA;ENDIF&#xA;&#xA;&#xA;/* the C in EFAC, F in BCDF, and DE in BADE are all rotated from the other positioning */" type="Int16" />
+            <Field name="InstructionID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="dirChange" source="Formula: IF StartsWith([data], 'R')&#xA;THEN 1&#xA;ELSEIF StartsWith([data], 'L')&#xA;THEN -1&#xA;ELSE 0&#xA;ENDIF" type="Int16" />
+            <Field name="joinsheet" size="1073741823" source="Formula: IF ([sect] IN ('B','A','D','E')) and ([direction] in (0,2))&#xA;THEN 'BADE'&#xA;ELSEIF ([sect] IN ('B','C','D')) and ([direction] IN (1,3))&#xA;THEN 'BCDF'&#xA;ELSEIF ([sect] IN ('E','F','A')) and ([direction] IN (1,3))&#xA;THEN 'EFAC'&#xA;ELSEIF [sect]='C' and ([direction] in (0,2))&#xA;THEN 'EFAC'&#xA;ELSEIF [sect]='F' and ([direction] in (0,2))&#xA;THEN 'BCDF'&#xA;ELSE Null()&#xA;ENDIF " type="V_WString" />
+            <Field name="CurrentRowID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="CurrentColID" source="Transpose:" type="Int32" />
+            <Field name="rotate" size="1073741823" source="Formula: IF Contains([FileName], 'EFAC') and [sect]='C'&#xA;THEN 'row col switch 1-row'&#xA;ELSEIF Contains([FileName], 'BCDF') and [sect]='F'&#xA;THEN 'row col switch 1-row'&#xA;ELSEIF Contains([FileName],'BADE') and ([sect] in ('E','D'))&#xA;THEN '1-row 1-col'&#xA;ELSE 'none'&#xA;ENDIF&#xA;" type="V_WString" />
+            <Field name="Sheet" size="1073741823" source="Formula: Trim(Right([FileName], 7), '`$')" type="V_WString" />
+            <Field name="Min_ColID" source="Formula: 1" type="Byte" />
+            <Field name="Max_ColID" source="Formula: IF [Sheet] = 'BADE'&#xA;THEN 200&#xA;ELSE 50&#xA;ENDIF" type="Byte" />
+            <Field name="Min_RowID" source="Formula: 1" type="Byte" />
+            <Field name="Max_RowID" source="Formula: IF [Sheet] = 'BADE'&#xA;THEN 50&#xA;ELSE 200&#xA;ENDIF" type="Byte" />
+            <Field description="Formula: IF [AttemptOrder]-[Row-1:AttemptOrder]&gt;1&#xA;THEN Null()&#xA;ELSEIF IsNull([Row-1:PotentialRowIDMin])&#xA;THEN Null()&#xA;ELSE [PotentialRowIDMin]&#xA;ENDIF" name="PotentialRowIDMin" source="Formula: IF [AttemptOrder]-[Row-1:AttemptOrder]&gt;1&#xA;THEN Null()&#xA;ELSEIF IsNull([Row-1:PotentialRowIDMin])&#xA;THEN Null()&#xA;ELSE [PotentialRowIDMin]&#xA;ENDIF" type="Int32" />
+            <Field name="PotentialColIDMin" source="Formula: IF [PotentialColIDMin]=[CurrentColID]&#xA;THEN [PotentialColIDMin]&#xA;ELSEIF [direction]=2 and [PotentialColIDMin]&lt;[Min_ColID]&#xA;THEN [Max_ColID]-([Min_ColID] - [PotentialColIDMin])+1&#xA;ELSEIF [direction]=0 and [PotentialColIDMin]&gt;[Max_ColID]&#xA;THEN [Min_ColID]+([PotentialColIDMin]-[Max_ColID])-1&#xA;ELSE [PotentialColIDMin]&#xA;ENDIF" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="27">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="2106" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="AttemptOrder" action="Max" rename="Max_AttemptOrder" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Max_AttemptOrder" source="Formula: IF [PotentialColIDMax]=[CurrentColID] and [PotentialRowIDMax]=[CurrentRowID]&#xA;THEN ToNumber([data])+2-[AttemptOrder]&#xA;ELSE [AttemptOrder]&#xA;ENDIF" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="28">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="2202" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Max_AttemptOrder" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="AttemptOrder" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_AttemptOrder" selected="True" input="Right_" />
+                <SelectField field="Right_CurrentRowID_abs" selected="True" rename="OldRowID" input="Right_" />
+                <SelectField field="Right_CurrentColID_abs" selected="True" rename="OldColID" input="Right_" />
+                <SelectField field="Right_direction" selected="True" input="Right_" />
+                <SelectField field="Right_InstructionID" selected="True" input="Right_" />
+                <SelectField field="Right_Sheet" selected="True" input="Right_" />
+                <SelectField field="Right_Min_ColID" selected="True" input="Right_" />
+                <SelectField field="Right_Max_ColID" selected="True" input="Right_" />
+                <SelectField field="Right_Min_RowID" selected="True" input="Right_" />
+                <SelectField field="Right_Max_RowID" selected="True" input="Right_" />
+                <SelectField field="Right_PotentialRowIDMin" selected="True" rename="CurrentRowID" input="Right_" />
+                <SelectField field="Right_PotentialColIDMin" selected="True" rename="CurrentColID" input="Right_" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Get ending position</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="Max_AttemptOrder" source="Formula: IF [PotentialColIDMax]=[CurrentColID] and [PotentialRowIDMax]=[CurrentRowID]&#xA;THEN ToNumber([data])+2-[AttemptOrder]&#xA;ELSE [AttemptOrder]&#xA;ENDIF" type="Int32" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="Max_AttemptOrder" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field name="AttemptOrder" source="Formula: IF [PotentialColIDMax]=[CurrentColID] and [PotentialRowIDMax]=[CurrentRowID]&#xA;THEN ToNumber([data])+2-[AttemptOrder]&#xA;ELSE [AttemptOrder]&#xA;ENDIF" type="Int32" />
+            <Field name="OldRowID" source="TextInput:" type="Byte" />
+            <Field name="OldColID" source="TextInput:" type="Byte" />
+            <Field name="direction" source="Formula: IF [sect]='C' and [joinsheet]='EFAC'&#xA;THEN Switch([direction],Null(),0,3,2,1)&#xA;ELSEIF [sect]='F' and [joinsheet]='BCDF'&#xA;THEN Switch([direction],Null(),0,3,2,1)&#xA;ELSEIF [joinsheet]='BADE' and ([sect] in ('D','E'))&#xA;THEN Switch([direction],Null(),0,2,2,0)&#xA;ELSE [direction]&#xA;ENDIF&#xA;&#xA;&#xA;/* the C in EFAC, F in BCDF, and DE in BADE are all rotated from the other positioning */" type="Int16" />
+            <Field name="InstructionID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="Sheet" size="1073741823" source="Formula: Trim(Right([FileName], 7), '`$')" type="V_WString" />
+            <Field name="Min_ColID" source="Formula: 1" type="Byte" />
+            <Field name="Max_ColID" source="Formula: IF [Sheet] = 'BADE'&#xA;THEN 200&#xA;ELSE 50&#xA;ENDIF" type="Byte" />
+            <Field name="Min_RowID" source="Formula: 1" type="Byte" />
+            <Field name="Max_RowID" source="Formula: IF [Sheet] = 'BADE'&#xA;THEN 50&#xA;ELSE 200&#xA;ENDIF" type="Byte" />
+            <Field name="CurrentRowID" source="Formula: IF [PotentialRowIDMin]=[CurrentRowID]&#xA;THEN [PotentialRowIDMin]&#xA;ELSEIF [direction]=1 and [PotentialRowIDMin]&gt;[Max_RowID]&#xA;THEN [Min_RowID]+([PotentialRowIDMin]-[Max_RowID])-1&#xA;ELSEIF [direction]=3 and [PotentialRowIDMin]&lt;[Min_RowID]&#xA;THEN [Max_RowID]-([Min_RowID] - [PotentialRowIDMin])+1&#xA;ELSE [PotentialRowIDMin]&#xA;ENDIF" type="Int32" />
+            <Field name="CurrentColID" source="Formula: IF [PotentialColIDMin]=[CurrentColID]&#xA;THEN [PotentialColIDMin]&#xA;ELSEIF [direction]=2 and [PotentialColIDMin]&lt;[Min_ColID]&#xA;THEN [Max_ColID]-([Min_ColID] - [PotentialColIDMin])+1&#xA;ELSEIF [direction]=0 and [PotentialColIDMin]&gt;[Max_ColID]&#xA;THEN [Min_ColID]+([PotentialColIDMin]-[Max_ColID])-1&#xA;ELSE [PotentialColIDMin]&#xA;ENDIF" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="AttemptOrder" source="Formula: IF [PotentialColIDMax]=[CurrentColID] and [PotentialRowIDMax]=[CurrentRowID]&#xA;THEN ToNumber([data])+2-[AttemptOrder]&#xA;ELSE [AttemptOrder]&#xA;ENDIF" type="Int32" />
+            <Field name="CurrentRowID_abs" source="TextInput:" type="Byte" />
+            <Field name="CurrentColID_abs" source="TextInput:" type="Byte" />
+            <Field name="sect" size="1" source="TextInput:" type="String" />
+            <Field name="direction" source="Formula: IF [sect]='C' and [joinsheet]='EFAC'&#xA;THEN Switch([direction],Null(),0,3,2,1)&#xA;ELSEIF [sect]='F' and [joinsheet]='BCDF'&#xA;THEN Switch([direction],Null(),0,3,2,1)&#xA;ELSEIF [joinsheet]='BADE' and ([sect] in ('D','E'))&#xA;THEN Switch([direction],Null(),0,2,2,0)&#xA;ELSE [direction]&#xA;ENDIF&#xA;&#xA;&#xA;/* the C in EFAC, F in BCDF, and DE in BADE are all rotated from the other positioning */" type="Int16" />
+            <Field name="InstructionID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="dirChange" source="Formula: IF StartsWith([data], 'R')&#xA;THEN 1&#xA;ELSEIF StartsWith([data], 'L')&#xA;THEN -1&#xA;ELSE 0&#xA;ENDIF" type="Int16" />
+            <Field name="joinsheet" size="1073741823" source="Formula: IF ([sect] IN ('B','A','D','E')) and ([direction] in (0,2))&#xA;THEN 'BADE'&#xA;ELSEIF ([sect] IN ('B','C','D')) and ([direction] IN (1,3))&#xA;THEN 'BCDF'&#xA;ELSEIF ([sect] IN ('E','F','A')) and ([direction] IN (1,3))&#xA;THEN 'EFAC'&#xA;ELSEIF [sect]='C' and ([direction] in (0,2))&#xA;THEN 'EFAC'&#xA;ELSEIF [sect]='F' and ([direction] in (0,2))&#xA;THEN 'BCDF'&#xA;ELSE Null()&#xA;ENDIF " type="V_WString" />
+            <Field name="CurrentRowID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="CurrentColID" source="Transpose:" type="Int32" />
+            <Field name="rotate" size="1073741823" source="Formula: IF Contains([FileName], 'EFAC') and [sect]='C'&#xA;THEN 'row col switch 1-row'&#xA;ELSEIF Contains([FileName], 'BCDF') and [sect]='F'&#xA;THEN 'row col switch 1-row'&#xA;ELSEIF Contains([FileName],'BADE') and ([sect] in ('E','D'))&#xA;THEN '1-row 1-col'&#xA;ELSE 'none'&#xA;ENDIF&#xA;" type="V_WString" />
+            <Field name="Sheet" size="1073741823" source="Formula: Trim(Right([FileName], 7), '`$')" type="V_WString" />
+            <Field name="Min_ColID" source="Formula: 1" type="Byte" />
+            <Field name="Max_ColID" source="Formula: IF [Sheet] = 'BADE'&#xA;THEN 200&#xA;ELSE 50&#xA;ENDIF" type="Byte" />
+            <Field name="Min_RowID" source="Formula: 1" type="Byte" />
+            <Field name="Max_RowID" source="Formula: IF [Sheet] = 'BADE'&#xA;THEN 50&#xA;ELSE 200&#xA;ENDIF" type="Byte" />
+            <Field name="PotentialRowIDMin" source="Formula: IF [PotentialRowIDMin]=[CurrentRowID]&#xA;THEN [PotentialRowIDMin]&#xA;ELSEIF [direction]=1 and [PotentialRowIDMin]&gt;[Max_RowID]&#xA;THEN [Min_RowID]+([PotentialRowIDMin]-[Max_RowID])-1&#xA;ELSEIF [direction]=3 and [PotentialRowIDMin]&lt;[Min_RowID]&#xA;THEN [Max_RowID]-([Min_RowID] - [PotentialRowIDMin])+1&#xA;ELSE [PotentialRowIDMin]&#xA;ENDIF" type="Int32" />
+            <Field name="PotentialColIDMin" source="Formula: IF [PotentialColIDMin]=[CurrentColID]&#xA;THEN [PotentialColIDMin]&#xA;ELSEIF [direction]=2 and [PotentialColIDMin]&lt;[Min_ColID]&#xA;THEN [Max_ColID]-([Min_ColID] - [PotentialColIDMin])+1&#xA;ELSEIF [direction]=0 and [PotentialColIDMin]&gt;[Max_ColID]&#xA;THEN [Min_ColID]+([PotentialColIDMin]-[Max_ColID])-1&#xA;ELSE [PotentialColIDMin]&#xA;ENDIF" type="Int32" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="AttemptOrder" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="30">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="2778" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>Exit</Name>
+          <Abbrev />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Output</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="31">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="2778" y="366" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>Iterate</Name>
+          <Abbrev />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Output</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="32">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="2682" y="366" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="direction" selected="True" />
+            <SelectField field="CurrentRowID" selected="True" />
+            <SelectField field="CurrentColID" selected="True" />
+            <SelectField field="sect" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="direction" source="Formula: IF [sect]='C' and [joinsheet]='EFAC'&#xA;THEN Switch([direction],Null(),0,3,2,1)&#xA;ELSEIF [sect]='F' and [joinsheet]='BCDF'&#xA;THEN Switch([direction],Null(),0,3,2,1)&#xA;ELSEIF [joinsheet]='BADE' and ([sect] in ('D','E'))&#xA;THEN Switch([direction],Null(),0,2,2,0)&#xA;ELSE [direction]&#xA;ENDIF&#xA;&#xA;&#xA;/* the C in EFAC, F in BCDF, and DE in BADE are all rotated from the other positioning */" type="Int16" />
+            <Field name="CurrentRowID" source="Formula: IF [PotentialRowIDMin]=[CurrentRowID]&#xA;THEN [PotentialRowIDMin]&#xA;ELSEIF [direction]=1 and [PotentialRowIDMin]&gt;[Max_RowID]&#xA;THEN [Min_RowID]+([PotentialRowIDMin]-[Max_RowID])-1&#xA;ELSEIF [direction]=3 and [PotentialRowIDMin]&lt;[Min_RowID]&#xA;THEN [Max_RowID]-([Min_RowID] - [PotentialRowIDMin])+1&#xA;ELSE [PotentialRowIDMin]&#xA;ENDIF" type="Int32" />
+            <Field name="CurrentColID" source="Formula: IF [PotentialColIDMin]=[CurrentColID]&#xA;THEN [PotentialColIDMin]&#xA;ELSEIF [direction]=2 and [PotentialColIDMin]&lt;[Min_ColID]&#xA;THEN [Max_ColID]-([Min_ColID] - [PotentialColIDMin])+1&#xA;ELSEIF [direction]=0 and [PotentialColIDMin]&gt;[Max_ColID]&#xA;THEN [Min_ColID]+([PotentialColIDMin]-[Max_ColID])-1&#xA;ELSE [PotentialColIDMin]&#xA;ENDIF" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="35">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="2682" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="InstructionID" selected="True" />
+            <SelectField field="CurrentRowID" selected="True" />
+            <SelectField field="CurrentColID" selected="True" />
+            <SelectField field="OldRowID" selected="True" />
+            <SelectField field="OldColID" selected="True" />
+            <SelectField field="AttemptOrder" selected="True" />
+            <SelectField field="Sheet" selected="True" />
+            <SelectField field="sect" selected="True" />
+            <SelectField field="direction" selected="True" />
+            <SelectField field="Min_ColID" selected="False" />
+            <SelectField field="Max_ColID" selected="False" />
+            <SelectField field="Min_RowID" selected="False" />
+            <SelectField field="Max_RowID" selected="False" />
+            <SelectField field="direction_Sheet" selected="False" />
+            <SelectField field="CurrentRowID_relativeSheet" selected="False" />
+            <SelectField field="CurrentColID_relativeSheet" selected="False" />
+            <SelectField field="rotate" selected="False" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="InstructionID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="CurrentRowID" source="Formula: IF [PotentialRowIDMin]=[CurrentRowID]&#xA;THEN [PotentialRowIDMin]&#xA;ELSEIF [direction]=1 and [PotentialRowIDMin]&gt;[Max_RowID]&#xA;THEN [Min_RowID]+([PotentialRowIDMin]-[Max_RowID])-1&#xA;ELSEIF [direction]=3 and [PotentialRowIDMin]&lt;[Min_RowID]&#xA;THEN [Max_RowID]-([Min_RowID] - [PotentialRowIDMin])+1&#xA;ELSE [PotentialRowIDMin]&#xA;ENDIF" type="Int32" />
+            <Field name="CurrentColID" source="Formula: IF [PotentialColIDMin]=[CurrentColID]&#xA;THEN [PotentialColIDMin]&#xA;ELSEIF [direction]=2 and [PotentialColIDMin]&lt;[Min_ColID]&#xA;THEN [Max_ColID]-([Min_ColID] - [PotentialColIDMin])+1&#xA;ELSEIF [direction]=0 and [PotentialColIDMin]&gt;[Max_ColID]&#xA;THEN [Min_ColID]+([PotentialColIDMin]-[Max_ColID])-1&#xA;ELSE [PotentialColIDMin]&#xA;ENDIF" type="Int32" />
+            <Field name="OldRowID" source="TextInput:" type="Byte" />
+            <Field name="OldColID" source="TextInput:" type="Byte" />
+            <Field name="AttemptOrder" source="Formula: IF [PotentialColIDMax]=[CurrentColID] and [PotentialRowIDMax]=[CurrentRowID]&#xA;THEN ToNumber([data])+2-[AttemptOrder]&#xA;ELSE [AttemptOrder]&#xA;ENDIF" type="Int32" />
+            <Field name="Sheet" size="1073741823" source="Formula: Trim(Right([FileName], 7), '`$')" type="V_WString" />
+            <Field name="direction" source="Formula: IF [sect]='C' and [joinsheet]='EFAC'&#xA;THEN Switch([direction],Null(),0,3,2,1)&#xA;ELSEIF [sect]='F' and [joinsheet]='BCDF'&#xA;THEN Switch([direction],Null(),0,3,2,1)&#xA;ELSEIF [joinsheet]='BADE' and ([sect] in ('D','E'))&#xA;THEN Switch([direction],Null(),0,2,2,0)&#xA;ELSE [direction]&#xA;ENDIF&#xA;&#xA;&#xA;/* the C in EFAC, F in BCDF, and DE in BADE are all rotated from the other positioning */" type="Int16" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="37">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+        <Position x="1422" y="246" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldName>AttemptOrder</FieldName>
+          <StartValue>1</StartValue>
+          <FieldType>Int32</FieldType>
+          <FieldSize>6</FieldSize>
+          <Position>0</Position>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="AttemptOrder" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="CurrentRowID_abs" source="TextInput:" type="Byte" />
+            <Field name="CurrentColID_abs" source="TextInput:" type="Byte" />
+            <Field name="sect" size="1" source="TextInput:" type="String" />
+            <Field name="direction" source="Formula: IF [sect]='C' and [joinsheet]='EFAC'&#xA;THEN Switch([direction],Null(),0,3,2,1)&#xA;ELSEIF [sect]='F' and [joinsheet]='BCDF'&#xA;THEN Switch([direction],Null(),0,3,2,1)&#xA;ELSEIF [joinsheet]='BADE' and ([sect] in ('D','E'))&#xA;THEN Switch([direction],Null(),0,2,2,0)&#xA;ELSE [direction]&#xA;ENDIF&#xA;&#xA;&#xA;/* the C in EFAC, F in BCDF, and DE in BADE are all rotated from the other positioning */" type="Int16" />
+            <Field name="InstructionID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="data" source="Formula: Trim([data],'RL')" type="Byte" />
+            <Field name="dirChange" source="Formula: IF StartsWith([data], 'R')&#xA;THEN 1&#xA;ELSEIF StartsWith([data], 'L')&#xA;THEN -1&#xA;ELSE 0&#xA;ENDIF" type="Int16" />
+            <Field name="joinsheet" size="1073741823" source="Formula: IF ([sect] IN ('B','A','D','E')) and ([direction] in (0,2))&#xA;THEN 'BADE'&#xA;ELSEIF ([sect] IN ('B','C','D')) and ([direction] IN (1,3))&#xA;THEN 'BCDF'&#xA;ELSEIF ([sect] IN ('E','F','A')) and ([direction] IN (1,3))&#xA;THEN 'EFAC'&#xA;ELSEIF [sect]='C' and ([direction] in (0,2))&#xA;THEN 'EFAC'&#xA;ELSEIF [sect]='F' and ([direction] in (0,2))&#xA;THEN 'BCDF'&#xA;ELSE Null()&#xA;ENDIF " type="V_WString" />
+            <Field name="CurrentRowID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="CurrentColID" source="Transpose:" type="Int32" />
+            <Field name="rotate" size="1073741823" source="Formula: IF Contains([FileName], 'EFAC') and [sect]='C'&#xA;THEN 'row col switch 1-row'&#xA;ELSEIF Contains([FileName], 'BCDF') and [sect]='F'&#xA;THEN 'row col switch 1-row'&#xA;ELSEIF Contains([FileName],'BADE') and ([sect] in ('E','D'))&#xA;THEN '1-row 1-col'&#xA;ELSE 'none'&#xA;ENDIF&#xA;" type="V_WString" />
+            <Field name="Sheet" size="1073741823" source="Formula: Trim(Right([FileName], 7), '`$')" type="V_WString" />
+            <Field name="Min_ColID" source="Formula: 1" type="Byte" />
+            <Field name="Max_ColID" source="Formula: IF [Sheet] = 'BADE'&#xA;THEN 200&#xA;ELSE 50&#xA;ENDIF" type="Byte" />
+            <Field name="Min_RowID" source="Formula: 1" type="Byte" />
+            <Field name="Max_RowID" source="Formula: IF [Sheet] = 'BADE'&#xA;THEN 50&#xA;ELSE 200&#xA;ENDIF" type="Byte" />
+            <Field name="PotentialRowIDMin" source="Formula: IF [direction]=3&#xA;THEN [CurrentRowID]-ToNumber([data])&#xA;ELSE [CurrentRowID]&#xA;ENDIF" type="Int32" />
+            <Field name="PotentialRowIDMax" source="Formula: IF [direction]=1&#xA;THEN [CurrentRowID]+ToNumber([data])&#xA;ELSE [CurrentRowID]&#xA;ENDIF" type="Int32" />
+            <Field name="PotentialColIDMin" source="Formula: IF [direction]=2&#xA;THEN [CurrentColID]-ToNumber([data])&#xA;ELSE [CurrentColID]&#xA;ENDIF" type="Int32" />
+            <Field name="PotentialColIDMax" source="Formula: IF [direction]=0&#xA;THEN [CurrentColID]+ToNumber([data])&#xA;ELSE [CurrentColID]&#xA;ENDIF" type="Int32" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="CurrentRowID_abs" order="" />
+            <Field field="CurrentColID_abs" order="" />
+            <Field field="joinsheet" order="" />
+            <Field field="sect" order="" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+    </Node>
+    <Node ToolID="38">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Detour.Detour">
+        <Position x="714" y="246" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <DetourRight value="True" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="CurrentRowID" source="TextInput:" type="Byte" />
+            <Field name="CurrentColID" source="TextInput:" type="Byte" />
+            <Field name="sect" size="1" source="TextInput:" type="String" />
+            <Field name="direction" source="Formula: Switch([direction],[direction],4,0,-1,3)" type="Int16" />
+            <Field name="RowID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="Min_ColID" source="Formula: [_CurrentField_]" type="Int64" />
+            <Field name="Max_ColID" source="Formula: [_CurrentField_]" type="Int64" />
+            <Field name="ColID" source="Formula: [_CurrentField_]" type="Int64" />
+            <Field name="Min_RowID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="Max_RowID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="InstructionID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="data" source="Formula: Trim([data],'RL')" type="Byte" />
+            <Field name="dirChange" source="Formula: IF StartsWith([data], 'R')&#xA;THEN 1&#xA;ELSEIF StartsWith([data], 'L')&#xA;THEN -1&#xA;ELSE 0&#xA;ENDIF" type="Int16" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="CurrentRowID" source="TextInput:" type="Byte" />
+            <Field name="CurrentColID" source="TextInput:" type="Byte" />
+            <Field name="sect" size="1" source="TextInput:" type="String" />
+            <Field name="direction" source="Formula: Switch([direction],[direction],4,0,-1,3)" type="Int16" />
+            <Field name="RowID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="Min_ColID" source="Formula: [_CurrentField_]" type="Int64" />
+            <Field name="Max_ColID" source="Formula: [_CurrentField_]" type="Int64" />
+            <Field name="ColID" source="Formula: [_CurrentField_]" type="Int64" />
+            <Field name="Min_RowID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="Max_RowID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="InstructionID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="data" source="Formula: Trim([data],'RL')" type="Byte" />
+            <Field name="dirChange" source="Formula: IF StartsWith([data], 'R')&#xA;THEN 1&#xA;ELSEIF StartsWith([data], 'L')&#xA;THEN -1&#xA;ELSE 0&#xA;ENDIF" type="Int16" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDetour" />
+    </Node>
+    <Node ToolID="39">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DetourEnd.DetourEnd">
+        <Position x="1062" y="246" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="CurrentRowID_abs" source="TextInput:" type="Byte" />
+            <Field name="CurrentColID_abs" source="TextInput:" type="Byte" />
+            <Field name="sect" size="1" source="TextInput:" type="String" />
+            <Field name="direction" source="Formula: IF [sect]='C' and [joinsheet]='EFAC'&#xA;THEN Switch([direction],Null(),0,3,2,1)&#xA;ELSEIF [sect]='F' and [joinsheet]='BCDF'&#xA;THEN Switch([direction],Null(),0,3,2,1)&#xA;ELSEIF [joinsheet]='BADE' and ([sect] in ('D','E'))&#xA;THEN Switch([direction],Null(),0,2,2,0)&#xA;ELSE [direction]&#xA;ENDIF&#xA;&#xA;&#xA;/* the C in EFAC, F in BCDF, and DE in BADE are all rotated from the other positioning */" type="Int16" />
+            <Field name="InstructionID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="data" source="Formula: Trim([data],'RL')" type="Byte" />
+            <Field name="dirChange" source="Formula: IF StartsWith([data], 'R')&#xA;THEN 1&#xA;ELSEIF StartsWith([data], 'L')&#xA;THEN -1&#xA;ELSE 0&#xA;ENDIF" type="Int16" />
+            <Field name="joinsheet" size="1073741823" source="Formula: IF ([sect] IN ('B','A','D','E')) and ([direction] in (0,2))&#xA;THEN 'BADE'&#xA;ELSEIF ([sect] IN ('B','C','D')) and ([direction] IN (1,3))&#xA;THEN 'BCDF'&#xA;ELSEIF ([sect] IN ('E','F','A')) and ([direction] IN (1,3))&#xA;THEN 'EFAC'&#xA;ELSEIF [sect]='C' and ([direction] in (0,2))&#xA;THEN 'EFAC'&#xA;ELSEIF [sect]='F' and ([direction] in (0,2))&#xA;THEN 'BCDF'&#xA;ELSE Null()&#xA;ENDIF " type="V_WString" />
+            <Field name="CurrentRowID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="CurrentColID" source="Transpose:" type="Int32" />
+            <Field name="rotate" size="1073741823" source="Formula: IF Contains([FileName], 'EFAC') and [sect]='C'&#xA;THEN 'row col switch 1-row'&#xA;ELSEIF Contains([FileName], 'BCDF') and [sect]='F'&#xA;THEN 'row col switch 1-row'&#xA;ELSEIF Contains([FileName],'BADE') and ([sect] in ('E','D'))&#xA;THEN '1-row 1-col'&#xA;ELSE 'none'&#xA;ENDIF&#xA;" type="V_WString" />
+            <Field name="Sheet" size="1073741823" source="Formula: Trim(Right([FileName], 7), '`$')" type="V_WString" />
+            <Field name="Min_ColID" source="Formula: 1" type="Byte" />
+            <Field name="Max_ColID" source="Formula: IF [Sheet] = 'BADE'&#xA;THEN 200&#xA;ELSE 50&#xA;ENDIF" type="Byte" />
+            <Field name="Min_RowID" source="Formula: 1" type="Byte" />
+            <Field name="Max_RowID" source="Formula: IF [Sheet] = 'BADE'&#xA;THEN 50&#xA;ELSE 200&#xA;ENDIF" type="Byte" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="CurrentRowID_abs" order="" />
+            <Field field="CurrentColID_abs" order="" />
+            <Field field="joinsheet" order="" />
+            <Field field="sect" order="" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDetourEnd" />
+    </Node>
+    <Node ToolID="40">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Detour.Detour">
+        <Position x="714" y="438" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <DetourRight value="True" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="RowID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="TextToColumns: Parsed from ColID" name="ColID" source="TextToColumns: Parsed from ColID" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="RowID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="TextToColumns: Parsed from ColID" name="ColID" source="TextToColumns: Parsed from ColID" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDetour" />
+    </Node>
+    <Node ToolID="41">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DetourEnd.DetourEnd">
+        <Position x="1062" y="438" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="sect" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="RowID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="ColID" source="Transpose:" type="Int32" />
+            <Field name="Sheet" size="1073741823" source="Formula: Trim(Right([FileName], 7), '`$')" type="V_WString" />
+            <Field name="RowID_abs" source="Formula: IF [rotate] = 'none'&#xA;THEN [RowID_sect]+[Min_RowID_abs]-1&#xA;ELSEIF [rotate] = 'row col switch 1-row'&#xA;THEN [ColID_sect]+[Min_RowID_abs]-1&#xA;ELSEIF [rotate] = '1-row 1-col'&#xA;THEN (50-[RowID_sect])+[Min_RowID_abs]&#xA;ELSE null()&#xA;ENDIF" type="Int32" />
+            <Field name="ColID_abs" source="Formula: IF [rotate]='none'&#xA;THEN [ColID_sect]+[Min_ColID_abs]-1&#xA;ELSEIF [rotate]='row col switch 1-row'&#xA;THEN (50-[RowID_sect]-1)+[Min_ColID_abs]+1&#xA;ELSEIF [rotate]='1-row 1-col'&#xA;THEN (50-[ColID_sect])+[Min_ColID_abs]&#xA;ELSE null()&#xA;ENDIF" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDetourEnd" />
+    </Node>
+    <Node ToolID="42">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="810" y="270" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="IF ([sect] IN ('B','A','D','E')) and ([direction] in (0,2))&#xA;THEN 'BADE'&#xA;ELSEIF ([sect] IN ('B','C','D')) and ([direction] IN (1,3))&#xA;THEN 'BCDF'&#xA;ELSEIF ([sect] IN ('E','F','A')) and ([direction] IN (1,3))&#xA;THEN 'EFAC'&#xA;ELSEIF [sect]='C' and ([direction] in (0,2))&#xA;THEN 'EFAC'&#xA;ELSEIF [sect]='F' and ([direction] in (0,2))&#xA;THEN 'BCDF'&#xA;ELSE Null()&#xA;ENDIF " field="joinsheet" size="1073741823" type="V_WString" />
+            <FormulaField expression="IF [sect]='C' and [joinsheet]='EFAC'&#xA;THEN Switch([direction],Null(),0,3,2,1)&#xA;ELSEIF [sect]='F' and [joinsheet]='BCDF'&#xA;THEN Switch([direction],Null(),0,3,2,1)&#xA;ELSEIF [joinsheet]='BADE' and ([sect] in ('D','E'))&#xA;THEN Switch([direction],Null(),0,2,2,0)&#xA;ELSE [direction]&#xA;ENDIF&#xA;&#xA;&#xA;/* the C in EFAC, F in BCDF, and DE in BADE are all rotated from the other positioning */" field="direction" size="2" type="Int16" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Find cube connecting sides</AnnotationText>
+          <DefaultAnnotationText>joinsheet = IF ([sect] IN ('B','A','D','E')) and ([direction] in (0,2))
+THEN 'BA...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="CurrentRowID" source="TextInput:" type="Byte" />
+            <Field name="CurrentColID" source="TextInput:" type="Byte" />
+            <Field name="sect" size="1" source="TextInput:" type="String" />
+            <Field name="direction" source="Formula: IF [sect]='C' and [joinsheet]='EFAC'&#xA;THEN Switch([direction],Null(),0,3,2,1)&#xA;ELSEIF [sect]='F' and [joinsheet]='BCDF'&#xA;THEN Switch([direction],Null(),0,3,2,1)&#xA;ELSEIF [joinsheet]='BADE' and ([sect] in ('D','E'))&#xA;THEN Switch([direction],Null(),0,2,2,0)&#xA;ELSE [direction]&#xA;ENDIF&#xA;&#xA;&#xA;/* the C in EFAC, F in BCDF, and DE in BADE are all rotated from the other positioning */" type="Int16" />
+            <Field name="RowID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="Min_ColID" source="Formula: [_CurrentField_]" type="Int64" />
+            <Field name="Max_ColID" source="Formula: [_CurrentField_]" type="Int64" />
+            <Field name="ColID" source="Formula: [_CurrentField_]" type="Int64" />
+            <Field name="Min_RowID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="Max_RowID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="InstructionID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="data" source="Formula: Trim([data],'RL')" type="Byte" />
+            <Field name="dirChange" source="Formula: IF StartsWith([data], 'R')&#xA;THEN 1&#xA;ELSEIF StartsWith([data], 'L')&#xA;THEN -1&#xA;ELSE 0&#xA;ENDIF" type="Int16" />
+            <Field name="joinsheet" size="1073741823" source="Formula: IF ([sect] IN ('B','A','D','E')) and ([direction] in (0,2))&#xA;THEN 'BADE'&#xA;ELSEIF ([sect] IN ('B','C','D')) and ([direction] IN (1,3))&#xA;THEN 'BCDF'&#xA;ELSEIF ([sect] IN ('E','F','A')) and ([direction] IN (1,3))&#xA;THEN 'EFAC'&#xA;ELSEIF [sect]='C' and ([direction] in (0,2))&#xA;THEN 'EFAC'&#xA;ELSEIF [sect]='F' and ([direction] in (0,2))&#xA;THEN 'BCDF'&#xA;ELSE Null()&#xA;ENDIF " type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="70">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="438" y="582" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">Day22CoordinateSwitch.yxdb</File>
+          <FormatSpecificOptions />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Day22CoordinateSwitch.yxdb</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="sect" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="RowID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="ColID" source="Transpose:" type="Int32" />
+            <Field name="data" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Min_ColID_sect" source="Transpose:" type="Int32" />
+            <Field name="Min_RowID_sect" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="Max_ColID_sect" source="Transpose:" type="Int32" />
+            <Field name="Max_RowID_sect" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="rotate" size="1073741823" source="Formula: IF Contains([FileName], 'EFAC') and [sect]='C'&#xA;THEN 'row col switch 1-row'&#xA;ELSEIF Contains([FileName], 'BCDF') and [sect]='F'&#xA;THEN 'row col switch 1-row'&#xA;ELSEIF Contains([FileName],'BADE') and ([sect] in ('E','D'))&#xA;THEN '1-row 1-col'&#xA;ELSE 'none'&#xA;ENDIF&#xA;" type="V_WString" />
+            <Field name="Sheet" size="1073741823" source="Formula: Trim(Right([FileName], 7), '`$')" type="V_WString" />
+            <Field name="Min_ColID_abs" source="TextInput:" type="Byte" />
+            <Field name="Min_RowID_abs" source="TextInput:" type="Byte" />
+            <Field name="Max_ColID_abs" source="TextInput:" type="Byte" />
+            <Field name="Max_RowID_abs" source="TextInput:" type="Byte" />
+            <Field name="RowID_sect" source="Formula: [RowID]-[Min_RowID_sect]+1" type="Int32" />
+            <Field name="ColID_sect" source="Formula: [ColID]-[Min_ColID_sect]+1" type="Int32" />
+            <Field name="RowID_abs" source="Formula: IF [rotate] = 'none'&#xA;THEN [RowID_sect]+[Min_RowID_abs]-1&#xA;ELSEIF [rotate] = 'row col switch 1-row'&#xA;THEN [ColID_sect]+[Min_RowID_abs]-1&#xA;ELSEIF [rotate] = '1-row 1-col'&#xA;THEN (50-[RowID_sect])+[Min_RowID_abs]&#xA;ELSE null()&#xA;ENDIF" type="Int32" />
+            <Field name="ColID_abs" source="Formula: IF [rotate]='none'&#xA;THEN [ColID_sect]+[Min_ColID_abs]-1&#xA;ELSEIF [rotate]='row col switch 1-row'&#xA;THEN (50-[RowID_sect]-1)+[Min_ColID_abs]+1&#xA;ELSEIF [rotate]='1-row 1-col'&#xA;THEN (50-[ColID_sect])+[Min_ColID_abs]&#xA;ELSE null()&#xA;ENDIF" type="Int32" />
+            <Field name="Min_ColID" source="Formula: 1" type="Byte" />
+            <Field name="Max_ColID" source="Formula: IF [Sheet] = 'BADE'&#xA;THEN 200&#xA;ELSE 50&#xA;ENDIF" type="Byte" />
+            <Field name="Min_RowID" source="Formula: 1" type="Byte" />
+            <Field name="Max_RowID" source="Formula: IF [Sheet] = 'BADE'&#xA;THEN 50&#xA;ELSE 200&#xA;ENDIF" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="71">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="954" y="282" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="CurrentRowID" />
+            <Field field="CurrentColID" />
+            <Field field="joinsheet" />
+            <Field field="sect" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="RowID_abs" />
+            <Field field="ColID_abs" />
+            <Field field="Sheet" />
+            <Field field="sect" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_CurrentRowID" selected="True" rename="CurrentRowID_abs" input="Left_" />
+                <SelectField field="Left_CurrentColID" selected="True" rename="CurrentColID_abs" input="Left_" />
+                <SelectField field="Left_RowID" selected="False" input="Left_" />
+                <SelectField field="Left_Min_ColID" selected="False" input="Left_" />
+                <SelectField field="Left_Max_ColID" selected="False" input="Left_" />
+                <SelectField field="Left_ColID" selected="False" input="Left_" />
+                <SelectField field="Left_Min_RowID" selected="False" input="Left_" />
+                <SelectField field="Left_Max_RowID" selected="False" input="Left_" />
+                <SelectField field="Right_sect" selected="False" rename="Right_sect" input="Right_" />
+                <SelectField field="Right_RowID" selected="True" rename="CurrentRowID" input="Right_" />
+                <SelectField field="Right_ColID" selected="True" rename="CurrentColID" input="Right_" />
+                <SelectField field="Right_data" selected="False" rename="Right_data" input="Right_" />
+                <SelectField field="Right_Min_ColID_sect" selected="False" input="Right_" />
+                <SelectField field="Right_Min_RowID_sect" selected="False" input="Right_" />
+                <SelectField field="Right_Max_ColID_sect" selected="False" input="Right_" />
+                <SelectField field="Right_Max_RowID_sect" selected="False" input="Right_" />
+                <SelectField field="Right_Min_ColID_abs" selected="False" input="Right_" />
+                <SelectField field="Right_Min_RowID_abs" selected="False" input="Right_" />
+                <SelectField field="Right_Max_ColID_abs" selected="False" input="Right_" />
+                <SelectField field="Right_Max_RowID_abs" selected="False" input="Right_" />
+                <SelectField field="Right_RowID_sect" selected="False" input="Right_" />
+                <SelectField field="Right_ColID_sect" selected="False" input="Right_" />
+                <SelectField field="Right_RowID_abs" selected="False" input="Right_" />
+                <SelectField field="Right_ColID_abs" selected="False" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Convert absolute map coordinates to relative sheet coordinates</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="CurrentRowID" source="TextInput:" type="Byte" />
+            <Field name="CurrentColID" source="TextInput:" type="Byte" />
+            <Field name="sect" size="1" source="TextInput:" type="String" />
+            <Field name="direction" source="Formula: IF [sect]='C' and [joinsheet]='EFAC'&#xA;THEN Switch([direction],Null(),0,3,2,1)&#xA;ELSEIF [sect]='F' and [joinsheet]='BCDF'&#xA;THEN Switch([direction],Null(),0,3,2,1)&#xA;ELSEIF [joinsheet]='BADE' and ([sect] in ('D','E'))&#xA;THEN Switch([direction],Null(),0,2,2,0)&#xA;ELSE [direction]&#xA;ENDIF&#xA;&#xA;&#xA;/* the C in EFAC, F in BCDF, and DE in BADE are all rotated from the other positioning */" type="Int16" />
+            <Field name="RowID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="Min_ColID" source="Formula: [_CurrentField_]" type="Int64" />
+            <Field name="Max_ColID" source="Formula: [_CurrentField_]" type="Int64" />
+            <Field name="ColID" source="Formula: [_CurrentField_]" type="Int64" />
+            <Field name="Min_RowID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="Max_RowID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="InstructionID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="data" source="Formula: Trim([data],'RL')" type="Byte" />
+            <Field name="dirChange" source="Formula: IF StartsWith([data], 'R')&#xA;THEN 1&#xA;ELSEIF StartsWith([data], 'L')&#xA;THEN -1&#xA;ELSE 0&#xA;ENDIF" type="Int16" />
+            <Field name="joinsheet" size="1073741823" source="Formula: IF ([sect] IN ('B','A','D','E')) and ([direction] in (0,2))&#xA;THEN 'BADE'&#xA;ELSEIF ([sect] IN ('B','C','D')) and ([direction] IN (1,3))&#xA;THEN 'BCDF'&#xA;ELSEIF ([sect] IN ('E','F','A')) and ([direction] IN (1,3))&#xA;THEN 'EFAC'&#xA;ELSEIF [sect]='C' and ([direction] in (0,2))&#xA;THEN 'EFAC'&#xA;ELSEIF [sect]='F' and ([direction] in (0,2))&#xA;THEN 'BCDF'&#xA;ELSE Null()&#xA;ENDIF " type="V_WString" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="CurrentRowID" />
+            <Field field="CurrentColID" />
+            <Field field="joinsheet" />
+            <Field field="sect" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field name="CurrentRowID_abs" source="TextInput:" type="Byte" />
+            <Field name="CurrentColID_abs" source="TextInput:" type="Byte" />
+            <Field name="sect" size="1" source="TextInput:" type="String" />
+            <Field name="direction" source="Formula: IF [sect]='C' and [joinsheet]='EFAC'&#xA;THEN Switch([direction],Null(),0,3,2,1)&#xA;ELSEIF [sect]='F' and [joinsheet]='BCDF'&#xA;THEN Switch([direction],Null(),0,3,2,1)&#xA;ELSEIF [joinsheet]='BADE' and ([sect] in ('D','E'))&#xA;THEN Switch([direction],Null(),0,2,2,0)&#xA;ELSE [direction]&#xA;ENDIF&#xA;&#xA;&#xA;/* the C in EFAC, F in BCDF, and DE in BADE are all rotated from the other positioning */" type="Int16" />
+            <Field name="InstructionID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="data" source="Formula: Trim([data],'RL')" type="Byte" />
+            <Field name="dirChange" source="Formula: IF StartsWith([data], 'R')&#xA;THEN 1&#xA;ELSEIF StartsWith([data], 'L')&#xA;THEN -1&#xA;ELSE 0&#xA;ENDIF" type="Int16" />
+            <Field name="joinsheet" size="1073741823" source="Formula: IF ([sect] IN ('B','A','D','E')) and ([direction] in (0,2))&#xA;THEN 'BADE'&#xA;ELSEIF ([sect] IN ('B','C','D')) and ([direction] IN (1,3))&#xA;THEN 'BCDF'&#xA;ELSEIF ([sect] IN ('E','F','A')) and ([direction] IN (1,3))&#xA;THEN 'EFAC'&#xA;ELSEIF [sect]='C' and ([direction] in (0,2))&#xA;THEN 'EFAC'&#xA;ELSEIF [sect]='F' and ([direction] in (0,2))&#xA;THEN 'BCDF'&#xA;ELSE Null()&#xA;ENDIF " type="V_WString" />
+            <Field name="CurrentRowID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="CurrentColID" source="Transpose:" type="Int32" />
+            <Field name="rotate" size="1073741823" source="Formula: IF Contains([FileName], 'EFAC') and [sect]='C'&#xA;THEN 'row col switch 1-row'&#xA;ELSEIF Contains([FileName], 'BCDF') and [sect]='F'&#xA;THEN 'row col switch 1-row'&#xA;ELSEIF Contains([FileName],'BADE') and ([sect] in ('E','D'))&#xA;THEN '1-row 1-col'&#xA;ELSE 'none'&#xA;ENDIF&#xA;" type="V_WString" />
+            <Field name="Sheet" size="1073741823" source="Formula: Trim(Right([FileName], 7), '`$')" type="V_WString" />
+            <Field name="Min_ColID" source="Formula: 1" type="Byte" />
+            <Field name="Max_ColID" source="Formula: IF [Sheet] = 'BADE'&#xA;THEN 200&#xA;ELSE 50&#xA;ENDIF" type="Byte" />
+            <Field name="Min_RowID" source="Formula: 1" type="Byte" />
+            <Field name="Max_RowID" source="Formula: IF [Sheet] = 'BADE'&#xA;THEN 50&#xA;ELSE 200&#xA;ENDIF" type="Byte" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="CurrentRowID_abs" order="" />
+            <Field field="CurrentColID_abs" order="" />
+            <Field field="joinsheet" order="" />
+            <Field field="sect" order="" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="sect" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="RowID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="ColID" source="Transpose:" type="Int32" />
+            <Field name="data" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Min_ColID_sect" source="Transpose:" type="Int32" />
+            <Field name="Min_RowID_sect" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="Max_ColID_sect" source="Transpose:" type="Int32" />
+            <Field name="Max_RowID_sect" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="rotate" size="1073741823" source="Formula: IF Contains([FileName], 'EFAC') and [sect]='C'&#xA;THEN 'row col switch 1-row'&#xA;ELSEIF Contains([FileName], 'BCDF') and [sect]='F'&#xA;THEN 'row col switch 1-row'&#xA;ELSEIF Contains([FileName],'BADE') and ([sect] in ('E','D'))&#xA;THEN '1-row 1-col'&#xA;ELSE 'none'&#xA;ENDIF&#xA;" type="V_WString" />
+            <Field name="Sheet" size="1073741823" source="Formula: Trim(Right([FileName], 7), '`$')" type="V_WString" />
+            <Field name="Min_ColID_abs" source="TextInput:" type="Byte" />
+            <Field name="Min_RowID_abs" source="TextInput:" type="Byte" />
+            <Field name="Max_ColID_abs" source="TextInput:" type="Byte" />
+            <Field name="Max_RowID_abs" source="TextInput:" type="Byte" />
+            <Field name="RowID_sect" source="Formula: [RowID]-[Min_RowID_sect]+1" type="Int32" />
+            <Field name="ColID_sect" source="Formula: [ColID]-[Min_ColID_sect]+1" type="Int32" />
+            <Field name="RowID_abs" source="Formula: IF [rotate] = 'none'&#xA;THEN [RowID_sect]+[Min_RowID_abs]-1&#xA;ELSEIF [rotate] = 'row col switch 1-row'&#xA;THEN [ColID_sect]+[Min_RowID_abs]-1&#xA;ELSEIF [rotate] = '1-row 1-col'&#xA;THEN (50-[RowID_sect])+[Min_RowID_abs]&#xA;ELSE null()&#xA;ENDIF" type="Int32" />
+            <Field name="ColID_abs" source="Formula: IF [rotate]='none'&#xA;THEN [ColID_sect]+[Min_ColID_abs]-1&#xA;ELSEIF [rotate]='row col switch 1-row'&#xA;THEN (50-[RowID_sect]-1)+[Min_ColID_abs]+1&#xA;ELSEIF [rotate]='1-row 1-col'&#xA;THEN (50-[ColID_sect])+[Min_ColID_abs]&#xA;ELSE null()&#xA;ENDIF" type="Int32" />
+            <Field name="Min_ColID" source="Formula: 1" type="Byte" />
+            <Field name="Max_ColID" source="Formula: IF [Sheet] = 'BADE'&#xA;THEN 200&#xA;ELSE 50&#xA;ENDIF" type="Byte" />
+            <Field name="Min_RowID" source="Formula: 1" type="Byte" />
+            <Field name="Max_RowID" source="Formula: IF [Sheet] = 'BADE'&#xA;THEN 50&#xA;ELSE 200&#xA;ENDIF" type="Byte" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="RowID_abs" />
+            <Field field="ColID_abs" />
+            <Field field="Sheet" />
+            <Field field="sect" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="72">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="750" y="498" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="joinsheet" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="joinsheet" size="1073741823" source="Formula: IF ([sect] IN ('B','A','D','E')) and ([direction] in (0,2))&#xA;THEN 'BADE'&#xA;ELSEIF ([sect] IN ('B','C','D')) and ([direction] IN (1,3))&#xA;THEN 'BCDF'&#xA;ELSEIF ([sect] IN ('E','F','A')) and ([direction] IN (1,3))&#xA;THEN 'EFAC'&#xA;ELSEIF [sect]='C' and ([direction] in (0,2))&#xA;THEN 'EFAC'&#xA;ELSEIF [sect]='F' and ([direction] in (0,2))&#xA;THEN 'BCDF'&#xA;ELSE Null()&#xA;ENDIF " type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="73">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="846" y="510" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="joinsheet" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Sheet" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_joinsheet" selected="False" input="Left_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Keep only current sheet</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="joinsheet" size="1073741823" source="Formula: IF ([sect] IN ('B','A','D','E')) and ([direction] in (0,2))&#xA;THEN 'BADE'&#xA;ELSEIF ([sect] IN ('B','C','D')) and ([direction] IN (1,3))&#xA;THEN 'BCDF'&#xA;ELSEIF ([sect] IN ('E','F','A')) and ([direction] IN (1,3))&#xA;THEN 'EFAC'&#xA;ELSEIF [sect]='C' and ([direction] in (0,2))&#xA;THEN 'EFAC'&#xA;ELSEIF [sect]='F' and ([direction] in (0,2))&#xA;THEN 'BCDF'&#xA;ELSE Null()&#xA;ENDIF " type="V_WString" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="joinsheet" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field name="sect" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="RowID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="ColID" source="Transpose:" type="Int32" />
+            <Field name="data" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Min_ColID_sect" source="Transpose:" type="Int32" />
+            <Field name="Min_RowID_sect" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="Max_ColID_sect" source="Transpose:" type="Int32" />
+            <Field name="Max_RowID_sect" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="rotate" size="1073741823" source="Formula: IF Contains([FileName], 'EFAC') and [sect]='C'&#xA;THEN 'row col switch 1-row'&#xA;ELSEIF Contains([FileName], 'BCDF') and [sect]='F'&#xA;THEN 'row col switch 1-row'&#xA;ELSEIF Contains([FileName],'BADE') and ([sect] in ('E','D'))&#xA;THEN '1-row 1-col'&#xA;ELSE 'none'&#xA;ENDIF&#xA;" type="V_WString" />
+            <Field name="Sheet" size="1073741823" source="Formula: Trim(Right([FileName], 7), '`$')" type="V_WString" />
+            <Field name="Min_ColID_abs" source="TextInput:" type="Byte" />
+            <Field name="Min_RowID_abs" source="TextInput:" type="Byte" />
+            <Field name="Max_ColID_abs" source="TextInput:" type="Byte" />
+            <Field name="Max_RowID_abs" source="TextInput:" type="Byte" />
+            <Field name="RowID_sect" source="Formula: [RowID]-[Min_RowID_sect]+1" type="Int32" />
+            <Field name="ColID_sect" source="Formula: [ColID]-[Min_ColID_sect]+1" type="Int32" />
+            <Field name="RowID_abs" source="Formula: IF [rotate] = 'none'&#xA;THEN [RowID_sect]+[Min_RowID_abs]-1&#xA;ELSEIF [rotate] = 'row col switch 1-row'&#xA;THEN [ColID_sect]+[Min_RowID_abs]-1&#xA;ELSEIF [rotate] = '1-row 1-col'&#xA;THEN (50-[RowID_sect])+[Min_RowID_abs]&#xA;ELSE null()&#xA;ENDIF" type="Int32" />
+            <Field name="ColID_abs" source="Formula: IF [rotate]='none'&#xA;THEN [ColID_sect]+[Min_ColID_abs]-1&#xA;ELSEIF [rotate]='row col switch 1-row'&#xA;THEN (50-[RowID_sect]-1)+[Min_ColID_abs]+1&#xA;ELSEIF [rotate]='1-row 1-col'&#xA;THEN (50-[ColID_sect])+[Min_ColID_abs]&#xA;ELSE null()&#xA;ENDIF" type="Int32" />
+            <Field name="Min_ColID" source="Formula: 1" type="Byte" />
+            <Field name="Max_ColID" source="Formula: IF [Sheet] = 'BADE'&#xA;THEN 200&#xA;ELSE 50&#xA;ENDIF" type="Byte" />
+            <Field name="Min_RowID" source="Formula: 1" type="Byte" />
+            <Field name="Max_RowID" source="Formula: IF [Sheet] = 'BADE'&#xA;THEN 50&#xA;ELSE 200&#xA;ENDIF" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="sect" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="RowID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="ColID" source="Transpose:" type="Int32" />
+            <Field name="data" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Min_ColID_sect" source="Transpose:" type="Int32" />
+            <Field name="Min_RowID_sect" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="Max_ColID_sect" source="Transpose:" type="Int32" />
+            <Field name="Max_RowID_sect" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="rotate" size="1073741823" source="Formula: IF Contains([FileName], 'EFAC') and [sect]='C'&#xA;THEN 'row col switch 1-row'&#xA;ELSEIF Contains([FileName], 'BCDF') and [sect]='F'&#xA;THEN 'row col switch 1-row'&#xA;ELSEIF Contains([FileName],'BADE') and ([sect] in ('E','D'))&#xA;THEN '1-row 1-col'&#xA;ELSE 'none'&#xA;ENDIF&#xA;" type="V_WString" />
+            <Field name="Sheet" size="1073741823" source="Formula: Trim(Right([FileName], 7), '`$')" type="V_WString" />
+            <Field name="Min_ColID_abs" source="TextInput:" type="Byte" />
+            <Field name="Min_RowID_abs" source="TextInput:" type="Byte" />
+            <Field name="Max_ColID_abs" source="TextInput:" type="Byte" />
+            <Field name="Max_RowID_abs" source="TextInput:" type="Byte" />
+            <Field name="RowID_sect" source="Formula: [RowID]-[Min_RowID_sect]+1" type="Int32" />
+            <Field name="ColID_sect" source="Formula: [ColID]-[Min_ColID_sect]+1" type="Int32" />
+            <Field name="RowID_abs" source="Formula: IF [rotate] = 'none'&#xA;THEN [RowID_sect]+[Min_RowID_abs]-1&#xA;ELSEIF [rotate] = 'row col switch 1-row'&#xA;THEN [ColID_sect]+[Min_RowID_abs]-1&#xA;ELSEIF [rotate] = '1-row 1-col'&#xA;THEN (50-[RowID_sect])+[Min_RowID_abs]&#xA;ELSE null()&#xA;ENDIF" type="Int32" />
+            <Field name="ColID_abs" source="Formula: IF [rotate]='none'&#xA;THEN [ColID_sect]+[Min_ColID_abs]-1&#xA;ELSEIF [rotate]='row col switch 1-row'&#xA;THEN (50-[RowID_sect]-1)+[Min_ColID_abs]+1&#xA;ELSEIF [rotate]='1-row 1-col'&#xA;THEN (50-[ColID_sect])+[Min_ColID_abs]&#xA;ELSE null()&#xA;ENDIF" type="Int32" />
+            <Field name="Min_ColID" source="Formula: 1" type="Byte" />
+            <Field name="Max_ColID" source="Formula: IF [Sheet] = 'BADE'&#xA;THEN 200&#xA;ELSE 50&#xA;ENDIF" type="Byte" />
+            <Field name="Min_RowID" source="Formula: 1" type="Byte" />
+            <Field name="Max_RowID" source="Formula: IF [Sheet] = 'BADE'&#xA;THEN 50&#xA;ELSE 200&#xA;ENDIF" type="Byte" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="Sheet" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="74">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="954" y="462" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="RowID" />
+            <Field field="ColID" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="RowID_abs" />
+            <Field field="ColID_abs" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_RowID" selected="False" input="Left_" />
+                <SelectField field="Left_ColID" selected="False" input="Left_" />
+                <SelectField field="Right_data" selected="False" input="Right_" />
+                <SelectField field="Right_Min_ColID_sect" selected="False" input="Right_" />
+                <SelectField field="Right_Min_RowID_sect" selected="False" input="Right_" />
+                <SelectField field="Right_Max_ColID_sect" selected="False" input="Right_" />
+                <SelectField field="Right_Max_RowID_sect" selected="False" input="Right_" />
+                <SelectField field="Right_rotate" selected="False" input="Right_" />
+                <SelectField field="Right_Min_ColID_abs" selected="False" input="Right_" />
+                <SelectField field="Right_Min_RowID_abs" selected="False" input="Right_" />
+                <SelectField field="Right_Max_ColID_abs" selected="False" input="Right_" />
+                <SelectField field="Right_Max_RowID_abs" selected="False" input="Right_" />
+                <SelectField field="Right_RowID_sect" selected="False" input="Right_" />
+                <SelectField field="Right_ColID_sect" selected="False" input="Right_" />
+                <SelectField field="Right_Min_ColID" selected="False" input="Right_" />
+                <SelectField field="Right_Max_ColID" selected="False" input="Right_" />
+                <SelectField field="Right_Min_RowID" selected="False" input="Right_" />
+                <SelectField field="Right_Max_RowID" selected="False" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Convert wall coordinates to current sheet coordinates</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="RowID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="TextToColumns: Parsed from ColID" name="ColID" source="TextToColumns: Parsed from ColID" type="Int32" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="RowID" />
+            <Field field="ColID" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field name="sect" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="RowID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="ColID" source="Transpose:" type="Int32" />
+            <Field name="Sheet" size="1073741823" source="Formula: Trim(Right([FileName], 7), '`$')" type="V_WString" />
+            <Field name="RowID_abs" source="Formula: IF [rotate] = 'none'&#xA;THEN [RowID_sect]+[Min_RowID_abs]-1&#xA;ELSEIF [rotate] = 'row col switch 1-row'&#xA;THEN [ColID_sect]+[Min_RowID_abs]-1&#xA;ELSEIF [rotate] = '1-row 1-col'&#xA;THEN (50-[RowID_sect])+[Min_RowID_abs]&#xA;ELSE null()&#xA;ENDIF" type="Int32" />
+            <Field name="ColID_abs" source="Formula: IF [rotate]='none'&#xA;THEN [ColID_sect]+[Min_ColID_abs]-1&#xA;ELSEIF [rotate]='row col switch 1-row'&#xA;THEN (50-[RowID_sect]-1)+[Min_ColID_abs]+1&#xA;ELSEIF [rotate]='1-row 1-col'&#xA;THEN (50-[ColID_sect])+[Min_ColID_abs]&#xA;ELSE null()&#xA;ENDIF" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="sect" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="RowID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="ColID" source="Transpose:" type="Int32" />
+            <Field name="data" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Min_ColID_sect" source="Transpose:" type="Int32" />
+            <Field name="Min_RowID_sect" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="Max_ColID_sect" source="Transpose:" type="Int32" />
+            <Field name="Max_RowID_sect" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="rotate" size="1073741823" source="Formula: IF Contains([FileName], 'EFAC') and [sect]='C'&#xA;THEN 'row col switch 1-row'&#xA;ELSEIF Contains([FileName], 'BCDF') and [sect]='F'&#xA;THEN 'row col switch 1-row'&#xA;ELSEIF Contains([FileName],'BADE') and ([sect] in ('E','D'))&#xA;THEN '1-row 1-col'&#xA;ELSE 'none'&#xA;ENDIF&#xA;" type="V_WString" />
+            <Field name="Sheet" size="1073741823" source="Formula: Trim(Right([FileName], 7), '`$')" type="V_WString" />
+            <Field name="Min_ColID_abs" source="TextInput:" type="Byte" />
+            <Field name="Min_RowID_abs" source="TextInput:" type="Byte" />
+            <Field name="Max_ColID_abs" source="TextInput:" type="Byte" />
+            <Field name="Max_RowID_abs" source="TextInput:" type="Byte" />
+            <Field name="RowID_sect" source="Formula: [RowID]-[Min_RowID_sect]+1" type="Int32" />
+            <Field name="ColID_sect" source="Formula: [ColID]-[Min_ColID_sect]+1" type="Int32" />
+            <Field name="RowID_abs" source="Formula: IF [rotate] = 'none'&#xA;THEN [RowID_sect]+[Min_RowID_abs]-1&#xA;ELSEIF [rotate] = 'row col switch 1-row'&#xA;THEN [ColID_sect]+[Min_RowID_abs]-1&#xA;ELSEIF [rotate] = '1-row 1-col'&#xA;THEN (50-[RowID_sect])+[Min_RowID_abs]&#xA;ELSE null()&#xA;ENDIF" type="Int32" />
+            <Field name="ColID_abs" source="Formula: IF [rotate]='none'&#xA;THEN [ColID_sect]+[Min_ColID_abs]-1&#xA;ELSEIF [rotate]='row col switch 1-row'&#xA;THEN (50-[RowID_sect]-1)+[Min_ColID_abs]+1&#xA;ELSEIF [rotate]='1-row 1-col'&#xA;THEN (50-[ColID_sect])+[Min_ColID_abs]&#xA;ELSE null()&#xA;ENDIF" type="Int32" />
+            <Field name="Min_ColID" source="Formula: 1" type="Byte" />
+            <Field name="Max_ColID" source="Formula: IF [Sheet] = 'BADE'&#xA;THEN 200&#xA;ELSE 50&#xA;ENDIF" type="Byte" />
+            <Field name="Min_RowID" source="Formula: 1" type="Byte" />
+            <Field name="Max_RowID" source="Formula: IF [Sheet] = 'BADE'&#xA;THEN 50&#xA;ELSE 200&#xA;ENDIF" type="Byte" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="RowID_abs" />
+            <Field field="ColID_abs" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="75">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="2394" y="330" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="CurrentRowID" />
+            <Field field="CurrentColID" />
+            <Field field="Sheet" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="RowID" />
+            <Field field="ColID" />
+            <Field field="Sheet" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_direction" selected="True" rename="direction_Sheet" input="Left_" />
+                <SelectField field="Left_Min_ColID" selected="False" input="Left_" />
+                <SelectField field="Left_Max_ColID" selected="False" input="Left_" />
+                <SelectField field="Left_Min_RowID" selected="False" input="Left_" />
+                <SelectField field="Left_Max_RowID" selected="False" input="Left_" />
+                <SelectField field="Left_CurrentRowID" selected="True" rename="CurrentRowID_relativeSheet" input="Left_" />
+                <SelectField field="Left_CurrentColID" selected="True" rename="CurrentColID_relativeSheet" input="Left_" />
+                <SelectField field="Right_RowID" selected="False" input="Right_" />
+                <SelectField field="Right_ColID" selected="False" input="Right_" />
+                <SelectField field="Right_Min_ColID_sect" selected="False" input="Right_" />
+                <SelectField field="Right_Min_RowID_sect" selected="False" input="Right_" />
+                <SelectField field="Right_Max_ColID_sect" selected="False" input="Right_" />
+                <SelectField field="Right_Max_RowID_sect" selected="False" input="Right_" />
+                <SelectField field="Right_Sheet" selected="False" rename="Right_Sheet" input="Right_" />
+                <SelectField field="Right_Min_ColID_abs" selected="False" input="Right_" />
+                <SelectField field="Right_Min_RowID_abs" selected="False" input="Right_" />
+                <SelectField field="Right_Max_ColID_abs" selected="False" input="Right_" />
+                <SelectField field="Right_Max_RowID_abs" selected="False" input="Right_" />
+                <SelectField field="Right_RowID_sect" selected="False" input="Right_" />
+                <SelectField field="Right_ColID_sect" selected="False" input="Right_" />
+                <SelectField field="Right_RowID_abs" selected="True" rename="CurrentRowID" input="Right_" />
+                <SelectField field="Right_ColID_abs" selected="True" rename="CurrentColID" input="Right_" />
+                <SelectField field="Right_Min_ColID" selected="False" rename="Right_Min_ColID" input="Right_" />
+                <SelectField field="Right_Max_ColID" selected="False" rename="Right_Max_ColID" input="Right_" />
+                <SelectField field="Right_Min_RowID" selected="False" rename="Right_Min_RowID" input="Right_" />
+                <SelectField field="Right_Max_RowID" selected="False" rename="Right_Max_RowID" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Convert back to absolute coordinates</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="AttemptOrder" source="Formula: IF [PotentialColIDMax]=[CurrentColID] and [PotentialRowIDMax]=[CurrentRowID]&#xA;THEN ToNumber([data])+2-[AttemptOrder]&#xA;ELSE [AttemptOrder]&#xA;ENDIF" type="Int32" />
+            <Field name="OldRowID" source="TextInput:" type="Byte" />
+            <Field name="OldColID" source="TextInput:" type="Byte" />
+            <Field name="direction" source="Formula: IF [sect]='C' and [joinsheet]='EFAC'&#xA;THEN Switch([direction],Null(),0,3,2,1)&#xA;ELSEIF [sect]='F' and [joinsheet]='BCDF'&#xA;THEN Switch([direction],Null(),0,3,2,1)&#xA;ELSEIF [joinsheet]='BADE' and ([sect] in ('D','E'))&#xA;THEN Switch([direction],Null(),0,2,2,0)&#xA;ELSE [direction]&#xA;ENDIF&#xA;&#xA;&#xA;/* the C in EFAC, F in BCDF, and DE in BADE are all rotated from the other positioning */" type="Int16" />
+            <Field name="InstructionID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="Sheet" size="1073741823" source="Formula: Trim(Right([FileName], 7), '`$')" type="V_WString" />
+            <Field name="Min_ColID" source="Formula: 1" type="Byte" />
+            <Field name="Max_ColID" source="Formula: IF [Sheet] = 'BADE'&#xA;THEN 200&#xA;ELSE 50&#xA;ENDIF" type="Byte" />
+            <Field name="Min_RowID" source="Formula: 1" type="Byte" />
+            <Field name="Max_RowID" source="Formula: IF [Sheet] = 'BADE'&#xA;THEN 50&#xA;ELSE 200&#xA;ENDIF" type="Byte" />
+            <Field name="CurrentRowID" source="Formula: IF [PotentialRowIDMin]=[CurrentRowID]&#xA;THEN [PotentialRowIDMin]&#xA;ELSEIF [direction]=1 and [PotentialRowIDMin]&gt;[Max_RowID]&#xA;THEN [Min_RowID]+([PotentialRowIDMin]-[Max_RowID])-1&#xA;ELSEIF [direction]=3 and [PotentialRowIDMin]&lt;[Min_RowID]&#xA;THEN [Max_RowID]-([Min_RowID] - [PotentialRowIDMin])+1&#xA;ELSE [PotentialRowIDMin]&#xA;ENDIF" type="Int32" />
+            <Field name="CurrentColID" source="Formula: IF [PotentialColIDMin]=[CurrentColID]&#xA;THEN [PotentialColIDMin]&#xA;ELSEIF [direction]=2 and [PotentialColIDMin]&lt;[Min_ColID]&#xA;THEN [Max_ColID]-([Min_ColID] - [PotentialColIDMin])+1&#xA;ELSEIF [direction]=0 and [PotentialColIDMin]&gt;[Max_ColID]&#xA;THEN [Min_ColID]+([PotentialColIDMin]-[Max_ColID])-1&#xA;ELSE [PotentialColIDMin]&#xA;ENDIF" type="Int32" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="CurrentRowID" />
+            <Field field="CurrentColID" />
+            <Field field="Sheet" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field name="AttemptOrder" source="Formula: IF [PotentialColIDMax]=[CurrentColID] and [PotentialRowIDMax]=[CurrentRowID]&#xA;THEN ToNumber([data])+2-[AttemptOrder]&#xA;ELSE [AttemptOrder]&#xA;ENDIF" type="Int32" />
+            <Field name="OldRowID" source="TextInput:" type="Byte" />
+            <Field name="OldColID" source="TextInput:" type="Byte" />
+            <Field name="direction_Sheet" source="Formula: IF [sect]='C' and [joinsheet]='EFAC'&#xA;THEN Switch([direction],Null(),0,3,2,1)&#xA;ELSEIF [sect]='F' and [joinsheet]='BCDF'&#xA;THEN Switch([direction],Null(),0,3,2,1)&#xA;ELSEIF [joinsheet]='BADE' and ([sect] in ('D','E'))&#xA;THEN Switch([direction],Null(),0,2,2,0)&#xA;ELSE [direction]&#xA;ENDIF&#xA;&#xA;&#xA;/* the C in EFAC, F in BCDF, and DE in BADE are all rotated from the other positioning */" type="Int16" />
+            <Field name="InstructionID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="Sheet" size="1073741823" source="Formula: Trim(Right([FileName], 7), '`$')" type="V_WString" />
+            <Field name="CurrentRowID_relativeSheet" source="Formula: IF [PotentialRowIDMin]=[CurrentRowID]&#xA;THEN [PotentialRowIDMin]&#xA;ELSEIF [direction]=1 and [PotentialRowIDMin]&gt;[Max_RowID]&#xA;THEN [Min_RowID]+([PotentialRowIDMin]-[Max_RowID])-1&#xA;ELSEIF [direction]=3 and [PotentialRowIDMin]&lt;[Min_RowID]&#xA;THEN [Max_RowID]-([Min_RowID] - [PotentialRowIDMin])+1&#xA;ELSE [PotentialRowIDMin]&#xA;ENDIF" type="Int32" />
+            <Field name="CurrentColID_relativeSheet" source="Formula: IF [PotentialColIDMin]=[CurrentColID]&#xA;THEN [PotentialColIDMin]&#xA;ELSEIF [direction]=2 and [PotentialColIDMin]&lt;[Min_ColID]&#xA;THEN [Max_ColID]-([Min_ColID] - [PotentialColIDMin])+1&#xA;ELSEIF [direction]=0 and [PotentialColIDMin]&gt;[Max_ColID]&#xA;THEN [Min_ColID]+([PotentialColIDMin]-[Max_ColID])-1&#xA;ELSE [PotentialColIDMin]&#xA;ENDIF" type="Int32" />
+            <Field name="sect" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="data" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="rotate" size="1073741823" source="Formula: IF Contains([FileName], 'EFAC') and [sect]='C'&#xA;THEN 'row col switch 1-row'&#xA;ELSEIF Contains([FileName], 'BCDF') and [sect]='F'&#xA;THEN 'row col switch 1-row'&#xA;ELSEIF Contains([FileName],'BADE') and ([sect] in ('E','D'))&#xA;THEN '1-row 1-col'&#xA;ELSE 'none'&#xA;ENDIF&#xA;" type="V_WString" />
+            <Field name="CurrentRowID" source="Formula: IF [rotate] = 'none'&#xA;THEN [RowID_sect]+[Min_RowID_abs]-1&#xA;ELSEIF [rotate] = 'row col switch 1-row'&#xA;THEN [ColID_sect]+[Min_RowID_abs]-1&#xA;ELSEIF [rotate] = '1-row 1-col'&#xA;THEN (50-[RowID_sect])+[Min_RowID_abs]&#xA;ELSE null()&#xA;ENDIF" type="Int32" />
+            <Field name="CurrentColID" source="Formula: IF [rotate]='none'&#xA;THEN [ColID_sect]+[Min_ColID_abs]-1&#xA;ELSEIF [rotate]='row col switch 1-row'&#xA;THEN (50-[RowID_sect]-1)+[Min_ColID_abs]+1&#xA;ELSEIF [rotate]='1-row 1-col'&#xA;THEN (50-[ColID_sect])+[Min_ColID_abs]&#xA;ELSE null()&#xA;ENDIF" type="Int32" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="CurrentRowID_relativeSheet" order="" />
+            <Field field="CurrentColID_relativeSheet" order="" />
+            <Field field="Sheet" order="" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="sect" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="RowID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="ColID" source="Transpose:" type="Int32" />
+            <Field name="data" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Min_ColID_sect" source="Transpose:" type="Int32" />
+            <Field name="Min_RowID_sect" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="Max_ColID_sect" source="Transpose:" type="Int32" />
+            <Field name="Max_RowID_sect" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="rotate" size="1073741823" source="Formula: IF Contains([FileName], 'EFAC') and [sect]='C'&#xA;THEN 'row col switch 1-row'&#xA;ELSEIF Contains([FileName], 'BCDF') and [sect]='F'&#xA;THEN 'row col switch 1-row'&#xA;ELSEIF Contains([FileName],'BADE') and ([sect] in ('E','D'))&#xA;THEN '1-row 1-col'&#xA;ELSE 'none'&#xA;ENDIF&#xA;" type="V_WString" />
+            <Field name="Sheet" size="1073741823" source="Formula: Trim(Right([FileName], 7), '`$')" type="V_WString" />
+            <Field name="Min_ColID_abs" source="TextInput:" type="Byte" />
+            <Field name="Min_RowID_abs" source="TextInput:" type="Byte" />
+            <Field name="Max_ColID_abs" source="TextInput:" type="Byte" />
+            <Field name="Max_RowID_abs" source="TextInput:" type="Byte" />
+            <Field name="RowID_sect" source="Formula: [RowID]-[Min_RowID_sect]+1" type="Int32" />
+            <Field name="ColID_sect" source="Formula: [ColID]-[Min_ColID_sect]+1" type="Int32" />
+            <Field name="RowID_abs" source="Formula: IF [rotate] = 'none'&#xA;THEN [RowID_sect]+[Min_RowID_abs]-1&#xA;ELSEIF [rotate] = 'row col switch 1-row'&#xA;THEN [ColID_sect]+[Min_RowID_abs]-1&#xA;ELSEIF [rotate] = '1-row 1-col'&#xA;THEN (50-[RowID_sect])+[Min_RowID_abs]&#xA;ELSE null()&#xA;ENDIF" type="Int32" />
+            <Field name="ColID_abs" source="Formula: IF [rotate]='none'&#xA;THEN [ColID_sect]+[Min_ColID_abs]-1&#xA;ELSEIF [rotate]='row col switch 1-row'&#xA;THEN (50-[RowID_sect]-1)+[Min_ColID_abs]+1&#xA;ELSEIF [rotate]='1-row 1-col'&#xA;THEN (50-[ColID_sect])+[Min_ColID_abs]&#xA;ELSE null()&#xA;ENDIF" type="Int32" />
+            <Field name="Min_ColID" source="Formula: 1" type="Byte" />
+            <Field name="Max_ColID" source="Formula: IF [Sheet] = 'BADE'&#xA;THEN 200&#xA;ELSE 50&#xA;ENDIF" type="Byte" />
+            <Field name="Min_RowID" source="Formula: 1" type="Byte" />
+            <Field name="Max_RowID" source="Formula: IF [Sheet] = 'BADE'&#xA;THEN 50&#xA;ELSE 200&#xA;ENDIF" type="Byte" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="RowID" />
+            <Field field="ColID" />
+            <Field field="Sheet" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="77">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="618" y="246" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[direction]+[dirChange]" field="direction" size="2" type="Int16" />
+            <FormulaField expression="Switch([direction],[direction],4,0,-1,3)" field="direction" size="2" type="Int16" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Turn L or R based on instructions</AnnotationText>
+          <DefaultAnnotationText>direction = [direction]+[dirChange]
+direction = Switch([direction],[direction],4...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="CurrentRowID" source="TextInput:" type="Byte" />
+            <Field name="CurrentColID" source="TextInput:" type="Byte" />
+            <Field name="sect" size="1" source="TextInput:" type="String" />
+            <Field name="direction" source="Formula: Switch([direction],[direction],4,0,-1,3)" type="Int16" />
+            <Field name="RowID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="Min_ColID" source="Formula: [_CurrentField_]" type="Int64" />
+            <Field name="Max_ColID" source="Formula: [_CurrentField_]" type="Int64" />
+            <Field name="ColID" source="Formula: [_CurrentField_]" type="Int64" />
+            <Field name="Min_RowID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="Max_RowID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="InstructionID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="data" source="Formula: Trim([data],'RL')" type="Byte" />
+            <Field name="dirChange" source="Formula: IF StartsWith([data], 'R')&#xA;THEN 1&#xA;ELSEIF StartsWith([data], 'L')&#xA;THEN -1&#xA;ELSE 0&#xA;ENDIF" type="Int16" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="78">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="2502" y="330" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="IF ([sect]='C' and [Sheet]='EFAC')&#xA;or ([sect]='F' and [Sheet]='BCDF')&#xA;THEN Switch([direction_Sheet],Null(),3,0,1,2)&#xA;ELSEIF [Sheet]='BADE' and ([sect] in ('D','E'))&#xA;THEN Switch([direction_Sheet],Null(),0,2,2,0)&#xA;ELSE [direction_Sheet]&#xA;ENDIF" field="direction" size="1" type="Byte" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Rotate direction for cubic sides</AnnotationText>
+          <DefaultAnnotationText>direction = IF ([sect]='C' and [Sheet]='EFAC')
+or ([sect]='F' and [Sheet]='BCDF'...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="AttemptOrder" source="Formula: IF [PotentialColIDMax]=[CurrentColID] and [PotentialRowIDMax]=[CurrentRowID]&#xA;THEN ToNumber([data])+2-[AttemptOrder]&#xA;ELSE [AttemptOrder]&#xA;ENDIF" type="Int32" />
+            <Field name="OldRowID" source="TextInput:" type="Byte" />
+            <Field name="OldColID" source="TextInput:" type="Byte" />
+            <Field name="direction_Sheet" source="Formula: IF [sect]='C' and [joinsheet]='EFAC'&#xA;THEN Switch([direction],Null(),0,3,2,1)&#xA;ELSEIF [sect]='F' and [joinsheet]='BCDF'&#xA;THEN Switch([direction],Null(),0,3,2,1)&#xA;ELSEIF [joinsheet]='BADE' and ([sect] in ('D','E'))&#xA;THEN Switch([direction],Null(),0,2,2,0)&#xA;ELSE [direction]&#xA;ENDIF&#xA;&#xA;&#xA;/* the C in EFAC, F in BCDF, and DE in BADE are all rotated from the other positioning */" type="Int16" />
+            <Field name="InstructionID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="Sheet" size="1073741823" source="Formula: Trim(Right([FileName], 7), '`$')" type="V_WString" />
+            <Field name="CurrentRowID_relativeSheet" source="Formula: IF [PotentialRowIDMin]=[CurrentRowID]&#xA;THEN [PotentialRowIDMin]&#xA;ELSEIF [direction]=1 and [PotentialRowIDMin]&gt;[Max_RowID]&#xA;THEN [Min_RowID]+([PotentialRowIDMin]-[Max_RowID])-1&#xA;ELSEIF [direction]=3 and [PotentialRowIDMin]&lt;[Min_RowID]&#xA;THEN [Max_RowID]-([Min_RowID] - [PotentialRowIDMin])+1&#xA;ELSE [PotentialRowIDMin]&#xA;ENDIF" type="Int32" />
+            <Field name="CurrentColID_relativeSheet" source="Formula: IF [PotentialColIDMin]=[CurrentColID]&#xA;THEN [PotentialColIDMin]&#xA;ELSEIF [direction]=2 and [PotentialColIDMin]&lt;[Min_ColID]&#xA;THEN [Max_ColID]-([Min_ColID] - [PotentialColIDMin])+1&#xA;ELSEIF [direction]=0 and [PotentialColIDMin]&gt;[Max_ColID]&#xA;THEN [Min_ColID]+([PotentialColIDMin]-[Max_ColID])-1&#xA;ELSE [PotentialColIDMin]&#xA;ENDIF" type="Int32" />
+            <Field name="sect" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="data" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="rotate" size="1073741823" source="Formula: IF Contains([FileName], 'EFAC') and [sect]='C'&#xA;THEN 'row col switch 1-row'&#xA;ELSEIF Contains([FileName], 'BCDF') and [sect]='F'&#xA;THEN 'row col switch 1-row'&#xA;ELSEIF Contains([FileName],'BADE') and ([sect] in ('E','D'))&#xA;THEN '1-row 1-col'&#xA;ELSE 'none'&#xA;ENDIF&#xA;" type="V_WString" />
+            <Field name="CurrentRowID" source="Formula: IF [rotate] = 'none'&#xA;THEN [RowID_sect]+[Min_RowID_abs]-1&#xA;ELSEIF [rotate] = 'row col switch 1-row'&#xA;THEN [ColID_sect]+[Min_RowID_abs]-1&#xA;ELSEIF [rotate] = '1-row 1-col'&#xA;THEN (50-[RowID_sect])+[Min_RowID_abs]&#xA;ELSE null()&#xA;ENDIF" type="Int32" />
+            <Field name="CurrentColID" source="Formula: IF [rotate]='none'&#xA;THEN [ColID_sect]+[Min_ColID_abs]-1&#xA;ELSEIF [rotate]='row col switch 1-row'&#xA;THEN (50-[RowID_sect]-1)+[Min_ColID_abs]+1&#xA;ELSEIF [rotate]='1-row 1-col'&#xA;THEN (50-[ColID_sect])+[Min_ColID_abs]&#xA;ELSE null()&#xA;ENDIF" type="Int32" />
+            <Field name="direction" source="Formula: IF ([sect]='C' and [Sheet]='EFAC')&#xA;or ([sect]='F' and [Sheet]='BCDF')&#xA;THEN Switch([direction_Sheet],Null(),3,0,1,2)&#xA;ELSEIF [Sheet]='BADE' and ([sect] in ('D','E'))&#xA;THEN Switch([direction_Sheet],Null(),0,2,2,0)&#xA;ELSE [direction_Sheet]&#xA;ENDIF" type="Byte" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="CurrentRowID_relativeSheet" order="" />
+            <Field field="CurrentColID_relativeSheet" order="" />
+            <Field field="Sheet" order="" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="79">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DetourEnd.DetourEnd">
+        <Position x="2586" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="AttemptOrder" source="Formula: IF [PotentialColIDMax]=[CurrentColID] and [PotentialRowIDMax]=[CurrentRowID]&#xA;THEN ToNumber([data])+2-[AttemptOrder]&#xA;ELSE [AttemptOrder]&#xA;ENDIF" type="Int32" />
+            <Field name="OldRowID" source="TextInput:" type="Byte" />
+            <Field name="OldColID" source="TextInput:" type="Byte" />
+            <Field name="direction" source="Formula: IF [sect]='C' and [joinsheet]='EFAC'&#xA;THEN Switch([direction],Null(),0,3,2,1)&#xA;ELSEIF [sect]='F' and [joinsheet]='BCDF'&#xA;THEN Switch([direction],Null(),0,3,2,1)&#xA;ELSEIF [joinsheet]='BADE' and ([sect] in ('D','E'))&#xA;THEN Switch([direction],Null(),0,2,2,0)&#xA;ELSE [direction]&#xA;ENDIF&#xA;&#xA;&#xA;/* the C in EFAC, F in BCDF, and DE in BADE are all rotated from the other positioning */" type="Int16" />
+            <Field name="InstructionID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="Sheet" size="1073741823" source="Formula: Trim(Right([FileName], 7), '`$')" type="V_WString" />
+            <Field name="Min_ColID" source="Formula: 1" type="Byte" />
+            <Field name="Max_ColID" source="Formula: IF [Sheet] = 'BADE'&#xA;THEN 200&#xA;ELSE 50&#xA;ENDIF" type="Byte" />
+            <Field name="Min_RowID" source="Formula: 1" type="Byte" />
+            <Field name="Max_RowID" source="Formula: IF [Sheet] = 'BADE'&#xA;THEN 50&#xA;ELSE 200&#xA;ENDIF" type="Byte" />
+            <Field name="CurrentRowID" source="Formula: IF [PotentialRowIDMin]=[CurrentRowID]&#xA;THEN [PotentialRowIDMin]&#xA;ELSEIF [direction]=1 and [PotentialRowIDMin]&gt;[Max_RowID]&#xA;THEN [Min_RowID]+([PotentialRowIDMin]-[Max_RowID])-1&#xA;ELSEIF [direction]=3 and [PotentialRowIDMin]&lt;[Min_RowID]&#xA;THEN [Max_RowID]-([Min_RowID] - [PotentialRowIDMin])+1&#xA;ELSE [PotentialRowIDMin]&#xA;ENDIF" type="Int32" />
+            <Field name="CurrentColID" source="Formula: IF [PotentialColIDMin]=[CurrentColID]&#xA;THEN [PotentialColIDMin]&#xA;ELSEIF [direction]=2 and [PotentialColIDMin]&lt;[Min_ColID]&#xA;THEN [Max_ColID]-([Min_ColID] - [PotentialColIDMin])+1&#xA;ELSEIF [direction]=0 and [PotentialColIDMin]&gt;[Max_ColID]&#xA;THEN [Min_ColID]+([PotentialColIDMin]-[Max_ColID])-1&#xA;ELSE [PotentialColIDMin]&#xA;ENDIF" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDetourEnd" />
+    </Node>
+    <Node ToolID="80">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Detour.Detour">
+        <Position x="2298" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <DetourRight value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="AttemptOrder" source="Formula: IF [PotentialColIDMax]=[CurrentColID] and [PotentialRowIDMax]=[CurrentRowID]&#xA;THEN ToNumber([data])+2-[AttemptOrder]&#xA;ELSE [AttemptOrder]&#xA;ENDIF" type="Int32" />
+            <Field name="OldRowID" source="TextInput:" type="Byte" />
+            <Field name="OldColID" source="TextInput:" type="Byte" />
+            <Field name="direction" source="Formula: IF [sect]='C' and [joinsheet]='EFAC'&#xA;THEN Switch([direction],Null(),0,3,2,1)&#xA;ELSEIF [sect]='F' and [joinsheet]='BCDF'&#xA;THEN Switch([direction],Null(),0,3,2,1)&#xA;ELSEIF [joinsheet]='BADE' and ([sect] in ('D','E'))&#xA;THEN Switch([direction],Null(),0,2,2,0)&#xA;ELSE [direction]&#xA;ENDIF&#xA;&#xA;&#xA;/* the C in EFAC, F in BCDF, and DE in BADE are all rotated from the other positioning */" type="Int16" />
+            <Field name="InstructionID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="Sheet" size="1073741823" source="Formula: Trim(Right([FileName], 7), '`$')" type="V_WString" />
+            <Field name="Min_ColID" source="Formula: 1" type="Byte" />
+            <Field name="Max_ColID" source="Formula: IF [Sheet] = 'BADE'&#xA;THEN 200&#xA;ELSE 50&#xA;ENDIF" type="Byte" />
+            <Field name="Min_RowID" source="Formula: 1" type="Byte" />
+            <Field name="Max_RowID" source="Formula: IF [Sheet] = 'BADE'&#xA;THEN 50&#xA;ELSE 200&#xA;ENDIF" type="Byte" />
+            <Field name="CurrentRowID" source="Formula: IF [PotentialRowIDMin]=[CurrentRowID]&#xA;THEN [PotentialRowIDMin]&#xA;ELSEIF [direction]=1 and [PotentialRowIDMin]&gt;[Max_RowID]&#xA;THEN [Min_RowID]+([PotentialRowIDMin]-[Max_RowID])-1&#xA;ELSEIF [direction]=3 and [PotentialRowIDMin]&lt;[Min_RowID]&#xA;THEN [Max_RowID]-([Min_RowID] - [PotentialRowIDMin])+1&#xA;ELSE [PotentialRowIDMin]&#xA;ENDIF" type="Int32" />
+            <Field name="CurrentColID" source="Formula: IF [PotentialColIDMin]=[CurrentColID]&#xA;THEN [PotentialColIDMin]&#xA;ELSEIF [direction]=2 and [PotentialColIDMin]&lt;[Min_ColID]&#xA;THEN [Max_ColID]-([Min_ColID] - [PotentialColIDMin])+1&#xA;ELSEIF [direction]=0 and [PotentialColIDMin]&gt;[Max_ColID]&#xA;THEN [Min_ColID]+([PotentialColIDMin]-[Max_ColID])-1&#xA;ELSE [PotentialColIDMin]&#xA;ENDIF" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="AttemptOrder" source="Formula: IF [PotentialColIDMax]=[CurrentColID] and [PotentialRowIDMax]=[CurrentRowID]&#xA;THEN ToNumber([data])+2-[AttemptOrder]&#xA;ELSE [AttemptOrder]&#xA;ENDIF" type="Int32" />
+            <Field name="OldRowID" source="TextInput:" type="Byte" />
+            <Field name="OldColID" source="TextInput:" type="Byte" />
+            <Field name="direction" source="Formula: IF [sect]='C' and [joinsheet]='EFAC'&#xA;THEN Switch([direction],Null(),0,3,2,1)&#xA;ELSEIF [sect]='F' and [joinsheet]='BCDF'&#xA;THEN Switch([direction],Null(),0,3,2,1)&#xA;ELSEIF [joinsheet]='BADE' and ([sect] in ('D','E'))&#xA;THEN Switch([direction],Null(),0,2,2,0)&#xA;ELSE [direction]&#xA;ENDIF&#xA;&#xA;&#xA;/* the C in EFAC, F in BCDF, and DE in BADE are all rotated from the other positioning */" type="Int16" />
+            <Field name="InstructionID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="Sheet" size="1073741823" source="Formula: Trim(Right([FileName], 7), '`$')" type="V_WString" />
+            <Field name="Min_ColID" source="Formula: 1" type="Byte" />
+            <Field name="Max_ColID" source="Formula: IF [Sheet] = 'BADE'&#xA;THEN 200&#xA;ELSE 50&#xA;ENDIF" type="Byte" />
+            <Field name="Min_RowID" source="Formula: 1" type="Byte" />
+            <Field name="Max_RowID" source="Formula: IF [Sheet] = 'BADE'&#xA;THEN 50&#xA;ELSE 200&#xA;ENDIF" type="Byte" />
+            <Field name="CurrentRowID" source="Formula: IF [PotentialRowIDMin]=[CurrentRowID]&#xA;THEN [PotentialRowIDMin]&#xA;ELSEIF [direction]=1 and [PotentialRowIDMin]&gt;[Max_RowID]&#xA;THEN [Min_RowID]+([PotentialRowIDMin]-[Max_RowID])-1&#xA;ELSEIF [direction]=3 and [PotentialRowIDMin]&lt;[Min_RowID]&#xA;THEN [Max_RowID]-([Min_RowID] - [PotentialRowIDMin])+1&#xA;ELSE [PotentialRowIDMin]&#xA;ENDIF" type="Int32" />
+            <Field name="CurrentColID" source="Formula: IF [PotentialColIDMin]=[CurrentColID]&#xA;THEN [PotentialColIDMin]&#xA;ELSEIF [direction]=2 and [PotentialColIDMin]&lt;[Min_ColID]&#xA;THEN [Max_ColID]-([Min_ColID] - [PotentialColIDMin])+1&#xA;ELSEIF [direction]=0 and [PotentialColIDMin]&gt;[Max_ColID]&#xA;THEN [Min_ColID]+([PotentialColIDMin]-[Max_ColID])-1&#xA;ELSE [PotentialColIDMin]&#xA;ENDIF" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDetour" />
+    </Node>
+    <Node ToolID="81">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.RadioButtonGroup.RadioButtonGroup">
+        <Position x="606" y="30" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Radio Button (81)</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="82">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.RadioButtonGroup.RadioButtonGroup">
+        <Position x="606" y="78" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Radio Button (82)</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="83">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
+        <Position x="726" y="162" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Update Value</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="84">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
+        <Position x="726" y="366" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Update Value</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="85">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
+        <Position x="2310" y="222" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Update Value</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection name="#1">
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection name="#3">
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="True" />
+      <Destination ToolID="13" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="13" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="21" Connection="Input" />
+    </Connection>
+    <Connection name="#3">
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="10" Connection="Output" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Join" />
+      <Destination ToolID="77" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="Output" />
+      <Destination ToolID="15" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="Output" />
+      <Destination ToolID="16" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="37" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="17" Connection="Output" />
+      <Destination ToolID="19" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="19" Connection="Output" />
+      <Destination ToolID="20" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="41" Connection="Output" />
+      <Destination ToolID="20" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="20" Connection="Left" />
+      <Destination ToolID="23" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="20" Connection="Left" />
+      <Destination ToolID="28" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="27" Connection="Output" />
+      <Destination ToolID="28" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="21" Connection="Output" />
+      <Destination ToolID="22" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="22" Connection="Output" />
+      <Destination ToolID="40" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="84" Connection="Action" />
+      <Destination ToolID="40" Connection="Action" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="23" Connection="Output" />
+      <Destination ToolID="24" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="24" Connection="Output" />
+      <Destination ToolID="26" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="26" Connection="True" />
+      <Destination ToolID="27" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="28" Connection="Join" />
+      <Destination ToolID="80" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="85" Connection="Action" />
+      <Destination ToolID="80" Connection="Action" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="32" Connection="Output" />
+      <Destination ToolID="31" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="35" Connection="Output" />
+      <Destination ToolID="30" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="37" Connection="Output" />
+      <Destination ToolID="17" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="38" Connection="Left" />
+      <Destination ToolID="39" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="71" Connection="Join" />
+      <Destination ToolID="39" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="38" Connection="Right" />
+      <Destination ToolID="42" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="39" Connection="Output" />
+      <Destination ToolID="14" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="40" Connection="Left" />
+      <Destination ToolID="41" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="74" Connection="Join" />
+      <Destination ToolID="41" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="40" Connection="Right" />
+      <Destination ToolID="74" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="73" Connection="Join" />
+      <Destination ToolID="74" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="42" Connection="Output" />
+      <Destination ToolID="71" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="70" Connection="Output" />
+      <Destination ToolID="71" Connection="Right" />
+    </Connection>
+    <Connection Wireless="True">
+      <Origin ToolID="42" Connection="Output" />
+      <Destination ToolID="72" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="70" Connection="Output" />
+      <Destination ToolID="75" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="80" Connection="Right" />
+      <Destination ToolID="75" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="70" Connection="Output" />
+      <Destination ToolID="73" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="72" Connection="Output" />
+      <Destination ToolID="73" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="75" Connection="Join" />
+      <Destination ToolID="78" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="77" Connection="Output" />
+      <Destination ToolID="38" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="83" Connection="Action" />
+      <Destination ToolID="38" Connection="Action" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="78" Connection="Output" />
+      <Destination ToolID="79" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="80" Connection="Left" />
+      <Destination ToolID="79" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="79" Connection="Output" />
+      <Destination ToolID="32" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="79" Connection="Output" />
+      <Destination ToolID="35" Connection="Input" />
+    </Connection>
+    <Connection name="#1" Wireless="True">
+      <Origin ToolID="82" Connection="Question" />
+      <Destination ToolID="83" Connection="Question" />
+    </Connection>
+    <Connection name="#1" Wireless="True">
+      <Origin ToolID="82" Connection="Question" />
+      <Destination ToolID="84" Connection="Question" />
+    </Connection>
+    <Connection name="#1" Wireless="True">
+      <Origin ToolID="82" Connection="Question" />
+      <Destination ToolID="85" Connection="Question" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <Constants>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Macro Input (3)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Macro Input (2)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Radio Button (81)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Radio Button (82)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+    </Constants>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Day22Iterative</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="85ba7f0d-8807-4d81-a7d6-21e5416571d1" />
+      <Telemetry>
+        <PreviousWorkflowId value="f840efd9-ddc2-4014-9738-a85bd1597f0e" />
+        <OriginWorkflowId value="85ba7f0d-8807-4d81-a7d6-21e5416571d1" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="False" />
+    </Events>
+    <RuntimeProperties>
+      <Actions>
+        <NoCondition>
+          <Type>NoCondition</Type>
+          <Description>(Always Run)</Description>
+          <True>
+            <Action>
+              <Type>Dynamic</Type>
+              <Description />
+              <ToolId value="83" />
+              <Expression>{{INPUT}}</Expression>
+              <Destination>38/DetourRight/@value</Destination>
+              <Mapping>Update Detour Direction from Question</Mapping>
+              <Mode>Expression</Mode>
+              <DynamicConfiguration />
+              <DefaultConfiguration value="True" />
+            </Action>
+            <Action>
+              <Type>Dynamic</Type>
+              <Description />
+              <ToolId value="84" />
+              <Expression>{{INPUT}}</Expression>
+              <Destination>40/DetourRight/@value</Destination>
+              <Mapping>Update Detour Direction from Question</Mapping>
+              <Mode>Expression</Mode>
+              <DynamicConfiguration />
+              <DefaultConfiguration value="True" />
+            </Action>
+            <Action>
+              <Type>Dynamic</Type>
+              <Description />
+              <ToolId value="85" />
+              <Expression>{{INPUT}}</Expression>
+              <Destination>80/DetourRight/@value</Destination>
+              <Mapping>Update Detour Direction from Question</Mapping>
+              <Mode>Expression</Mode>
+              <DynamicConfiguration />
+              <DefaultConfiguration value="True" />
+            </Action>
+          </True>
+        </NoCondition>
+      </Actions>
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Tab (12)</Name>
+          <ToolId value="12" />
+          <Questions>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description>Macro Output (30)</Description>
+              <Name>Macro Output (30)</Name>
+              <ToolId value="30" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description>Macro Output (31)</Description>
+              <Name>Macro Output (31)</Name>
+              <ToolId value="31" />
+            </Question>
+            <Question>
+              <Type>MacroInput</Type>
+              <Description />
+              <Name>Macro Input (2)</Name>
+              <ToolId value="2" />
+            </Question>
+            <Question>
+              <Type>MacroInput</Type>
+              <Description />
+              <Name>Macro Input (3)</Name>
+              <ToolId value="3" />
+            </Question>
+            <Question>
+              <Type>MacroInput</Type>
+              <Description />
+              <Name>Macro Input (1)</Name>
+              <ToolId value="1" />
+            </Question>
+            <Question>
+              <Type>RadioGroup</Type>
+              <Description>Part 1</Description>
+              <Name>Radio Button (81)</Name>
+              <ToolId value="81" />
+              <Questions />
+              <Default value="True" />
+              <Collapsable value="False" />
+            </Question>
+            <Question>
+              <Type>RadioGroup</Type>
+              <Description>Part 2</Description>
+              <Name>Radio Button (82)</Name>
+              <ToolId value="82" />
+              <Questions />
+              <Default value="False" />
+              <Collapsable value="False" />
+            </Question>
+          </Questions>
+        </Question>
+      </Questions>
+      <ModuleType>Macro</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImageStd value="39" />
+      <MacroInputs />
+      <MacroOutputs />
+      <IterativeMacro>
+        <Input>Input1</Input>
+        <Output>Iterate</Output>
+        <IterationLimit value="10000" />
+        <LimitBehavior>Warn</LimitBehavior>
+        <OutputMode>AutoByName</OutputMode>
+      </IterativeMacro>
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="1" Selected="True" />
+        <Tool ToolId="2" Selected="True" />
+        <Tool ToolId="3" Selected="True" />
+        <Tool ToolId="30" Selected="True" />
+        <Tool ToolId="31" Selected="True" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>

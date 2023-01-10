@@ -1,0 +1,2282 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2022.3">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="Path" RecordLimit="" SearchSubDirs="False" FileFormat="25">Day22CubeGrid.xlsx|||`BADE$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>True</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Day22CubeGrid.xlsx
+Query=`BADE$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="F1" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F2" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F3" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F4" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F5" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F6" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F7" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F8" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F9" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F10" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F11" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F12" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F13" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F14" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F15" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F16" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F17" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F18" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F19" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F20" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F21" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F22" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F23" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F24" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F25" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F26" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F27" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F28" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F29" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F30" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F31" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F32" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F33" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F34" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F35" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F36" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F37" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F38" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F39" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F40" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F41" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F42" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F43" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F44" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F45" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F46" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F47" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F48" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F49" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F50" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F51" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F52" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F53" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F54" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F55" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F56" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F57" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F58" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F59" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F60" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F61" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F62" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F63" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F64" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F65" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F66" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F67" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F68" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F69" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F70" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F71" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F72" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F73" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F74" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F75" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F76" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F77" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F78" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F79" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F80" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F81" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F82" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F83" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F84" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F85" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F86" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F87" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F88" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F89" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F90" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F91" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F92" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F93" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F94" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F95" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F96" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F97" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F98" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F99" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F100" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F101" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F102" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F103" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F104" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F105" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F106" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F107" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F108" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F109" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F110" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F111" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F112" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F113" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F114" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F115" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F116" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F117" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F118" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F119" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F120" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F121" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F122" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F123" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F124" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F125" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F126" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F127" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F128" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F129" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F130" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F131" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F132" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F133" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F134" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F135" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F136" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F137" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F138" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F139" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F140" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F141" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F142" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F143" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F144" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F145" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F146" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F147" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F148" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F149" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F150" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F151" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F152" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F153" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F154" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F155" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F156" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F157" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F158" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F159" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F160" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F161" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F162" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F163" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F164" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F165" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F166" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F167" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F168" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F169" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F170" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F171" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F172" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F173" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F174" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F175" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F176" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F177" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F178" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F179" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F180" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F181" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F182" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F183" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F184" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F185" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F186" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F187" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F188" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F189" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F190" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F191" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F192" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F193" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F194" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F195" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F196" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F197" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F198" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F199" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="F200" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="FileName" size="254" source="File: FileName" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="174" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="Path" RecordLimit="" SearchSubDirs="False" FileFormat="25">Day22CubeGrid.xlsx|||`BCDF$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>True</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Day22CubeGrid.xlsx
+Query=`BCDF$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="F1" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="F2" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="F3" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="F4" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="F5" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="F6" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="F7" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="F8" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="F9" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="F10" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="F11" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="F12" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="F13" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="F14" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="F15" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="F16" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="F17" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="F18" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="F19" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="F20" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="F21" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="F22" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="F23" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="F24" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="F25" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="F26" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="F27" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="F28" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="F29" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="F30" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="F31" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="F32" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="F33" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="F34" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="F35" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="F36" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="F37" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="F38" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="F39" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="F40" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="F41" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="F42" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="F43" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="F44" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="F45" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="F46" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="F47" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="F48" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="F49" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="F50" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="F51" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="FileName" size="254" source="File: FileName" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="Path" RecordLimit="" SearchSubDirs="False" FileFormat="25">Day22CubeGrid.xlsx|||`EFAC$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>True</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Day22CubeGrid.xlsx
+Query=`EFAC$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="F1" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="F2" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="F3" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="F4" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="F5" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="F6" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="F7" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="F8" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="F9" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="F10" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="F11" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="F12" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="F13" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="F14" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="F15" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="F16" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="F17" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="F18" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="F19" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="F20" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="F21" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="F22" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="F23" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="F24" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="F25" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="F26" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="F27" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="F28" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="F29" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="F30" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="F31" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="F32" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="F33" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="F34" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="F35" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="F36" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="F37" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="F38" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="F39" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="F40" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="F41" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="F42" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="F43" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="F44" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="F45" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="F46" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="F47" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="F48" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="F49" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="F50" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="F51" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="FileName" size="254" source="File: FileName" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="870" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Ignore</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+        <Position x="174" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldName>RowID</FieldName>
+          <StartValue>1</StartValue>
+          <FieldType>Int32</FieldType>
+          <FieldSize>6</FieldSize>
+          <Position>0</Position>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Y</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+        <Position x="174" y="174" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldName>RowID</FieldName>
+          <StartValue>1</StartValue>
+          <FieldType>Int32</FieldType>
+          <FieldSize>6</FieldSize>
+          <Position>0</Position>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+        <Position x="174" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldName>RowID</FieldName>
+          <StartValue>1</StartValue>
+          <FieldType>Int32</FieldType>
+          <FieldSize>6</FieldSize>
+          <Position>0</Position>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DynamicRename.DynamicRename">
+        <Position x="270" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <RenameMode>Formula</RenameMode>
+          <Fields orderChanged="False">
+            <Field name="RowID" />
+            <Field name="F1" />
+            <Field name="F2" />
+            <Field name="F3" />
+            <Field name="F4" />
+            <Field name="F5" />
+            <Field name="F6" />
+            <Field name="F7" />
+            <Field name="F8" />
+            <Field name="F9" />
+            <Field name="F10" />
+            <Field name="F11" />
+            <Field name="F12" />
+            <Field name="F13" />
+            <Field name="F14" />
+            <Field name="F15" />
+            <Field name="F16" />
+            <Field name="F17" />
+            <Field name="F18" />
+            <Field name="F19" />
+            <Field name="F20" />
+            <Field name="F21" />
+            <Field name="F22" />
+            <Field name="F23" />
+            <Field name="F24" />
+            <Field name="F25" />
+            <Field name="F26" />
+            <Field name="F27" />
+            <Field name="F28" />
+            <Field name="F29" />
+            <Field name="F30" />
+            <Field name="F31" />
+            <Field name="F32" />
+            <Field name="F33" />
+            <Field name="F34" />
+            <Field name="F35" />
+            <Field name="F36" />
+            <Field name="F37" />
+            <Field name="F38" />
+            <Field name="F39" />
+            <Field name="F40" />
+            <Field name="F41" />
+            <Field name="F42" />
+            <Field name="F43" />
+            <Field name="F44" />
+            <Field name="F45" />
+            <Field name="F46" />
+            <Field name="F47" />
+            <Field name="F48" />
+            <Field name="F49" />
+            <Field name="F50" />
+            <Field name="F51" />
+            <Field name="F52" />
+            <Field name="F53" />
+            <Field name="F54" />
+            <Field name="F55" />
+            <Field name="F56" />
+            <Field name="F57" />
+            <Field name="F58" />
+            <Field name="F59" />
+            <Field name="F60" />
+            <Field name="F61" />
+            <Field name="F62" />
+            <Field name="F63" />
+            <Field name="F64" />
+            <Field name="F65" />
+            <Field name="F66" />
+            <Field name="F67" />
+            <Field name="F68" />
+            <Field name="F69" />
+            <Field name="F70" />
+            <Field name="F71" />
+            <Field name="F72" />
+            <Field name="F73" />
+            <Field name="F74" />
+            <Field name="F75" />
+            <Field name="F76" />
+            <Field name="F77" />
+            <Field name="F78" />
+            <Field name="F79" />
+            <Field name="F80" />
+            <Field name="F81" />
+            <Field name="F82" />
+            <Field name="F83" />
+            <Field name="F84" />
+            <Field name="F85" />
+            <Field name="F86" />
+            <Field name="F87" />
+            <Field name="F88" />
+            <Field name="F89" />
+            <Field name="F90" />
+            <Field name="F91" />
+            <Field name="F92" />
+            <Field name="F93" />
+            <Field name="F94" />
+            <Field name="F95" />
+            <Field name="F96" />
+            <Field name="F97" />
+            <Field name="F98" />
+            <Field name="F99" />
+            <Field name="F100" />
+            <Field name="F101" />
+            <Field name="F102" />
+            <Field name="F103" />
+            <Field name="F104" />
+            <Field name="F105" />
+            <Field name="F106" />
+            <Field name="F107" />
+            <Field name="F108" />
+            <Field name="F109" />
+            <Field name="F110" />
+            <Field name="F111" />
+            <Field name="F112" />
+            <Field name="F113" />
+            <Field name="F114" />
+            <Field name="F115" />
+            <Field name="F116" />
+            <Field name="F117" />
+            <Field name="F118" />
+            <Field name="F119" />
+            <Field name="F120" />
+            <Field name="F121" />
+            <Field name="F122" />
+            <Field name="F123" />
+            <Field name="F124" />
+            <Field name="F125" />
+            <Field name="F126" />
+            <Field name="F127" />
+            <Field name="F128" />
+            <Field name="F129" />
+            <Field name="F130" />
+            <Field name="F131" />
+            <Field name="F132" />
+            <Field name="F133" />
+            <Field name="F134" />
+            <Field name="F135" />
+            <Field name="F136" />
+            <Field name="F137" />
+            <Field name="F138" />
+            <Field name="F139" />
+            <Field name="F140" />
+            <Field name="F141" />
+            <Field name="F142" />
+            <Field name="F143" />
+            <Field name="F144" />
+            <Field name="F145" />
+            <Field name="F146" />
+            <Field name="F147" />
+            <Field name="F148" />
+            <Field name="F149" />
+            <Field name="F150" />
+            <Field name="F151" />
+            <Field name="F152" />
+            <Field name="F153" />
+            <Field name="F154" />
+            <Field name="F155" />
+            <Field name="F156" />
+            <Field name="F157" />
+            <Field name="F158" />
+            <Field name="F159" />
+            <Field name="F160" />
+            <Field name="F161" />
+            <Field name="F162" />
+            <Field name="F163" />
+            <Field name="F164" />
+            <Field name="F165" />
+            <Field name="F166" />
+            <Field name="F167" />
+            <Field name="F168" />
+            <Field name="F169" />
+            <Field name="F170" />
+            <Field name="F171" />
+            <Field name="F172" />
+            <Field name="F173" />
+            <Field name="F174" />
+            <Field name="F175" />
+            <Field name="F176" />
+            <Field name="F177" />
+            <Field name="F178" />
+            <Field name="F179" />
+            <Field name="F180" />
+            <Field name="F181" />
+            <Field name="F182" />
+            <Field name="F183" />
+            <Field name="F184" />
+            <Field name="F185" />
+            <Field name="F186" />
+            <Field name="F187" />
+            <Field name="F188" />
+            <Field name="F189" />
+            <Field name="F190" />
+            <Field name="F191" />
+            <Field name="F192" />
+            <Field name="F193" />
+            <Field name="F194" />
+            <Field name="F195" />
+            <Field name="F196" />
+            <Field name="F197" />
+            <Field name="F198" />
+            <Field name="F199" />
+            <Field name="F200" />
+            <Field name="*Unknown" />
+            <Field name="FileName" selected="False" />
+            <Field name="ColID" selected="False" />
+          </Fields>
+          <Expression>Replace([_CurrentField_], 'F','')</Expression>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>X</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="RowID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="1" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="2" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="3" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="4" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="5" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="6" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="7" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="8" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="9" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="10" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="11" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="12" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="13" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="14" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="15" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="16" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="17" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="18" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="19" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="20" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="21" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="22" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="23" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="24" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="25" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="26" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="27" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="28" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="29" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="30" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="31" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="32" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="33" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="34" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="35" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="36" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="37" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="38" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="39" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="40" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="41" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="42" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="43" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="44" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="45" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="46" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="47" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="48" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="49" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="50" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="51" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="52" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="53" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="54" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="55" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="56" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="57" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="58" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="59" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="60" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="61" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="62" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="63" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="64" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="65" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="66" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="67" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="68" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="69" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="70" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="71" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="72" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="73" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="74" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="75" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="76" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="77" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="78" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="79" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="80" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="81" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="82" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="83" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="84" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="85" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="86" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="87" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="88" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="89" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="90" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="91" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="92" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="93" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="94" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="95" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="96" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="97" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="98" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="99" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="100" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="101" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="102" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="103" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="104" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="105" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="106" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="107" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="108" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="109" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="110" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="111" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="112" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="113" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="114" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="115" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="116" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="117" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="118" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="119" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="120" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="121" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="122" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="123" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="124" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="125" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="126" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="127" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="128" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="129" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="130" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="131" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="132" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="133" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="134" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="135" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="136" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="137" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="138" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="139" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="140" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="141" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="142" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="143" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="144" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="145" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="146" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="147" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="148" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="149" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="150" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="151" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="152" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="153" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="154" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="155" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="156" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="157" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="158" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="159" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="160" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="161" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="162" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="163" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="164" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="165" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="166" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="167" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="168" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="169" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="170" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="171" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="172" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="173" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="174" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="175" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="176" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="177" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="178" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="179" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="180" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="181" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="182" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="183" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="184" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="185" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="186" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="187" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="188" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="189" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="190" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="191" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="192" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="193" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="194" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="195" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="196" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="197" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="198" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="199" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="200" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BADE$`" type="V_String" />
+            <Field name="FileName" size="254" source="File: FileName" type="V_WString" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="RowID" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDynamicRename" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="354" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DynamicRename.DynamicRename">
+        <Position x="270" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <RenameMode>Formula</RenameMode>
+          <Fields orderChanged="False">
+            <Field name="F1" />
+            <Field name="F2" />
+            <Field name="F3" />
+            <Field name="F4" />
+            <Field name="F5" />
+            <Field name="F6" />
+            <Field name="F7" />
+            <Field name="F8" />
+            <Field name="F9" />
+            <Field name="F10" />
+            <Field name="F11" />
+            <Field name="F12" />
+            <Field name="F13" />
+            <Field name="F14" />
+            <Field name="F15" />
+            <Field name="F16" />
+            <Field name="F17" />
+            <Field name="F18" />
+            <Field name="F19" />
+            <Field name="F20" />
+            <Field name="F21" />
+            <Field name="F22" />
+            <Field name="F23" />
+            <Field name="F24" />
+            <Field name="F25" />
+            <Field name="F26" />
+            <Field name="F27" />
+            <Field name="F28" />
+            <Field name="F29" />
+            <Field name="F30" />
+            <Field name="F31" />
+            <Field name="F32" />
+            <Field name="F33" />
+            <Field name="F34" />
+            <Field name="F35" />
+            <Field name="F36" />
+            <Field name="F37" />
+            <Field name="F38" />
+            <Field name="F39" />
+            <Field name="F40" />
+            <Field name="F41" />
+            <Field name="F42" />
+            <Field name="F43" />
+            <Field name="F44" />
+            <Field name="F45" />
+            <Field name="F46" />
+            <Field name="F47" />
+            <Field name="F48" />
+            <Field name="F49" />
+            <Field name="F50" />
+            <Field name="F51" />
+            <Field name="F52" />
+            <Field name="F53" />
+            <Field name="F54" />
+            <Field name="F55" />
+            <Field name="F56" />
+            <Field name="F57" />
+            <Field name="F58" />
+            <Field name="F59" />
+            <Field name="F60" />
+            <Field name="F61" />
+            <Field name="F62" />
+            <Field name="F63" />
+            <Field name="F64" />
+            <Field name="F65" />
+            <Field name="F66" />
+            <Field name="F67" />
+            <Field name="F68" />
+            <Field name="F69" />
+            <Field name="F70" />
+            <Field name="F71" />
+            <Field name="F72" />
+            <Field name="F73" />
+            <Field name="F74" />
+            <Field name="F75" />
+            <Field name="F76" />
+            <Field name="F77" />
+            <Field name="F78" />
+            <Field name="F79" />
+            <Field name="F80" />
+            <Field name="F81" />
+            <Field name="F82" />
+            <Field name="F83" />
+            <Field name="F84" />
+            <Field name="F85" />
+            <Field name="F86" />
+            <Field name="F87" />
+            <Field name="F88" />
+            <Field name="F89" />
+            <Field name="F90" />
+            <Field name="F91" />
+            <Field name="F92" />
+            <Field name="F93" />
+            <Field name="F94" />
+            <Field name="F95" />
+            <Field name="F96" />
+            <Field name="F97" />
+            <Field name="F98" />
+            <Field name="F99" />
+            <Field name="F100" />
+            <Field name="F101" />
+            <Field name="F102" />
+            <Field name="F103" />
+            <Field name="F104" />
+            <Field name="F105" />
+            <Field name="F106" />
+            <Field name="F107" />
+            <Field name="F108" />
+            <Field name="F109" />
+            <Field name="F110" />
+            <Field name="F111" />
+            <Field name="F112" />
+            <Field name="F113" />
+            <Field name="F114" />
+            <Field name="F115" />
+            <Field name="F116" />
+            <Field name="F117" />
+            <Field name="F118" />
+            <Field name="F119" />
+            <Field name="F120" />
+            <Field name="F121" />
+            <Field name="F122" />
+            <Field name="F123" />
+            <Field name="F124" />
+            <Field name="F125" />
+            <Field name="F126" />
+            <Field name="F127" />
+            <Field name="F128" />
+            <Field name="F129" />
+            <Field name="F130" />
+            <Field name="F131" />
+            <Field name="F132" />
+            <Field name="F133" />
+            <Field name="F134" />
+            <Field name="F135" />
+            <Field name="F136" />
+            <Field name="F137" />
+            <Field name="F138" />
+            <Field name="F139" />
+            <Field name="F140" />
+            <Field name="F141" />
+            <Field name="F142" />
+            <Field name="F143" />
+            <Field name="F144" />
+            <Field name="F145" />
+            <Field name="F146" />
+            <Field name="F147" />
+            <Field name="F148" />
+            <Field name="F149" />
+            <Field name="F150" />
+            <Field name="F151" />
+            <Field name="F152" />
+            <Field name="F153" />
+            <Field name="F154" />
+            <Field name="F155" />
+            <Field name="F156" />
+            <Field name="F157" />
+            <Field name="F158" />
+            <Field name="F159" />
+            <Field name="F160" />
+            <Field name="F161" />
+            <Field name="F162" />
+            <Field name="F163" />
+            <Field name="F164" />
+            <Field name="F165" />
+            <Field name="F166" />
+            <Field name="F167" />
+            <Field name="F168" />
+            <Field name="F169" />
+            <Field name="F170" />
+            <Field name="F171" />
+            <Field name="F172" />
+            <Field name="F173" />
+            <Field name="F174" />
+            <Field name="F175" />
+            <Field name="F176" />
+            <Field name="F177" />
+            <Field name="F178" />
+            <Field name="F179" />
+            <Field name="F180" />
+            <Field name="F181" />
+            <Field name="F182" />
+            <Field name="F183" />
+            <Field name="F184" />
+            <Field name="F185" />
+            <Field name="F186" />
+            <Field name="F187" />
+            <Field name="F188" />
+            <Field name="F189" />
+            <Field name="F190" />
+            <Field name="F191" />
+            <Field name="F192" />
+            <Field name="F193" />
+            <Field name="F194" />
+            <Field name="F195" />
+            <Field name="F196" />
+            <Field name="F197" />
+            <Field name="F198" />
+            <Field name="F199" />
+            <Field name="F200" />
+            <Field name="*Unknown" />
+            <Field name="ColID" selected="False" />
+            <Field name="FileName" selected="False" />
+          </Fields>
+          <Expression>Replace([_CurrentField_], 'F','')</Expression>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="RowID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="1" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="2" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="3" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="4" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="5" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="6" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="7" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="8" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="9" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="10" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="11" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="12" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="13" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="14" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="15" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="16" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="17" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="18" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="19" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="20" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="21" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="22" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="23" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="24" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="25" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="26" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="27" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="28" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="29" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="30" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="31" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="32" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="33" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="34" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="35" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="36" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="37" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="38" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="39" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="40" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="41" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="42" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="43" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="44" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="45" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="46" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="47" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="48" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="49" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="50" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="51" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`BCDF$`" type="V_String" />
+            <Field name="FileName" size="254" source="File: FileName" type="V_WString" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="RowID" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDynamicRename" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="354" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="51" selected="True" rename="sect" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Mark the section identifier</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Transpose.Transpose">
+        <Position x="438" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ErrorWarn>Warn</ErrorWarn>
+          <KeyFields>
+            <Field field="RowID" />
+            <Field field="sect" />
+            <Field field="FileName" />
+          </KeyFields>
+          <DataFields>
+            <Field field="RowID" selected="False" />
+            <Field field="1" selected="True" />
+            <Field field="2" selected="True" />
+            <Field field="3" selected="True" />
+            <Field field="4" selected="True" />
+            <Field field="5" selected="True" />
+            <Field field="6" selected="True" />
+            <Field field="7" selected="True" />
+            <Field field="8" selected="True" />
+            <Field field="9" selected="True" />
+            <Field field="10" selected="True" />
+            <Field field="11" selected="True" />
+            <Field field="12" selected="True" />
+            <Field field="13" selected="True" />
+            <Field field="14" selected="True" />
+            <Field field="15" selected="True" />
+            <Field field="16" selected="True" />
+            <Field field="17" selected="True" />
+            <Field field="18" selected="True" />
+            <Field field="19" selected="True" />
+            <Field field="20" selected="True" />
+            <Field field="21" selected="True" />
+            <Field field="22" selected="True" />
+            <Field field="23" selected="True" />
+            <Field field="24" selected="True" />
+            <Field field="25" selected="True" />
+            <Field field="26" selected="True" />
+            <Field field="27" selected="True" />
+            <Field field="28" selected="True" />
+            <Field field="29" selected="True" />
+            <Field field="30" selected="True" />
+            <Field field="31" selected="True" />
+            <Field field="32" selected="True" />
+            <Field field="33" selected="True" />
+            <Field field="34" selected="True" />
+            <Field field="35" selected="True" />
+            <Field field="36" selected="True" />
+            <Field field="37" selected="True" />
+            <Field field="38" selected="True" />
+            <Field field="39" selected="True" />
+            <Field field="40" selected="True" />
+            <Field field="41" selected="True" />
+            <Field field="42" selected="True" />
+            <Field field="43" selected="True" />
+            <Field field="44" selected="True" />
+            <Field field="45" selected="True" />
+            <Field field="46" selected="True" />
+            <Field field="47" selected="True" />
+            <Field field="48" selected="True" />
+            <Field field="49" selected="True" />
+            <Field field="50" selected="True" />
+            <Field field="sect" selected="False" />
+            <Field field="FileName" selected="False" />
+            <Field field="*Unknown" selected="True" />
+          </DataFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTranspose" />
+    </Node>
+    <Node ToolID="14">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Transpose.Transpose">
+        <Position x="438" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ErrorWarn>Warn</ErrorWarn>
+          <KeyFields>
+            <Field field="RowID" />
+            <Field field="FileName" />
+          </KeyFields>
+          <DataFields>
+            <Field field="RowID" selected="False" />
+            <Field field="1" selected="True" />
+            <Field field="2" selected="True" />
+            <Field field="3" selected="True" />
+            <Field field="4" selected="True" />
+            <Field field="5" selected="True" />
+            <Field field="6" selected="True" />
+            <Field field="7" selected="True" />
+            <Field field="8" selected="True" />
+            <Field field="9" selected="True" />
+            <Field field="10" selected="True" />
+            <Field field="11" selected="True" />
+            <Field field="12" selected="True" />
+            <Field field="13" selected="True" />
+            <Field field="14" selected="True" />
+            <Field field="15" selected="True" />
+            <Field field="16" selected="True" />
+            <Field field="17" selected="True" />
+            <Field field="18" selected="True" />
+            <Field field="19" selected="True" />
+            <Field field="20" selected="True" />
+            <Field field="21" selected="True" />
+            <Field field="22" selected="True" />
+            <Field field="23" selected="True" />
+            <Field field="24" selected="True" />
+            <Field field="25" selected="True" />
+            <Field field="26" selected="True" />
+            <Field field="27" selected="True" />
+            <Field field="28" selected="True" />
+            <Field field="29" selected="True" />
+            <Field field="30" selected="True" />
+            <Field field="31" selected="True" />
+            <Field field="32" selected="True" />
+            <Field field="33" selected="True" />
+            <Field field="34" selected="True" />
+            <Field field="35" selected="True" />
+            <Field field="36" selected="True" />
+            <Field field="37" selected="True" />
+            <Field field="38" selected="True" />
+            <Field field="39" selected="True" />
+            <Field field="40" selected="True" />
+            <Field field="41" selected="True" />
+            <Field field="42" selected="True" />
+            <Field field="43" selected="True" />
+            <Field field="44" selected="True" />
+            <Field field="45" selected="True" />
+            <Field field="46" selected="True" />
+            <Field field="47" selected="True" />
+            <Field field="48" selected="True" />
+            <Field field="49" selected="True" />
+            <Field field="50" selected="True" />
+            <Field field="51" selected="True" />
+            <Field field="52" selected="True" />
+            <Field field="53" selected="True" />
+            <Field field="54" selected="True" />
+            <Field field="55" selected="True" />
+            <Field field="56" selected="True" />
+            <Field field="57" selected="True" />
+            <Field field="58" selected="True" />
+            <Field field="59" selected="True" />
+            <Field field="60" selected="True" />
+            <Field field="61" selected="True" />
+            <Field field="62" selected="True" />
+            <Field field="63" selected="True" />
+            <Field field="64" selected="True" />
+            <Field field="65" selected="True" />
+            <Field field="66" selected="True" />
+            <Field field="67" selected="True" />
+            <Field field="68" selected="True" />
+            <Field field="69" selected="True" />
+            <Field field="70" selected="True" />
+            <Field field="71" selected="True" />
+            <Field field="72" selected="True" />
+            <Field field="73" selected="True" />
+            <Field field="74" selected="True" />
+            <Field field="75" selected="True" />
+            <Field field="76" selected="True" />
+            <Field field="77" selected="True" />
+            <Field field="78" selected="True" />
+            <Field field="79" selected="True" />
+            <Field field="80" selected="True" />
+            <Field field="81" selected="True" />
+            <Field field="82" selected="True" />
+            <Field field="83" selected="True" />
+            <Field field="84" selected="True" />
+            <Field field="85" selected="True" />
+            <Field field="86" selected="True" />
+            <Field field="87" selected="True" />
+            <Field field="88" selected="True" />
+            <Field field="89" selected="True" />
+            <Field field="90" selected="True" />
+            <Field field="91" selected="True" />
+            <Field field="92" selected="True" />
+            <Field field="93" selected="True" />
+            <Field field="94" selected="True" />
+            <Field field="95" selected="True" />
+            <Field field="96" selected="True" />
+            <Field field="97" selected="True" />
+            <Field field="98" selected="True" />
+            <Field field="99" selected="True" />
+            <Field field="100" selected="True" />
+            <Field field="101" selected="True" />
+            <Field field="102" selected="True" />
+            <Field field="103" selected="True" />
+            <Field field="104" selected="True" />
+            <Field field="105" selected="True" />
+            <Field field="106" selected="True" />
+            <Field field="107" selected="True" />
+            <Field field="108" selected="True" />
+            <Field field="109" selected="True" />
+            <Field field="110" selected="True" />
+            <Field field="111" selected="True" />
+            <Field field="112" selected="True" />
+            <Field field="113" selected="True" />
+            <Field field="114" selected="True" />
+            <Field field="115" selected="True" />
+            <Field field="116" selected="True" />
+            <Field field="117" selected="True" />
+            <Field field="118" selected="True" />
+            <Field field="119" selected="True" />
+            <Field field="120" selected="True" />
+            <Field field="121" selected="True" />
+            <Field field="122" selected="True" />
+            <Field field="123" selected="True" />
+            <Field field="124" selected="True" />
+            <Field field="125" selected="True" />
+            <Field field="126" selected="True" />
+            <Field field="127" selected="True" />
+            <Field field="128" selected="True" />
+            <Field field="129" selected="True" />
+            <Field field="130" selected="True" />
+            <Field field="131" selected="True" />
+            <Field field="132" selected="True" />
+            <Field field="133" selected="True" />
+            <Field field="134" selected="True" />
+            <Field field="135" selected="True" />
+            <Field field="136" selected="True" />
+            <Field field="137" selected="True" />
+            <Field field="138" selected="True" />
+            <Field field="139" selected="True" />
+            <Field field="140" selected="True" />
+            <Field field="141" selected="True" />
+            <Field field="142" selected="True" />
+            <Field field="143" selected="True" />
+            <Field field="144" selected="True" />
+            <Field field="145" selected="True" />
+            <Field field="146" selected="True" />
+            <Field field="147" selected="True" />
+            <Field field="148" selected="True" />
+            <Field field="149" selected="True" />
+            <Field field="150" selected="True" />
+            <Field field="151" selected="True" />
+            <Field field="152" selected="True" />
+            <Field field="153" selected="True" />
+            <Field field="154" selected="True" />
+            <Field field="155" selected="True" />
+            <Field field="156" selected="True" />
+            <Field field="157" selected="True" />
+            <Field field="158" selected="True" />
+            <Field field="159" selected="True" />
+            <Field field="160" selected="True" />
+            <Field field="161" selected="True" />
+            <Field field="162" selected="True" />
+            <Field field="163" selected="True" />
+            <Field field="164" selected="True" />
+            <Field field="165" selected="True" />
+            <Field field="166" selected="True" />
+            <Field field="167" selected="True" />
+            <Field field="168" selected="True" />
+            <Field field="169" selected="True" />
+            <Field field="170" selected="True" />
+            <Field field="171" selected="True" />
+            <Field field="172" selected="True" />
+            <Field field="173" selected="True" />
+            <Field field="174" selected="True" />
+            <Field field="175" selected="True" />
+            <Field field="176" selected="True" />
+            <Field field="177" selected="True" />
+            <Field field="178" selected="True" />
+            <Field field="179" selected="True" />
+            <Field field="180" selected="True" />
+            <Field field="181" selected="True" />
+            <Field field="182" selected="True" />
+            <Field field="183" selected="True" />
+            <Field field="184" selected="True" />
+            <Field field="185" selected="True" />
+            <Field field="186" selected="True" />
+            <Field field="187" selected="True" />
+            <Field field="188" selected="True" />
+            <Field field="189" selected="True" />
+            <Field field="190" selected="True" />
+            <Field field="191" selected="True" />
+            <Field field="192" selected="True" />
+            <Field field="193" selected="True" />
+            <Field field="194" selected="True" />
+            <Field field="195" selected="True" />
+            <Field field="196" selected="True" />
+            <Field field="197" selected="True" />
+            <Field field="198" selected="True" />
+            <Field field="199" selected="True" />
+            <Field field="200" selected="True" />
+            <Field field="FileName" selected="False" />
+            <Field field="*Unknown" selected="True" />
+          </DataFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Convert to rows</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTranspose" />
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DynamicRename.DynamicRename">
+        <Position x="270" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <RenameMode>Formula</RenameMode>
+          <Fields orderChanged="False">
+            <Field name="F1" />
+            <Field name="F2" />
+            <Field name="F3" />
+            <Field name="F4" />
+            <Field name="F5" />
+            <Field name="F6" />
+            <Field name="F7" />
+            <Field name="F8" />
+            <Field name="F9" />
+            <Field name="F10" />
+            <Field name="F11" />
+            <Field name="F12" />
+            <Field name="F13" />
+            <Field name="F14" />
+            <Field name="F15" />
+            <Field name="F16" />
+            <Field name="F17" />
+            <Field name="F18" />
+            <Field name="F19" />
+            <Field name="F20" />
+            <Field name="F21" />
+            <Field name="F22" />
+            <Field name="F23" />
+            <Field name="F24" />
+            <Field name="F25" />
+            <Field name="F26" />
+            <Field name="F27" />
+            <Field name="F28" />
+            <Field name="F29" />
+            <Field name="F30" />
+            <Field name="F31" />
+            <Field name="F32" />
+            <Field name="F33" />
+            <Field name="F34" />
+            <Field name="F35" />
+            <Field name="F36" />
+            <Field name="F37" />
+            <Field name="F38" />
+            <Field name="F39" />
+            <Field name="F40" />
+            <Field name="F41" />
+            <Field name="F42" />
+            <Field name="F43" />
+            <Field name="F44" />
+            <Field name="F45" />
+            <Field name="F46" />
+            <Field name="F47" />
+            <Field name="F48" />
+            <Field name="F49" />
+            <Field name="F50" />
+            <Field name="F51" />
+            <Field name="*Unknown" />
+            <Field name="ColID" selected="False" />
+            <Field name="FileName" selected="False" />
+          </Fields>
+          <Expression>Replace([_CurrentField_], 'F','')</Expression>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="RowID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="1" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="2" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="3" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="4" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="5" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="6" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="7" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="8" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="9" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="10" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="11" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="12" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="13" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="14" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="15" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="16" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="17" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="18" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="19" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="20" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="21" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="22" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="23" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="24" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="25" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="26" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="27" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="28" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="29" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="30" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="31" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="32" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="33" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="34" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="35" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="36" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="37" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="38" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="39" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="40" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="41" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="42" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="43" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="44" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="45" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="46" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="47" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="48" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="49" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="50" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="51" size="255" source="File: \\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day22CubeGrid.xlsx|||`EFAC$`" type="V_String" />
+            <Field name="FileName" size="254" source="File: FileName" type="V_WString" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="RowID" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDynamicRename" />
+    </Node>
+    <Node ToolID="16">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="354" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="51" selected="True" rename="sect" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="18">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Transpose.Transpose">
+        <Position x="438" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ErrorWarn>Warn</ErrorWarn>
+          <KeyFields>
+            <Field field="RowID" />
+            <Field field="sect" />
+            <Field field="FileName" />
+          </KeyFields>
+          <DataFields>
+            <Field field="RowID" selected="False" />
+            <Field field="1" selected="True" />
+            <Field field="2" selected="True" />
+            <Field field="3" selected="True" />
+            <Field field="4" selected="True" />
+            <Field field="5" selected="True" />
+            <Field field="6" selected="True" />
+            <Field field="7" selected="True" />
+            <Field field="8" selected="True" />
+            <Field field="9" selected="True" />
+            <Field field="10" selected="True" />
+            <Field field="11" selected="True" />
+            <Field field="12" selected="True" />
+            <Field field="13" selected="True" />
+            <Field field="14" selected="True" />
+            <Field field="15" selected="True" />
+            <Field field="16" selected="True" />
+            <Field field="17" selected="True" />
+            <Field field="18" selected="True" />
+            <Field field="19" selected="True" />
+            <Field field="20" selected="True" />
+            <Field field="21" selected="True" />
+            <Field field="22" selected="True" />
+            <Field field="23" selected="True" />
+            <Field field="24" selected="True" />
+            <Field field="25" selected="True" />
+            <Field field="26" selected="True" />
+            <Field field="27" selected="True" />
+            <Field field="28" selected="True" />
+            <Field field="29" selected="True" />
+            <Field field="30" selected="True" />
+            <Field field="31" selected="True" />
+            <Field field="32" selected="True" />
+            <Field field="33" selected="True" />
+            <Field field="34" selected="True" />
+            <Field field="35" selected="True" />
+            <Field field="36" selected="True" />
+            <Field field="37" selected="True" />
+            <Field field="38" selected="True" />
+            <Field field="39" selected="True" />
+            <Field field="40" selected="True" />
+            <Field field="41" selected="True" />
+            <Field field="42" selected="True" />
+            <Field field="43" selected="True" />
+            <Field field="44" selected="True" />
+            <Field field="45" selected="True" />
+            <Field field="46" selected="True" />
+            <Field field="47" selected="True" />
+            <Field field="48" selected="True" />
+            <Field field="49" selected="True" />
+            <Field field="50" selected="True" />
+            <Field field="sect" selected="False" />
+            <Field field="FileName" selected="False" />
+            <Field field="*Unknown" selected="True" />
+          </DataFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTranspose" />
+    </Node>
+    <Node ToolID="19">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="534" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Name" selected="True" rename="ColID" type="Int32" size="4" />
+            <SelectField field="Value" selected="True" rename="data" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="20">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="534" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Name" selected="True" rename="ColID" type="Int32" size="4" />
+            <SelectField field="Value" selected="True" rename="data" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="21">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="630" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>RowID</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2022-12-22 12:55:55</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <StartDate>2022-12-22 12:55:55</StartDate>
+              <EndDate>2022-12-22 12:55:55</EndDate>
+              <Operand>51</Operand>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[RowID] = 51</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="22">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="534" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Name" selected="True" rename="ColID" type="Int32" size="4" />
+            <SelectField field="Value" selected="True" rename="data" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="23">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="726" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="ColID" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="ColID" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_RowID" selected="False" input="Left_" />
+                <SelectField field="Left_FileName" selected="False" input="Left_" />
+                <SelectField field="Left_ColID" selected="False" input="Left_" />
+                <SelectField field="Left_data" selected="True" rename="sect" input="Left_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Create section identifier</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="24">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="966" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="sect" action="GroupBy" rename="sect" />
+            <SummarizeField field="ColID" action="Min" rename="Min_ColID_sect" />
+            <SummarizeField field="RowID" action="Min" rename="Min_RowID_sect" />
+            <SummarizeField field="ColID" action="Max" rename="Max_ColID_sect" />
+            <SummarizeField field="RowID" action="Max" rename="Max_RowID_sect" />
+            <SummarizeField field="FileName" action="GroupBy" rename="FileName" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="26">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="966" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="6" />
+          <Fields>
+            <Field name="sect" />
+            <Field name="Min_ColID_abs" />
+            <Field name="Min_RowID_abs" />
+            <Field name="Max_ColID_abs" />
+            <Field name="Max_RowID_abs" />
+          </Fields>
+          <Data>
+            <r>
+              <c>A</c>
+              <c>101</c>
+              <c>1</c>
+              <c>150</c>
+              <c>50</c>
+            </r>
+            <r>
+              <c>B</c>
+              <c>51</c>
+              <c>1</c>
+              <c>100</c>
+              <c>50</c>
+            </r>
+            <r>
+              <c>C</c>
+              <c>51</c>
+              <c>51</c>
+              <c>100</c>
+              <c>100</c>
+            </r>
+            <r>
+              <c>D</c>
+              <c>51</c>
+              <c>101</c>
+              <c>100</c>
+              <c>150</c>
+            </r>
+            <r>
+              <c>E</c>
+              <c>1</c>
+              <c>101</c>
+              <c>50</c>
+              <c>150</c>
+            </r>
+            <r>
+              <c>F</c>
+              <c>1</c>
+              <c>151</c>
+              <c>50</c>
+              <c>200</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="28">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="1146" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="sect" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="sect" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_sect" selected="False" rename="Right_sect" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="29">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="1230" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="sect" />
+            <Field field="FileName" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="sect" />
+            <Field field="FileName" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_FileName" selected="False" input="Left_" />
+                <SelectField field="Right_sect" selected="False" rename="Right_sect" input="Right_" />
+                <SelectField field="Right_FileName" selected="False" rename="Right_FileName" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="30">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1050" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="IF Contains([FileName], 'EFAC') and [sect]='C'&#xA;THEN 'row col switch 1-row'&#xA;ELSEIF Contains([FileName], 'BCDF') and [sect]='F'&#xA;THEN 'row col switch 1-row'&#xA;ELSEIF Contains([FileName],'BADE') and ([sect] in ('E','D'))&#xA;THEN '1-row 1-col'&#xA;ELSE 'none'&#xA;ENDIF&#xA;" field="rotate" size="1073741823" type="V_WString" />
+            <FormulaField expression="Trim(Right([FileName], 7), '`$')" field="Sheet" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Mark necessary rotation for special sections</AnnotationText>
+          <DefaultAnnotationText>rotate = IF Contains([FileName], 'EFAC') and [sect]='C'
+THEN 'row col switch 1-r...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="31">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1326" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[RowID]-[Min_RowID_sect]+1" field="RowID_sect" size="4" type="Int32" />
+            <FormulaField expression="[ColID]-[Min_ColID_sect]+1" field="ColID_sect" size="4" type="Int32" />
+            <FormulaField expression="IF [rotate] = 'none'&#xA;THEN [RowID_sect]+[Min_RowID_abs]-1&#xA;ELSEIF [rotate] = 'row col switch 1-row'&#xA;THEN [ColID_sect]+[Min_RowID_abs]-1&#xA;ELSEIF [rotate] = '1-row 1-col'&#xA;THEN (50-[RowID_sect])+[Min_RowID_abs]&#xA;ELSE null()&#xA;ENDIF" field="RowID_abs" size="4" type="Int32" />
+            <FormulaField expression="IF [rotate]='none'&#xA;THEN [ColID_sect]+[Min_ColID_abs]-1&#xA;ELSEIF [rotate]='row col switch 1-row'&#xA;THEN (50-[RowID_sect]-1)+[Min_ColID_abs]+1&#xA;ELSEIF [rotate]='1-row 1-col'&#xA;THEN (50-[ColID_sect])+[Min_ColID_abs]&#xA;ELSE null()&#xA;ENDIF" field="ColID_abs" size="4" type="Int32" />
+            <FormulaField expression="1" field="Min_ColID" size="1" type="Byte" />
+            <FormulaField expression="IF [Sheet] = 'BADE'&#xA;THEN 200&#xA;ELSE 50&#xA;ENDIF" field="Max_ColID" size="1" type="Byte" />
+            <FormulaField expression="1" field="Min_RowID" size="1" type="Byte" />
+            <FormulaField expression="IF [Sheet] = 'BADE'&#xA;THEN 50&#xA;ELSE 200&#xA;ENDIF" field="Max_RowID" size="1" type="Byte" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Calculate X and Y absolute coordinates and relative per square section</AnnotationText>
+          <DefaultAnnotationText>RowID_sect = [RowID]-[Min_RowID_sect]+1
+ColID_sect = [ColID]-[Min_ColID_sect]+1
+...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="34">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="1458" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File FileFormat="19" MaxRecords="">Day22CoordinateSwitch.yxdb</File>
+          <Passwords />
+          <Disable>False</Disable>
+          <FormatSpecificOptions>
+            <NoSpatialIndex>False</NoSpatialIndex>
+            <SaveSource>True</SaveSource>
+            <WriteCompatibleVersion>False</WriteCompatibleVersion>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Day22CoordinateSwitch.yxdb</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="24" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="29" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="28" Connection="Join" />
+      <Destination ToolID="29" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="8" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="11" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="15" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="14" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="19" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="Output" />
+      <Destination ToolID="22" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="Output" />
+      <Destination ToolID="16" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="18" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="Output" />
+      <Destination ToolID="20" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="19" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection name="#3">
+      <Origin ToolID="20" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="23" Connection="Join" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="21" Connection="True" />
+      <Destination ToolID="23" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="21" Connection="False" />
+      <Destination ToolID="23" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="22" Connection="Output" />
+      <Destination ToolID="21" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="24" Connection="Output" />
+      <Destination ToolID="30" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="26" Connection="Output" />
+      <Destination ToolID="28" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="30" Connection="Output" />
+      <Destination ToolID="28" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="29" Connection="Join" />
+      <Destination ToolID="31" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="31" Connection="Output" />
+      <Destination ToolID="34" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Day22CoordinateSwap</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="4a291de5-2caa-427e-9720-c2985786a974" />
+      <Telemetry>
+        <PreviousWorkflowId value="ff012182-f2f1-4a1e-8f22-f71cbfc9a840" />
+        <OriginWorkflowId value="4a291de5-2caa-427e-9720-c2985786a974" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
