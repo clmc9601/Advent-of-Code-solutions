@@ -1,0 +1,1722 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2021.2">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
+        <Position x="138" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UseFileInput value="False" />
+          <Name>iterateElves</Name>
+          <Abbrev />
+          <ShowFieldMap value="False" />
+          <Optional value="False" />
+          <TextInput>
+            <Configuration>
+              <NumRows value="5" />
+              <Fields>
+                <Field name="x" />
+                <Field name="y" />
+                <Field name="data" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>1002</c>
+                  <c>1002</c>
+                  <c>#</c>
+                </r>
+                <r>
+                  <c>1002</c>
+                  <c>1001</c>
+                  <c>#</c>
+                </r>
+                <r>
+                  <c>1003</c>
+                  <c>1001</c>
+                  <c>#</c>
+                </r>
+                <r>
+                  <c>1002</c>
+                  <c>1004</c>
+                  <c>#</c>
+                </r>
+                <r>
+                  <c>1003</c>
+                  <c>1004</c>
+                  <c>#</c>
+                </r>
+              </Data>
+            </Configuration>
+          </TextInput>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Input</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="x" source="TextInput:" type="Int16" />
+            <Field name="y" source="TextInput:" type="Int16" />
+            <Field name="data" size="1" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="138" y="282" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="12" />
+          <Fields>
+            <Field name="direction" />
+            <Field name="yeffect" />
+            <Field name="xeffect" />
+            <Field name="group" />
+            <Field name="group_name" />
+          </Fields>
+          <Data>
+            <r>
+              <c>N</c>
+              <c>-1</c>
+              <c>0</c>
+              <c>4</c>
+              <c>N</c>
+            </r>
+            <r>
+              <c>NE</c>
+              <c>-1</c>
+              <c>1</c>
+              <c>4</c>
+              <c>N</c>
+            </r>
+            <r>
+              <c>NW</c>
+              <c>-1</c>
+              <c>-1</c>
+              <c>4</c>
+              <c>N</c>
+            </r>
+            <r>
+              <c>S</c>
+              <c>1</c>
+              <c>0</c>
+              <c>3</c>
+              <c>S</c>
+            </r>
+            <r>
+              <c>SE</c>
+              <c>1</c>
+              <c>1</c>
+              <c>3</c>
+              <c>S</c>
+            </r>
+            <r>
+              <c>SW</c>
+              <c>1</c>
+              <c>-1</c>
+              <c>3</c>
+              <c>S</c>
+            </r>
+            <r>
+              <c>E</c>
+              <c>0</c>
+              <c>1</c>
+              <c>1</c>
+              <c>E</c>
+            </r>
+            <r>
+              <c>W</c>
+              <c>0</c>
+              <c>-1</c>
+              <c>2</c>
+              <c>W</c>
+            </r>
+            <r>
+              <c>NE</c>
+              <c>-1</c>
+              <c>1</c>
+              <c>1</c>
+              <c>E</c>
+            </r>
+            <r>
+              <c>SE</c>
+              <c>1</c>
+              <c>1</c>
+              <c>1</c>
+              <c>E</c>
+            </r>
+            <r>
+              <c>NW</c>
+              <c>-1</c>
+              <c>-1</c>
+              <c>2</c>
+              <c>W</c>
+            </r>
+            <r>
+              <c>SW</c>
+              <c>1</c>
+              <c>-1</c>
+              <c>2</c>
+              <c>W</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="direction" size="2" source="TextInput:" type="String" />
+            <Field name="yeffect" source="TextInput:" type="Int16" />
+            <Field name="xeffect" source="TextInput:" type="Int16" />
+            <Field name="group" source="TextInput:" type="Byte" />
+            <Field name="group_name" size="1" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="234" y="282" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[Engine.IterationNumber] // has to be 0 indexed" field="iteration" size="4" type="Int32" />
+            <FormulaField expression="[group]+Mod([iteration], 4)" field="priority" size="4" type="Int32" />
+            <FormulaField expression="IF [priority]&gt;4&#xA;THEN [priority]-4&#xA;ELSE [priority]&#xA;ENDIF" field="priority" size="4" type="Int32" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>iteration = [Engine.IterationNumber] // has to be 0 indexed
+priority = [group]+M...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="direction" size="2" source="TextInput:" type="String" />
+            <Field name="yeffect" source="TextInput:" type="Int16" />
+            <Field name="xeffect" source="TextInput:" type="Int16" />
+            <Field name="group" source="TextInput:" type="Byte" />
+            <Field name="group_name" size="1" source="TextInput:" type="String" />
+            <Field name="iteration" source="Formula: [Engine.IterationNumber] // has to be 0 indexed" type="Int32" />
+            <Field name="priority" source="Formula: IF [priority]&gt;4&#xA;THEN [priority]-4&#xA;ELSE [priority]&#xA;ENDIF" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="234" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>!=</Operator>
+            <Field>data</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2022-12-22 21:25:30</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>.</Operand>
+              <StartDate>2022-12-22 21:25:30</StartDate>
+              <EndDate>2022-12-22 21:25:30</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[data] != "."</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="x" source="TextInput:" type="Int16" />
+            <Field name="y" source="TextInput:" type="Int16" />
+            <Field name="data" size="1" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="x" source="TextInput:" type="Int16" />
+            <Field name="y" source="TextInput:" type="Int16" />
+            <Field name="data" size="1" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="32">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="785" y="101" width="949" height="285" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Determine movement</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="10">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="810" y="198" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Mode>Simple</Mode>
+              <Simple>
+                <Operator>=</Operator>
+                <Field>free_spaces</Field>
+                <Operands>
+                  <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                  <DateType>fixed</DateType>
+                  <PeriodDate>2022-12-22 21:28:12</PeriodDate>
+                  <PeriodType>
+                  </PeriodType>
+                  <PeriodCount>0</PeriodCount>
+                  <Operand>3</Operand>
+                  <StartDate>2022-12-22 21:28:12</StartDate>
+                  <EndDate>2022-12-22 21:28:12</EndDate>
+                </Operands>
+              </Simple>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[free_spaces] = 3</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="True">
+              <RecordInfo>
+                <Field name="x" source="Summarize: GroupBy - x" type="Int16" />
+                <Field name="y" source="Summarize: GroupBy - y" type="Int16" />
+                <Field name="data" size="1" source="Summarize: GroupBy - data" type="String" />
+                <Field name="group" source="Summarize: GroupBy - group" type="Byte" />
+                <Field name="group_name" size="1" source="Summarize: GroupBy - group_name" type="String" />
+                <Field name="priority" source="Summarize: GroupBy - priority" type="Int32" />
+                <Field name="free_spaces" source="Summarize: CountNull - neighbor_data" type="Int64" />
+              </RecordInfo>
+              <SortInfo>
+                <Field field="x" order="Asc" />
+                <Field field="y" order="Asc" />
+                <Field field="data" order="Asc" />
+                <Field field="group" order="Asc" />
+                <Field field="group_name" order="Asc" />
+                <Field field="priority" order="Asc" />
+              </SortInfo>
+            </MetaInfo>
+            <MetaInfo connection="False">
+              <RecordInfo>
+                <Field name="x" source="Summarize: GroupBy - x" type="Int16" />
+                <Field name="y" source="Summarize: GroupBy - y" type="Int16" />
+                <Field name="data" size="1" source="Summarize: GroupBy - data" type="String" />
+                <Field name="group" source="Summarize: GroupBy - group" type="Byte" />
+                <Field name="group_name" size="1" source="Summarize: GroupBy - group_name" type="String" />
+                <Field name="priority" source="Summarize: GroupBy - priority" type="Int32" />
+                <Field name="free_spaces" source="Summarize: CountNull - neighbor_data" type="Int64" />
+              </RecordInfo>
+              <SortInfo>
+                <Field field="x" order="Asc" />
+                <Field field="y" order="Asc" />
+                <Field field="data" order="Asc" />
+                <Field field="group" order="Asc" />
+                <Field field="group_name" order="Asc" />
+                <Field field="priority" order="Asc" />
+              </SortInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="11">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="1422" y="210" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="[x]+[xeffect]" field="proposedx" size="4" type="Int32" />
+                <FormulaField expression="[y]+[yeffect]" field="proposedy" size="4" type="Int32" />
+                <FormulaField expression="ToString([x])+','+ToString([y])" field="elf" size="1073741823" type="V_WString" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>proposedx = [x]+[xeffect]
+proposedy = [y]+[yeffect]
+elf = ToString([x])+','+ToSt...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="x" source="Summarize: GroupBy - x" type="Int16" />
+                <Field name="y" source="Summarize: GroupBy - y" type="Int16" />
+                <Field name="data" size="1" source="Summarize: GroupBy - data" type="String" />
+                <Field name="priority" source="Summarize: GroupBy - priority" type="Int32" />
+                <Field name="direction" size="2" source="TextInput:" type="String" />
+                <Field name="yeffect" source="TextInput:" type="Int16" />
+                <Field name="xeffect" source="TextInput:" type="Int16" />
+                <Field name="proposedx" source="Formula: [x]+[xeffect]" type="Int32" />
+                <Field name="proposedy" source="Formula: [y]+[yeffect]" type="Int32" />
+                <Field name="elf" size="1073741823" source="Formula: ToString([x])+','+ToString([y])" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="12">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="1350" y="210" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="group_name" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="direction" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Left_group" selected="False" input="Left_" />
+                    <SelectField field="Left_group_name" selected="False" input="Left_" />
+                    <SelectField field="Left_free_spaces" selected="False" input="Left_" />
+                    <SelectField field="Right_group" selected="False" rename="Right_group" input="Right_" />
+                    <SelectField field="Right_group_name" selected="False" rename="Right_group_name" input="Right_" />
+                    <SelectField field="Right_iteration" selected="False" input="Right_" />
+                    <SelectField field="Right_priority" selected="False" input="Right_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Left">
+              <RecordInfo>
+                <Field name="x" source="Summarize: GroupBy - x" type="Int16" />
+                <Field name="y" source="Summarize: GroupBy - y" type="Int16" />
+                <Field name="data" size="1" source="Summarize: GroupBy - data" type="String" />
+                <Field name="group_name" size="1" source="Summarize: GroupBy - group_name" type="String" />
+                <Field name="priority" source="Summarize: GroupBy - priority" type="Int32" />
+              </RecordInfo>
+              <SortInfo noProgress="True">
+                <Field field="group_name" />
+              </SortInfo>
+            </MetaInfo>
+            <MetaInfo connection="Join">
+              <RecordInfo>
+                <Field name="x" source="Summarize: GroupBy - x" type="Int16" />
+                <Field name="y" source="Summarize: GroupBy - y" type="Int16" />
+                <Field name="data" size="1" source="Summarize: GroupBy - data" type="String" />
+                <Field name="priority" source="Summarize: GroupBy - priority" type="Int32" />
+                <Field name="direction" size="2" source="TextInput:" type="String" />
+                <Field name="yeffect" source="TextInput:" type="Int16" />
+                <Field name="xeffect" source="TextInput:" type="Int16" />
+              </RecordInfo>
+            </MetaInfo>
+            <MetaInfo connection="Right">
+              <RecordInfo>
+                <Field name="direction" size="2" source="TextInput:" type="String" />
+                <Field name="yeffect" source="TextInput:" type="Int16" />
+                <Field name="xeffect" source="TextInput:" type="Int16" />
+              </RecordInfo>
+              <SortInfo noProgress="True">
+                <Field field="direction" />
+              </SortInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="13">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="1506" y="210" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="proposedx" action="GroupBy" rename="proposedx" />
+                <SummarizeField field="proposedy" action="GroupBy" rename="proposedy" />
+                <SummarizeField field="elf" action="CountDistinct" rename="CountDistinct_elf" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="proposedx" source="Summarize: GroupBy - proposedx" type="Int32" />
+                <Field name="proposedy" source="Summarize: GroupBy - proposedy" type="Int32" />
+                <Field name="CountDistinct_elf" source="Summarize: CountDistinct - elf" type="Int64" />
+              </RecordInfo>
+              <SortInfo>
+                <Field field="proposedx" order="Asc" />
+                <Field field="proposedy" order="Asc" />
+              </SortInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="14">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="1578" y="210" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Mode>Simple</Mode>
+              <Simple>
+                <Operator>=</Operator>
+                <Field>CountDistinct_elf</Field>
+                <Operands>
+                  <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                  <DateType>fixed</DateType>
+                  <PeriodDate>2022-12-22 21:32:35</PeriodDate>
+                  <PeriodType>
+                  </PeriodType>
+                  <PeriodCount>0</PeriodCount>
+                  <Operand>1</Operand>
+                  <StartDate>2022-12-22 21:32:35</StartDate>
+                  <EndDate>2022-12-22 21:32:35</EndDate>
+                </Operands>
+              </Simple>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[CountDistinct_elf] = 1</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="True">
+              <RecordInfo>
+                <Field name="proposedx" source="Summarize: GroupBy - proposedx" type="Int32" />
+                <Field name="proposedy" source="Summarize: GroupBy - proposedy" type="Int32" />
+                <Field name="CountDistinct_elf" source="Summarize: CountDistinct - elf" type="Int64" />
+              </RecordInfo>
+              <SortInfo>
+                <Field field="proposedx" order="Asc" />
+                <Field field="proposedy" order="Asc" />
+              </SortInfo>
+            </MetaInfo>
+            <MetaInfo connection="False">
+              <RecordInfo>
+                <Field name="proposedx" source="Summarize: GroupBy - proposedx" type="Int32" />
+                <Field name="proposedy" source="Summarize: GroupBy - proposedy" type="Int32" />
+                <Field name="CountDistinct_elf" source="Summarize: CountDistinct - elf" type="Int64" />
+              </RecordInfo>
+              <SortInfo>
+                <Field field="proposedx" order="Asc" />
+                <Field field="proposedy" order="Asc" />
+              </SortInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="15">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="1650" y="210" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="proposedx" />
+                <Field field="proposedy" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="proposedx" />
+                <Field field="proposedy" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Left_proposedx" selected="True" rename="x" input="Left_" />
+                    <SelectField field="Left_proposedy" selected="True" rename="y" input="Left_" />
+                    <SelectField field="Right_x" selected="True" rename="oldx" input="Right_" />
+                    <SelectField field="Right_y" selected="True" rename="oldy" input="Right_" />
+                    <SelectField field="Right_data" selected="True" input="Right_" />
+                    <SelectField field="Right_priority" selected="True" input="Right_" />
+                    <SelectField field="Right_direction" selected="True" input="Right_" />
+                    <SelectField field="Right_proposedx" selected="False" rename="Right_proposedx" input="Right_" />
+                    <SelectField field="Right_proposedy" selected="False" rename="Right_proposedy" input="Right_" />
+                    <SelectField field="*Unknown" selected="False" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Left">
+              <RecordInfo>
+                <Field name="proposedx" source="Summarize: GroupBy - proposedx" type="Int32" />
+                <Field name="proposedy" source="Summarize: GroupBy - proposedy" type="Int32" />
+              </RecordInfo>
+              <SortInfo noProgress="True">
+                <Field field="proposedx" />
+                <Field field="proposedy" />
+              </SortInfo>
+            </MetaInfo>
+            <MetaInfo connection="Join">
+              <RecordInfo>
+                <Field name="x" source="Summarize: GroupBy - proposedx" type="Int32" />
+                <Field name="y" source="Summarize: GroupBy - proposedy" type="Int32" />
+                <Field name="oldx" source="Summarize: GroupBy - x" type="Int16" />
+                <Field name="oldy" source="Summarize: GroupBy - y" type="Int16" />
+                <Field name="data" size="1" source="Summarize: GroupBy - data" type="String" />
+                <Field name="priority" source="Summarize: GroupBy - priority" type="Int32" />
+                <Field name="direction" size="2" source="TextInput:" type="String" />
+              </RecordInfo>
+              <SortInfo>
+                <Field field="x" order="" />
+                <Field field="y" order="" />
+              </SortInfo>
+            </MetaInfo>
+            <MetaInfo connection="Right">
+              <RecordInfo>
+                <Field name="x" source="Summarize: GroupBy - x" type="Int16" />
+                <Field name="y" source="Summarize: GroupBy - y" type="Int16" />
+                <Field name="data" size="1" source="Summarize: GroupBy - data" type="String" />
+                <Field name="priority" source="Summarize: GroupBy - priority" type="Int32" />
+                <Field name="direction" size="2" source="TextInput:" type="String" />
+                <Field name="proposedx" source="Formula: [x]+[xeffect]" type="Int32" />
+                <Field name="proposedy" source="Formula: [y]+[yeffect]" type="Int32" />
+              </RecordInfo>
+              <SortInfo noProgress="True">
+                <Field field="proposedx" />
+                <Field field="proposedy" />
+              </SortInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="17">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+            <Position x="1194" y="198" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SortInfo locale="1033">
+                <Field field="x" order="Ascending" />
+                <Field field="y" order="Ascending" />
+                <Field field="priority" order="Descending" />
+              </SortInfo>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>x - Ascending
+y - Ascending
+priority - Descending</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="x" source="Summarize: GroupBy - x" type="Int16" />
+                <Field name="y" source="Summarize: GroupBy - y" type="Int16" />
+                <Field name="data" size="1" source="Summarize: GroupBy - data" type="String" />
+                <Field name="group" source="Summarize: GroupBy - group" type="Byte" />
+                <Field name="group_name" size="1" source="Summarize: GroupBy - group_name" type="String" />
+                <Field name="priority" source="Summarize: GroupBy - priority" type="Int32" />
+                <Field name="free_spaces" source="Summarize: CountNull - neighbor_data" type="Int64" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+        </Node>
+        <Node ToolID="18">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Sample.Sample">
+            <Position x="1278" y="198" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Mode>First</Mode>
+              <N>1</N>
+              <GroupFields orderChanged="False">
+                <Field name="x" />
+                <Field name="y" />
+              </GroupFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>First 1</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="x" source="Summarize: GroupBy - x" type="Int16" />
+                <Field name="y" source="Summarize: GroupBy - y" type="Int16" />
+                <Field name="data" size="1" source="Summarize: GroupBy - data" type="String" />
+                <Field name="group" source="Summarize: GroupBy - group" type="Byte" />
+                <Field name="group_name" size="1" source="Summarize: GroupBy - group_name" type="String" />
+                <Field name="priority" source="Summarize: GroupBy - priority" type="Int32" />
+                <Field name="free_spaces" source="Summarize: CountNull - neighbor_data" type="Int64" />
+              </RecordInfo>
+              <SortInfo>
+                <Field field="x" order="Asc" />
+                <Field field="y" order="Asc" />
+              </SortInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSample" />
+        </Node>
+        <Node ToolID="24">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="906" y="149" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="x" action="GroupBy" rename="x" />
+                <SummarizeField field="y" action="GroupBy" rename="y" />
+                <SummarizeField field="free_spaces" action="Sum" rename="Sum_free_spaces" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="x" source="Summarize: GroupBy - x" type="Int16" />
+                <Field name="y" source="Summarize: GroupBy - y" type="Int16" />
+                <Field name="Sum_free_spaces" source="Summarize: Sum - free_spaces" type="Int64" />
+              </RecordInfo>
+              <SortInfo>
+                <Field field="x" order="Asc" />
+                <Field field="y" order="Asc" />
+              </SortInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="25">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="990" y="150" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Mode>Simple</Mode>
+              <Simple>
+                <Operator>&lt;</Operator>
+                <Field>Sum_free_spaces</Field>
+                <Operands>
+                  <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                  <DateType>fixed</DateType>
+                  <PeriodDate>2022-12-22 22:17:54</PeriodDate>
+                  <PeriodType>
+                  </PeriodType>
+                  <PeriodCount>0</PeriodCount>
+                  <Operand>12</Operand>
+                  <StartDate>2022-12-22 22:17:54</StartDate>
+                  <EndDate>2022-12-22 22:17:54</EndDate>
+                </Operands>
+              </Simple>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[Sum_free_spaces] &lt; 12</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="True">
+              <RecordInfo>
+                <Field name="x" source="Summarize: GroupBy - x" type="Int16" />
+                <Field name="y" source="Summarize: GroupBy - y" type="Int16" />
+                <Field name="Sum_free_spaces" source="Summarize: Sum - free_spaces" type="Int64" />
+              </RecordInfo>
+              <SortInfo>
+                <Field field="x" order="Asc" />
+                <Field field="y" order="Asc" />
+              </SortInfo>
+            </MetaInfo>
+            <MetaInfo connection="False">
+              <RecordInfo>
+                <Field name="x" source="Summarize: GroupBy - x" type="Int16" />
+                <Field name="y" source="Summarize: GroupBy - y" type="Int16" />
+                <Field name="Sum_free_spaces" source="Summarize: Sum - free_spaces" type="Int64" />
+              </RecordInfo>
+              <SortInfo>
+                <Field field="x" order="Asc" />
+                <Field field="y" order="Asc" />
+              </SortInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="26">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="1110" y="197" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="x" />
+                <Field field="y" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="x" />
+                <Field field="y" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Right_x" selected="False" rename="Right_x" input="Right_" />
+                    <SelectField field="Right_y" selected="False" rename="Right_y" input="Right_" />
+                    <SelectField field="Right_Sum_free_spaces" selected="False" input="Right_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Left">
+              <RecordInfo>
+                <Field name="x" source="Summarize: GroupBy - x" type="Int16" />
+                <Field name="y" source="Summarize: GroupBy - y" type="Int16" />
+                <Field name="data" size="1" source="Summarize: GroupBy - data" type="String" />
+                <Field name="group" source="Summarize: GroupBy - group" type="Byte" />
+                <Field name="group_name" size="1" source="Summarize: GroupBy - group_name" type="String" />
+                <Field name="priority" source="Summarize: GroupBy - priority" type="Int32" />
+                <Field name="free_spaces" source="Summarize: CountNull - neighbor_data" type="Int64" />
+              </RecordInfo>
+              <SortInfo noProgress="True">
+                <Field field="x" />
+                <Field field="y" />
+              </SortInfo>
+            </MetaInfo>
+            <MetaInfo connection="Join">
+              <RecordInfo>
+                <Field name="x" source="Summarize: GroupBy - x" type="Int16" />
+                <Field name="y" source="Summarize: GroupBy - y" type="Int16" />
+                <Field name="data" size="1" source="Summarize: GroupBy - data" type="String" />
+                <Field name="group" source="Summarize: GroupBy - group" type="Byte" />
+                <Field name="group_name" size="1" source="Summarize: GroupBy - group_name" type="String" />
+                <Field name="priority" source="Summarize: GroupBy - priority" type="Int32" />
+                <Field name="free_spaces" source="Summarize: CountNull - neighbor_data" type="Int64" />
+              </RecordInfo>
+              <SortInfo>
+                <Field field="x" order="" />
+                <Field field="y" order="" />
+              </SortInfo>
+            </MetaInfo>
+            <MetaInfo connection="Right">
+              <RecordInfo>
+                <Field name="x" source="Summarize: GroupBy - x" type="Int16" />
+                <Field name="y" source="Summarize: GroupBy - y" type="Int16" />
+              </RecordInfo>
+              <SortInfo noProgress="True">
+                <Field field="x" />
+                <Field field="y" />
+              </SortInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="31">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="329" y="148" width="445" height="195" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Find possible neighbors</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="4">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+            <Position x="354" y="197" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <CartesianMode>Error</CartesianMode>
+              <SelectConfiguration>
+                <Configuration outputConnection="Output">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="x" source="TextInput:" type="Int16" />
+                <Field name="y" source="TextInput:" type="Int16" />
+                <Field name="data" size="1" source="TextInput:" type="String" />
+                <Field name="direction" size="2" source="TextInput:" type="String" />
+                <Field name="yeffect" source="TextInput:" type="Int16" />
+                <Field name="xeffect" source="TextInput:" type="Int16" />
+                <Field name="group" source="TextInput:" type="Byte" />
+                <Field name="group_name" size="1" source="TextInput:" type="String" />
+                <Field name="iteration" source="Formula: [Engine.IterationNumber] // has to be 0 indexed" type="Int32" />
+                <Field name="priority" source="Formula: IF [priority]&gt;4&#xA;THEN [priority]-4&#xA;ELSE [priority]&#xA;ENDIF" type="Int32" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+        </Node>
+        <Node ToolID="5">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="426" y="197" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="[x]	+ [xeffect]" field="neighborx" size="4" type="Int32" />
+                <FormulaField expression="[y]+[yeffect]" field="neighbory" size="4" type="Int32" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[neighborx = [x]	+ [xeffect]
+neighbory = [y]+[yeffect]
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="x" source="TextInput:" type="Int16" />
+                <Field name="y" source="TextInput:" type="Int16" />
+                <Field name="data" size="1" source="TextInput:" type="String" />
+                <Field name="direction" size="2" source="TextInput:" type="String" />
+                <Field name="yeffect" source="TextInput:" type="Int16" />
+                <Field name="xeffect" source="TextInput:" type="Int16" />
+                <Field name="group" source="TextInput:" type="Byte" />
+                <Field name="group_name" size="1" source="TextInput:" type="String" />
+                <Field name="iteration" source="Formula: [Engine.IterationNumber] // has to be 0 indexed" type="Int32" />
+                <Field name="priority" source="Formula: IF [priority]&gt;4&#xA;THEN [priority]-4&#xA;ELSE [priority]&#xA;ENDIF" type="Int32" />
+                <Field name="neighborx" source="Formula: [x] + [xeffect]" type="Int32" />
+                <Field name="neighbory" source="Formula: [y]+[yeffect]" type="Int32" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="6">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="522" y="210" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="neighborx" />
+                <Field field="neighbory" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="x" />
+                <Field field="y" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Right_x" selected="False" rename="Right_x" input="Right_" />
+                    <SelectField field="Right_y" selected="False" rename="Right_y" input="Right_" />
+                    <SelectField field="Right_data" selected="True" rename="neighbor_data" input="Right_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Left">
+              <RecordInfo>
+                <Field name="x" source="TextInput:" type="Int16" />
+                <Field name="y" source="TextInput:" type="Int16" />
+                <Field name="data" size="1" source="TextInput:" type="String" />
+                <Field name="direction" size="2" source="TextInput:" type="String" />
+                <Field name="yeffect" source="TextInput:" type="Int16" />
+                <Field name="xeffect" source="TextInput:" type="Int16" />
+                <Field name="group" source="TextInput:" type="Byte" />
+                <Field name="group_name" size="1" source="TextInput:" type="String" />
+                <Field name="iteration" source="Formula: [Engine.IterationNumber] // has to be 0 indexed" type="Int32" />
+                <Field name="priority" source="Formula: IF [priority]&gt;4&#xA;THEN [priority]-4&#xA;ELSE [priority]&#xA;ENDIF" type="Int32" />
+                <Field name="neighborx" source="Formula: [x] + [xeffect]" type="Int32" />
+                <Field name="neighbory" source="Formula: [y]+[yeffect]" type="Int32" />
+              </RecordInfo>
+              <SortInfo noProgress="True">
+                <Field field="neighborx" />
+                <Field field="neighbory" />
+              </SortInfo>
+            </MetaInfo>
+            <MetaInfo connection="Join">
+              <RecordInfo>
+                <Field name="x" source="TextInput:" type="Int16" />
+                <Field name="y" source="TextInput:" type="Int16" />
+                <Field name="data" size="1" source="TextInput:" type="String" />
+                <Field name="direction" size="2" source="TextInput:" type="String" />
+                <Field name="yeffect" source="TextInput:" type="Int16" />
+                <Field name="xeffect" source="TextInput:" type="Int16" />
+                <Field name="group" source="TextInput:" type="Byte" />
+                <Field name="group_name" size="1" source="TextInput:" type="String" />
+                <Field name="iteration" source="Formula: [Engine.IterationNumber] // has to be 0 indexed" type="Int32" />
+                <Field name="priority" source="Formula: IF [priority]&gt;4&#xA;THEN [priority]-4&#xA;ELSE [priority]&#xA;ENDIF" type="Int32" />
+                <Field name="neighborx" source="Formula: [x] + [xeffect]" type="Int32" />
+                <Field name="neighbory" source="Formula: [y]+[yeffect]" type="Int32" />
+                <Field name="neighbor_data" size="1" source="TextInput:" type="String" />
+              </RecordInfo>
+              <SortInfo>
+                <Field field="neighborx" order="" />
+                <Field field="neighbory" order="" />
+              </SortInfo>
+            </MetaInfo>
+            <MetaInfo connection="Right">
+              <RecordInfo>
+                <Field name="x" source="TextInput:" type="Int16" />
+                <Field name="y" source="TextInput:" type="Int16" />
+                <Field name="data" size="1" source="TextInput:" type="String" />
+              </RecordInfo>
+              <SortInfo noProgress="True">
+                <Field field="x" />
+                <Field field="y" />
+              </SortInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="8">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="690" y="198" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="x" action="GroupBy" rename="x" />
+                <SummarizeField field="y" action="GroupBy" rename="y" />
+                <SummarizeField field="data" action="GroupBy" rename="data" />
+                <SummarizeField field="group" action="GroupBy" rename="group" />
+                <SummarizeField field="group_name" action="GroupBy" rename="group_name" />
+                <SummarizeField field="priority" action="GroupBy" rename="priority" />
+                <SummarizeField field="neighbor_data" action="CountNull" rename="free_spaces" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="x" source="Summarize: GroupBy - x" type="Int16" />
+                <Field name="y" source="Summarize: GroupBy - y" type="Int16" />
+                <Field name="data" size="1" source="Summarize: GroupBy - data" type="String" />
+                <Field name="group" source="Summarize: GroupBy - group" type="Byte" />
+                <Field name="group_name" size="1" source="Summarize: GroupBy - group_name" type="String" />
+                <Field name="priority" source="Summarize: GroupBy - priority" type="Int32" />
+                <Field name="free_spaces" source="Summarize: CountNull - neighbor_data" type="Int64" />
+              </RecordInfo>
+              <SortInfo>
+                <Field field="x" order="Asc" />
+                <Field field="y" order="Asc" />
+                <Field field="data" order="Asc" />
+                <Field field="group" order="Asc" />
+                <Field field="group_name" order="Asc" />
+                <Field field="priority" order="Asc" />
+              </SortInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="16">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+            <Position x="606" y="198" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <ByName_ErrorMode>Ignore</ByName_ErrorMode>
+              <ByName_OutputMode>All</ByName_OutputMode>
+              <Mode>ByName</Mode>
+              <SetOutputOrder value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="x" source="TextInput:" type="Int16" />
+                <Field name="y" source="TextInput:" type="Int16" />
+                <Field name="data" size="1" source="TextInput:" type="String" />
+                <Field name="direction" size="2" source="TextInput:" type="String" />
+                <Field name="yeffect" source="TextInput:" type="Int16" />
+                <Field name="xeffect" source="TextInput:" type="Int16" />
+                <Field name="group" source="TextInput:" type="Byte" />
+                <Field name="group_name" size="1" source="TextInput:" type="String" />
+                <Field name="iteration" source="Formula: [Engine.IterationNumber] // has to be 0 indexed" type="Int32" />
+                <Field name="priority" source="Formula: IF [priority]&gt;4&#xA;THEN [priority]-4&#xA;ELSE [priority]&#xA;ENDIF" type="Int32" />
+                <Field name="neighborx" source="Formula: [x] + [xeffect]" type="Int32" />
+                <Field name="neighbory" source="Formula: [y]+[yeffect]" type="Int32" />
+                <Field name="neighbor_data" size="1" source="TextInput:" type="String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="33">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="1745" y="136" width="656" height="288" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Evaluate round end</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="19">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="1770" y="222" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="oldx" />
+                <Field field="oldy" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="x" />
+                <Field field="y" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Left_x" selected="True" input="Left_" />
+                    <SelectField field="Left_y" selected="True" input="Left_" />
+                    <SelectField field="Left_oldx" selected="True" input="Left_" />
+                    <SelectField field="Left_oldy" selected="True" input="Left_" />
+                    <SelectField field="Left_data" selected="True" input="Left_" />
+                    <SelectField field="Left_priority" selected="True" input="Left_" />
+                    <SelectField field="Left_direction" selected="True" input="Left_" />
+                    <SelectField field="Right_x" selected="False" rename="Right_x" input="Right_" />
+                    <SelectField field="Right_y" selected="False" rename="Right_y" input="Right_" />
+                    <SelectField field="Right_data" selected="False" rename="Right_data" input="Right_" />
+                    <SelectField field="*Unknown" selected="False" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Left">
+              <RecordInfo>
+                <Field name="x" source="Summarize: GroupBy - proposedx" type="Int32" />
+                <Field name="y" source="Summarize: GroupBy - proposedy" type="Int32" />
+                <Field name="oldx" source="Summarize: GroupBy - x" type="Int16" />
+                <Field name="oldy" source="Summarize: GroupBy - y" type="Int16" />
+                <Field name="data" size="1" source="Summarize: GroupBy - data" type="String" />
+                <Field name="priority" source="Summarize: GroupBy - priority" type="Int32" />
+                <Field name="direction" size="2" source="TextInput:" type="String" />
+              </RecordInfo>
+              <SortInfo noProgress="True">
+                <Field field="oldx" />
+                <Field field="oldy" />
+              </SortInfo>
+            </MetaInfo>
+            <MetaInfo connection="Join">
+              <RecordInfo>
+                <Field name="x" source="Summarize: GroupBy - proposedx" type="Int32" />
+                <Field name="y" source="Summarize: GroupBy - proposedy" type="Int32" />
+                <Field name="oldx" source="Summarize: GroupBy - x" type="Int16" />
+                <Field name="oldy" source="Summarize: GroupBy - y" type="Int16" />
+                <Field name="data" size="1" source="Summarize: GroupBy - data" type="String" />
+                <Field name="priority" source="Summarize: GroupBy - priority" type="Int32" />
+                <Field name="direction" size="2" source="TextInput:" type="String" />
+              </RecordInfo>
+              <SortInfo>
+                <Field field="oldx" order="" />
+                <Field field="oldy" order="" />
+              </SortInfo>
+            </MetaInfo>
+            <MetaInfo connection="Right">
+              <RecordInfo>
+                <Field name="x" source="TextInput:" type="Int16" />
+                <Field name="y" source="TextInput:" type="Int16" />
+                <Field name="data" size="1" source="TextInput:" type="String" />
+              </RecordInfo>
+              <SortInfo noProgress="True">
+                <Field field="x" />
+                <Field field="y" />
+              </SortInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="20">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+            <Position x="1866" y="221" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <ByName_ErrorMode>Warning</ByName_ErrorMode>
+              <ByName_OutputMode>All</ByName_OutputMode>
+              <Mode>ByName</Mode>
+              <SetOutputOrder value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="x" source="(Multiple Sources)" type="Int32" />
+                <Field name="y" source="(Multiple Sources)" type="Int32" />
+                <Field name="oldx" source="Summarize: GroupBy - x" type="Int16" />
+                <Field name="oldy" source="Summarize: GroupBy - y" type="Int16" />
+                <Field name="data" size="1" source="(Multiple Sources)" type="String" />
+                <Field name="priority" source="Summarize: GroupBy - priority" type="Int32" />
+                <Field name="direction" size="2" source="TextInput:" type="String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+        </Node>
+        <Node ToolID="21">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="2106" y="234" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>// [Engine.IterationNumber]+1&lt;10
+[Count]&gt;[CountNull_oldy]</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>// [Engine.IterationNumber]+1&lt;10
+[Count]&gt;[CountNull_oldy]</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="True">
+              <RecordInfo>
+                <Field name="x" source="(Multiple Sources)" type="Int32" />
+                <Field name="y" source="(Multiple Sources)" type="Int32" />
+                <Field name="oldx" source="Summarize: GroupBy - x" type="Int16" />
+                <Field name="oldy" source="Summarize: GroupBy - y" type="Int16" />
+                <Field name="data" size="1" source="(Multiple Sources)" type="String" />
+                <Field name="priority" source="Summarize: GroupBy - priority" type="Int32" />
+                <Field name="direction" size="2" source="TextInput:" type="String" />
+                <Field name="Count" source="Summarize: Count - oldy" type="Int64" />
+                <Field name="CountNull_oldy" source="Summarize: CountNull - oldy" type="Int64" />
+              </RecordInfo>
+            </MetaInfo>
+            <MetaInfo connection="False">
+              <RecordInfo>
+                <Field name="x" source="(Multiple Sources)" type="Int32" />
+                <Field name="y" source="(Multiple Sources)" type="Int32" />
+                <Field name="oldx" source="Summarize: GroupBy - x" type="Int16" />
+                <Field name="oldy" source="Summarize: GroupBy - y" type="Int16" />
+                <Field name="data" size="1" source="(Multiple Sources)" type="String" />
+                <Field name="priority" source="Summarize: GroupBy - priority" type="Int32" />
+                <Field name="direction" size="2" source="TextInput:" type="String" />
+                <Field name="Count" source="Summarize: Count - oldy" type="Int64" />
+                <Field name="CountNull_oldy" source="Summarize: CountNull - oldy" type="Int64" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="22">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+            <Position x="2274" y="294" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Name>exit</Name>
+              <Abbrev />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Output</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+        </Node>
+        <Node ToolID="23">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+            <Position x="2274" y="222" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Name>iterate</Name>
+              <Abbrev />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Output</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+        </Node>
+        <Node ToolID="27">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="2202" y="294" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="[Engine.IterationNumber]+1" field="round" size="4" type="Int32" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[round = [Engine.IterationNumber]+1
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="x" source="(Multiple Sources)" type="Int32" />
+                <Field name="y" source="(Multiple Sources)" type="Int32" />
+                <Field name="oldx" source="Summarize: GroupBy - x" type="Int16" />
+                <Field name="oldy" source="Summarize: GroupBy - y" type="Int16" />
+                <Field name="data" size="1" source="(Multiple Sources)" type="String" />
+                <Field name="priority" source="Summarize: GroupBy - priority" type="Int32" />
+                <Field name="direction" size="2" source="TextInput:" type="String" />
+                <Field name="Count" source="Summarize: Count - oldy" type="Int64" />
+                <Field name="CountNull_oldy" source="Summarize: CountNull - oldy" type="Int64" />
+                <Field name="round" source="Formula: [Engine.IterationNumber]+1" type="Int32" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="28">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="2202" y="222" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="x" selected="True" />
+                <SelectField field="y" selected="True" />
+                <SelectField field="data" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="x" source="(Multiple Sources)" type="Int32" />
+                <Field name="y" source="(Multiple Sources)" type="Int32" />
+                <Field name="data" size="1" source="(Multiple Sources)" type="String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="29">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="1938" y="185" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="oldy" action="Count" rename="Count" />
+                <SummarizeField field="oldy" action="CountNull" rename="CountNull_oldy" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Count" source="Summarize: Count - oldy" type="Int64" />
+                <Field name="CountNull_oldy" source="Summarize: CountNull - oldy" type="Int64" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="30">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+            <Position x="2034" y="234" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <CartesianMode>Error</CartesianMode>
+              <SelectConfiguration>
+                <Configuration outputConnection="Output">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="x" source="(Multiple Sources)" type="Int32" />
+                <Field name="y" source="(Multiple Sources)" type="Int32" />
+                <Field name="oldx" source="Summarize: GroupBy - x" type="Int16" />
+                <Field name="oldy" source="Summarize: GroupBy - y" type="Int16" />
+                <Field name="data" size="1" source="(Multiple Sources)" type="String" />
+                <Field name="priority" source="Summarize: GroupBy - priority" type="Int32" />
+                <Field name="direction" size="2" source="TextInput:" type="String" />
+                <Field name="Count" source="Summarize: Count - oldy" type="Int64" />
+                <Field name="CountNull_oldy" source="Summarize: CountNull - oldy" type="Int64" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="4" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="True" />
+      <Destination ToolID="4" Connection="Targets" />
+    </Connection>
+    <Connection Wireless="True">
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="12" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="Output" />
+      <Destination ToolID="12" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="True" />
+      <Destination ToolID="6" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="6" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="True" />
+      <Destination ToolID="19" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="Join" />
+      <Destination ToolID="19" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="True" />
+      <Destination ToolID="24" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="True" />
+      <Destination ToolID="26" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="25" Connection="True" />
+      <Destination ToolID="26" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="15" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="True" />
+      <Destination ToolID="15" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Join" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="14" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="17" Connection="Output" />
+      <Destination ToolID="18" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="24" Connection="Output" />
+      <Destination ToolID="25" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="26" Connection="Join" />
+      <Destination ToolID="17" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="6" Connection="Join" />
+      <Destination ToolID="16" Connection="Input" />
+    </Connection>
+    <Connection name="#3">
+      <Origin ToolID="6" Connection="Left" />
+      <Destination ToolID="16" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="19" Connection="Join" />
+      <Destination ToolID="20" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="19" Connection="Right" />
+      <Destination ToolID="20" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="20" Connection="Output" />
+      <Destination ToolID="29" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="20" Connection="Output" />
+      <Destination ToolID="30" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="29" Connection="Output" />
+      <Destination ToolID="30" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="21" Connection="True" />
+      <Destination ToolID="28" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="21" Connection="False" />
+      <Destination ToolID="27" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="27" Connection="Output" />
+      <Destination ToolID="22" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="28" Connection="Output" />
+      <Destination ToolID="23" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="30" Connection="Output" />
+      <Destination ToolID="21" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <Constants>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Macro Output (22)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Macro Output (23)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+    </Constants>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Day23Iterate</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="3b20df6a-de10-4441-b61d-5b4a3f5ebe72" />
+      <Telemetry>
+        <PreviousWorkflowId value="02d9a495-b89a-4d31-930f-0cb6c7a5aa62" />
+        <OriginWorkflowId value="3b20df6a-de10-4441-b61d-5b4a3f5ebe72" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="False" />
+    </Events>
+    <RuntimeProperties>
+      <Actions />
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Tab (2)</Name>
+          <ToolId value="2" />
+          <Questions>
+            <Question>
+              <Type>MacroInput</Type>
+              <Description />
+              <Name>Macro Input (1)</Name>
+              <ToolId value="1" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description>Macro Output (22)</Description>
+              <Name>Macro Output (22)</Name>
+              <ToolId value="22" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description>Macro Output (23)</Description>
+              <Name>Macro Output (23)</Name>
+              <ToolId value="23" />
+            </Question>
+          </Questions>
+        </Question>
+      </Questions>
+      <ModuleType>Macro</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImageStd value="39" />
+      <MacroInputs />
+      <MacroOutputs />
+      <IterativeMacro>
+        <Input>iterateElves</Input>
+        <Output>iterate</Output>
+        <IterationLimit value="5000" />
+        <LimitBehavior>Warn</LimitBehavior>
+        <OutputMode>AllSame</OutputMode>
+      </IterativeMacro>
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="22" Selected="True" />
+        <Tool ToolId="23" Selected="True" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>

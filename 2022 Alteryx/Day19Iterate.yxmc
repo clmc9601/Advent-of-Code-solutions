@@ -3,7 +3,7 @@
   <Nodes>
     <Node ToolID="1">
       <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
-        <Position x="54" y="78" />
+        <Position x="54" y="66" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -15,7 +15,7 @@
           <FileInput>
             <Configuration>
               <Passwords />
-              <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">\\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day19_MacroInput.yxdb</File>
+              <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">Day19_MacroInput.yxdb</File>
               <FormatSpecificOptions />
             </Configuration>
           </FileInput>
@@ -25,6 +25,9 @@
           <DefaultAnnotationText>Day19_MacroInput.yxdb</DefaultAnnotationText>
           <Left value="True" />
         </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
         <MetaInfo connection="Output">
           <RecordInfo>
             <Field description="RegEx: Parsed from data" name="Blueprint" source="RegEx: Parsed from data" type="Int16" />
@@ -67,7 +70,7 @@
     </Node>
     <Node ToolID="3">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="138" y="78" />
+        <Position x="138" y="66" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -122,7 +125,7 @@ FLOOR([Obs]/[GeoRobot-Cos...</DefaultAnnotationText>
     </Node>
     <Node ToolID="15">
       <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
-        <Position x="246" y="78" />
+        <Position x="246" y="66" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -168,7 +171,7 @@ FLOOR([Obs]/[GeoRobot-Cos...</DefaultAnnotationText>
     </Node>
     <Node ToolID="16">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="354" y="78" />
+        <Position x="354" y="66" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -223,7 +226,7 @@ ELSEIF [Build...</DefaultAnnotationText>
     </Node>
     <Node ToolID="17">
       <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
-        <Position x="1110" y="66" />
+        <Position x="1110" y="54" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -241,7 +244,7 @@ ELSEIF [Build...</DefaultAnnotationText>
     </Node>
     <Node ToolID="18">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="1014" y="66" />
+        <Position x="1014" y="54" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -305,7 +308,7 @@ ELSEIF [Build...</DefaultAnnotationText>
     </Node>
     <Node ToolID="19">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="918" y="78" />
+        <Position x="918" y="66" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -392,7 +395,7 @@ ELSEIF [Build...</DefaultAnnotationText>
     </Node>
     <Node ToolID="20">
       <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
-        <Position x="1014" y="138" />
+        <Position x="1014" y="126" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -410,7 +413,7 @@ ELSEIF [Build...</DefaultAnnotationText>
     </Node>
     <Node ToolID="21">
       <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-        <Position x="450" y="126" />
+        <Position x="450" y="114" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -438,7 +441,7 @@ ELSEIF [Build...</DefaultAnnotationText>
     </Node>
     <Node ToolID="22">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
-        <Position x="546" y="90" />
+        <Position x="546" y="78" />
       </GuiSettings>
       <Properties>
         <Configuration joinByRecordPos="False">
@@ -530,7 +533,7 @@ ELSEIF [Build...</DefaultAnnotationText>
     </Node>
     <Node ToolID="23">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="630" y="90" />
+        <Position x="630" y="78" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -611,7 +614,7 @@ ELSEIF [Eng...</DefaultAnnotationText>
     </Node>
     <Node ToolID="27">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
-        <Position x="738" y="78" />
+        <Position x="738" y="66" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -669,7 +672,7 @@ ClayRobot - Ascending
     </Node>
     <Node ToolID="28">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Sample.Sample">
-        <Position x="834" y="78" />
+        <Position x="834" y="66" />
       </GuiSettings>
       <Properties>
         <Configuration>

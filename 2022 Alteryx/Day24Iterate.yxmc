@@ -1,0 +1,1429 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2021.2">
+  <Nodes>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="426" y="282" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[data] IN ('&lt;','&gt;','v','^')</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>separate blizzards from explorer</AnnotationText>
+          <DefaultAnnotationText>[data] IN ('&lt;','&gt;','v','^')</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="y" source="TextInput:" type="Byte" />
+            <Field name="data" size="1" source="TextInput:" type="String" />
+            <Field name="x" source="TextInput:" type="Byte" />
+            <Field name="Min_y_valley" source="TextInput:" type="Byte" />
+            <Field name="Min_x_valley" source="TextInput:" type="Byte" />
+            <Field name="Max_y_valley" source="TextInput:" type="Byte" />
+            <Field name="Max_x_valley" source="TextInput:" type="Byte" />
+            <Field name="Steps" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="y" source="TextInput:" type="Byte" />
+            <Field name="data" size="1" source="TextInput:" type="String" />
+            <Field name="x" source="TextInput:" type="Byte" />
+            <Field name="Min_y_valley" source="TextInput:" type="Byte" />
+            <Field name="Min_x_valley" source="TextInput:" type="Byte" />
+            <Field name="Max_y_valley" source="TextInput:" type="Byte" />
+            <Field name="Max_x_valley" source="TextInput:" type="Byte" />
+            <Field name="Steps" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="606" y="270" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="IF [data]='^'&#xA;THEN [y]-1&#xA;ELSEIF [data]='v'&#xA;THEN [y]+1&#xA;ELSE [y]&#xA;ENDIF" field="y" size="1" type="Byte" />
+            <FormulaField expression="IF [y]&gt;=[Max_y_valley]&#xA;THEN [Min_y_valley]+1+([y]-[Max_y_valley])&#xA;ELSEIF [y]&lt;=[Min_y_valley]&#xA;THEN [Max_y_valley]-1-([Min_y_valley]-[y])&#xA;ELSE [y]&#xA;ENDIF" field="y" size="1" type="Byte" />
+            <FormulaField expression="IF [data]='&lt;'&#xA;THEN [x]-1&#xA;ELSEIF [data]='&gt;'&#xA;THEN [x]+1&#xA;ELSE [x]&#xA;ENDIF" field="x" size="1" type="Byte" />
+            <FormulaField expression="IF [x]&gt;=[Max_x_valley]&#xA;THEN [Min_x_valley]+1+([x]-[Max_x_valley])&#xA;ELSEIF [x]&lt;=[Min_x_valley]&#xA;THEN [Max_x_valley]-1-([Min_x_valley]-[x])&#xA;ELSE [x]	&#xA;ENDIF" field="x" size="1" type="Byte" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>update blizzard positions</AnnotationText>
+          <DefaultAnnotationText>y = IF [data]='^'
+THEN [y]-1
+ELSEIF [data]='v'
+THEN [y]+1
+ELSE [y]
+ENDIF
+y = IF ...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="y" source="Formula: IF [y]&gt;=[Max_y_valley]&#xA;THEN [Min_y_valley]+1+([y]-[Max_y_valley])&#xA;ELSEIF [y]&lt;=[Min_y_valley]&#xA;THEN [Max_y_valley]-1-([Min_y_valley]-[y])&#xA;ELSE [y]&#xA;ENDIF" type="Byte" />
+            <Field name="data" size="1" source="TextInput:" type="String" />
+            <Field name="x" source="Formula: IF [x]&gt;=[Max_x_valley]&#xA;THEN [Min_x_valley]+1+([x]-[Max_x_valley])&#xA;ELSEIF [x]&lt;=[Min_x_valley]&#xA;THEN [Max_x_valley]-1-([Min_x_valley]-[x])&#xA;ELSE [x] &#xA;ENDIF" type="Byte" />
+            <Field name="Min_y_valley" source="TextInput:" type="Byte" />
+            <Field name="Min_x_valley" source="TextInput:" type="Byte" />
+            <Field name="Max_y_valley" source="TextInput:" type="Byte" />
+            <Field name="Max_x_valley" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="606" y="378" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="5" />
+          <Fields>
+            <Field name="xeffect" />
+            <Field name="yeffect" />
+          </Fields>
+          <Data>
+            <r>
+              <c>0</c>
+              <c>0</c>
+            </r>
+            <r>
+              <c>0</c>
+              <c>1</c>
+            </r>
+            <r>
+              <c>0</c>
+              <c>-1</c>
+            </r>
+            <r>
+              <c>1</c>
+              <c>0</c>
+            </r>
+            <r>
+              <c>-1</c>
+              <c>0</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Possible explorer moves</AnnotationText>
+          <DefaultAnnotationText>Possible explorer moves</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="xeffect" source="TextInput:" type="Int16" />
+            <Field name="yeffect" source="TextInput:" type="Int16" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="738" y="462" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Allow</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="xeffect" source="TextInput:" type="Int16" />
+            <Field name="yeffect" source="TextInput:" type="Int16" />
+            <Field name="y" source="TextInput:" type="Byte" />
+            <Field name="data" size="1" source="TextInput:" type="String" />
+            <Field name="x" source="TextInput:" type="Byte" />
+            <Field name="Min_y_valley" source="TextInput:" type="Byte" />
+            <Field name="Min_x_valley" source="TextInput:" type="Byte" />
+            <Field name="Max_y_valley" source="TextInput:" type="Byte" />
+            <Field name="Max_x_valley" source="TextInput:" type="Byte" />
+            <Field name="Steps" source="TextInput:" type="Byte" />
+            <Field name="end_y" source="TextInput:" type="Byte" />
+            <Field name="end_x" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="822" y="462" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[x]+[xeffect]" field="x_opt" size="4" type="Int32" />
+            <FormulaField expression="[y]+[yeffect]" field="y_opt" size="4" type="Int32" />
+            <FormulaField expression="[Steps]+1" field="Steps" size="1" type="Byte" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText><![CDATA[Move explorer
+]]></AnnotationText>
+          <DefaultAnnotationText><![CDATA[x_opt = [x]+[xeffect]
+y_opt = [y]+[yeffect]
+Steps = [Steps]+1
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="xeffect" source="TextInput:" type="Int16" />
+            <Field name="yeffect" source="TextInput:" type="Int16" />
+            <Field name="y" source="TextInput:" type="Byte" />
+            <Field name="data" size="1" source="TextInput:" type="String" />
+            <Field name="x" source="TextInput:" type="Byte" />
+            <Field name="Min_y_valley" source="TextInput:" type="Byte" />
+            <Field name="Min_x_valley" source="TextInput:" type="Byte" />
+            <Field name="Max_y_valley" source="TextInput:" type="Byte" />
+            <Field name="Max_x_valley" source="TextInput:" type="Byte" />
+            <Field name="Steps" source="Formula: [Steps]+1" type="Byte" />
+            <Field name="end_y" source="TextInput:" type="Byte" />
+            <Field name="end_x" source="TextInput:" type="Byte" />
+            <Field name="x_opt" source="Formula: [x]+[xeffect]" type="Int32" />
+            <Field name="y_opt" source="Formula: [y]+[yeffect]" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="918" y="462" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>([x_opt] &lt; [Max_x_valley]
+and 
+[x_opt] &gt; [Min_x_valley]
+and 
+[y_opt] &lt; [Max_y_valley]
+and 
+[y_opt] &gt; [Min_y_valley]
+)
+
+or ([x_opt] = [x] and [y_opt]=[y])
+or ([y_opt] = [end_y] and [x_opt] = [end_x])</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Only in valid positions</AnnotationText>
+          <DefaultAnnotationText>([x_opt] &lt; [Max_x_valley]
+and 
+[x_opt] &gt; [Min_x_valley]
+and 
+[y_opt] &lt; [Max_y_va...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="xeffect" source="TextInput:" type="Int16" />
+            <Field name="yeffect" source="TextInput:" type="Int16" />
+            <Field name="y" source="TextInput:" type="Byte" />
+            <Field name="data" size="1" source="TextInput:" type="String" />
+            <Field name="x" source="TextInput:" type="Byte" />
+            <Field name="Min_y_valley" source="TextInput:" type="Byte" />
+            <Field name="Min_x_valley" source="TextInput:" type="Byte" />
+            <Field name="Max_y_valley" source="TextInput:" type="Byte" />
+            <Field name="Max_x_valley" source="TextInput:" type="Byte" />
+            <Field name="Steps" source="Formula: [Steps]+1" type="Byte" />
+            <Field name="end_y" source="TextInput:" type="Byte" />
+            <Field name="end_x" source="TextInput:" type="Byte" />
+            <Field name="x_opt" source="Formula: [x]+[xeffect]" type="Int32" />
+            <Field name="y_opt" source="Formula: [y]+[yeffect]" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="xeffect" source="TextInput:" type="Int16" />
+            <Field name="yeffect" source="TextInput:" type="Int16" />
+            <Field name="y" source="TextInput:" type="Byte" />
+            <Field name="data" size="1" source="TextInput:" type="String" />
+            <Field name="x" source="TextInput:" type="Byte" />
+            <Field name="Min_y_valley" source="TextInput:" type="Byte" />
+            <Field name="Min_x_valley" source="TextInput:" type="Byte" />
+            <Field name="Max_y_valley" source="TextInput:" type="Byte" />
+            <Field name="Max_x_valley" source="TextInput:" type="Byte" />
+            <Field name="Steps" source="Formula: [Steps]+1" type="Byte" />
+            <Field name="end_y" source="TextInput:" type="Byte" />
+            <Field name="end_x" source="TextInput:" type="Byte" />
+            <Field name="x_opt" source="Formula: [x]+[xeffect]" type="Int32" />
+            <Field name="y_opt" source="Formula: [y]+[yeffect]" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="522" y="474" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Append goal coordinates</AnnotationText>
+          <DefaultAnnotationText>Append goal coordinates</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="y" source="TextInput:" type="Byte" />
+            <Field name="data" size="1" source="TextInput:" type="String" />
+            <Field name="x" source="TextInput:" type="Byte" />
+            <Field name="Min_y_valley" source="TextInput:" type="Byte" />
+            <Field name="Min_x_valley" source="TextInput:" type="Byte" />
+            <Field name="Max_y_valley" source="TextInput:" type="Byte" />
+            <Field name="Max_x_valley" source="TextInput:" type="Byte" />
+            <Field name="Steps" source="TextInput:" type="Byte" />
+            <Field name="end_y" source="TextInput:" type="Byte" />
+            <Field name="end_x" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="1110" y="426" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="y" />
+            <Field field="x" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="y_opt" />
+            <Field field="x_opt" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_y" selected="False" input="Left_" />
+                <SelectField field="Left_data" selected="False" input="Left_" />
+                <SelectField field="Left_x" selected="False" input="Left_" />
+                <SelectField field="Left_Min_y_valley" selected="False" input="Left_" />
+                <SelectField field="Left_Min_x_valley" selected="False" input="Left_" />
+                <SelectField field="Left_Max_y_valley" selected="False" input="Left_" />
+                <SelectField field="Left_Max_x_valley" selected="False" input="Left_" />
+                <SelectField field="Right_xeffect" selected="False" input="Right_" />
+                <SelectField field="Right_yeffect" selected="False" input="Right_" />
+                <SelectField field="Right_y" selected="True" rename="Right_y" input="Right_" />
+                <SelectField field="Right_data" selected="True" rename="Right_data" input="Right_" />
+                <SelectField field="Right_x" selected="True" rename="Right_x" input="Right_" />
+                <SelectField field="Right_Min_y_valley" selected="False" rename="Right_Min_y_valley" input="Right_" />
+                <SelectField field="Right_Min_x_valley" selected="False" rename="Right_Min_x_valley" input="Right_" />
+                <SelectField field="Right_Max_y_valley" selected="False" rename="Right_Max_y_valley" input="Right_" />
+                <SelectField field="Right_Max_x_valley" selected="False" rename="Right_Max_x_valley" input="Right_" />
+                <SelectField field="Right_end_y" selected="False" input="Right_" />
+                <SelectField field="Right_end_x" selected="False" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Only not overlapping a blizzard</AnnotationText>
+          <DefaultAnnotationText>Only not overlapping a blizzard</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="y" source="Formula: IF [y]&gt;=[Max_y_valley]&#xA;THEN [Min_y_valley]+1+([y]-[Max_y_valley])&#xA;ELSEIF [y]&lt;=[Min_y_valley]&#xA;THEN [Max_y_valley]-1-([Min_y_valley]-[y])&#xA;ELSE [y]&#xA;ENDIF" type="Byte" />
+            <Field name="x" source="Formula: IF [x]&gt;=[Max_x_valley]&#xA;THEN [Min_x_valley]+1+([x]-[Max_x_valley])&#xA;ELSEIF [x]&lt;=[Min_x_valley]&#xA;THEN [Max_x_valley]-1-([Min_x_valley]-[x])&#xA;ELSE [x] &#xA;ENDIF" type="Byte" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="y" />
+            <Field field="x" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field name="Right_y" source="TextInput:" type="Byte" />
+            <Field name="Right_data" size="1" source="TextInput:" type="String" />
+            <Field name="Right_x" source="TextInput:" type="Byte" />
+            <Field name="Steps" source="Formula: [Steps]+1" type="Byte" />
+            <Field name="x_opt" source="Formula: [x]+[xeffect]" type="Int32" />
+            <Field name="y_opt" source="Formula: [y]+[yeffect]" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="xeffect" source="TextInput:" type="Int16" />
+            <Field name="yeffect" source="TextInput:" type="Int16" />
+            <Field name="y" source="TextInput:" type="Byte" />
+            <Field name="data" size="1" source="TextInput:" type="String" />
+            <Field name="x" source="TextInput:" type="Byte" />
+            <Field name="Min_y_valley" source="TextInput:" type="Byte" />
+            <Field name="Min_x_valley" source="TextInput:" type="Byte" />
+            <Field name="Max_y_valley" source="TextInput:" type="Byte" />
+            <Field name="Max_x_valley" source="TextInput:" type="Byte" />
+            <Field name="Steps" source="Formula: [Steps]+1" type="Byte" />
+            <Field name="end_y" source="TextInput:" type="Byte" />
+            <Field name="end_x" source="TextInput:" type="Byte" />
+            <Field name="x_opt" source="Formula: [x]+[xeffect]" type="Int32" />
+            <Field name="y_opt" source="Formula: [y]+[yeffect]" type="Int32" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="y_opt" />
+            <Field field="x_opt" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="14">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1206" y="438" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="data" selected="True" />
+            <SelectField field="Min_y_valley" selected="True" />
+            <SelectField field="Min_x_valley" selected="True" />
+            <SelectField field="Max_y_valley" selected="True" />
+            <SelectField field="Max_x_valley" selected="True" />
+            <SelectField field="Steps" selected="True" />
+            <SelectField field="end_y" selected="True" />
+            <SelectField field="end_x" selected="True" />
+            <SelectField field="x_opt" selected="True" rename="x" />
+            <SelectField field="y_opt" selected="True" rename="y" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="data" size="1" source="TextInput:" type="String" />
+            <Field name="Min_y_valley" source="TextInput:" type="Byte" />
+            <Field name="Min_x_valley" source="TextInput:" type="Byte" />
+            <Field name="Max_y_valley" source="TextInput:" type="Byte" />
+            <Field name="Max_x_valley" source="TextInput:" type="Byte" />
+            <Field name="Steps" source="Formula: [Steps]+1" type="Byte" />
+            <Field name="end_y" source="TextInput:" type="Byte" />
+            <Field name="end_x" source="TextInput:" type="Byte" />
+            <Field name="x" source="Formula: [x]+[xeffect]" type="Int32" />
+            <Field name="y" source="Formula: [y]+[yeffect]" type="Int32" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="y" order="" />
+            <Field field="x" order="" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1290" y="438" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[x]=[end_x] and [y]=[end_y]</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[x]=[end_x] and [y]=[end_y]</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="data" size="1" source="TextInput:" type="String" />
+            <Field name="Min_y_valley" source="TextInput:" type="Byte" />
+            <Field name="Min_x_valley" source="TextInput:" type="Byte" />
+            <Field name="Max_y_valley" source="TextInput:" type="Byte" />
+            <Field name="Max_x_valley" source="TextInput:" type="Byte" />
+            <Field name="Steps" source="Formula: [Steps]+1" type="Byte" />
+            <Field name="end_y" source="TextInput:" type="Byte" />
+            <Field name="end_x" source="TextInput:" type="Byte" />
+            <Field name="x" source="Formula: [x]+[xeffect]" type="Int32" />
+            <Field name="y" source="Formula: [y]+[yeffect]" type="Int32" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="y" order="" />
+            <Field field="x" order="" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="data" size="1" source="TextInput:" type="String" />
+            <Field name="Min_y_valley" source="TextInput:" type="Byte" />
+            <Field name="Min_x_valley" source="TextInput:" type="Byte" />
+            <Field name="Max_y_valley" source="TextInput:" type="Byte" />
+            <Field name="Max_x_valley" source="TextInput:" type="Byte" />
+            <Field name="Steps" source="Formula: [Steps]+1" type="Byte" />
+            <Field name="end_y" source="TextInput:" type="Byte" />
+            <Field name="end_x" source="TextInput:" type="Byte" />
+            <Field name="x" source="Formula: [x]+[xeffect]" type="Int32" />
+            <Field name="y" source="Formula: [y]+[yeffect]" type="Int32" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="y" order="" />
+            <Field field="x" order="" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="16">
+      <GuiSettings>
+        <Position x="1386" y="366" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output9">
+          <RecordInfo>
+            <Field name="Count" source="(Multiple Sources)" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings Macro="CountRecords.yxmc" />
+    </Node>
+    <Node ToolID="18">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="1494" y="462" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Target_data" selected="True" input="Target_" />
+                <SelectField field="Target_Min_y_valley" selected="True" input="Target_" />
+                <SelectField field="Target_Min_x_valley" selected="True" input="Target_" />
+                <SelectField field="Target_Max_y_valley" selected="True" input="Target_" />
+                <SelectField field="Target_Max_x_valley" selected="True" input="Target_" />
+                <SelectField field="Target_Steps" selected="True" input="Target_" />
+                <SelectField field="Target_end_y" selected="True" input="Target_" />
+                <SelectField field="Target_end_x" selected="True" input="Target_" />
+                <SelectField field="Target_x" selected="True" input="Target_" />
+                <SelectField field="Target_y" selected="True" input="Target_" />
+                <SelectField field="Source_Count" selected="True" input="Source_" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="data" size="1" source="TextInput:" type="String" />
+            <Field name="Min_y_valley" source="TextInput:" type="Byte" />
+            <Field name="Min_x_valley" source="TextInput:" type="Byte" />
+            <Field name="Max_y_valley" source="TextInput:" type="Byte" />
+            <Field name="Max_x_valley" source="TextInput:" type="Byte" />
+            <Field name="Steps" source="Formula: [Steps]+1" type="Byte" />
+            <Field name="end_y" source="TextInput:" type="Byte" />
+            <Field name="end_x" source="TextInput:" type="Byte" />
+            <Field name="x" source="Formula: [x]+[xeffect]" type="Int32" />
+            <Field name="y" source="Formula: [y]+[yeffect]" type="Int32" />
+            <Field name="Count" source="(Multiple Sources)" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="19">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1590" y="462" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>Count</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2022-12-23 21:29:28</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <StartDate>2022-12-23 21:29:28</StartDate>
+              <EndDate>2022-12-23 21:29:28</EndDate>
+              <Operand>0</Operand>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Count] = 0</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="data" size="1" source="TextInput:" type="String" />
+            <Field name="Min_y_valley" source="TextInput:" type="Byte" />
+            <Field name="Min_x_valley" source="TextInput:" type="Byte" />
+            <Field name="Max_y_valley" source="TextInput:" type="Byte" />
+            <Field name="Max_x_valley" source="TextInput:" type="Byte" />
+            <Field name="Steps" source="Formula: [Steps]+1" type="Byte" />
+            <Field name="end_y" source="TextInput:" type="Byte" />
+            <Field name="end_x" source="TextInput:" type="Byte" />
+            <Field name="x" source="Formula: [x]+[xeffect]" type="Int32" />
+            <Field name="y" source="Formula: [y]+[yeffect]" type="Int32" />
+            <Field name="Count" source="(Multiple Sources)" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="data" size="1" source="TextInput:" type="String" />
+            <Field name="Min_y_valley" source="TextInput:" type="Byte" />
+            <Field name="Min_x_valley" source="TextInput:" type="Byte" />
+            <Field name="Max_y_valley" source="TextInput:" type="Byte" />
+            <Field name="Max_x_valley" source="TextInput:" type="Byte" />
+            <Field name="Steps" source="Formula: [Steps]+1" type="Byte" />
+            <Field name="end_y" source="TextInput:" type="Byte" />
+            <Field name="end_x" source="TextInput:" type="Byte" />
+            <Field name="x" source="Formula: [x]+[xeffect]" type="Int32" />
+            <Field name="y" source="Formula: [y]+[yeffect]" type="Int32" />
+            <Field name="Count" source="(Multiple Sources)" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="20">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
+        <Position x="330" y="486" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UseFileInput value="False" />
+          <Name>endCoordinates</Name>
+          <Abbrev />
+          <ShowFieldMap value="True" />
+          <Optional value="False" />
+          <TextInput>
+            <Configuration>
+              <NumRows value="1" />
+              <Fields>
+                <Field name="end_y" />
+                <Field name="end_x" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>27</c>
+                  <c>121</c>
+                </r>
+              </Data>
+            </Configuration>
+          </TextInput>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Input</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="end_y" source="TextInput:" type="Byte" />
+            <Field name="end_x" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroInput" />
+    </Node>
+    <Node ToolID="21">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="22">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
+        <Position x="318" y="282" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UseFileInput value="False" />
+          <Name>Iterate</Name>
+          <Abbrev />
+          <ShowFieldMap value="False" />
+          <Optional value="False" />
+          <TextInput>
+            <Configuration>
+              <NumRows value="5" />
+              <Fields>
+                <Field name="y" />
+                <Field name="data" />
+                <Field name="x" />
+                <Field name="Min_y_valley" />
+                <Field name="Min_x_valley" />
+                <Field name="Max_y_valley" />
+                <Field name="Max_x_valley" />
+                <Field name="Steps" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>1</c>
+                  <c>E</c>
+                  <c>2</c>
+                  <c>1</c>
+                  <c>1</c>
+                  <c>27</c>
+                  <c>122</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>19</c>
+                  <c>&gt;</c>
+                  <c>3</c>
+                  <c>1</c>
+                  <c>1</c>
+                  <c>27</c>
+                  <c>122</c>
+                  <c />
+                </r>
+                <r>
+                  <c>19</c>
+                  <c>&lt;</c>
+                  <c>2</c>
+                  <c>1</c>
+                  <c>1</c>
+                  <c>27</c>
+                  <c>122</c>
+                  <c />
+                </r>
+                <r>
+                  <c>20</c>
+                  <c>v</c>
+                  <c>4</c>
+                  <c>1</c>
+                  <c>1</c>
+                  <c>27</c>
+                  <c>122</c>
+                  <c />
+                </r>
+                <r>
+                  <c>20</c>
+                  <c>v</c>
+                  <c>5</c>
+                  <c>1</c>
+                  <c>1</c>
+                  <c>27</c>
+                  <c>122</c>
+                  <c />
+                </r>
+              </Data>
+            </Configuration>
+          </TextInput>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Input</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="y" source="TextInput:" type="Byte" />
+            <Field name="data" size="1" source="TextInput:" type="String" />
+            <Field name="x" source="TextInput:" type="Byte" />
+            <Field name="Min_y_valley" source="TextInput:" type="Byte" />
+            <Field name="Min_x_valley" source="TextInput:" type="Byte" />
+            <Field name="Max_y_valley" source="TextInput:" type="Byte" />
+            <Field name="Max_x_valley" source="TextInput:" type="Byte" />
+            <Field name="Steps" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroInput" />
+    </Node>
+    <Node ToolID="23">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="522" y="270" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Steps" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="y" source="TextInput:" type="Byte" />
+            <Field name="data" size="1" source="TextInput:" type="String" />
+            <Field name="x" source="TextInput:" type="Byte" />
+            <Field name="Min_y_valley" source="TextInput:" type="Byte" />
+            <Field name="Min_x_valley" source="TextInput:" type="Byte" />
+            <Field name="Max_y_valley" source="TextInput:" type="Byte" />
+            <Field name="Max_x_valley" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="24">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="1494" y="282" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Target_y" selected="True" input="Target_" />
+                <SelectField field="Target_data" selected="True" input="Target_" />
+                <SelectField field="Target_x" selected="True" input="Target_" />
+                <SelectField field="Target_Min_y_valley" selected="True" input="Target_" />
+                <SelectField field="Target_Min_x_valley" selected="True" input="Target_" />
+                <SelectField field="Target_Max_y_valley" selected="True" input="Target_" />
+                <SelectField field="Target_Max_x_valley" selected="True" input="Target_" />
+                <SelectField field="Source_Count" selected="True" input="Source_" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="y" source="Formula: IF [y]&gt;=[Max_y_valley]&#xA;THEN [Min_y_valley]+1+([y]-[Max_y_valley])&#xA;ELSEIF [y]&lt;=[Min_y_valley]&#xA;THEN [Max_y_valley]-1-([Min_y_valley]-[y])&#xA;ELSE [y]&#xA;ENDIF" type="Byte" />
+            <Field name="data" size="1" source="TextInput:" type="String" />
+            <Field name="x" source="Formula: IF [x]&gt;=[Max_x_valley]&#xA;THEN [Min_x_valley]+1+([x]-[Max_x_valley])&#xA;ELSEIF [x]&lt;=[Min_x_valley]&#xA;THEN [Max_x_valley]-1-([Min_x_valley]-[x])&#xA;ELSE [x] &#xA;ENDIF" type="Byte" />
+            <Field name="Min_y_valley" source="TextInput:" type="Byte" />
+            <Field name="Min_x_valley" source="TextInput:" type="Byte" />
+            <Field name="Max_y_valley" source="TextInput:" type="Byte" />
+            <Field name="Max_x_valley" source="TextInput:" type="Byte" />
+            <Field name="Count" source="(Multiple Sources)" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="25">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1590" y="282" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>Count</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2022-12-23 21:29:28</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>0</Operand>
+              <StartDate>2022-12-23 21:29:28</StartDate>
+              <EndDate>2022-12-23 21:29:28</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Count] = 0</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="y" source="Formula: IF [y]&gt;=[Max_y_valley]&#xA;THEN [Min_y_valley]+1+([y]-[Max_y_valley])&#xA;ELSEIF [y]&lt;=[Min_y_valley]&#xA;THEN [Max_y_valley]-1-([Min_y_valley]-[y])&#xA;ELSE [y]&#xA;ENDIF" type="Byte" />
+            <Field name="data" size="1" source="TextInput:" type="String" />
+            <Field name="x" source="Formula: IF [x]&gt;=[Max_x_valley]&#xA;THEN [Min_x_valley]+1+([x]-[Max_x_valley])&#xA;ELSEIF [x]&lt;=[Min_x_valley]&#xA;THEN [Max_x_valley]-1-([Min_x_valley]-[x])&#xA;ELSE [x] &#xA;ENDIF" type="Byte" />
+            <Field name="Min_y_valley" source="TextInput:" type="Byte" />
+            <Field name="Min_x_valley" source="TextInput:" type="Byte" />
+            <Field name="Max_y_valley" source="TextInput:" type="Byte" />
+            <Field name="Max_x_valley" source="TextInput:" type="Byte" />
+            <Field name="Count" source="(Multiple Sources)" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="y" source="Formula: IF [y]&gt;=[Max_y_valley]&#xA;THEN [Min_y_valley]+1+([y]-[Max_y_valley])&#xA;ELSEIF [y]&lt;=[Min_y_valley]&#xA;THEN [Max_y_valley]-1-([Min_y_valley]-[y])&#xA;ELSE [y]&#xA;ENDIF" type="Byte" />
+            <Field name="data" size="1" source="TextInput:" type="String" />
+            <Field name="x" source="Formula: IF [x]&gt;=[Max_x_valley]&#xA;THEN [Min_x_valley]+1+([x]-[Max_x_valley])&#xA;ELSEIF [x]&lt;=[Min_x_valley]&#xA;THEN [Max_x_valley]-1-([Min_x_valley]-[x])&#xA;ELSE [x] &#xA;ENDIF" type="Byte" />
+            <Field name="Min_y_valley" source="TextInput:" type="Byte" />
+            <Field name="Min_x_valley" source="TextInput:" type="Byte" />
+            <Field name="Max_y_valley" source="TextInput:" type="Byte" />
+            <Field name="Max_x_valley" source="TextInput:" type="Byte" />
+            <Field name="Count" source="(Multiple Sources)" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="26">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="1686" y="450" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Ignore</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="data" size="1" source="TextInput:" type="String" />
+            <Field name="Min_y_valley" source="TextInput:" type="Byte" />
+            <Field name="Min_x_valley" source="TextInput:" type="Byte" />
+            <Field name="Max_y_valley" source="TextInput:" type="Byte" />
+            <Field name="Max_x_valley" source="TextInput:" type="Byte" />
+            <Field name="Steps" source="Formula: [Steps]+1" type="Byte" />
+            <Field name="end_y" source="TextInput:" type="Byte" />
+            <Field name="end_x" source="TextInput:" type="Byte" />
+            <Field name="x" source="Formula: (Multiple Sources)" type="Int32" />
+            <Field name="y" source="Formula: (Multiple Sources)" type="Int32" />
+            <Field name="Count" source="(Multiple Sources)" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="27">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="1590" y="570" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>Exit</Name>
+          <Abbrev />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Output</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="28">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="1854" y="450" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>Iterate</Name>
+          <Abbrev />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Output</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="29">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1770" y="450" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="data" selected="True" />
+            <SelectField field="Min_y_valley" selected="True" />
+            <SelectField field="Min_x_valley" selected="True" />
+            <SelectField field="Max_y_valley" selected="True" />
+            <SelectField field="Max_x_valley" selected="True" />
+            <SelectField field="Steps" selected="True" />
+            <SelectField field="end_y" selected="True" />
+            <SelectField field="end_x" selected="True" />
+            <SelectField field="x" selected="True" />
+            <SelectField field="y" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="data" size="1" source="TextInput:" type="String" />
+            <Field name="Min_y_valley" source="TextInput:" type="Byte" />
+            <Field name="Min_x_valley" source="TextInput:" type="Byte" />
+            <Field name="Max_y_valley" source="TextInput:" type="Byte" />
+            <Field name="Max_x_valley" source="TextInput:" type="Byte" />
+            <Field name="Steps" source="Formula: [Steps]+1" type="Byte" />
+            <Field name="end_y" source="TextInput:" type="Byte" />
+            <Field name="end_x" source="TextInput:" type="Byte" />
+            <Field name="x" source="Formula: (Multiple Sources)" type="Int32" />
+            <Field name="y" source="Formula: (Multiple Sources)" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="30">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
+        <Position x="1002" y="450" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UniqueFields>
+            <Field field="Steps" />
+            <Field field="x_opt" />
+            <Field field="y_opt" />
+          </UniqueFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Only keep unique positions</AnnotationText>
+          <DefaultAnnotationText>Only keep unique positions</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Unique">
+          <RecordInfo>
+            <Field name="xeffect" source="TextInput:" type="Int16" />
+            <Field name="yeffect" source="TextInput:" type="Int16" />
+            <Field name="y" source="TextInput:" type="Byte" />
+            <Field name="data" size="1" source="TextInput:" type="String" />
+            <Field name="x" source="TextInput:" type="Byte" />
+            <Field name="Min_y_valley" source="TextInput:" type="Byte" />
+            <Field name="Min_x_valley" source="TextInput:" type="Byte" />
+            <Field name="Max_y_valley" source="TextInput:" type="Byte" />
+            <Field name="Max_x_valley" source="TextInput:" type="Byte" />
+            <Field name="Steps" source="Formula: [Steps]+1" type="Byte" />
+            <Field name="end_y" source="TextInput:" type="Byte" />
+            <Field name="end_x" source="TextInput:" type="Byte" />
+            <Field name="x_opt" source="Formula: [x]+[xeffect]" type="Int32" />
+            <Field name="y_opt" source="Formula: [y]+[yeffect]" type="Int32" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="Steps" order="Asc" />
+            <Field field="x_opt" order="Asc" />
+            <Field field="y_opt" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Duplicates">
+          <RecordInfo>
+            <Field name="xeffect" source="TextInput:" type="Int16" />
+            <Field name="yeffect" source="TextInput:" type="Int16" />
+            <Field name="y" source="TextInput:" type="Byte" />
+            <Field name="data" size="1" source="TextInput:" type="String" />
+            <Field name="x" source="TextInput:" type="Byte" />
+            <Field name="Min_y_valley" source="TextInput:" type="Byte" />
+            <Field name="Min_x_valley" source="TextInput:" type="Byte" />
+            <Field name="Max_y_valley" source="TextInput:" type="Byte" />
+            <Field name="Max_x_valley" source="TextInput:" type="Byte" />
+            <Field name="Steps" source="Formula: [Steps]+1" type="Byte" />
+            <Field name="end_y" source="TextInput:" type="Byte" />
+            <Field name="end_x" source="TextInput:" type="Byte" />
+            <Field name="x_opt" source="Formula: [x]+[xeffect]" type="Int32" />
+            <Field name="y_opt" source="Formula: [y]+[yeffect]" type="Int32" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="Steps" order="Asc" />
+            <Field field="x_opt" order="Asc" />
+            <Field field="y_opt" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnique" />
+    </Node>
+    <Node ToolID="31">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1398" y="570" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="y" selected="True" />
+            <SelectField field="data" selected="True" />
+            <SelectField field="x" selected="True" />
+            <SelectField field="Min_y_valley" selected="True" />
+            <SelectField field="Min_x_valley" selected="True" />
+            <SelectField field="Max_y_valley" selected="True" />
+            <SelectField field="Max_x_valley" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="y" source="Formula: IF [y]&gt;=[Max_y_valley]&#xA;THEN [Min_y_valley]+1+([y]-[Max_y_valley])&#xA;ELSEIF [y]&lt;=[Min_y_valley]&#xA;THEN [Max_y_valley]-1-([Min_y_valley]-[y])&#xA;ELSE [y]&#xA;ENDIF" type="Byte" />
+            <Field name="data" size="1" source="TextInput:" type="String" />
+            <Field name="x" source="Formula: IF [x]&gt;=[Max_x_valley]&#xA;THEN [Min_x_valley]+1+([x]-[Max_x_valley])&#xA;ELSEIF [x]&lt;=[Min_x_valley]&#xA;THEN [Max_x_valley]-1-([Min_x_valley]-[x])&#xA;ELSE [x] &#xA;ENDIF" type="Byte" />
+            <Field name="Min_y_valley" source="TextInput:" type="Byte" />
+            <Field name="Min_x_valley" source="TextInput:" type="Byte" />
+            <Field name="Max_y_valley" source="TextInput:" type="Byte" />
+            <Field name="Max_x_valley" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="32">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="1494" y="570" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Ignore</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="data" size="1" source="TextInput:" type="String" />
+            <Field name="Min_y_valley" source="TextInput:" type="Byte" />
+            <Field name="Min_x_valley" source="TextInput:" type="Byte" />
+            <Field name="Max_y_valley" source="TextInput:" type="Byte" />
+            <Field name="Max_x_valley" source="TextInput:" type="Byte" />
+            <Field name="Steps" source="Formula: [Steps]+1" type="Byte" />
+            <Field name="end_y" source="TextInput:" type="Byte" />
+            <Field name="end_x" source="TextInput:" type="Byte" />
+            <Field name="x" source="Formula: (Multiple Sources)" type="Int32" />
+            <Field name="y" source="Formula: (Multiple Sources)" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="33">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="1278" y="234" width="612" height="28" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Stop the macro if the explorer reached the end point</Text>
+          <Font name="Arial" size="12" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="3" Connection="False" />
+      <Destination ToolID="10" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="20" Connection="Output" />
+      <Destination ToolID="10" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="True" />
+      <Destination ToolID="23" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="11" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="30" Connection="Unique" />
+      <Destination ToolID="11" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="24" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Output9" />
+      <Destination ToolID="24" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="6" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Output" />
+      <Destination ToolID="6" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="True" />
+      <Destination ToolID="30" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Right" />
+      <Destination ToolID="14" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="Output" />
+      <Destination ToolID="15" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="True" />
+      <Destination ToolID="16" Connection="Input8" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="False" />
+      <Destination ToolID="18" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Output9" />
+      <Destination ToolID="18" Connection="Source" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="15" Connection="True" />
+      <Destination ToolID="32" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="31" Connection="Output" />
+      <Destination ToolID="32" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="Output" />
+      <Destination ToolID="19" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="19" Connection="True" />
+      <Destination ToolID="26" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="25" Connection="True" />
+      <Destination ToolID="26" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="22" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="23" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="24" Connection="Output" />
+      <Destination ToolID="25" Connection="Input" />
+    </Connection>
+    <Connection Wireless="True">
+      <Origin ToolID="25" Connection="False" />
+      <Destination ToolID="31" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="26" Connection="Output" />
+      <Destination ToolID="29" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="29" Connection="Output" />
+      <Destination ToolID="28" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="32" Connection="Output" />
+      <Destination ToolID="27" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Day24Iterate</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="693b74a7-fa82-4603-8711-96b6073c1b13" />
+      <Telemetry>
+        <PreviousWorkflowId value="d80387d3-d7e4-45ed-b02c-eee528fbf947" />
+        <OriginWorkflowId value="693b74a7-fa82-4603-8711-96b6073c1b13" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="False" />
+    </Events>
+    <RuntimeProperties>
+      <Actions />
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Tab (21)</Name>
+          <ToolId value="21" />
+          <Questions>
+            <Question>
+              <Type>MacroInput</Type>
+              <Description />
+              <Name>Macro Input (22)</Name>
+              <ToolId value="22" />
+            </Question>
+            <Question>
+              <Type>MacroInput</Type>
+              <Description />
+              <Name>Macro Input (20)</Name>
+              <ToolId value="20" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description>Macro Output (27)</Description>
+              <Name>Macro Output (27)</Name>
+              <ToolId value="27" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description>Macro Output (28)</Description>
+              <Name>Macro Output (28)</Name>
+              <ToolId value="28" />
+            </Question>
+          </Questions>
+        </Question>
+      </Questions>
+      <ModuleType>Macro</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImageStd value="39" />
+      <MacroInputs />
+      <MacroOutputs />
+      <IterativeMacro>
+        <Input>Iterate</Input>
+        <Output>Iterate</Output>
+        <IterationLimit value="100000" />
+        <LimitBehavior>Warn</LimitBehavior>
+        <OutputMode>AutoByName</OutputMode>
+      </IterativeMacro>
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="16" Selected="True" />
+        <Tool ToolId="27" Selected="True" />
+        <Tool ToolId="28" Selected="True" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>
