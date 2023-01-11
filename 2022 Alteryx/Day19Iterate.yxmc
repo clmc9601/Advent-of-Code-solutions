@@ -1,0 +1,882 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2022.3">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
+        <Position x="54" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UseFileInput value="True" />
+          <Name>Input1</Name>
+          <Abbrev />
+          <ShowFieldMap value="False" />
+          <Optional value="False" />
+          <FileInput>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">\\Mac\Home\Documents\Claire\CU Boulder\Alteryx\Advent of Code\AoC_2022\Day19_MacroInput.yxdb</File>
+              <FormatSpecificOptions />
+            </Configuration>
+          </FileInput>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Day19_MacroInput.yxdb</DefaultAnnotationText>
+          <Left value="True" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="RegEx: Parsed from data" name="Blueprint" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="OreRobot-CostOre" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="ClayRobot-CostOre" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="ObsRobot-CostOre" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="ObsRobot-CostClay" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="GeoRobot-CostOre" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="GeoRobot-CostObs" source="RegEx: Parsed from data" type="Int16" />
+            <Field name="MinLeft" source="TextInput:" type="Int32" />
+            <Field name="Ore" source="TextInput:" type="Int32" />
+            <Field name="Clay" source="TextInput:" type="Int32" />
+            <Field name="Obs" source="TextInput:" type="Int32" />
+            <Field name="Geode" source="TextInput:" type="Int32" />
+            <Field name="OreRobot" source="TextInput:" type="Int32" />
+            <Field name="ClayRobot" source="TextInput:" type="Int32" />
+            <Field name="ObsRobot" source="TextInput:" type="Int32" />
+            <Field name="GeodeRobot" source="TextInput:" type="Int32" />
+            <Field name="BuildOreRobot" source="TextInput:" type="Int32" />
+            <Field name="BuildClayRobot" source="TextInput:" type="Int32" />
+            <Field name="BuildObsRobot" source="TextInput:" type="Int32" />
+            <Field name="BuildGeodeRobot" source="TextInput:" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="138" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="Min(FLOOR([Ore]/[GeoRobot-CostOre]),&#xA;FLOOR([Obs]/[GeoRobot-CostObs]))" field="BuildGeodeRobot" size="4" type="Int32" />
+            <FormulaField expression="IF [OreRobot]&gt;Max([OreRobot-CostOre], [ClayRobot-CostOre], [ObsRobot-CostOre], [GeoRobot-CostOre])&#xA;THEN 0 ELSE&#xA;FLOOR([Ore]/[OreRobot-CostOre])&#xA;ENDIF" field="BuildOreRobot" size="4" type="Int32" />
+            <FormulaField expression="IF [ClayRobot]&gt;[ObsRobot-CostClay]&#xA;THEN 0 ELSE&#xA;FLOOR([Ore]/[ClayRobot-CostOre])&#xA;ENDIF" field="BuildClayRobot" size="4" type="Int32" />
+            <FormulaField expression="IF [ObsRobot]&gt;[GeoRobot-CostObs]&#xA;THEN 0 ELSE&#xA;Min(FLOOR([Ore]/[ObsRobot-CostOre]),&#xA;FLOOR([Clay]/[ObsRobot-CostClay]))&#xA;ENDIF" field="BuildObsRobot" size="4" type="Int32" />
+            <FormulaField expression="[Ore] + [OreRobot]" field="Ore" size="4" type="Int32" />
+            <FormulaField expression="[Clay] + [ClayRobot]" field="Clay" size="4" type="Int32" />
+            <FormulaField expression="[Obs] + [ObsRobot]" field="Obs" size="4" type="Int32" />
+            <FormulaField expression="[Geode] + [GeodeRobot]" field="Geode" size="4" type="Int32" />
+            <FormulaField expression="Min([BuildOreRobot],1)+Min([BuildClayRobot],1)+Min([BuildObsRobot],1)+Min([BuildGeodeRobot],1)" field="BuildCount" size="4" type="Int32" />
+            <FormulaField expression="IF [BuildCount]=4&#xA;THEN ''&#xA;ELSE ','&#xA;ENDIF +&#xA;IF [BuildOreRobot]&gt;0&#xA;THEN 'OreRobot,'&#xA;ELSE ''&#xA;ENDIF&#xA;+&#xA;IF [BuildClayRobot]&gt;0&#xA;THEN 'ClayRobot,'&#xA;ELSE ''&#xA;ENDIF&#xA;+&#xA;IF [BuildObsRobot]&gt;0&#xA;THEN 'ObsRobot,'&#xA;ELSE ''&#xA;ENDIF&#xA;+&#xA;IF [BuildGeodeRobot]&gt;0&#xA;THEN 'GeoRobot,'&#xA;ELSE ''&#xA;ENDIF" field="BuildString" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Collect resources and calculate which robots to build</AnnotationText>
+          <DefaultAnnotationText>BuildGeodeRobot = Min(FLOOR([Ore]/[GeoRobot-CostOre]),
+FLOOR([Obs]/[GeoRobot-Cos...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="RegEx: Parsed from data" name="Blueprint" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="OreRobot-CostOre" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="ClayRobot-CostOre" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="ObsRobot-CostOre" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="ObsRobot-CostClay" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="GeoRobot-CostOre" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="GeoRobot-CostObs" source="RegEx: Parsed from data" type="Int16" />
+            <Field name="MinLeft" source="TextInput:" type="Int32" />
+            <Field name="Ore" source="Formula: [Ore] + [OreRobot]" type="Int32" />
+            <Field name="Clay" source="Formula: [Clay] + [ClayRobot]" type="Int32" />
+            <Field name="Obs" source="Formula: [Obs] + [ObsRobot]" type="Int32" />
+            <Field name="Geode" source="Formula: [Geode] + [GeodeRobot]" type="Int32" />
+            <Field name="OreRobot" source="TextInput:" type="Int32" />
+            <Field name="ClayRobot" source="TextInput:" type="Int32" />
+            <Field name="ObsRobot" source="TextInput:" type="Int32" />
+            <Field name="GeodeRobot" source="TextInput:" type="Int32" />
+            <Field name="BuildOreRobot" source="Formula: IF [OreRobot]&gt;Max([OreRobot-CostOre], [ClayRobot-CostOre], [ObsRobot-CostOre], [GeoRobot-CostOre])&#xA;THEN 0 ELSE&#xA;FLOOR([Ore]/[OreRobot-CostOre])&#xA;ENDIF" type="Int32" />
+            <Field name="BuildClayRobot" source="Formula: IF [ClayRobot]&gt;[ObsRobot-CostClay]&#xA;THEN 0 ELSE&#xA;FLOOR([Ore]/[ClayRobot-CostOre])&#xA;ENDIF" type="Int32" />
+            <Field name="BuildObsRobot" source="Formula: IF [ObsRobot]&gt;[GeoRobot-CostObs]&#xA;THEN 0 ELSE&#xA;Min(FLOOR([Ore]/[ObsRobot-CostOre]),&#xA;FLOOR([Clay]/[ObsRobot-CostClay]))&#xA;ENDIF" type="Int32" />
+            <Field name="BuildGeodeRobot" source="Formula: Min(FLOOR([Ore]/[GeoRobot-CostOre]),&#xA;FLOOR([Obs]/[GeoRobot-CostObs]))" type="Int32" />
+            <Field name="BuildCount" source="Formula: Min([BuildOreRobot],1)+Min([BuildClayRobot],1)+Min([BuildObsRobot],1)+Min([BuildGeodeRobot],1)" type="Int32" />
+            <Field name="BuildString" size="1073741823" source="Formula: IF [BuildCount]=4&#xA;THEN ''&#xA;ELSE ','&#xA;ENDIF +&#xA;IF [BuildOreRobot]&gt;0&#xA;THEN 'OreRobot,'&#xA;ELSE ''&#xA;ENDIF&#xA;+&#xA;IF [BuildClayRobot]&gt;0&#xA;THEN 'ClayRobot,'&#xA;ELSE ''&#xA;ENDIF&#xA;+&#xA;IF [BuildObsRobot]&gt;0&#xA;THEN 'ObsRobot,'&#xA;ELSE ''&#xA;ENDIF&#xA;+&#xA;IF [BuildGeodeRobot]&gt;0&#xA;THEN 'GeoRobot,'&#xA;ELSE ''&#xA;ENDIF" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+        <Position x="246" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>BuildString</Field>
+          <Delimeters value="," />
+          <NumFields value="1" />
+          <Flags value="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Add a new permutation per robot to build (or none)</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="RegEx: Parsed from data" name="Blueprint" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="OreRobot-CostOre" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="ClayRobot-CostOre" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="ObsRobot-CostOre" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="ObsRobot-CostClay" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="GeoRobot-CostOre" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="GeoRobot-CostObs" source="RegEx: Parsed from data" type="Int16" />
+            <Field name="MinLeft" source="TextInput:" type="Int32" />
+            <Field name="Ore" source="Formula: [Ore] + [OreRobot]" type="Int32" />
+            <Field name="Clay" source="Formula: [Clay] + [ClayRobot]" type="Int32" />
+            <Field name="Obs" source="Formula: [Obs] + [ObsRobot]" type="Int32" />
+            <Field name="Geode" source="Formula: [Geode] + [GeodeRobot]" type="Int32" />
+            <Field name="OreRobot" source="TextInput:" type="Int32" />
+            <Field name="ClayRobot" source="TextInput:" type="Int32" />
+            <Field name="ObsRobot" source="TextInput:" type="Int32" />
+            <Field name="GeodeRobot" source="TextInput:" type="Int32" />
+            <Field name="BuildOreRobot" source="Formula: FLOOR([Ore]/[OreRobot-CostOre])" type="Int32" />
+            <Field name="BuildClayRobot" source="Formula: FLOOR([Ore]/[ClayRobot-CostOre])" type="Int32" />
+            <Field name="BuildObsRobot" source="Formula: Min(FLOOR([Ore]/[ObsRobot-CostOre]),&#xA;FLOOR([Clay]/[ObsRobot-CostClay]))" type="Int32" />
+            <Field name="BuildGeodeRobot" source="Formula: Min(FLOOR([Ore]/[GeoRobot-CostOre]),&#xA;FLOOR([Obs]/[GeoRobot-CostObs]))" type="Int32" />
+            <Field name="BuildCount" source="Formula: Min([BuildOreRobot],1)+Min([BuildClayRobot],1)+Min([BuildObsRobot],1)+Min([BuildGeodeRobot],1)" type="Int32" />
+            <Field description="TextToColumns: Parsed from BuildString" name="BuildString" size="1073741823" source="TextToColumns: Parsed from BuildString" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns" />
+    </Node>
+    <Node ToolID="16">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="354" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[Ore] - &#xA;IF [BuildString]='OreRobot'&#xA;THEN [OreRobot-CostOre]&#xA;ELSEIF [BuildString] = 'ClayRobot'&#xA;THEN [ClayRobot-CostOre]&#xA;ELSEIF [BuildString] = 'ObsRobot'&#xA;THEN [ObsRobot-CostOre]&#xA;ELSEIF [BuildString] = 'GeoRobot'&#xA;THEN [GeoRobot-CostOre]&#xA;ELSE 0&#xA;ENDIF" field="Ore" size="4" type="Int32" />
+            <FormulaField expression="[Clay] - &#xA;IF [BuildString] = 'ObsRobot'&#xA;THEN [ObsRobot-CostClay]&#xA;ELSE 0&#xA;ENDIF&#xA;" field="Clay" size="4" type="Int32" />
+            <FormulaField expression="[Obs] - &#xA;IF [BuildString] = 'GeoRobot'&#xA;THEN [GeoRobot-CostObs]&#xA;ELSE 0&#xA;ENDIF" field="Obs" size="4" type="Int32" />
+            <FormulaField expression="[OreRobot] + &#xA;IF [BuildString]='OreRobot'&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" field="OreRobot" size="4" type="Int32" />
+            <FormulaField expression="[ClayRobot] + &#xA;IF [BuildString]='ClayRobot'&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" field="ClayRobot" size="4" type="Int32" />
+            <FormulaField expression="[ObsRobot] + &#xA;IF [BuildString]='ObsRobot'&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" field="ObsRobot" size="4" type="Int32" />
+            <FormulaField expression="[GeodeRobot] + &#xA;IF [BuildString]='GeoRobot'&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" field="GeodeRobot" size="4" type="Int32" />
+            <FormulaField expression="[MinLeft]-1" field="MinLeft" size="4" type="Int32" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Build robots</AnnotationText>
+          <DefaultAnnotationText>Ore = [Ore] - 
+IF [BuildString]='OreRobot'
+THEN [OreRobot-CostOre]
+ELSEIF [Build...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="RegEx: Parsed from data" name="Blueprint" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="OreRobot-CostOre" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="ClayRobot-CostOre" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="ObsRobot-CostOre" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="ObsRobot-CostClay" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="GeoRobot-CostOre" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="GeoRobot-CostObs" source="RegEx: Parsed from data" type="Int16" />
+            <Field name="MinLeft" source="Formula: [MinLeft]-1" type="Int32" />
+            <Field name="Ore" source="Formula: [Ore] - &#xA;IF [BuildString]='OreRobot'&#xA;THEN [OreRobot-CostOre]&#xA;ELSEIF [BuildString] = 'ClayRobot'&#xA;THEN [ClayRobot-CostOre]&#xA;ELSEIF [BuildString] = 'ObsRobot'&#xA;THEN [ObsRobot-CostOre]&#xA;ELSEIF [BuildString] = 'GeoRobot'&#xA;THEN [GeoRobot-CostOre]&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="Clay" source="Formula: [Clay] - &#xA;IF [BuildString] = 'ObsRobot'&#xA;THEN [ObsRobot-CostClay]&#xA;ELSE 0&#xA;ENDIF&#xA;" type="Int32" />
+            <Field name="Obs" source="Formula: [Obs] - &#xA;IF [BuildString] = 'GeoRobot'&#xA;THEN [GeoRobot-CostObs]&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="Geode" source="Formula: [Geode] + [GeodeRobot]" type="Int32" />
+            <Field name="OreRobot" source="Formula: [OreRobot] + &#xA;IF [BuildString]='OreRobot'&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="ClayRobot" source="Formula: [ClayRobot] + &#xA;IF [BuildString]='ClayRobot'&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="ObsRobot" source="Formula: [ObsRobot] + &#xA;IF [BuildString]='ObsRobot'&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="GeodeRobot" source="Formula: [GeodeRobot] + &#xA;IF [BuildString]='GeoRobot'&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="BuildOreRobot" source="Formula: IF [BuildGeodeRobot]&gt;0&#xA;THEN 0 ELSE&#xA;FLOOR([Ore]/[OreRobot-CostOre])&#xA;ENDIF" type="Int32" />
+            <Field name="BuildClayRobot" source="Formula: IF [BuildGeodeRobot]&gt;0&#xA;THEN 0 ELSE&#xA;FLOOR([Ore]/[ClayRobot-CostOre])&#xA;ENDIF" type="Int32" />
+            <Field name="BuildObsRobot" source="Formula: IF [BuildGeodeRobot]&gt;0&#xA;THEN 0 ELSE&#xA;Min(FLOOR([Ore]/[ObsRobot-CostOre]),&#xA;FLOOR([Clay]/[ObsRobot-CostClay]))&#xA;ENDIF" type="Int32" />
+            <Field name="BuildGeodeRobot" source="Formula: Min(FLOOR([Ore]/[GeoRobot-CostOre]),&#xA;FLOOR([Obs]/[GeoRobot-CostObs]))" type="Int32" />
+            <Field name="BuildCount" source="Formula: Min([BuildOreRobot],1)+Min([BuildClayRobot],1)+Min([BuildObsRobot],1)+Min([BuildGeodeRobot],1)" type="Int32" />
+            <Field description="TextToColumns: Parsed from BuildString" name="BuildString" size="1073741823" source="TextToColumns: Parsed from BuildString" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="17">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="1110" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>Iterate</Name>
+          <Abbrev />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Output</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="18">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1014" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Blueprint" selected="True" />
+            <SelectField field="OreRobot-CostOre" selected="True" />
+            <SelectField field="ClayRobot-CostOre" selected="True" />
+            <SelectField field="ObsRobot-CostOre" selected="True" />
+            <SelectField field="ObsRobot-CostClay" selected="True" />
+            <SelectField field="GeoRobot-CostOre" selected="True" />
+            <SelectField field="GeoRobot-CostObs" selected="True" />
+            <SelectField field="MinLeft" selected="True" />
+            <SelectField field="Ore" selected="True" />
+            <SelectField field="Clay" selected="True" />
+            <SelectField field="Obs" selected="True" />
+            <SelectField field="Geode" selected="True" />
+            <SelectField field="OreRobot" selected="True" />
+            <SelectField field="ClayRobot" selected="True" />
+            <SelectField field="ObsRobot" selected="True" />
+            <SelectField field="GeodeRobot" selected="True" />
+            <SelectField field="BuildOreRobot" selected="True" />
+            <SelectField field="BuildClayRobot" selected="True" />
+            <SelectField field="BuildObsRobot" selected="True" />
+            <SelectField field="BuildGeodeRobot" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="RegEx: Parsed from data" name="Blueprint" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="OreRobot-CostOre" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="ClayRobot-CostOre" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="ObsRobot-CostOre" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="ObsRobot-CostClay" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="GeoRobot-CostOre" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="GeoRobot-CostObs" source="RegEx: Parsed from data" type="Int16" />
+            <Field name="MinLeft" source="TextInput:" type="Int32" />
+            <Field name="Ore" source="Formula: [Ore] - &#xA;IF [BuildString]='OreRobot'&#xA;THEN [OreRobot-CostOre]&#xA;ELSEIF [BuildString] = 'ClayRobot'&#xA;THEN [ClayRobot-CostOre]&#xA;ELSEIF [BuildString] = 'ObsRobot'&#xA;THEN [ObsRobot-CostOre]&#xA;ELSEIF [BuildString] = 'GeoRobot'&#xA;THEN [GeoRobot-CostOre]&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="Clay" source="Formula: [Clay] - &#xA;IF [BuildString] = 'ObsRobot'&#xA;THEN [ObsRobot-CostClay]&#xA;ELSE 0&#xA;ENDIF&#xA;" type="Int32" />
+            <Field name="Obs" source="Formula: [Obs] - &#xA;IF [BuildString] = 'GeoRobot'&#xA;THEN [GeoRobot-CostObs]&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="Geode" source="Formula: [Geode] + [GeodeRobot]" type="Int32" />
+            <Field name="OreRobot" source="Formula: [OreRobot] + &#xA;IF [BuildString]='OreRobot'&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="ClayRobot" source="Formula: [ClayRobot] + &#xA;IF [BuildString]='ClayRobot'&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="ObsRobot" source="Formula: [ObsRobot] + &#xA;IF [BuildString]='ObsRobot'&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="GeodeRobot" source="Formula: [GeodeRobot] + &#xA;IF [BuildString]='GeoRobot'&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="BuildOreRobot" source="Formula: FLOOR([Ore]/[OreRobot-CostOre])" type="Int32" />
+            <Field name="BuildClayRobot" source="Formula: FLOOR([Ore]/[ClayRobot-CostOre])" type="Int32" />
+            <Field name="BuildObsRobot" source="Formula: Min(FLOOR([Ore]/[ObsRobot-CostOre]),&#xA;FLOOR([Clay]/[ObsRobot-CostClay]))" type="Int32" />
+            <Field name="BuildGeodeRobot" source="Formula: Min(FLOOR([Ore]/[GeoRobot-CostOre]),&#xA;FLOOR([Obs]/[GeoRobot-CostObs]))" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="19">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="918" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>&gt;</Operator>
+            <Field>MinLeft</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2023-01-10 20:23:31</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <StartDate>2023-01-10 20:23:31</StartDate>
+              <EndDate>2023-01-10 20:23:31</EndDate>
+              <Operand>0</Operand>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[MinLeft] &gt; 0</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field description="RegEx: Parsed from data" name="Blueprint" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="OreRobot-CostOre" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="ClayRobot-CostOre" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="ObsRobot-CostOre" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="ObsRobot-CostClay" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="GeoRobot-CostOre" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="GeoRobot-CostObs" source="RegEx: Parsed from data" type="Int16" />
+            <Field name="MinLeft" source="Formula: [MinLeft]-1" type="Int32" />
+            <Field name="Ore" source="Formula: [Ore] - &#xA;IF [BuildString]='OreRobot'&#xA;THEN [OreRobot-CostOre]&#xA;ELSEIF [BuildString] = 'ClayRobot'&#xA;THEN [ClayRobot-CostOre]&#xA;ELSEIF [BuildString] = 'ObsRobot'&#xA;THEN [ObsRobot-CostOre]&#xA;ELSEIF [BuildString] = 'GeoRobot'&#xA;THEN [GeoRobot-CostOre]&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="Clay" source="Formula: [Clay] - &#xA;IF [BuildString] = 'ObsRobot'&#xA;THEN [ObsRobot-CostClay]&#xA;ELSE 0&#xA;ENDIF&#xA;" type="Int32" />
+            <Field name="Obs" source="Formula: [Obs] - &#xA;IF [BuildString] = 'GeoRobot'&#xA;THEN [GeoRobot-CostObs]&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="Geode" source="Formula: [Geode] + [GeodeRobot]" type="Int32" />
+            <Field name="OreRobot" source="Formula: [OreRobot] + &#xA;IF [BuildString]='OreRobot'&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="ClayRobot" source="Formula: [ClayRobot] + &#xA;IF [BuildString]='ClayRobot'&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="ObsRobot" source="Formula: [ObsRobot] + &#xA;IF [BuildString]='ObsRobot'&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="GeodeRobot" source="Formula: [GeodeRobot] + &#xA;IF [BuildString]='GeoRobot'&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="BuildOreRobot" source="Formula: IF [OreRobot]&gt;Max([OreRobot-CostOre], [ClayRobot-CostOre], [ObsRobot-CostOre], [GeoRobot-CostOre])&#xA;THEN 0 ELSE&#xA;FLOOR([Ore]/[OreRobot-CostOre])&#xA;ENDIF" type="Int32" />
+            <Field name="BuildClayRobot" source="Formula: IF [ClayRobot]&gt;[ObsRobot-CostClay]&#xA;THEN 0 ELSE&#xA;FLOOR([Ore]/[ClayRobot-CostOre])&#xA;ENDIF" type="Int32" />
+            <Field name="BuildObsRobot" source="Formula: IF [ObsRobot]&gt;[GeoRobot-CostObs]&#xA;THEN 0 ELSE&#xA;Min(FLOOR([Ore]/[ObsRobot-CostOre]),&#xA;FLOOR([Clay]/[ObsRobot-CostClay]))&#xA;ENDIF" type="Int32" />
+            <Field name="BuildGeodeRobot" source="Formula: Min(FLOOR([Ore]/[GeoRobot-CostOre]),&#xA;FLOOR([Obs]/[GeoRobot-CostObs]))" type="Int32" />
+            <Field name="BuildCount" source="Formula: Min([BuildOreRobot],1)+Min([BuildClayRobot],1)+Min([BuildObsRobot],1)+Min([BuildGeodeRobot],1)" type="Int32" />
+            <Field description="TextToColumns: Parsed from BuildString" name="BuildString" size="1073741823" source="TextToColumns: Parsed from BuildString" type="V_WString" />
+            <Field name="Max_GeodeRobot" source="Formula: [GeodeRobot] + &#xA;IF [BuildString]='GeoRobot'&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="Max_Geode" source="Formula: [Geode] + [GeodeRobot]" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field description="RegEx: Parsed from data" name="Blueprint" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="OreRobot-CostOre" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="ClayRobot-CostOre" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="ObsRobot-CostOre" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="ObsRobot-CostClay" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="GeoRobot-CostOre" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="GeoRobot-CostObs" source="RegEx: Parsed from data" type="Int16" />
+            <Field name="MinLeft" source="Formula: [MinLeft]-1" type="Int32" />
+            <Field name="Ore" source="Formula: [Ore] - &#xA;IF [BuildString]='OreRobot'&#xA;THEN [OreRobot-CostOre]&#xA;ELSEIF [BuildString] = 'ClayRobot'&#xA;THEN [ClayRobot-CostOre]&#xA;ELSEIF [BuildString] = 'ObsRobot'&#xA;THEN [ObsRobot-CostOre]&#xA;ELSEIF [BuildString] = 'GeoRobot'&#xA;THEN [GeoRobot-CostOre]&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="Clay" source="Formula: [Clay] - &#xA;IF [BuildString] = 'ObsRobot'&#xA;THEN [ObsRobot-CostClay]&#xA;ELSE 0&#xA;ENDIF&#xA;" type="Int32" />
+            <Field name="Obs" source="Formula: [Obs] - &#xA;IF [BuildString] = 'GeoRobot'&#xA;THEN [GeoRobot-CostObs]&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="Geode" source="Formula: [Geode] + [GeodeRobot]" type="Int32" />
+            <Field name="OreRobot" source="Formula: [OreRobot] + &#xA;IF [BuildString]='OreRobot'&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="ClayRobot" source="Formula: [ClayRobot] + &#xA;IF [BuildString]='ClayRobot'&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="ObsRobot" source="Formula: [ObsRobot] + &#xA;IF [BuildString]='ObsRobot'&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="GeodeRobot" source="Formula: [GeodeRobot] + &#xA;IF [BuildString]='GeoRobot'&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="BuildOreRobot" source="Formula: IF [OreRobot]&gt;Max([OreRobot-CostOre], [ClayRobot-CostOre], [ObsRobot-CostOre], [GeoRobot-CostOre])&#xA;THEN 0 ELSE&#xA;FLOOR([Ore]/[OreRobot-CostOre])&#xA;ENDIF" type="Int32" />
+            <Field name="BuildClayRobot" source="Formula: IF [ClayRobot]&gt;[ObsRobot-CostClay]&#xA;THEN 0 ELSE&#xA;FLOOR([Ore]/[ClayRobot-CostOre])&#xA;ENDIF" type="Int32" />
+            <Field name="BuildObsRobot" source="Formula: IF [ObsRobot]&gt;[GeoRobot-CostObs]&#xA;THEN 0 ELSE&#xA;Min(FLOOR([Ore]/[ObsRobot-CostOre]),&#xA;FLOOR([Clay]/[ObsRobot-CostClay]))&#xA;ENDIF" type="Int32" />
+            <Field name="BuildGeodeRobot" source="Formula: Min(FLOOR([Ore]/[GeoRobot-CostOre]),&#xA;FLOOR([Obs]/[GeoRobot-CostObs]))" type="Int32" />
+            <Field name="BuildCount" source="Formula: Min([BuildOreRobot],1)+Min([BuildClayRobot],1)+Min([BuildObsRobot],1)+Min([BuildGeodeRobot],1)" type="Int32" />
+            <Field description="TextToColumns: Parsed from BuildString" name="BuildString" size="1073741823" source="TextToColumns: Parsed from BuildString" type="V_WString" />
+            <Field name="Max_GeodeRobot" source="Formula: [GeodeRobot] + &#xA;IF [BuildString]='GeoRobot'&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="Max_Geode" source="Formula: [Geode] + [GeodeRobot]" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="20">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="1014" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>Exit</Name>
+          <Abbrev />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Output</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="21">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="450" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Blueprint" action="GroupBy" rename="Blueprint" />
+            <SummarizeField field="GeodeRobot" action="Max" rename="Max_GeodeRobot" />
+            <SummarizeField field="Geode" action="Max" rename="Max_Geode" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Find max geodes and geode robots per blueprint</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="RegEx: Parsed from data" name="Blueprint" source="Summarize: GroupBy - Blueprint" type="Int16" />
+            <Field name="Max_GeodeRobot" source="Formula: [GeodeRobot] + &#xA;IF [BuildString]='GeoRobot'&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="Max_Geode" source="Formula: [Geode] + [GeodeRobot]" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="22">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="546" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Blueprint" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Blueprint" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_Blueprint" selected="False" rename="Right_Blueprint" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field description="RegEx: Parsed from data" name="Blueprint" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="OreRobot-CostOre" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="ClayRobot-CostOre" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="ObsRobot-CostOre" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="ObsRobot-CostClay" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="GeoRobot-CostOre" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="GeoRobot-CostObs" source="RegEx: Parsed from data" type="Int16" />
+            <Field name="MinLeft" source="Formula: [MinLeft]-1" type="Int32" />
+            <Field name="Ore" source="Formula: [Ore] - &#xA;IF [BuildString]='OreRobot'&#xA;THEN [OreRobot-CostOre]&#xA;ELSEIF [BuildString] = 'ClayRobot'&#xA;THEN [ClayRobot-CostOre]&#xA;ELSEIF [BuildString] = 'ObsRobot'&#xA;THEN [ObsRobot-CostOre]&#xA;ELSEIF [BuildString] = 'GeoRobot'&#xA;THEN [GeoRobot-CostOre]&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="Clay" source="Formula: [Clay] - &#xA;IF [BuildString] = 'ObsRobot'&#xA;THEN [ObsRobot-CostClay]&#xA;ELSE 0&#xA;ENDIF&#xA;" type="Int32" />
+            <Field name="Obs" source="Formula: [Obs] - &#xA;IF [BuildString] = 'GeoRobot'&#xA;THEN [GeoRobot-CostObs]&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="Geode" source="Formula: [Geode] + [GeodeRobot]" type="Int32" />
+            <Field name="OreRobot" source="Formula: [OreRobot] + &#xA;IF [BuildString]='OreRobot'&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="ClayRobot" source="Formula: [ClayRobot] + &#xA;IF [BuildString]='ClayRobot'&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="ObsRobot" source="Formula: [ObsRobot] + &#xA;IF [BuildString]='ObsRobot'&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="GeodeRobot" source="Formula: [GeodeRobot] + &#xA;IF [BuildString]='GeoRobot'&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="BuildOreRobot" source="Formula: FLOOR([Ore]/[OreRobot-CostOre])" type="Int32" />
+            <Field name="BuildClayRobot" source="Formula: FLOOR([Ore]/[ClayRobot-CostOre])" type="Int32" />
+            <Field name="BuildObsRobot" source="Formula: Min(FLOOR([Ore]/[ObsRobot-CostOre]),&#xA;FLOOR([Clay]/[ObsRobot-CostClay]))" type="Int32" />
+            <Field name="BuildGeodeRobot" source="Formula: Min(FLOOR([Ore]/[GeoRobot-CostOre]),&#xA;FLOOR([Obs]/[GeoRobot-CostObs]))" type="Int32" />
+            <Field name="BuildCount" source="Formula: Min([BuildOreRobot],1)+Min([BuildClayRobot],1)+Min([BuildObsRobot],1)+Min([BuildGeodeRobot],1)" type="Int32" />
+            <Field description="TextToColumns: Parsed from BuildString" name="BuildString" size="1073741823" source="TextToColumns: Parsed from BuildString" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field description="RegEx: Parsed from data" name="Blueprint" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="OreRobot-CostOre" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="ClayRobot-CostOre" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="ObsRobot-CostOre" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="ObsRobot-CostClay" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="GeoRobot-CostOre" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="GeoRobot-CostObs" source="RegEx: Parsed from data" type="Int16" />
+            <Field name="MinLeft" source="Formula: [MinLeft]-1" type="Int32" />
+            <Field name="Ore" source="Formula: [Ore] - &#xA;IF [BuildString]='OreRobot'&#xA;THEN [OreRobot-CostOre]&#xA;ELSEIF [BuildString] = 'ClayRobot'&#xA;THEN [ClayRobot-CostOre]&#xA;ELSEIF [BuildString] = 'ObsRobot'&#xA;THEN [ObsRobot-CostOre]&#xA;ELSEIF [BuildString] = 'GeoRobot'&#xA;THEN [GeoRobot-CostOre]&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="Clay" source="Formula: [Clay] - &#xA;IF [BuildString] = 'ObsRobot'&#xA;THEN [ObsRobot-CostClay]&#xA;ELSE 0&#xA;ENDIF&#xA;" type="Int32" />
+            <Field name="Obs" source="Formula: [Obs] - &#xA;IF [BuildString] = 'GeoRobot'&#xA;THEN [GeoRobot-CostObs]&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="Geode" source="Formula: [Geode] + [GeodeRobot]" type="Int32" />
+            <Field name="OreRobot" source="Formula: [OreRobot] + &#xA;IF [BuildString]='OreRobot'&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="ClayRobot" source="Formula: [ClayRobot] + &#xA;IF [BuildString]='ClayRobot'&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="ObsRobot" source="Formula: [ObsRobot] + &#xA;IF [BuildString]='ObsRobot'&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="GeodeRobot" source="Formula: [GeodeRobot] + &#xA;IF [BuildString]='GeoRobot'&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="BuildOreRobot" source="Formula: IF [OreRobot]&gt;Max([OreRobot-CostOre], [ClayRobot-CostOre], [ObsRobot-CostOre], [GeoRobot-CostOre])&#xA;THEN 0 ELSE&#xA;FLOOR([Ore]/[OreRobot-CostOre])&#xA;ENDIF" type="Int32" />
+            <Field name="BuildClayRobot" source="Formula: IF [ClayRobot]&gt;[ObsRobot-CostClay]&#xA;THEN 0 ELSE&#xA;FLOOR([Ore]/[ClayRobot-CostOre])&#xA;ENDIF" type="Int32" />
+            <Field name="BuildObsRobot" source="Formula: IF [ObsRobot]&gt;[GeoRobot-CostObs]&#xA;THEN 0 ELSE&#xA;Min(FLOOR([Ore]/[ObsRobot-CostOre]),&#xA;FLOOR([Clay]/[ObsRobot-CostClay]))&#xA;ENDIF" type="Int32" />
+            <Field name="BuildGeodeRobot" source="Formula: Min(FLOOR([Ore]/[GeoRobot-CostOre]),&#xA;FLOOR([Obs]/[GeoRobot-CostObs]))" type="Int32" />
+            <Field name="BuildCount" source="Formula: Min([BuildOreRobot],1)+Min([BuildClayRobot],1)+Min([BuildObsRobot],1)+Min([BuildGeodeRobot],1)" type="Int32" />
+            <Field description="TextToColumns: Parsed from BuildString" name="BuildString" size="1073741823" source="TextToColumns: Parsed from BuildString" type="V_WString" />
+            <Field name="Max_GeodeRobot" source="Formula: [GeodeRobot] + &#xA;IF [BuildString]='GeoRobot'&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="Max_Geode" source="Formula: [Geode] + [GeodeRobot]" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field description="RegEx: Parsed from data" name="Blueprint" source="Summarize: GroupBy - Blueprint" type="Int16" />
+            <Field name="Max_GeodeRobot" source="Formula: [GeodeRobot] + &#xA;IF [BuildString]='GeoRobot'&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="Max_Geode" source="Formula: [Geode] + [GeodeRobot]" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="23">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="630" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>IF [Engine.IterationNumber]&lt;18
+THEN [GeodeRobot]&gt;=[Max_GeodeRobot]-2
+ELSEIF [Engine.IterationNumber]&gt;29
+THEN [Geode]&gt;=[Max_Geode]-1
+ELSE [Geode]&gt;=[Max_Geode]-3
+ENDIF</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Only keep permutations that are close to the best ones</AnnotationText>
+          <DefaultAnnotationText>IF [Engine.IterationNumber]&lt;18
+THEN [GeodeRobot]&gt;=[Max_GeodeRobot]-2
+ELSEIF [Eng...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field description="RegEx: Parsed from data" name="Blueprint" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="OreRobot-CostOre" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="ClayRobot-CostOre" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="ObsRobot-CostOre" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="ObsRobot-CostClay" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="GeoRobot-CostOre" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="GeoRobot-CostObs" source="RegEx: Parsed from data" type="Int16" />
+            <Field name="MinLeft" source="Formula: [MinLeft]-1" type="Int32" />
+            <Field name="Ore" source="Formula: [Ore] - &#xA;IF [BuildString]='OreRobot'&#xA;THEN [OreRobot-CostOre]&#xA;ELSEIF [BuildString] = 'ClayRobot'&#xA;THEN [ClayRobot-CostOre]&#xA;ELSEIF [BuildString] = 'ObsRobot'&#xA;THEN [ObsRobot-CostOre]&#xA;ELSEIF [BuildString] = 'GeoRobot'&#xA;THEN [GeoRobot-CostOre]&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="Clay" source="Formula: [Clay] - &#xA;IF [BuildString] = 'ObsRobot'&#xA;THEN [ObsRobot-CostClay]&#xA;ELSE 0&#xA;ENDIF&#xA;" type="Int32" />
+            <Field name="Obs" source="Formula: [Obs] - &#xA;IF [BuildString] = 'GeoRobot'&#xA;THEN [GeoRobot-CostObs]&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="Geode" source="Formula: [Geode] + [GeodeRobot]" type="Int32" />
+            <Field name="OreRobot" source="Formula: [OreRobot] + &#xA;IF [BuildString]='OreRobot'&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="ClayRobot" source="Formula: [ClayRobot] + &#xA;IF [BuildString]='ClayRobot'&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="ObsRobot" source="Formula: [ObsRobot] + &#xA;IF [BuildString]='ObsRobot'&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="GeodeRobot" source="Formula: [GeodeRobot] + &#xA;IF [BuildString]='GeoRobot'&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="BuildOreRobot" source="Formula: IF [OreRobot]&gt;Max([OreRobot-CostOre], [ClayRobot-CostOre], [ObsRobot-CostOre], [GeoRobot-CostOre])&#xA;THEN 0 ELSE&#xA;FLOOR([Ore]/[OreRobot-CostOre])&#xA;ENDIF" type="Int32" />
+            <Field name="BuildClayRobot" source="Formula: IF [ClayRobot]&gt;[ObsRobot-CostClay]&#xA;THEN 0 ELSE&#xA;FLOOR([Ore]/[ClayRobot-CostOre])&#xA;ENDIF" type="Int32" />
+            <Field name="BuildObsRobot" source="Formula: IF [ObsRobot]&gt;[GeoRobot-CostObs]&#xA;THEN 0 ELSE&#xA;Min(FLOOR([Ore]/[ObsRobot-CostOre]),&#xA;FLOOR([Clay]/[ObsRobot-CostClay]))&#xA;ENDIF" type="Int32" />
+            <Field name="BuildGeodeRobot" source="Formula: Min(FLOOR([Ore]/[GeoRobot-CostOre]),&#xA;FLOOR([Obs]/[GeoRobot-CostObs]))" type="Int32" />
+            <Field name="BuildCount" source="Formula: Min([BuildOreRobot],1)+Min([BuildClayRobot],1)+Min([BuildObsRobot],1)+Min([BuildGeodeRobot],1)" type="Int32" />
+            <Field description="TextToColumns: Parsed from BuildString" name="BuildString" size="1073741823" source="TextToColumns: Parsed from BuildString" type="V_WString" />
+            <Field name="Max_GeodeRobot" source="Formula: [GeodeRobot] + &#xA;IF [BuildString]='GeoRobot'&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="Max_Geode" source="Formula: [Geode] + [GeodeRobot]" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field description="RegEx: Parsed from data" name="Blueprint" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="OreRobot-CostOre" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="ClayRobot-CostOre" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="ObsRobot-CostOre" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="ObsRobot-CostClay" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="GeoRobot-CostOre" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="GeoRobot-CostObs" source="RegEx: Parsed from data" type="Int16" />
+            <Field name="MinLeft" source="Formula: [MinLeft]-1" type="Int32" />
+            <Field name="Ore" source="Formula: [Ore] - &#xA;IF [BuildString]='OreRobot'&#xA;THEN [OreRobot-CostOre]&#xA;ELSEIF [BuildString] = 'ClayRobot'&#xA;THEN [ClayRobot-CostOre]&#xA;ELSEIF [BuildString] = 'ObsRobot'&#xA;THEN [ObsRobot-CostOre]&#xA;ELSEIF [BuildString] = 'GeoRobot'&#xA;THEN [GeoRobot-CostOre]&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="Clay" source="Formula: [Clay] - &#xA;IF [BuildString] = 'ObsRobot'&#xA;THEN [ObsRobot-CostClay]&#xA;ELSE 0&#xA;ENDIF&#xA;" type="Int32" />
+            <Field name="Obs" source="Formula: [Obs] - &#xA;IF [BuildString] = 'GeoRobot'&#xA;THEN [GeoRobot-CostObs]&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="Geode" source="Formula: [Geode] + [GeodeRobot]" type="Int32" />
+            <Field name="OreRobot" source="Formula: [OreRobot] + &#xA;IF [BuildString]='OreRobot'&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="ClayRobot" source="Formula: [ClayRobot] + &#xA;IF [BuildString]='ClayRobot'&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="ObsRobot" source="Formula: [ObsRobot] + &#xA;IF [BuildString]='ObsRobot'&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="GeodeRobot" source="Formula: [GeodeRobot] + &#xA;IF [BuildString]='GeoRobot'&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="BuildOreRobot" source="Formula: IF [OreRobot]&gt;Max([OreRobot-CostOre], [ClayRobot-CostOre], [ObsRobot-CostOre], [GeoRobot-CostOre])&#xA;THEN 0 ELSE&#xA;FLOOR([Ore]/[OreRobot-CostOre])&#xA;ENDIF" type="Int32" />
+            <Field name="BuildClayRobot" source="Formula: IF [ClayRobot]&gt;[ObsRobot-CostClay]&#xA;THEN 0 ELSE&#xA;FLOOR([Ore]/[ClayRobot-CostOre])&#xA;ENDIF" type="Int32" />
+            <Field name="BuildObsRobot" source="Formula: IF [ObsRobot]&gt;[GeoRobot-CostObs]&#xA;THEN 0 ELSE&#xA;Min(FLOOR([Ore]/[ObsRobot-CostOre]),&#xA;FLOOR([Clay]/[ObsRobot-CostClay]))&#xA;ENDIF" type="Int32" />
+            <Field name="BuildGeodeRobot" source="Formula: Min(FLOOR([Ore]/[GeoRobot-CostOre]),&#xA;FLOOR([Obs]/[GeoRobot-CostObs]))" type="Int32" />
+            <Field name="BuildCount" source="Formula: Min([BuildOreRobot],1)+Min([BuildClayRobot],1)+Min([BuildObsRobot],1)+Min([BuildGeodeRobot],1)" type="Int32" />
+            <Field description="TextToColumns: Parsed from BuildString" name="BuildString" size="1073741823" source="TextToColumns: Parsed from BuildString" type="V_WString" />
+            <Field name="Max_GeodeRobot" source="Formula: [GeodeRobot] + &#xA;IF [BuildString]='GeoRobot'&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="Max_Geode" source="Formula: [Geode] + [GeodeRobot]" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="27">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="738" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="1033">
+            <Field field="Blueprint" order="Ascending" />
+            <Field field="GeodeRobot" order="Ascending" />
+            <Field field="ObsRobot" order="Ascending" />
+            <Field field="ClayRobot" order="Ascending" />
+            <Field field="OreRobot" order="Ascending" />
+            <Field field="Obs" order="Descending" />
+            <Field field="Ore" order="Descending" />
+            <Field field="Clay" order="Descending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Most resources first</AnnotationText>
+          <DefaultAnnotationText>Blueprint - Ascending
+GeodeRobot - Ascending
+ObsRobot - Ascending
+ClayRobot - Ascending
+...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="RegEx: Parsed from data" name="Blueprint" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="OreRobot-CostOre" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="ClayRobot-CostOre" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="ObsRobot-CostOre" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="ObsRobot-CostClay" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="GeoRobot-CostOre" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="GeoRobot-CostObs" source="RegEx: Parsed from data" type="Int16" />
+            <Field name="MinLeft" source="Formula: [MinLeft]-1" type="Int32" />
+            <Field name="Ore" source="Formula: [Ore] - &#xA;IF [BuildString]='OreRobot'&#xA;THEN [OreRobot-CostOre]&#xA;ELSEIF [BuildString] = 'ClayRobot'&#xA;THEN [ClayRobot-CostOre]&#xA;ELSEIF [BuildString] = 'ObsRobot'&#xA;THEN [ObsRobot-CostOre]&#xA;ELSEIF [BuildString] = 'GeoRobot'&#xA;THEN [GeoRobot-CostOre]&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="Clay" source="Formula: [Clay] - &#xA;IF [BuildString] = 'ObsRobot'&#xA;THEN [ObsRobot-CostClay]&#xA;ELSE 0&#xA;ENDIF&#xA;" type="Int32" />
+            <Field name="Obs" source="Formula: [Obs] - &#xA;IF [BuildString] = 'GeoRobot'&#xA;THEN [GeoRobot-CostObs]&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="Geode" source="Formula: [Geode] + [GeodeRobot]" type="Int32" />
+            <Field name="OreRobot" source="Formula: [OreRobot] + &#xA;IF [BuildString]='OreRobot'&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="ClayRobot" source="Formula: [ClayRobot] + &#xA;IF [BuildString]='ClayRobot'&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="ObsRobot" source="Formula: [ObsRobot] + &#xA;IF [BuildString]='ObsRobot'&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="GeodeRobot" source="Formula: [GeodeRobot] + &#xA;IF [BuildString]='GeoRobot'&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="BuildOreRobot" source="Formula: IF [OreRobot]&gt;Max([OreRobot-CostOre], [ClayRobot-CostOre], [ObsRobot-CostOre], [GeoRobot-CostOre])&#xA;THEN 0 ELSE&#xA;FLOOR([Ore]/[OreRobot-CostOre])&#xA;ENDIF" type="Int32" />
+            <Field name="BuildClayRobot" source="Formula: IF [ClayRobot]&gt;[ObsRobot-CostClay]&#xA;THEN 0 ELSE&#xA;FLOOR([Ore]/[ClayRobot-CostOre])&#xA;ENDIF" type="Int32" />
+            <Field name="BuildObsRobot" source="Formula: IF [ObsRobot]&gt;[GeoRobot-CostObs]&#xA;THEN 0 ELSE&#xA;Min(FLOOR([Ore]/[ObsRobot-CostOre]),&#xA;FLOOR([Clay]/[ObsRobot-CostClay]))&#xA;ENDIF" type="Int32" />
+            <Field name="BuildGeodeRobot" source="Formula: Min(FLOOR([Ore]/[GeoRobot-CostOre]),&#xA;FLOOR([Obs]/[GeoRobot-CostObs]))" type="Int32" />
+            <Field name="BuildCount" source="Formula: Min([BuildOreRobot],1)+Min([BuildClayRobot],1)+Min([BuildObsRobot],1)+Min([BuildGeodeRobot],1)" type="Int32" />
+            <Field description="TextToColumns: Parsed from BuildString" name="BuildString" size="1073741823" source="TextToColumns: Parsed from BuildString" type="V_WString" />
+            <Field name="Max_GeodeRobot" source="Formula: [GeodeRobot] + &#xA;IF [BuildString]='GeoRobot'&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="Max_Geode" source="Formula: [Geode] + [GeodeRobot]" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="28">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sample.Sample">
+        <Position x="834" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>First</Mode>
+          <N>4</N>
+          <GroupFields orderChanged="False">
+            <Field name="Blueprint" />
+            <Field name="MinLeft" />
+            <Field name="Geode" />
+            <Field name="OreRobot" />
+            <Field name="ClayRobot" />
+            <Field name="ObsRobot" />
+            <Field name="GeodeRobot" />
+          </GroupFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>First 4 rows
+(preventing exploding records)</AnnotationText>
+          <DefaultAnnotationText>First 4 rows</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="RegEx: Parsed from data" name="Blueprint" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="OreRobot-CostOre" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="ClayRobot-CostOre" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="ObsRobot-CostOre" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="ObsRobot-CostClay" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="GeoRobot-CostOre" source="RegEx: Parsed from data" type="Int16" />
+            <Field description="RegEx: Parsed from data" name="GeoRobot-CostObs" source="RegEx: Parsed from data" type="Int16" />
+            <Field name="MinLeft" source="Formula: [MinLeft]-1" type="Int32" />
+            <Field name="Ore" source="Formula: [Ore] - &#xA;IF [BuildString]='OreRobot'&#xA;THEN [OreRobot-CostOre]&#xA;ELSEIF [BuildString] = 'ClayRobot'&#xA;THEN [ClayRobot-CostOre]&#xA;ELSEIF [BuildString] = 'ObsRobot'&#xA;THEN [ObsRobot-CostOre]&#xA;ELSEIF [BuildString] = 'GeoRobot'&#xA;THEN [GeoRobot-CostOre]&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="Clay" source="Formula: [Clay] - &#xA;IF [BuildString] = 'ObsRobot'&#xA;THEN [ObsRobot-CostClay]&#xA;ELSE 0&#xA;ENDIF&#xA;" type="Int32" />
+            <Field name="Obs" source="Formula: [Obs] - &#xA;IF [BuildString] = 'GeoRobot'&#xA;THEN [GeoRobot-CostObs]&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="Geode" source="Formula: [Geode] + [GeodeRobot]" type="Int32" />
+            <Field name="OreRobot" source="Formula: [OreRobot] + &#xA;IF [BuildString]='OreRobot'&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="ClayRobot" source="Formula: [ClayRobot] + &#xA;IF [BuildString]='ClayRobot'&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="ObsRobot" source="Formula: [ObsRobot] + &#xA;IF [BuildString]='ObsRobot'&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="GeodeRobot" source="Formula: [GeodeRobot] + &#xA;IF [BuildString]='GeoRobot'&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="BuildOreRobot" source="Formula: IF [OreRobot]&gt;Max([OreRobot-CostOre], [ClayRobot-CostOre], [ObsRobot-CostOre], [GeoRobot-CostOre])&#xA;THEN 0 ELSE&#xA;FLOOR([Ore]/[OreRobot-CostOre])&#xA;ENDIF" type="Int32" />
+            <Field name="BuildClayRobot" source="Formula: IF [ClayRobot]&gt;[ObsRobot-CostClay]&#xA;THEN 0 ELSE&#xA;FLOOR([Ore]/[ClayRobot-CostOre])&#xA;ENDIF" type="Int32" />
+            <Field name="BuildObsRobot" source="Formula: IF [ObsRobot]&gt;[GeoRobot-CostObs]&#xA;THEN 0 ELSE&#xA;Min(FLOOR([Ore]/[ObsRobot-CostOre]),&#xA;FLOOR([Clay]/[ObsRobot-CostClay]))&#xA;ENDIF" type="Int32" />
+            <Field name="BuildGeodeRobot" source="Formula: Min(FLOOR([Ore]/[GeoRobot-CostOre]),&#xA;FLOOR([Obs]/[GeoRobot-CostObs]))" type="Int32" />
+            <Field name="BuildCount" source="Formula: Min([BuildOreRobot],1)+Min([BuildClayRobot],1)+Min([BuildObsRobot],1)+Min([BuildGeodeRobot],1)" type="Int32" />
+            <Field description="TextToColumns: Parsed from BuildString" name="BuildString" size="1073741823" source="TextToColumns: Parsed from BuildString" type="V_WString" />
+            <Field name="Max_GeodeRobot" source="Formula: [GeodeRobot] + &#xA;IF [BuildString]='GeoRobot'&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" type="Int32" />
+            <Field name="Max_Geode" source="Formula: [Geode] + [GeodeRobot]" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSample" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="15" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="Output" />
+      <Destination ToolID="16" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="21" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="22" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="21" Connection="Output" />
+      <Destination ToolID="22" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="Output" />
+      <Destination ToolID="17" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="19" Connection="True" />
+      <Destination ToolID="18" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="19" Connection="False" />
+      <Destination ToolID="20" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="22" Connection="Join" />
+      <Destination ToolID="23" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="23" Connection="True" />
+      <Destination ToolID="27" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="27" Connection="Output" />
+      <Destination ToolID="28" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="28" Connection="Output" />
+      <Destination ToolID="19" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <SortedGrouping value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Day19Iterate</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="253d2e90-79bd-4b6b-8b7b-0d1743498902" />
+      <Telemetry>
+        <PreviousWorkflowId value="bfa36a76-168b-4350-b047-6047dff04a2a" />
+        <OriginWorkflowId value="bfa36a76-168b-4350-b047-6047dff04a2a" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="False" />
+    </Events>
+    <RuntimeProperties>
+      <Actions />
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Tab (2)</Name>
+          <ToolId value="2" />
+          <Questions>
+            <Question>
+              <Type>MacroInput</Type>
+              <Description />
+              <Name>Macro Input (1)</Name>
+              <ToolId value="1" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description>Macro Output (17)</Description>
+              <Name>Macro Output (17)</Name>
+              <ToolId value="17" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description>Macro Output (20)</Description>
+              <Name>Macro Output (20)</Name>
+              <ToolId value="20" />
+            </Question>
+          </Questions>
+        </Question>
+      </Questions>
+      <ModuleType>Macro</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImageStd value="39" />
+      <MacroInputs />
+      <MacroOutputs />
+      <IterativeMacro>
+        <Input>Input1</Input>
+        <Output>Iterate</Output>
+        <IterationLimit value="100" />
+        <LimitBehavior>Warn</LimitBehavior>
+        <OutputMode>AllSame</OutputMode>
+      </IterativeMacro>
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="1" Selected="True" />
+        <Tool ToolId="17" Selected="True" />
+        <Tool ToolId="20" Selected="True" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>
